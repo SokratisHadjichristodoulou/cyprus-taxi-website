@@ -62,8 +62,9 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
     }
     setError(null);
     setSubmitted(true);
+    const priceLine = quote ? `\n• Vehicle: ${quote.vehicle}\n• Price: €${quote.price} (fixed total)` : "";
     const msg = encodeURIComponent(
-      `Hi! I'd like to book a transfer:\n• From: ${pickup}\n• To: ${dropoff}\n• Date: ${date}\n• Passengers: ${passengers}${flight ? `\n• Flight: ${flight}` : ""}`,
+      `Hi! I'd like to book a transfer:\n• From: ${pickup}\n• To: ${dropoff}\n• Date: ${date}\n• Passengers: ${passengers}${priceLine}${flight ? `\n• Flight: ${flight}` : ""}`,
     );
     window.open(`https://wa.me/35796626844?text=${msg}`, "_blank");
   };
