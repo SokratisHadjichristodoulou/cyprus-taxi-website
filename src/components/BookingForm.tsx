@@ -1,40 +1,13 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { MapPin, Calendar, Users, Plane, ArrowRight } from "lucide-react";
 import { z } from "zod";
+import { allPricing, findPrice, passengerLabelToVehicle } from "@/lib/pricing";
 
-const pickupLocations = ["Paphos Airport", "Larnaca Airport"];
+const pickupLocations = allPricing.map((p) => p.airport);
 
-const dropoffByPickup: Record<string, string[]> = {
-  "Paphos Airport": [
-    "Paphos Town / Kato Paphos",
-    "Tomb of the Kings",
-    "Chlorakas / Empa",
-    "Kissonerga / Tala",
-    "Kamares",
-    "Tsada",
-    "Coral Bay",
-    "Peyia",
-    "Polis – Lachi",
-    "Intercontinental Hotel (Aphrodite Hills)",
-    "Pissouri",
-    "Limassol",
-    "Nicosia",
-    "Larnaka",
-    "Ayia Napa / Protaras",
-  ],
-  "Larnaca Airport": [
-    "Paphos Town",
-    "Chlorakas / Empa",
-    "Kissonerga / Tala",
-    "Kamares",
-    "Tsada",
-    "Coral Bay",
-    "Peyia",
-    "Intercontinental Hotel (Aphrodite Hills)",
-    "Pissouri",
-    "Polis – Lachi",
-  ],
-};
+const dropoffByPickup: Record<string, string[]> = Object.fromEntries(
+  allPricing.map((p) => [p.airport, p.destinations.map((d) => d.destination)]),
+);
 
 const passengerOptions = [
   "1 Passenger",
@@ -72,6 +45,14 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
 
   const dropoffOptions = dropoffByPickup[pickup] ?? [];
 
+  const quote = useMemo(() => {
+    if (!dropoff) return null;
+    const vehicle = passengerLabelToVehicle(passengers);
+    const price = findPrice(pickup, dropoff, vehicle);
+    if (price == null) return null;
+    return { price, vehicle };
+  }, [pickup, dropoff, passengers]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const result = bookingSchema.safeParse({ pickup, dropoff, date, passengers, flight });
@@ -81,8 +62,9 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
     }
     setError(null);
     setSubmitted(true);
+    const priceLine = quote ? `\n• Vehicle: ${quote.vehicle}\n• Price: €${quote.price} (fixed total)` : "";
     const msg = encodeURIComponent(
-      `Hi! I'd like to book a transfer:\n• From: ${pickup}\n• To: ${dropoff}\n• Date: ${date}\n• Passengers: ${passengers}${flight ? `\n• Flight: ${flight}` : ""}`,
+      `Hi! I'd like to book a transfer:\n• From: ${pickup}\n• To: ${dropoff}\n• Date: ${date}\n• Passengers: ${passengers}${priceLine}${flight ? `\n• Flight: ${flight}` : ""}`,
     );
     window.open(`https://wa.me/35796626844?text=${msg}`, "_blank");
   };
@@ -164,11 +146,21 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
         <p className="mt-3 text-sm font-medium text-destructive">{error}</p>
       )}
 
+      {quote && (
+        <div className="mt-5 flex items-center justify-between rounded-xl border border-navy/15 bg-secondary/40 px-4 py-3">
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-navy/60">Your fixed price</div>
+            <div className="text-xs text-muted-foreground">{quote.vehicle} · all-inclusive</div>
+          </div>
+          <div className="font-display text-3xl font-bold text-navy">€{quote.price}</div>
+        </div>
+      )}
+
       <button
         type="submit"
         className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-navy px-6 py-4 text-sm font-semibold text-[color:var(--navy-foreground)] shadow-elegant transition-all hover:scale-[1.01] hover:shadow-glow"
       >
-        {submitted ? "Sending…" : "Get Instant Quote"}
+        {submitted ? "Sending…" : quote ? `Book for €${quote.price}` : "Get Instant Quote"}
         <ArrowRight className="h-4 w-4" />
       </button>
 
