@@ -7,7 +7,7 @@ import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import meetGreetImg from "@/assets/meet-greet.jpg";
 import sedanImg from "@/assets/fleet-sedan.jpg";
 import vanImg from "@/assets/fleet-van.jpg";
-import luxuryImg from "@/assets/fleet-luxury.jpg";
+
 import coralBayImg from "@/assets/dest-coral-bay.jpg";
 import paphosImg from "@/assets/dest-paphos.jpg";
 import limassolImg from "@/assets/dest-limassol.jpg";
@@ -293,12 +293,12 @@ function HomePage() {
               Travel in Mercedes-Benz comfort
             </h2>
             <p className="mt-4 text-pretty text-base text-white/70 md:text-lg">
-              From executive sedans to luxury S-Class and premium 7-seater vans — choose the
+              From executive Mercedes-Benz sedans to spacious 7-seater vans — choose the
               vehicle that fits your party.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
             {fleet.map((v) => (
               <div key={v.name} className="group overflow-hidden rounded-2xl bg-white text-foreground shadow-elegant transition-transform hover:-translate-y-1">
                 <div className="aspect-[4/3] bg-secondary/60 p-6">
