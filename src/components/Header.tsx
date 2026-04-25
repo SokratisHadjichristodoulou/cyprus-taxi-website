@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -20,11 +21,8 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur-xl">
       <div className="container-tight flex h-16 items-center justify-between md:h-20">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-navy">
-            <span className="font-display text-base font-bold text-[color:var(--navy-foreground)]">
-              T
-            </span>
-          </div>
+          <img src={logo} alt="Taxi Cyprus 24" className="h-10 w-10 object-contain" width={40} height={40} />
+
           <div className="leading-tight">
             <div className="font-display text-[15px] font-bold tracking-tight text-navy">
               Taxi Cyprus 24
