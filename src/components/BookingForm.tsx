@@ -62,13 +62,15 @@ interface Props {
 }
 
 export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropoff = "" }: Props) {
-  const [pickup, setPickup] = useState(defaultPickup);
+  const [pickup, setPickup] = useState(defaultPickup || "Paphos Airport");
   const [dropoff, setDropoff] = useState(defaultDropoff);
   const [date, setDate] = useState("");
-  const [passengers, setPassengers] = useState("2");
+  const [passengers, setPassengers] = useState("2 Passengers");
   const [flight, setFlight] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
+
+  const dropoffOptions = dropoffByPickup[pickup] ?? [];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
