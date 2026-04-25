@@ -35,13 +35,23 @@ export const Route = createFileRoute("/cyprus-airport-transfers")({
 function AllTransfersPage() {
   return (
     <>
-      <StructuredData data={{
-        "@context": "https://schema.org",
-        "@type": "TaxiService",
-        name: "Cyprus Airport Transfers",
-        provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24" },
-        areaServed: "Cyprus",
-      }} />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TaxiService",
+          name: "Cyprus Airport Transfers",
+          description:
+            "Private fixed-price taxi transfers from Larnaca (LCA) and Paphos (PFO) airports to every destination in Cyprus.",
+          areaServed: { "@type": "Country", name: "Cyprus" },
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Taxi Cyprus 24",
+            telephone: "+35796626844",
+            url: "https://taxicyprus24.com",
+            areaServed: { "@type": "Country", name: "Cyprus" },
+          },
+        }}
+      />
 
       <PageHero
         eyebrow="All Cyprus airport transfers"
