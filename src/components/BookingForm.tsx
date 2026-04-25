@@ -2,21 +2,49 @@ import { useState } from "react";
 import { MapPin, Calendar, Users, Plane, ArrowRight } from "lucide-react";
 import { z } from "zod";
 
-const cyprusLocations = [
-  "Larnaca Airport",
-  "Paphos Airport",
-  "Paphos",
-  "Coral Bay",
-  "Peyia",
-  "Chloraka",
-  "Kato Paphos",
-  "Limassol",
-  "Limassol Marina",
-  "Ayia Napa",
-  "Protaras",
-  "Larnaca City",
-  "Nicosia",
-  "Tombs of the Kings",
+const pickupLocations = ["Paphos Airport", "Larnaca Airport"];
+
+const dropoffByPickup: Record<string, string[]> = {
+  "Paphos Airport": [
+    "Paphos Town / Kato Paphos",
+    "Tomb of the Kings",
+    "Chlorakas / Empa",
+    "Kissonerga / Tala",
+    "Kamares",
+    "Tsada",
+    "Coral Bay",
+    "Peyia",
+    "Polis – Lachi",
+    "Intercontinental Hotel (Aphrodite Hills)",
+    "Pissouri",
+    "Limassol",
+    "Nicosia",
+    "Larnaka",
+    "Ayia Napa / Protaras",
+  ],
+  "Larnaca Airport": [
+    "Paphos Town",
+    "Chlorakas / Empa",
+    "Kissonerga / Tala",
+    "Kamares",
+    "Tsada",
+    "Coral Bay",
+    "Peyia",
+    "Intercontinental Hotel (Aphrodite Hills)",
+    "Pissouri",
+    "Polis – Lachi",
+  ],
+};
+
+const passengerOptions = [
+  "1 Passenger",
+  "2 Passengers",
+  "3 Passengers",
+  "4 Passengers",
+  "5 Passengers",
+  "6 Passengers",
+  "7–8 Passengers",
+  "9–12 Passengers",
 ];
 
 const bookingSchema = z.object({
@@ -34,13 +62,15 @@ interface Props {
 }
 
 export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropoff = "" }: Props) {
-  const [pickup, setPickup] = useState(defaultPickup);
+  const [pickup, setPickup] = useState(defaultPickup || "Paphos Airport");
   const [dropoff, setDropoff] = useState(defaultDropoff);
   const [date, setDate] = useState("");
-  const [passengers, setPassengers] = useState("2");
+  const [passengers, setPassengers] = useState("2 Passengers");
   const [flight, setFlight] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
+
+  const dropoffOptions = dropoffByPickup[pickup] ?? [];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,24 +103,30 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
 
       <div className="grid gap-4 md:grid-cols-2">
         <Field label="Pickup location" icon={<MapPin className="h-4 w-4" />}>
-          <input
-            list="cy-locations"
+          <select
             value={pickup}
-            onChange={(e) => setPickup(e.target.value)}
-            placeholder="e.g. Larnaca Airport"
-            maxLength={80}
-            className="w-full bg-transparent text-sm font-medium text-foreground outline-none placeholder:text-muted-foreground/70"
-          />
+            onChange={(e) => {
+              setPickup(e.target.value);
+              setDropoff("");
+            }}
+            className="w-full bg-transparent text-sm font-medium text-foreground outline-none"
+          >
+            {pickupLocations.map((l) => (
+              <option key={l} value={l}>{l}</option>
+            ))}
+          </select>
         </Field>
         <Field label="Drop-off location" icon={<MapPin className="h-4 w-4" />}>
-          <input
-            list="cy-locations"
+          <select
             value={dropoff}
             onChange={(e) => setDropoff(e.target.value)}
-            placeholder="e.g. Coral Bay"
-            maxLength={80}
-            className="w-full bg-transparent text-sm font-medium text-foreground outline-none placeholder:text-muted-foreground/70"
-          />
+            className="w-full bg-transparent text-sm font-medium text-foreground outline-none"
+          >
+            <option value="">Select destination…</option>
+            {dropoffOptions.map((l) => (
+              <option key={l} value={l}>{l}</option>
+            ))}
+          </select>
         </Field>
         <Field label="Date & time" icon={<Calendar className="h-4 w-4" />}>
           <input
@@ -106,8 +142,8 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
             onChange={(e) => setPassengers(e.target.value)}
             className="w-full bg-transparent text-sm font-medium text-foreground outline-none"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-              <option key={n} value={n}>{n} passenger{n > 1 ? "s" : ""}</option>
+            {passengerOptions.map((p) => (
+              <option key={p} value={p}>{p}</option>
             ))}
           </select>
         </Field>
@@ -123,10 +159,6 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
           </Field>
         </div>
       </div>
-
-      <datalist id="cy-locations">
-        {cyprusLocations.map((l) => <option key={l} value={l} />)}
-      </datalist>
 
       {error && (
         <p className="mt-3 text-sm font-medium text-destructive">{error}</p>
