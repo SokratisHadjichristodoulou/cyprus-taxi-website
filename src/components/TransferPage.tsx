@@ -30,24 +30,33 @@ export interface TransferPageProps {
 export function TransferPage(p: TransferPageProps) {
   return (
     <>
-      <StructuredData data={{
-        "@context": "https://schema.org",
-        "@type": "Service",
-        serviceType: "Airport taxi transfer",
-        name: p.title,
-        description: p.subtitle,
-        areaServed: { "@type": "Place", name: "Cyprus" },
-        provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24", telephone: "+357-96-626-844" },
-      }} />
-      <StructuredData data={{
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: p.faqs.map((f) => ({
-          "@type": "Question",
-          name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
-        })),
-      }} />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TaxiService",
+          name: p.title,
+          description: p.subtitle,
+          areaServed: { "@type": "Country", name: "Cyprus" },
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Taxi Cyprus 24",
+            telephone: "+35796626844",
+            url: "https://taxicyprus24.com",
+            areaServed: { "@type": "Country", name: "Cyprus" },
+          },
+        }}
+      />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: p.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
+      />
 
       <PageHero
         eyebrow={p.eyebrow}
