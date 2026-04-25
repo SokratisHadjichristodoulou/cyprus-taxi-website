@@ -9,8 +9,92 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TaxiToPeyiaRouteImport } from './routes/taxi-to-peyia'
+import { Route as TaxiToLimassolRouteImport } from './routes/taxi-to-limassol'
+import { Route as TaxiToCoralBayRouteImport } from './routes/taxi-to-coral-bay'
+import { Route as TaxiToChlorakaRouteImport } from './routes/taxi-to-chloraka'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as PaphosAirportTransfersRouteImport } from './routes/paphos-airport-transfers'
+import { Route as LarnacaAirportTransfersRouteImport } from './routes/larnaca-airport-transfers'
+import { Route as LarnacaAirportToPaphosRouteImport } from './routes/larnaca-airport-to-paphos'
+import { Route as FleetRouteImport } from './routes/fleet'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as CyprusAirportTransfersRouteImport } from './routes/cyprus-airport-transfers'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TaxiToPeyiaRoute = TaxiToPeyiaRouteImport.update({
+  id: '/taxi-to-peyia',
+  path: '/taxi-to-peyia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxiToLimassolRoute = TaxiToLimassolRouteImport.update({
+  id: '/taxi-to-limassol',
+  path: '/taxi-to-limassol',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxiToCoralBayRoute = TaxiToCoralBayRouteImport.update({
+  id: '/taxi-to-coral-bay',
+  path: '/taxi-to-coral-bay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxiToChlorakaRoute = TaxiToChlorakaRouteImport.update({
+  id: '/taxi-to-chloraka',
+  path: '/taxi-to-chloraka',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaphosAirportTransfersRoute = PaphosAirportTransfersRouteImport.update({
+  id: '/paphos-airport-transfers',
+  path: '/paphos-airport-transfers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LarnacaAirportTransfersRoute = LarnacaAirportTransfersRouteImport.update({
+  id: '/larnaca-airport-transfers',
+  path: '/larnaca-airport-transfers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LarnacaAirportToPaphosRoute = LarnacaAirportToPaphosRouteImport.update({
+  id: '/larnaca-airport-to-paphos',
+  path: '/larnaca-airport-to-paphos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FleetRoute = FleetRouteImport.update({
+  id: '/fleet',
+  path: '/fleet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CyprusAirportTransfersRoute = CyprusAirportTransfersRouteImport.update({
+  id: '/cyprus-airport-transfers',
+  path: '/cyprus-airport-transfers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +103,228 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
+  '/faq': typeof FaqRoute
+  '/fleet': typeof FleetRoute
+  '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
+  '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
+  '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
+  '/reviews': typeof ReviewsRoute
+  '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
+  '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
+  '/taxi-to-limassol': typeof TaxiToLimassolRoute
+  '/taxi-to-peyia': typeof TaxiToPeyiaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
+  '/faq': typeof FaqRoute
+  '/fleet': typeof FleetRoute
+  '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
+  '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
+  '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
+  '/reviews': typeof ReviewsRoute
+  '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
+  '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
+  '/taxi-to-limassol': typeof TaxiToLimassolRoute
+  '/taxi-to-peyia': typeof TaxiToPeyiaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
+  '/faq': typeof FaqRoute
+  '/fleet': typeof FleetRoute
+  '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
+  '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
+  '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
+  '/reviews': typeof ReviewsRoute
+  '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
+  '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
+  '/taxi-to-limassol': typeof TaxiToLimassolRoute
+  '/taxi-to-peyia': typeof TaxiToPeyiaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/cyprus-airport-transfers'
+    | '/faq'
+    | '/fleet'
+    | '/larnaca-airport-to-paphos'
+    | '/larnaca-airport-transfers'
+    | '/paphos-airport-transfers'
+    | '/reviews'
+    | '/taxi-to-chloraka'
+    | '/taxi-to-coral-bay'
+    | '/taxi-to-limassol'
+    | '/taxi-to-peyia'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/cyprus-airport-transfers'
+    | '/faq'
+    | '/fleet'
+    | '/larnaca-airport-to-paphos'
+    | '/larnaca-airport-transfers'
+    | '/paphos-airport-transfers'
+    | '/reviews'
+    | '/taxi-to-chloraka'
+    | '/taxi-to-coral-bay'
+    | '/taxi-to-limassol'
+    | '/taxi-to-peyia'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/cyprus-airport-transfers'
+    | '/faq'
+    | '/fleet'
+    | '/larnaca-airport-to-paphos'
+    | '/larnaca-airport-transfers'
+    | '/paphos-airport-transfers'
+    | '/reviews'
+    | '/taxi-to-chloraka'
+    | '/taxi-to-coral-bay'
+    | '/taxi-to-limassol'
+    | '/taxi-to-peyia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRoute
+  ContactRoute: typeof ContactRoute
+  CyprusAirportTransfersRoute: typeof CyprusAirportTransfersRoute
+  FaqRoute: typeof FaqRoute
+  FleetRoute: typeof FleetRoute
+  LarnacaAirportToPaphosRoute: typeof LarnacaAirportToPaphosRoute
+  LarnacaAirportTransfersRoute: typeof LarnacaAirportTransfersRoute
+  PaphosAirportTransfersRoute: typeof PaphosAirportTransfersRoute
+  ReviewsRoute: typeof ReviewsRoute
+  TaxiToChlorakaRoute: typeof TaxiToChlorakaRoute
+  TaxiToCoralBayRoute: typeof TaxiToCoralBayRoute
+  TaxiToLimassolRoute: typeof TaxiToLimassolRoute
+  TaxiToPeyiaRoute: typeof TaxiToPeyiaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/taxi-to-peyia': {
+      id: '/taxi-to-peyia'
+      path: '/taxi-to-peyia'
+      fullPath: '/taxi-to-peyia'
+      preLoaderRoute: typeof TaxiToPeyiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/taxi-to-limassol': {
+      id: '/taxi-to-limassol'
+      path: '/taxi-to-limassol'
+      fullPath: '/taxi-to-limassol'
+      preLoaderRoute: typeof TaxiToLimassolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/taxi-to-coral-bay': {
+      id: '/taxi-to-coral-bay'
+      path: '/taxi-to-coral-bay'
+      fullPath: '/taxi-to-coral-bay'
+      preLoaderRoute: typeof TaxiToCoralBayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/taxi-to-chloraka': {
+      id: '/taxi-to-chloraka'
+      path: '/taxi-to-chloraka'
+      fullPath: '/taxi-to-chloraka'
+      preLoaderRoute: typeof TaxiToChlorakaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paphos-airport-transfers': {
+      id: '/paphos-airport-transfers'
+      path: '/paphos-airport-transfers'
+      fullPath: '/paphos-airport-transfers'
+      preLoaderRoute: typeof PaphosAirportTransfersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/larnaca-airport-transfers': {
+      id: '/larnaca-airport-transfers'
+      path: '/larnaca-airport-transfers'
+      fullPath: '/larnaca-airport-transfers'
+      preLoaderRoute: typeof LarnacaAirportTransfersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/larnaca-airport-to-paphos': {
+      id: '/larnaca-airport-to-paphos'
+      path: '/larnaca-airport-to-paphos'
+      fullPath: '/larnaca-airport-to-paphos'
+      preLoaderRoute: typeof LarnacaAirportToPaphosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fleet': {
+      id: '/fleet'
+      path: '/fleet'
+      fullPath: '/fleet'
+      preLoaderRoute: typeof FleetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cyprus-airport-transfers': {
+      id: '/cyprus-airport-transfers'
+      path: '/cyprus-airport-transfers'
+      fullPath: '/cyprus-airport-transfers'
+      preLoaderRoute: typeof CyprusAirportTransfersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +337,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BlogRoute: BlogRoute,
+  ContactRoute: ContactRoute,
+  CyprusAirportTransfersRoute: CyprusAirportTransfersRoute,
+  FaqRoute: FaqRoute,
+  FleetRoute: FleetRoute,
+  LarnacaAirportToPaphosRoute: LarnacaAirportToPaphosRoute,
+  LarnacaAirportTransfersRoute: LarnacaAirportTransfersRoute,
+  PaphosAirportTransfersRoute: PaphosAirportTransfersRoute,
+  ReviewsRoute: ReviewsRoute,
+  TaxiToChlorakaRoute: TaxiToChlorakaRoute,
+  TaxiToCoralBayRoute: TaxiToCoralBayRoute,
+  TaxiToLimassolRoute: TaxiToLimassolRoute,
+  TaxiToPeyiaRoute: TaxiToPeyiaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
