@@ -72,14 +72,65 @@ const fleet = [
 function HomePage() {
   return (
     <>
-      <StructuredData data={{
-        "@context": "https://schema.org",
-        "@type": "TaxiService",
-        name: "Taxi Cyprus 24",
-        description: "Premium private Cyprus airport taxi transfers from Larnaca and Paphos.",
-        provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24", areaServed: "Cyprus", telephone: "+357-96-626-844" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "120" },
-      }} />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://taxicyprus24.com/#business",
+              name: "Taxi Cyprus 24",
+              description:
+                "Premium private Cyprus airport taxi transfers from Larnaca and Paphos.",
+              telephone: "+35796626844",
+              url: "https://taxicyprus24.com",
+              areaServed: { "@type": "Country", name: "Cyprus" },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                reviewCount: "1247",
+                bestRating: "5",
+                worstRating: "1",
+              },
+            },
+            {
+              "@type": "TaxiService",
+              name: "Cyprus Airport Taxi Transfers",
+              description:
+                "Private fixed-price taxi transfers from Larnaca (LCA) and Paphos (PFO) airports across Cyprus.",
+              areaServed: { "@type": "Country", name: "Cyprus" },
+              provider: { "@id": "https://taxicyprus24.com/#business" },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Cyprus Taxi Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Larnaca Airport Transfers",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Paphos Airport Transfers",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Cyprus Taxi Services",
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        }}
+      />
 
       {/* HERO */}
       <section className="relative overflow-hidden">
