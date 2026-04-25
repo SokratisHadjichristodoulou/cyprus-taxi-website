@@ -34,7 +34,7 @@ const fleet = [
   {
     img: vanImg,
     name: "Premium 7-Seater Van",
-    model: "Mercedes V-Class or similar",
+    model: "Ford Tourneo Custom or similar",
     desc: "Spacious 7-seater for families and groups. Plenty of room for luggage, child seats and golf bags.",
     pax: "Up to 7 passengers",
     bags: "7 large suitcases",
