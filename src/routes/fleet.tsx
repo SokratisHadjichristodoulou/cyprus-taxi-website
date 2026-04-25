@@ -3,7 +3,7 @@ import { ArrowRight, Users, Briefcase, Wifi, Snowflake, Baby } from "lucide-reac
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import sedanImg from "@/assets/fleet-sedan.jpg";
 import vanImg from "@/assets/fleet-van.jpg";
-import luxuryImg from "@/assets/fleet-luxury.jpg";
+import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 
