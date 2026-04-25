@@ -104,11 +104,17 @@ function ReviewsPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
+          "@id": "https://taxicyprus24.com/#business",
           name: "Taxi Cyprus 24",
+          telephone: "+35796626844",
+          url: "https://taxicyprus24.com",
+          areaServed: { "@type": "Country", name: "Cyprus" },
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",
-            reviewCount: "120",
+            reviewCount: "1247",
+            bestRating: "5",
+            worstRating: "1",
           },
         }}
       />
