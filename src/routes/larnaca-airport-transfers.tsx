@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import larnacaImg from "@/assets/dest-larnaca.jpg";
 import { TransferPage } from "@/components/TransferPage";
+import { PriceTable } from "@/components/PriceTable";
+import { pricingFromLarnaca } from "@/lib/pricing";
 import { sharedFAQs } from "@/lib/faqs";
 
 export const Route = createFileRoute("/larnaca-airport-transfers")({
