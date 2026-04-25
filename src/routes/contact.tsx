@@ -7,7 +7,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact & Book — Taxi Cyprus 24" },
-      { name: "description", content: "Book your Cyprus airport transfer with Taxi Cyprus 24. Call +357 99 000 000, message on WhatsApp, or fill out the booking form for an instant quote." },
+      { name: "description", content: "Book your Cyprus airport transfer with Taxi Cyprus 24. Call +357 96 626 844, message on WhatsApp, or fill out the booking form for an instant quote." },
       { property: "og:title", content: "Contact & Book — Taxi Cyprus 24" },
       { property: "og:description", content: "Book your Cyprus airport transfer 24/7." },
     ],
@@ -27,8 +27,8 @@ function ContactPage() {
 
       <section className="container-tight py-16 md:py-20">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <ContactCard icon={<Phone />} title="Phone" main="+357 99 000 000" sub="Available 24/7" href="tel:+35799000000" />
-          <ContactCard icon={<MessageCircle />} title="WhatsApp" main="+357 99 000 000" sub="Fastest response" href="https://wa.me/35799000000" external />
+          <ContactCard icon={<Phone />} title="Phone" main="+357 96 626 844" sub="Available 24/7" href="tel:+35796626844" />
+          <ContactCard icon={<MessageCircle />} title="WhatsApp" main="+357 96 626 844" sub="Fastest response" href="https://wa.me/35796626844" external />
           <ContactCard icon={<Mail />} title="Email" main="bookings@taxicyprus24.com" sub="Reply within 1 hour" href="mailto:bookings@taxicyprus24.com" />
           <ContactCard icon={<MapPin />} title="Service area" main="All Cyprus" sub="From LCA & PFO airports" />
         </div>

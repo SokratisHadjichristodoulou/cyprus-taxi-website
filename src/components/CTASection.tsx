@@ -25,10 +25,10 @@ export function CTASection() {
               Book Your Transfer <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="tel:+35799000000"
+              href="tel:+35796626844"
               className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/15"
             >
-              <Phone className="h-4 w-4" /> +357 99 000 000
+              <Phone className="h-4 w-4" /> +357 96 626 844
             </a>
           </div>
         </div>

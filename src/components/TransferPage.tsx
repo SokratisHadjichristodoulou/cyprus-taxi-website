@@ -37,7 +37,7 @@ export function TransferPage(p: TransferPageProps) {
         name: p.title,
         description: p.subtitle,
         areaServed: { "@type": "Place", name: "Cyprus" },
-        provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24", telephone: "+357-99-000-000" },
+        provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24", telephone: "+357-96-626-844" },
       }} />
       <StructuredData data={{
         "@context": "https://schema.org",

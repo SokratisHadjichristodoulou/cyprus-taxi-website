@@ -77,7 +77,7 @@ function HomePage() {
         "@type": "TaxiService",
         name: "Taxi Cyprus 24",
         description: "Premium private Cyprus airport taxi transfers from Larnaca and Paphos.",
-        provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24", areaServed: "Cyprus", telephone: "+357-99-000-000" },
+        provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24", areaServed: "Cyprus", telephone: "+357-96-626-844" },
         aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "1247" },
       }} />
 
@@ -105,7 +105,7 @@ function HomePage() {
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-navy shadow-elegant transition-transform hover:scale-[1.02]">
                 Book Your Transfer <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="https://wa.me/35799000000" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/20">
+              <a href="https://wa.me/35796626844" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/20">
                 Get Instant Quote
               </a>
             </div>
