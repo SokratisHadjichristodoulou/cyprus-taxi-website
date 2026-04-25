@@ -40,15 +40,6 @@ const fleet = [
     bags: "7 large suitcases",
     priceFrom: "from €60",
   },
-  {
-    img: luxuryImg,
-    name: "Luxury S-Class",
-    model: "Mercedes S-Class",
-    desc: "The pinnacle of comfort. Reclining rear seats, premium audio, ambient lighting — for VIP and business clients.",
-    pax: "Up to 3 passengers",
-    bags: "3 large suitcases",
-    priceFrom: "from €120",
-  },
 ];
 
 const features = [
