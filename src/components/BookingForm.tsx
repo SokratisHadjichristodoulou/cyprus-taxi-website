@@ -84,7 +84,7 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
     const msg = encodeURIComponent(
       `Hi! I'd like to book a transfer:\n• From: ${pickup}\n• To: ${dropoff}\n• Date: ${date}\n• Passengers: ${passengers}${flight ? `\n• Flight: ${flight}` : ""}`,
     );
-    window.open(`https://wa.me/35799000000?text=${msg}`, "_blank");
+    window.open(`https://wa.me/35796626844?text=${msg}`, "_blank");
   };
 
   const isHero = variant === "hero";

@@ -10,7 +10,7 @@ const allFAQs = [
   ...sharedFAQs,
   {
     q: "How do I book an airport transfer?",
-    a: "You can book in three ways: (1) fill in the booking form on our website, (2) message us on WhatsApp at +357 99 000 000, or (3) call us. You'll receive a confirmation within minutes.",
+    a: "You can book in three ways: (1) fill in the booking form on our website, (2) message us on WhatsApp at +357 96 626 844, or (3) call us. You'll receive a confirmation within minutes.",
   },
   {
     q: "What is your cancellation policy?",
