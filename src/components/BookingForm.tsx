@@ -103,24 +103,30 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
 
       <div className="grid gap-4 md:grid-cols-2">
         <Field label="Pickup location" icon={<MapPin className="h-4 w-4" />}>
-          <input
-            list="cy-locations"
+          <select
             value={pickup}
-            onChange={(e) => setPickup(e.target.value)}
-            placeholder="e.g. Larnaca Airport"
-            maxLength={80}
-            className="w-full bg-transparent text-sm font-medium text-foreground outline-none placeholder:text-muted-foreground/70"
-          />
+            onChange={(e) => {
+              setPickup(e.target.value);
+              setDropoff("");
+            }}
+            className="w-full bg-transparent text-sm font-medium text-foreground outline-none"
+          >
+            {pickupLocations.map((l) => (
+              <option key={l} value={l}>{l}</option>
+            ))}
+          </select>
         </Field>
         <Field label="Drop-off location" icon={<MapPin className="h-4 w-4" />}>
-          <input
-            list="cy-locations"
+          <select
             value={dropoff}
             onChange={(e) => setDropoff(e.target.value)}
-            placeholder="e.g. Coral Bay"
-            maxLength={80}
-            className="w-full bg-transparent text-sm font-medium text-foreground outline-none placeholder:text-muted-foreground/70"
-          />
+            className="w-full bg-transparent text-sm font-medium text-foreground outline-none"
+          >
+            <option value="">Select destination…</option>
+            {dropoffOptions.map((l) => (
+              <option key={l} value={l}>{l}</option>
+            ))}
+          </select>
         </Field>
         <Field label="Date & time" icon={<Calendar className="h-4 w-4" />}>
           <input
@@ -136,8 +142,8 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
             onChange={(e) => setPassengers(e.target.value)}
             className="w-full bg-transparent text-sm font-medium text-foreground outline-none"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-              <option key={n} value={n}>{n} passenger{n > 1 ? "s" : ""}</option>
+            {passengerOptions.map((p) => (
+              <option key={p} value={p}>{p}</option>
             ))}
           </select>
         </Field>
@@ -153,10 +159,6 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
           </Field>
         </div>
       </div>
-
-      <datalist id="cy-locations">
-        {cyprusLocations.map((l) => <option key={l} value={l} />)}
-      </datalist>
 
       {error && (
         <p className="mt-3 text-sm font-medium text-destructive">{error}</p>
