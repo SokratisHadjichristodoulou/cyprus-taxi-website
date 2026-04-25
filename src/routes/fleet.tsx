@@ -3,7 +3,6 @@ import { ArrowRight, Users, Briefcase, Wifi, Snowflake, Baby } from "lucide-reac
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import sedanImg from "@/assets/fleet-sedan.jpg";
 import vanImg from "@/assets/fleet-van.jpg";
-import luxuryImg from "@/assets/fleet-luxury.jpg";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 
@@ -14,8 +13,8 @@ export const Route = createFileRoute("/fleet")({
       { name: "description", content: "Premium Mercedes-Benz fleet for Cyprus airport transfers — Executive E-Class sedans, V-Class 7-seater vans and luxury S-Class vehicles." },
       { property: "og:title", content: "Mercedes-Benz Fleet | Taxi Cyprus 24" },
       { property: "og:description", content: "Premium Mercedes-Benz vehicles for Cyprus airport transfers." },
-      { property: "og:image", content: luxuryImg },
-      { name: "twitter:image", content: luxuryImg },
+      { property: "og:image", content: heroImg },
+      { name: "twitter:image", content: heroImg },
     ],
   }),
   component: FleetPage,
@@ -39,15 +38,6 @@ const fleet = [
     pax: "Up to 7 passengers",
     bags: "7 large suitcases",
     priceFrom: "from €60",
-  },
-  {
-    img: luxuryImg,
-    name: "Luxury S-Class",
-    model: "Mercedes S-Class",
-    desc: "The pinnacle of comfort. Reclining rear seats, premium audio, ambient lighting — for VIP and business clients.",
-    pax: "Up to 3 passengers",
-    bags: "3 large suitcases",
-    priceFrom: "from €120",
   },
 ];
 
