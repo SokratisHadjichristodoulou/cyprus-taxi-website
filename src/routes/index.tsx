@@ -361,21 +361,46 @@ function HomePage() {
       <section className="bg-secondary/40 py-20 md:py-28">
         <div className="container-tight">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">Reviews</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">
+              TripAdvisor reviews
+            </span>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
-              Trusted by 5,000+ travellers
+              4.9★ on TripAdvisor — 120+ reviews
             </h2>
+            <p className="mt-4 text-sm text-muted-foreground md:text-base">
+              Ranked #6 of 94 Transportation in Paphos. Verified reviews from real travellers.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
-              { name: "Sarah M.", from: "London, UK", text: "Booked the Larnaca to Paphos transfer. Driver was waiting with a sign, helped with our cases and the Mercedes was spotless. Would book again." },
-              { name: "Michael K.", from: "Manchester, UK", text: "Used them four times now. Always punctual, fixed price, and the WhatsApp booking is so easy. Best taxi service in Cyprus by far." },
-              { name: "Emma R.", from: "Berlin, DE", text: "Late-night arrival from Paphos to Coral Bay — driver was already waiting when we landed. Clean car, child seat ready. Five stars." },
+              {
+                name: "Dmitry O",
+                from: "County Limerick, Ireland · TripAdvisor",
+                date: "Jun 2025",
+                text: "Vladimiros is a great safe driver, always on time, reasonably priced and has a new people carrier. We used his services throughout our entire stay both for the pick up at the airport and our hotel. Highly recommend.",
+              },
+              {
+                name: "Rayaa K",
+                from: "TripAdvisor",
+                date: "May 2025",
+                text: "Thank you Vlad! Very kind and friendly, excellent timing and took good care of the whole trip. 10/10 definitely recommend.",
+              },
+              {
+                name: "Joep D",
+                from: "TripAdvisor",
+                date: "Jul 2025",
+                text: "It was a very good experience — we have had this taxi multiple times, always on time, and he gave some good advice for our stay at different cities.",
+              },
             ].map((t) => (
               <div key={t.name} className="rounded-2xl border border-border bg-card p-7 shadow-card-soft">
-                <div className="flex">
-                  {[0,1,2,3,4].map((i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
+                <div className="flex items-center justify-between">
+                  <div className="flex">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <Star key={i} className="h-4 w-4 fill-gold text-gold" />
+                    ))}
+                  </div>
+                  <span className="text-xs text-muted-foreground">{t.date}</span>
                 </div>
                 <p className="mt-4 text-[15px] leading-relaxed text-foreground">"{t.text}"</p>
                 <div className="mt-5 border-t border-border pt-4">
@@ -387,8 +412,11 @@ function HomePage() {
           </div>
 
           <div className="mt-10 text-center">
-            <Link to="/reviews" className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline">
-              Read all reviews <ArrowRight className="h-4 w-4" />
+            <Link
+              to="/reviews"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
+            >
+              Read all 120+ TripAdvisor reviews <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
