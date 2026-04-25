@@ -2,21 +2,49 @@ import { useState } from "react";
 import { MapPin, Calendar, Users, Plane, ArrowRight } from "lucide-react";
 import { z } from "zod";
 
-const cyprusLocations = [
-  "Larnaca Airport",
-  "Paphos Airport",
-  "Paphos",
-  "Coral Bay",
-  "Peyia",
-  "Chloraka",
-  "Kato Paphos",
-  "Limassol",
-  "Limassol Marina",
-  "Ayia Napa",
-  "Protaras",
-  "Larnaca City",
-  "Nicosia",
-  "Tombs of the Kings",
+const pickupLocations = ["Paphos Airport", "Larnaca Airport"];
+
+const dropoffByPickup: Record<string, string[]> = {
+  "Paphos Airport": [
+    "Paphos Town / Kato Paphos",
+    "Tomb of the Kings",
+    "Chlorakas / Empa",
+    "Kissonerga / Tala",
+    "Kamares",
+    "Tsada",
+    "Coral Bay",
+    "Peyia",
+    "Polis – Lachi",
+    "Intercontinental Hotel (Aphrodite Hills)",
+    "Pissouri",
+    "Limassol",
+    "Nicosia",
+    "Larnaka",
+    "Ayia Napa / Protaras",
+  ],
+  "Larnaca Airport": [
+    "Paphos Town",
+    "Chlorakas / Empa",
+    "Kissonerga / Tala",
+    "Kamares",
+    "Tsada",
+    "Coral Bay",
+    "Peyia",
+    "Intercontinental Hotel (Aphrodite Hills)",
+    "Pissouri",
+    "Polis – Lachi",
+  ],
+};
+
+const passengerOptions = [
+  "1 Passenger",
+  "2 Passengers",
+  "3 Passengers",
+  "4 Passengers",
+  "5 Passengers",
+  "6 Passengers",
+  "7–8 Passengers",
+  "9–12 Passengers",
 ];
 
 const bookingSchema = z.object({
