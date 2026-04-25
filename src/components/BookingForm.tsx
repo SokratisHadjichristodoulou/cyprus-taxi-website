@@ -45,6 +45,14 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
 
   const dropoffOptions = dropoffByPickup[pickup] ?? [];
 
+  const quote = useMemo(() => {
+    if (!dropoff) return null;
+    const vehicle = passengerLabelToVehicle(passengers);
+    const price = findPrice(pickup, dropoff, vehicle);
+    if (price == null) return null;
+    return { price, vehicle };
+  }, [pickup, dropoff, passengers]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const result = bookingSchema.safeParse({ pickup, dropoff, date, passengers, flight });
