@@ -1,40 +1,13 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { MapPin, Calendar, Users, Plane, ArrowRight } from "lucide-react";
 import { z } from "zod";
+import { allPricing, findPrice, passengerLabelToVehicle } from "@/lib/pricing";
 
-const pickupLocations = ["Paphos Airport", "Larnaca Airport"];
+const pickupLocations = allPricing.map((p) => p.airport);
 
-const dropoffByPickup: Record<string, string[]> = {
-  "Paphos Airport": [
-    "Paphos Town / Kato Paphos",
-    "Tomb of the Kings",
-    "Chlorakas / Empa",
-    "Kissonerga / Tala",
-    "Kamares",
-    "Tsada",
-    "Coral Bay",
-    "Peyia",
-    "Polis – Lachi",
-    "Intercontinental Hotel (Aphrodite Hills)",
-    "Pissouri",
-    "Limassol",
-    "Nicosia",
-    "Larnaka",
-    "Ayia Napa / Protaras",
-  ],
-  "Larnaca Airport": [
-    "Paphos Town",
-    "Chlorakas / Empa",
-    "Kissonerga / Tala",
-    "Kamares",
-    "Tsada",
-    "Coral Bay",
-    "Peyia",
-    "Intercontinental Hotel (Aphrodite Hills)",
-    "Pissouri",
-    "Polis – Lachi",
-  ],
-};
+const dropoffByPickup: Record<string, string[]> = Object.fromEntries(
+  allPricing.map((p) => [p.airport, p.destinations.map((d) => d.destination)]),
+);
 
 const passengerOptions = [
   "1 Passenger",
