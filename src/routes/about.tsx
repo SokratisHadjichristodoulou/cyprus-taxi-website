@@ -51,7 +51,7 @@ function AboutPage() {
             <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>Taxi Cyprus 24 began with a single Mercedes E-Class and a simple promise: every traveller would be met on time, in a clean car, by a driver who genuinely cared.</p>
               <p>More than a decade and 5,000+ transfers later, that promise still defines how we operate. Our fixed-price model, free child seats, complimentary meet & greet and 24/7 availability are not features — they are the standard.</p>
-              <p>Today we serve guests from across the UK, Europe and beyond, including business travellers, families and tour groups. Our 4.9-star Google rating and 1,200+ verified reviews tell the rest of the story.</p>
+              <p>Today we serve guests from across the UK, Europe and beyond, including business travellers, families and tour groups. Our 4.9-star TripAdvisor rating and 120+ verified reviews tell the rest of the story.</p>
             </div>
             <Link to="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-[color:var(--navy-foreground)]">
               Book a transfer <ArrowRight className="h-4 w-4" />

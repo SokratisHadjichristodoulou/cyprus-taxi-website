@@ -78,7 +78,7 @@ function HomePage() {
         name: "Taxi Cyprus 24",
         description: "Premium private Cyprus airport taxi transfers from Larnaca and Paphos.",
         provider: { "@type": "LocalBusiness", name: "Taxi Cyprus 24", areaServed: "Cyprus", telephone: "+357-96-626-844" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "1247" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "120" },
       }} />
 
       {/* HERO */}
@@ -111,12 +111,12 @@ function HomePage() {
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-white/85">
-              <div className="flex items-center gap-2">
+              <Link to="/reviews" className="flex items-center gap-2 transition-opacity hover:opacity-80">
                 <div className="flex">
                   {[0,1,2,3,4].map((i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
                 </div>
-                <span><strong className="font-semibold text-white">4.9</strong> · 1,200+ Google reviews</span>
-              </div>
+                <span><strong className="font-semibold text-white">4.9</strong> · 120+ TripAdvisor reviews</span>
+              </Link>
               <div className="hidden h-4 w-px bg-white/20 sm:block" />
               <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> Licensed & insured</div>
             </div>
