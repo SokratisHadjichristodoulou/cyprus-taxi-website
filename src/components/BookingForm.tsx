@@ -146,11 +146,21 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
         <p className="mt-3 text-sm font-medium text-destructive">{error}</p>
       )}
 
+      {quote && (
+        <div className="mt-5 flex items-center justify-between rounded-xl border border-navy/15 bg-secondary/40 px-4 py-3">
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-navy/60">Your fixed price</div>
+            <div className="text-xs text-muted-foreground">{quote.vehicle} · all-inclusive</div>
+          </div>
+          <div className="font-display text-3xl font-bold text-navy">€{quote.price}</div>
+        </div>
+      )}
+
       <button
         type="submit"
         className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-navy px-6 py-4 text-sm font-semibold text-[color:var(--navy-foreground)] shadow-elegant transition-all hover:scale-[1.01] hover:shadow-glow"
       >
-        {submitted ? "Sending…" : "Get Instant Quote"}
+        {submitted ? "Sending…" : quote ? `Book for €${quote.price}` : "Get Instant Quote"}
         <ArrowRight className="h-4 w-4" />
       </button>
 
