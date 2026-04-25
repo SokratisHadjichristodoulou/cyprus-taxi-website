@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import paphosImg from "@/assets/dest-paphos.jpg";
 import { TransferPage } from "@/components/TransferPage";
+import { PriceTable } from "@/components/PriceTable";
+import { pricingFromPaphos } from "@/lib/pricing";
 import { sharedFAQs } from "@/lib/faqs";
 
 export const Route = createFileRoute("/paphos-airport-transfers")({
