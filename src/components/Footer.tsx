@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -7,9 +8,7 @@ export function Footer() {
       <div className="container-tight grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-white/10">
-              <span className="font-display text-base font-bold">T</span>
-            </div>
+            <img src={logo} alt="Taxi Cyprus 24" width={36} height={36} className="h-9 w-9 object-contain" />
             <div className="font-display text-base font-bold">Taxi Cyprus 24</div>
           </div>
           <p className="mt-4 max-w-xs text-sm text-white/70">
