@@ -1,12 +1,15 @@
 import { MessageCircle } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 export function WhatsAppButton() {
+  const { t } = useI18n();
+  const message = encodeURIComponent(t("wa.prefilledMessage"));
   return (
     <a
-      href="https://wa.me/35796626844?text=Hi!%20I%27d%20like%20to%20book%20a%20Cyprus%20airport%20transfer"
+      href={`https://wa.me/35796626844?text=${message}`}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
+      aria-label={t("wa.ariaLabel")}
       className="fixed bottom-24 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-elegant transition-transform hover:scale-110 md:bottom-8 md:right-8 md:h-16 md:w-16"
     >
       <MessageCircle className="h-6 w-6 fill-white md:h-7 md:w-7" />

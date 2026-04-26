@@ -108,7 +108,18 @@ type TranslationKey =
   | "trust.fixedPrices"
   | "trust.meetGreet"
   | "trust.support247"
-  | "trust.freeCancel";
+  | "trust.freeCancel"
+  | "price.from"
+  | "price.fixedFrom"
+  | "price.totalPerVehicle"
+  | "price.destination"
+  | "price.seater4"
+  | "price.seater6"
+  | "price.seater12"
+  | "airport.paphos"
+  | "airport.larnaca"
+  | "wa.ariaLabel"
+  | "wa.prefilledMessage";
 
 const translations: Record<TranslationKey, Record<Locale, string>> = {
   // Navigation
@@ -231,6 +242,31 @@ const translations: Record<TranslationKey, Record<Locale, string>> = {
   "trust.meetGreet": { en: "Meet & greet", el: "Υπηρεσία υποδοχής", ru: "Встреча в аэропорту" },
   "trust.support247": { en: "24/7 support", el: "Υποστήριξη 24/7", ru: "Поддержка 24/7" },
   "trust.freeCancel": { en: "Free cancellation", el: "Δωρεάν ακύρωση", ru: "Бесплатная отмена" },
+
+  // Price table
+  "price.from": { en: "From", el: "Από", ru: "Из" },
+  "price.fixedFrom": { en: "Fixed prices from", el: "Σταθερές τιμές από", ru: "Фиксированные цены из" },
+  "price.totalPerVehicle": {
+    en: "Total per vehicle · incl. tolls, child seats & meet & greet",
+    el: "Σύνολο ανά όχημα · διόδια, παιδικά καθίσματα & υποδοχή",
+    ru: "Итог за автомобиль · включая дороги, детские кресла и встречу",
+  },
+  "price.destination": { en: "Destination", el: "Προορισμός", ru: "Направление" },
+  "price.seater4": { en: "4 Seater", el: "4 θέσεων", ru: "4 места" },
+  "price.seater6": { en: "6 Seater", el: "6 θέσεων", ru: "6 мест" },
+  "price.seater12": { en: "12 Seater", el: "12 θέσεων", ru: "12 мест" },
+
+  // Airports
+  "airport.paphos": { en: "Paphos Airport", el: "Αεροδρόμιο Πάφου", ru: "Аэропорт Пафоса" },
+  "airport.larnaca": { en: "Larnaca Airport", el: "Αεροδρόμιο Λάρνακας", ru: "Аэропорт Ларнаки" },
+
+  // WhatsApp button
+  "wa.ariaLabel": { en: "Chat on WhatsApp", el: "Συνομιλία στο WhatsApp", ru: "Написать в WhatsApp" },
+  "wa.prefilledMessage": {
+    en: "Hi! I'd like to book a Cyprus airport transfer",
+    el: "Γεια σας! Θα ήθελα να κάνω κράτηση για μεταφορά από αεροδρόμιο της Κύπρου",
+    ru: "Здравствуйте! Я бы хотел(а) заказать трансфер из аэропорта Кипра",
+  },
 };
 
 export function translate(key: TranslationKey, locale: Locale): string {
