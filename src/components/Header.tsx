@@ -24,28 +24,28 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur-xl">
-      <div className="container-tight flex h-16 items-center justify-between md:h-20">
-        <Link to={homePath} className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Taxi Cyprus 24" className="h-10 w-10 object-contain" width={40} height={40} />
+      <div className="container-tight flex h-16 items-center justify-between gap-4 md:h-20">
+        <Link to={homePath} className="flex shrink-0 items-center gap-2.5" onClick={() => setOpen(false)}>
+          <img src={logo} alt="Taxi Cyprus 24" className="h-9 w-9 object-contain md:h-10 md:w-10" width={40} height={40} />
 
           <div className="leading-tight">
             <div className="font-display text-[15px] font-bold tracking-tight text-navy">
               Taxi Cyprus 24
             </div>
-            <div className="text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
+            <div className="hidden text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground sm:block">
               {t("header.premiumTransfers")}
             </div>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-5 xl:flex 2xl:gap-7">
           {navLinks.map((l) => {
             const href = withLocale(locale, l.path);
             return (
               <Link
                 key={l.path}
                 to={href}
-                className="text-sm font-medium text-foreground/75 transition-colors hover:text-navy"
+                className="whitespace-nowrap text-sm font-medium text-foreground/75 transition-colors hover:text-navy"
                 activeProps={{ className: "text-navy" }}
                 activeOptions={{ exact: l.path === "/" }}
               >
@@ -55,7 +55,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 md:gap-3">
           <Link
             to={switchPath}
             className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-navy transition-colors hover:bg-secondary md:inline-flex"
@@ -66,19 +66,26 @@ export function Header() {
           </Link>
           <a
             href="tel:+35796626844"
-            className="hidden items-center gap-2 text-sm font-semibold text-navy md:flex"
+            className="hidden h-10 w-10 items-center justify-center rounded-full border border-border text-navy transition-colors hover:bg-secondary md:inline-flex 2xl:hidden"
+            aria-label="Call +357 96 626 844"
+          >
+            <Phone className="h-4 w-4" />
+          </a>
+          <a
+            href="tel:+35796626844"
+            className="hidden whitespace-nowrap items-center gap-2 text-sm font-semibold text-navy 2xl:flex"
           >
             <Phone className="h-4 w-4" />
             +357 96 626 844
           </a>
           <Link
             to={contactPath}
-            className="hidden rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-[color:var(--navy-foreground)] shadow-elegant transition-all hover:scale-[1.02] md:inline-flex"
+            className="hidden whitespace-nowrap rounded-full bg-navy px-5 py-2.5 text-sm font-semibold text-[color:var(--navy-foreground)] shadow-elegant transition-all hover:scale-[1.02] md:inline-flex"
           >
             {t("cta.bookNow")}
           </Link>
           <button
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border xl:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -88,7 +95,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background lg:hidden">
+        <div className="border-t border-border bg-background xl:hidden">
           <nav className="container-tight flex flex-col py-4">
             {navLinks.map((l) => {
               const href = withLocale(locale, l.path);
