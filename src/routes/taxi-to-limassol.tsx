@@ -28,10 +28,13 @@ export const Route = createFileRoute("/taxi-to-limassol")({
       toLocation="Limassol"
       duration="45 min / 50 min"
       distance="70 km / 65 km"
-      intro="Limassol is the second-largest city in Cyprus and a major business, marina and resort destination. Our private taxi to Limassol delivers you directly to your business hotel, marina apartment or beachfront resort in comfort."
+      intro="Limassol is the second-largest city in Cyprus and one of the island's top destinations for business travel, luxury resorts, beaches, and marina lifestyle. Taxicyprus24 provides reliable private airport transfers to Limassol from Larnaca Airport and Paphos Airport with fixed prices, professional drivers, and 24/7 service."
       bodyParagraphs={[
-        "From Larnaca Airport, Limassol is around 45 minutes via the A1/A5 motorway. From Paphos Airport, the journey is approximately 50 minutes via the A6.",
-        "We cover all areas of Limassol including Limassol Marina, Old Town, Germasogeia, Amathus tourist strip, Mouttagiaka and Pyrgos. Business travellers can pre-book S-Class luxury sedans for the highest level of comfort.",
+        "Our private Limassol airport taxi service offers direct door-to-door transfers to hotels, marina apartments, business centres, villas, and beachfront resorts — with no waiting, no shared rides, and no hidden fees.",
+        "From Larnaca Airport, Limassol is approximately 45 minutes via the A1/A5 motorway. Transfers from Paphos Airport to Limassol usually take around 50 minutes via the A6 motorway.",
+        "We cover all Limassol areas including Limassol Marina, Old Town Limassol, Germasogeia, Amathus tourist area, Mouttagiaka, and Pyrgos. Business travellers and VIP guests can also pre-book luxury Mercedes S-Class airport transfers for premium comfort and executive travel across Cyprus.",
+        "Every Limassol airport transfer includes fixed-price taxi rates, meet & greet at the airport, real-time flight tracking, free baby and child seats, air-conditioned Mercedes vehicles, and card, bank transfer, or cash payment options in EUR or GBP.",
+        "Whether you need a taxi from Larnaca Airport to Limassol, a private transfer from Paphos Airport, or executive chauffeur service in Cyprus, Taxicyprus24 guarantees comfortable, professional, and stress-free travel.",
       ]}
       highlights={["Direct to Limassol hotel or marina", "Premium Mercedes-Benz", "Ideal for business travellers", "Fixed price guarantee", "Meet & greet at airport", "24/7 service"]}
       prices={[
