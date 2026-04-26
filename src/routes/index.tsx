@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ShieldCheck, Clock, BadgeCheck, Plane, Baby, CreditCard,
-  Star, ArrowRight, MapPin, Wifi,
+  Star, ArrowRight, MapPin,
 } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import meetGreetImg from "@/assets/meet-greet.jpg";
@@ -341,7 +341,6 @@ function HomePage() {
                 "Personal name sign in arrivals hall",
                 "Help with luggage included",
                 "Complimentary bottled water on board",
-                "Free Wi-Fi in luxury vehicles",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-[color:var(--success)]" />
