@@ -44,23 +44,23 @@ export function Footer() {
     en: [
       { path: "/contact", label: "Taxi Near Me" },
       { path: "/cyprus-airport-transfers", label: "Airport Taxi Near Me" },
-      { path: "/pricing", label: "24/7 Taxi Cyprus" },
-      { path: "/fleet", label: "Private Taxi Service" },
-      { path: "/pricing", label: "Cheap Airport Transfers Cyprus" },
+      { path: "/pricing", label: "24/7 Taxi Cyprus near me" },
+      { path: "/fleet", label: "Private Taxi Service near me" },
+      { path: "/pricing", label: "Cheap Airport Transfers Cyprus near me" },
     ],
     el: [
       { path: "/contact", label: "Ταξί κοντά μου" },
       { path: "/cyprus-airport-transfers", label: "Ταξί αεροδρομίου κοντά μου" },
-      { path: "/pricing", label: "Ταξί 24/7 Κύπρος" },
-      { path: "/fleet", label: "Ιδιωτική υπηρεσία ταξί" },
-      { path: "/pricing", label: "Φθηνές μεταφορές αεροδρομίου Κύπρος" },
+      { path: "/pricing", label: "Ταξί 24/7 Κύπρος κοντά μου" },
+      { path: "/fleet", label: "Ιδιωτική υπηρεσία ταξί κοντά μου" },
+      { path: "/pricing", label: "Φθηνές μεταφορές αεροδρομίου Κύπρος κοντά μου" },
     ],
     ru: [
       { path: "/contact", label: "Такси рядом со мной" },
       { path: "/cyprus-airport-transfers", label: "Такси из аэропорта рядом" },
-      { path: "/pricing", label: "Такси 24/7 на Кипре" },
-      { path: "/fleet", label: "Частная служба такси" },
-      { path: "/pricing", label: "Дешёвые трансферы из аэропорта Кипра" },
+      { path: "/pricing", label: "Такси 24/7 на Кипре рядом со мной" },
+      { path: "/fleet", label: "Частная служба такси рядом со мной" },
+      { path: "/pricing", label: "Дешёвые трансферы из аэропорта Кипра рядом со мной" },
     ],
   };
 
