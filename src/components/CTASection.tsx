@@ -14,8 +14,8 @@ export function CTASection() {
           <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-5xl">
             Book your Cyprus airport transfer
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-base text-white/75 md:text-lg">
-            Fixed prices, free cancellation, professional drivers and meet & greet — every time.
+          <p className="mx-auto mt-4 max-w-2xl text-base text-white/75 md:text-lg">
+            Taxicyprus24 combines fixed-price Cyprus airport transfers, free cancellation, professional English-speaking drivers, and reliable meet & greet service on every booking. Whether you need a taxi from Larnaca Airport, Paphos Airport, Limassol, or anywhere in Cyprus, we guarantee comfortable private transfers with no hidden fees, no surge pricing, and 24/7 customer support — every time.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
