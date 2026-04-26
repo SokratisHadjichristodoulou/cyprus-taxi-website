@@ -11,18 +11,18 @@ const allDestinations = Array.from(
   new Set(allPricing.flatMap((p) => p.destinations.map((d) => d.destination))),
 ).sort((a, b) => a.localeCompare(b));
 
-// Area presets (broad regions)
-const areaLocations = ["Paphos area", "Limassol area", "Larnaca area", "Nicosia area"];
+// Area presets (broad regions) — labels shown as plain city names
+const areaLocations = ["Paphos", "Limassol", "Larnaca", "Nicosia"];
 
 // All pickup options: airports first, then areas, then specific destinations
 const pickupLocations = [...airportLocations, ...areaLocations, ...allDestinations];
 
-// For dropoff: if pickup is an airport, show that airport's destinations + areas.
-// If pickup is an area or a destination, the dropoff must be an airport (reverse trip).
+// For dropoff: always include both airports. If pickup is an airport, also include
+// that airport's destinations + areas. Otherwise (area/destination pickup), only airports.
 function getDropoffOptions(pickup: string): string[] {
   const airportPricing = allPricing.find((p) => p.airport === pickup);
   if (airportPricing) {
-    return [...airportPricing.destinations.map((d) => d.destination), ...areaLocations];
+    return [...airportLocations, ...airportPricing.destinations.map((d) => d.destination), ...areaLocations];
   }
   return airportLocations;
 }
