@@ -93,7 +93,7 @@ function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Премиальный трансфер Mercedes из аэропорта Кипра" className="h-full w-full object-cover" loading="eager" width={1920} height={1080} />
+          <img src={heroImg} alt="Премиальный трансфер Mercedes из аэропорта Кипра" className="h-full w-full object-cover object-[65%_center] lg:object-center" loading="eager" width={1920} height={1080} />
           <div className="absolute inset-0 hero-overlay" />
         </div>
 
