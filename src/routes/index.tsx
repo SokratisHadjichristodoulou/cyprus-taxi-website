@@ -147,8 +147,7 @@ function HomePage() {
               Private Cyprus Airport Taxi Transfers
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">
-              Reliable transfers from Larnaca & Paphos airports to all Cyprus destinations with
-              fixed prices, professional drivers and free meet & greet.
+              Fixed-price Cyprus airport transfers from Larnaca & Paphos airports with professional drivers, private taxis, and free meet & greet service.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
