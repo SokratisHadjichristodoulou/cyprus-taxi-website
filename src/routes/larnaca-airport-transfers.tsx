@@ -31,10 +31,13 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
         toLocation="All Cyprus"
         duration="15 min – 1h 45m"
         distance="10–180 km"
-        intro="Larnaca International Airport (LCA) is the main gateway to Cyprus, handling the majority of international arrivals from the UK and Europe. Our premium airport transfer service makes your onward journey effortless — from the moment you land to the moment you check in to your hotel."
+        intro="Larnaca International Airport (LCA) is the largest and busiest airport in Cyprus, serving millions of international travellers from the UK and Europe every year. Taxicyprus24 provides premium private airport transfers from Larnaca Airport with fixed prices, professional drivers, flight tracking, and 24/7 service across Cyprus."
         bodyParagraphs={[
-          "Your professional driver will be waiting in the arrivals hall with a personal name sign, ready to help with your luggage. We monitor your flight live, so delays never affect your booking. Just walk out, meet your driver, and relax.",
-          "From Larnaca Airport we cover Larnaca city (15 min), Limassol (45 min), Ayia Napa & Protaras (45 min), Nicosia (40 min), Paphos (1h 30m), Coral Bay (1h 40m) and every village in between — all at a fixed total price.",
+          "Skip long taxi queues, crowded shuttle buses, and expensive last-minute airport taxis. Our private Cyprus airport transfer service offers direct door-to-door transport to hotels, villas, apartments, resorts, and business destinations anywhere on the island.",
+          "Your professional driver will meet you inside the arrivals hall with a personalised name sign, assist with luggage, and escort you directly to a clean, air-conditioned Mercedes vehicle. We monitor your flight in real time, so delayed arrivals never affect your airport transfer booking.",
+          "Popular transfer times from Larnaca Airport include Larnaca city (approximately 15 minutes), Nicosia (approximately 40 minutes), Limassol (approximately 45 minutes), Ayia Napa & Protaras (approximately 45 minutes), Paphos (approximately 1 hour 30 minutes), and Coral Bay (approximately 1 hour 40 minutes).",
+          "Every Larnaca Airport taxi transfer includes fixed-price airport taxi rates, meet & greet service, real-time flight monitoring, free baby and child seats, complimentary bottled water, and card, bank transfer, or cash payment options in EUR or GBP.",
+          "Whether you need a taxi from Larnaca Airport to Limassol, Paphos, Coral Bay, Ayia Napa, Nicosia, or anywhere else in Cyprus, Taxicyprus24 guarantees reliable, comfortable, and stress-free private airport transfers with no hidden fees.",
         ]}
         highlights={["Direct from Larnaca Airport (LCA)", "Meet & greet at arrivals", "Mercedes-Benz vehicles", "Free child seats", "Flight tracking included", "Pay cash or card"]}
         prices={[
