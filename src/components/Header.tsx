@@ -45,22 +45,6 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-5 xl:flex 2xl:gap-7">
-          {navLinks.map((l) => {
-            const href = withLocale(locale, l.path);
-            return (
-              <Link
-                key={l.path}
-                to={href}
-                className="whitespace-nowrap text-sm font-medium text-foreground/75 transition-colors hover:text-navy"
-                activeProps={{ className: "text-navy" }}
-                activeOptions={{ exact: l.path === "/" }}
-              >
-                {l.label}
-              </Link>
-            );
-          })}
-        </nav>
 
         <div className="flex shrink-0 items-center gap-2 md:gap-3">
           <DropdownMenu>
@@ -92,17 +76,10 @@ export function Header() {
 
           <a
             href="tel:+35796626844"
-            className="hidden h-10 w-10 items-center justify-center rounded-full border border-border text-navy transition-colors hover:bg-secondary md:inline-flex 2xl:hidden"
+            className="hidden h-10 w-10 items-center justify-center rounded-full border border-border text-navy transition-colors hover:bg-secondary md:inline-flex"
             aria-label="Call +357 96 626 844"
           >
             <Phone className="h-4 w-4" />
-          </a>
-          <a
-            href="tel:+35796626844"
-            className="hidden whitespace-nowrap items-center gap-2 text-sm font-semibold text-navy 2xl:flex"
-          >
-            <Phone className="h-4 w-4" />
-            +357 96 626 844
           </a>
           <Link
             to={contactPath}
@@ -111,7 +88,7 @@ export function Header() {
             {t("cta.bookNow")}
           </Link>
           <button
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border xl:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
