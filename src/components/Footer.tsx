@@ -32,7 +32,7 @@ export function Footer() {
 
   return (
     <footer className="mt-24 border-t border-border bg-navy text-[color:var(--navy-foreground)]">
-      <div className="container-tight grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-tight grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-5">
         <div>
           <div className="flex items-center gap-2.5">
             <img src={logo} alt="Taxi Cyprus 24" width={36} height={36} className="h-9 w-9 object-contain" />
