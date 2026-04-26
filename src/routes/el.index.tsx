@@ -192,7 +192,7 @@ function HomePage() {
                 {popularRoutes.map((r) => (
                   <tr key={r.slug} className="border-t border-border transition-colors hover:bg-secondary/30">
                     <td className="px-5 py-5 md:px-7">
-                      <Link to={`/el${r.slug}`} className="block">
+                      <Link to={`/el${r.slug}` as string} className="block">
                         <div className="font-semibold text-navy">{r.name}</div>
                         <div className="mt-0.5 text-xs text-muted-foreground sm:hidden">{r.duration} · {r.distance}</div>
                       </Link>
