@@ -3,7 +3,7 @@ import type { FAQItem } from "@/components/FAQAccordion";
 export const sharedFAQs: FAQItem[] = [
   {
     q: "How much is a taxi from Larnaca Airport to Paphos?",
-    a: "A private fixed-price taxi from Larnaca Airport to Paphos costs from €95 in our standard sedan and from €130 in a luxury Mercedes S-Class. The price is fixed — no surge, no surprises, and includes meet & greet, flight tracking and free child seats.",
+    a: "A private fixed-price taxi from Larnaca Airport to Paphos costs from €140 in our standard sedan (up to 4 passengers) and from €180 in a 6-seater premium van. The price is fixed — no surge, no surprises, and includes meet & greet, flight tracking and free child seats.",
   },
   {
     q: "How long does the airport transfer take?",
