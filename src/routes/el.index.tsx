@@ -302,22 +302,96 @@ function HomePage() {
                 </li>
               ))}
             </ul>
+            <Link to="/el/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-[color:var(--navy-foreground)] shadow-elegant transition-transform hover:scale-[1.02]">
+              Κάντε Κράτηση <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="bg-secondary/40 py-20 md:py-28">
+        <div className="container-tight">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">
+              Κριτικές TripAdvisor
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
+              4.9★ στο TripAdvisor — 120+ κριτικές
+            </h2>
+            <p className="mt-4 text-sm text-muted-foreground md:text-base">
+              #6 από 94 Μεταφορές στην Πάφο. Επαληθευμένες κριτικές από πραγματικούς ταξιδιώτες.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                name: "Dmitry O",
+                from: "Κομητεία Limerick, Ιρλανδία · TripAdvisor",
+                date: "Ιούν 2025",
+                text: "Ο Βλαδίμηρος είναι εξαιρετικός και ασφαλής οδηγός, πάντα στην ώρα του, σε λογικές τιμές και με καινούριο μίνι βαν. Χρησιμοποιήσαμε τις υπηρεσίες του σε όλη τη διάρκεια της διαμονής μας, τόσο για την παραλαβή στο αεροδρόμιο όσο και στο ξενοδοχείο. Συνιστάται ανεπιφύλακτα.",
+              },
+              {
+                name: "Rayaa K",
+                from: "TripAdvisor",
+                date: "Μάι 2025",
+                text: "Ευχαριστούμε Vlad! Πολύ ευγενικός και φιλικός, εξαιρετική συνέπεια στον χρόνο και άριστη φροντίδα σε όλο το ταξίδι. 10/10 το συνιστώ ανεπιφύλακτα.",
+              },
+              {
+                name: "Joep D",
+                from: "TripAdvisor",
+                date: "Ιούλ 2025",
+                text: "Ήταν πολύ καλή εμπειρία — έχουμε χρησιμοποιήσει αυτό το ταξί πολλές φορές, πάντα στην ώρα του, και μας έδωσε καλές συμβουλές για τη διαμονή μας σε διαφορετικές πόλεις.",
+              },
+            ].map((t) => (
+              <div key={t.name} className="rounded-2xl border border-border bg-card p-7 shadow-card-soft">
+                <div className="flex items-center justify-between">
+                  <div className="flex">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <Star key={i} className="h-4 w-4 fill-gold text-gold" />
+                    ))}
+                  </div>
+                  <span className="text-xs text-muted-foreground">{t.date}</span>
+                </div>
+                <p className="mt-4 text-[15px] leading-relaxed text-foreground">"{t.text}"</p>
+                <div className="mt-5 border-t border-border pt-4">
+                  <div className="font-semibold text-navy">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.from}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/el/reviews"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
+            >
+              Διαβάστε όλες τις 120+ κριτικές TripAdvisor <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/40 py-20 md:py-28">
-        <div className="container-tight">
-          <div className="mx-auto max-w-2xl text-center">
+      <section className="container-tight py-20 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+          <div>
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">Συχνές ερωτήσεις</span>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
-              Όλα όσα πρέπει να γνωρίζετε
+              Συχνές ερωτήσεις
             </h2>
+            <p className="mt-5 text-base text-muted-foreground">
+              Όλα όσα πρέπει να γνωρίζετε για τις μεταφορές αεροδρομίου στην Κύπρο.
+            </p>
+            <div className="mt-8 hidden lg:block">
+              <Link to="/el/faq" className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline">
+                Όλες οι συχνές ερωτήσεις <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </div>
-          <div className="mx-auto mt-12 max-w-3xl">
-            <FAQAccordion items={sharedFAQsEl} />
-          </div>
+          <FAQAccordion items={sharedFAQsEl.slice(0, 6)} />
         </div>
       </section>
 
