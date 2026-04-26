@@ -7,9 +7,9 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/taxi-to-peyia")({
   head: () => ({
     meta: [
-      { title: "Taxi to Peyia from €35 — Airport Transfers | Taxi Cyprus 24" },
-      { name: "description", content: "Private taxi to Peyia from Paphos Airport (€35) and Larnaca Airport (€115). Fixed price, professional driver, free child seats, 24/7." },
-      { property: "og:title", content: "Taxi to Peyia from €35" },
+      { title: "Taxi to Peyia from €65 — Airport Transfers | Taxi Cyprus 24" },
+      { name: "description", content: "Private taxi to Peyia from Paphos Airport (€65) and Larnaca Airport (€170). Fixed price, professional driver, free child seats, 24/7." },
+      { property: "og:title", content: "Taxi to Peyia from €65" },
       { property: "og:description", content: "Private fixed-price taxi transfer to Peyia, Cyprus." },
       { property: "og:image", content: peyiaImg },
       { name: "twitter:image", content: peyiaImg },
@@ -37,9 +37,10 @@ export const Route = createFileRoute("/taxi-to-peyia")({
       ]}
       highlights={["Direct to your Peyia villa", "Drivers know all hillside roads", "Clean and Luxury cars", "Fixed price", "Free child seats", "24/7 booking"]}
       prices={[
-        { type: "Paphos Airport to Peyia", pax: "Up to 3 passengers", price: "€35" },
-        { type: "Larnaca Airport to Peyia", pax: "Up to 3 passengers", price: "€115" },
-        { type: "7-seater Premium Van", pax: "Up to 7 passengers", price: "€55+" },
+        { type: "Paphos Airport to Peyia (Sedan)", pax: "Up to 4 passengers", price: "€65" },
+        { type: "Paphos Airport to Peyia (Van)", pax: "Up to 6 passengers", price: "€85" },
+        { type: "Larnaca Airport to Peyia (Sedan)", pax: "Up to 4 passengers", price: "€170" },
+        { type: "Larnaca Airport to Peyia (Van)", pax: "Up to 6 passengers", price: "€200" },
       ]}
       nearbyAreas={["Sea Caves", "St George Peyia", "Coral Bay", "Akamas", "Kissonerga"]}
       faqs={sharedFAQs.slice(0, 6)}

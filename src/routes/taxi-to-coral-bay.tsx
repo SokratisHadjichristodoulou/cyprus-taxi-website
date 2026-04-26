@@ -7,9 +7,9 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/taxi-to-coral-bay")({
   head: () => ({
     meta: [
-      { title: "Taxi to Coral Bay from €35 — Airport Transfers | Taxi Cyprus 24" },
-      { name: "description", content: "Private taxi to Coral Bay from Paphos Airport (€35) and Larnaca Airport (€110). Fixed price, meet & greet, free child seats, 24/7 booking." },
-      { property: "og:title", content: "Taxi to Coral Bay from €35" },
+      { title: "Taxi to Coral Bay from €65 — Airport Transfers | Taxi Cyprus 24" },
+      { name: "description", content: "Private taxi to Coral Bay from Paphos Airport (€65) and Larnaca Airport (€170). Fixed price, meet & greet, free child seats, 24/7 booking." },
+      { property: "og:title", content: "Taxi to Coral Bay from €65" },
       { property: "og:description", content: "Private fixed-price airport taxi to Coral Bay, Cyprus." },
       { property: "og:image", content: coralBayImg },
       { name: "twitter:image", content: coralBayImg },
@@ -38,9 +38,10 @@ export const Route = createFileRoute("/taxi-to-coral-bay")({
       ]}
       highlights={["Direct to your Coral Bay hotel", "Clean and Luxury cars", "Fixed price guarantee", "Free child seats", "24/7 night arrivals", "Meet & greet included"]}
       prices={[
-        { type: "Paphos Airport to Coral Bay", pax: "Up to 3 passengers", price: "€35" },
-        { type: "Larnaca Airport to Coral Bay", pax: "Up to 3 passengers", price: "€110" },
-        { type: "7-seater (any airport)", pax: "Up to 7 passengers", price: "€55+" },
+        { type: "Paphos Airport to Coral Bay (Sedan)", pax: "Up to 4 passengers", price: "€65" },
+        { type: "Paphos Airport to Coral Bay (Van)", pax: "Up to 6 passengers", price: "€85" },
+        { type: "Larnaca Airport to Coral Bay (Sedan)", pax: "Up to 4 passengers", price: "€170" },
+        { type: "Larnaca Airport to Coral Bay (Van)", pax: "Up to 6 passengers", price: "€200" },
       ]}
       nearbyAreas={["Coral Beach Hotel", "Mayfair Coral Bay", "Corallia Beach", "Akamas Peninsula", "Sea Caves", "Peyia"]}
       faqs={sharedFAQs.slice(0, 6)}

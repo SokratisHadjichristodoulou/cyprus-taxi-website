@@ -9,9 +9,9 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/larnaca-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Larnaca Airport Transfers & Taxi from €35 | Taxi Cyprus 24" },
-      { name: "description", content: "Private Larnaca Airport (LCA) taxi transfers to Paphos, Limassol, Ayia Napa, Protaras, Nicosia and all Cyprus. Fixed prices, meet & greet, 24/7." },
-      { property: "og:title", content: "Larnaca Airport Transfers from €35" },
+      { title: "Larnaca Airport Transfers & Taxi from €130 | Taxi Cyprus 24" },
+      { name: "description", content: "Private Larnaca Airport (LCA) taxi transfers to Paphos, Ayia Napa, Protaras, Nicosia and all Cyprus. Fixed prices, meet & greet, 24/7." },
+      { property: "og:title", content: "Larnaca Airport Transfers from €130" },
       { property: "og:description", content: "Premium Larnaca Airport taxi to all Cyprus destinations." },
       { property: "og:image", content: larnacaImg },
       { name: "twitter:image", content: larnacaImg },
@@ -41,15 +41,14 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
         ]}
         highlights={["Direct from Larnaca Airport (LCA)", "Meet & greet at arrivals", "Clean and Luxury cars", "Free child seats", "Flight tracking included", "Pay cash or card"]}
         prices={[
-          { type: "LCA to Pissouri", pax: "Up to 4 passengers", price: "€120" },
-          { type: "LCA to Paphos", pax: "Up to 4 passengers", price: "€130" },
-          { type: "LCA to Coral Bay", pax: "Up to 4 passengers", price: "€150" },
+          { type: "LCA to Pissouri", pax: "Up to 4 passengers", price: "€130" },
+          { type: "LCA to Paphos", pax: "Up to 4 passengers", price: "€140" },
+          { type: "LCA to Coral Bay", pax: "Up to 4 passengers", price: "€170" },
         ]}
-        nearbyAreas={["Larnaca City", "Limassol", "Ayia Napa", "Protaras", "Nicosia", "Paphos", "Coral Bay", "Peyia", "Pissouri"]}
+        nearbyAreas={["Larnaca City", "Ayia Napa", "Protaras", "Nicosia", "Paphos", "Coral Bay", "Peyia", "Pissouri"]}
         faqs={sharedFAQs}
         relatedLinks={[
           { to: "/larnaca-airport-to-paphos", label: "LCA to Paphos" },
-          { to: "/taxi-to-limassol", label: "LCA to Limassol" },
           { to: "/taxi-to-coral-bay", label: "LCA to Coral Bay" },
           { to: "/cyprus-airport-transfers", label: "All Routes" },
         ]}

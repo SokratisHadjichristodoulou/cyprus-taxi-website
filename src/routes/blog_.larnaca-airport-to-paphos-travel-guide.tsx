@@ -125,7 +125,7 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             The average fixed price for a private transfer from Larnaca Airport to Paphos starts
-            from around €95 depending on the vehicle type and destination. Most airport taxi
+            from around €140 depending on the vehicle type and destination. Most airport taxi
             services include luggage, motorway fees, child seats, and meet & greet in the quoted
             price.
           </p>

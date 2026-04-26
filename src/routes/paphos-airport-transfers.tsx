@@ -9,9 +9,9 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/paphos-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Paphos Airport Transfers & Taxi from €25 | Taxi Cyprus 24" },
+      { title: "Paphos Airport Transfers & Taxi from €35 | Taxi Cyprus 24" },
       { name: "description", content: "Private Paphos Airport (PFO) transfers to Coral Bay, Peyia, Chloraka, Kato Paphos & all of Cyprus. Fixed prices, meet & greet, 24/7 service." },
-      { property: "og:title", content: "Paphos Airport Transfers from €25" },
+      { property: "og:title", content: "Paphos Airport Transfers from €35" },
       { property: "og:description", content: "Premium Paphos Airport taxi to all Cyprus destinations." },
       { property: "og:image", content: paphosImg },
       { name: "twitter:image", content: paphosImg },
@@ -47,9 +47,9 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
           "Free flight tracking",
         ]}
         prices={[
-          { type: "PFO to Coral Bay", pax: "Up to 4 passengers", price: "€55" },
-          { type: "PFO to Limassol", pax: "Up to 4 passengers", price: "€80" },
-          { type: "PFO to Larnaca", pax: "Up to 4 passengers", price: "€130" },
+          { type: "PFO to Coral Bay", pax: "Up to 4 passengers", price: "€65" },
+          { type: "PFO to Limassol", pax: "Up to 4 passengers", price: "€90" },
+          { type: "PFO to Larnaca", pax: "Up to 4 passengers", price: "€140" },
         ]}
         nearbyAreas={["Coral Bay", "Peyia", "Chloraka", "Kato Paphos", "Paphos Harbour", "Tombs of the Kings", "Geroskipou", "Latchi", "Polis"]}
         faqs={sharedFAQs}

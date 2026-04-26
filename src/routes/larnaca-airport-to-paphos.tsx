@@ -7,9 +7,9 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Larnaca Airport to Paphos Taxi — Fixed €95 | Taxi Cyprus 24" },
-      { name: "description", content: "Private Larnaca Airport to Paphos taxi from €95. Fixed price, meet & greet, free child seats, flight tracking. 24/7 booking, 5,000+ happy customers." },
-      { property: "og:title", content: "Larnaca Airport to Paphos Taxi from €95" },
+      { title: "Larnaca Airport to Paphos Taxi — Fixed €140 | Taxi Cyprus 24" },
+      { name: "description", content: "Private Larnaca Airport to Paphos taxi from €140. Fixed price, meet & greet, free child seats, flight tracking. 24/7 booking, 5,000+ happy customers." },
+      { property: "og:title", content: "Larnaca Airport to Paphos Taxi from €140" },
       { property: "og:description", content: "Private fixed-price Larnaca Airport to Paphos transfer with meet & greet." },
       { property: "og:image", content: paphosImg },
       { name: "twitter:image", content: paphosImg },
@@ -43,9 +43,9 @@ export const Route = createFileRoute("/larnaca-airport-to-paphos")({
         "Cash or card accepted",
       ]}
       prices={[
-        { type: "Executive Sedan", pax: "Up to 3 passengers", price: "€95" },
-        { type: "Premium Van", pax: "Up to 7 passengers", price: "€130" },
-        { type: "Luxury S-Class", pax: "Up to 3 passengers", price: "€160" },
+        { type: "Executive Sedan", pax: "Up to 4 passengers", price: "€140" },
+        { type: "Premium Van (6 seats)", pax: "Up to 6 passengers", price: "€180" },
+        { type: "Large Van (12 seats)", pax: "Up to 12 passengers", price: "€240" },
       ]}
       nearbyAreas={["Coral Bay", "Peyia", "Chloraka", "Kato Paphos", "Tombs of the Kings", "Geroskipou", "Paphos Harbour", "Latchi", "Polis"]}
       faqs={sharedFAQs.slice(0, 6)}

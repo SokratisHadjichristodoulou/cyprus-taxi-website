@@ -57,9 +57,9 @@ const carRentalNotes = [
 ];
 
 const fixedPrices = [
-  "Larnaca Airport to Paphos: from €95",
-  "Larnaca Airport to Limassol: from €55",
-  "Paphos Airport to Coral Bay: from €45",
+  "Larnaca Airport to Paphos: from €140",
+  "Paphos Airport to Limassol: from €90",
+  "Paphos Airport to Coral Bay: from €65",
 ];
 
 const idealFor = [

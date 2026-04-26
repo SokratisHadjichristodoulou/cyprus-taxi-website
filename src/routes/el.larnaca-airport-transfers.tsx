@@ -9,9 +9,9 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/larnaca-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Μεταφορές & Ταξί Αεροδρομίου Λάρνακας από €35 | Taxi Cyprus 24" },
-      { name: "description", content: "Ιδιωτικές μεταφορές από Αεροδρόμιο Λάρνακας (LCA) προς Πάφο, Λεμεσό, Αγία Νάπα, Πρωταρά, Λευκωσία και όλη την Κύπρο. Σταθερές τιμές, υποδοχή, 24/7." },
-      { property: "og:title", content: "Μεταφορές Αεροδρομίου Λάρνακας από €35" },
+      { title: "Μεταφορές & Ταξί Αεροδρομίου Λάρνακας από €130 | Taxi Cyprus 24" },
+      { name: "description", content: "Ιδιωτικές μεταφορές από Αεροδρόμιο Λάρνακας (LCA) προς Πάφο, Αγία Νάπα, Πρωταρά, Λευκωσία και όλη την Κύπρο. Σταθερές τιμές, υποδοχή, 24/7." },
+      { property: "og:title", content: "Μεταφορές Αεροδρομίου Λάρνακας από €130" },
       { property: "og:description", content: "Premium ταξί από το Αεροδρόμιο Λάρνακας προς όλους τους προορισμούς της Κύπρου." },
       { property: "og:image", content: larnacaImg },
       { property: "og:locale", content: "el_GR" },
@@ -42,15 +42,14 @@ export const Route = createFileRoute("/el/larnaca-airport-transfers")({
         ]}
         highlights={["Απευθείας από Αεροδρόμιο Λάρνακας", "Υποδοχή στις αφίξεις", "Καθαρά και πολυτελή αυτοκίνητα", "Δωρεάν παιδικά καθίσματα", "Παρακολούθηση πτήσης", "Πληρωμή μετρητά ή κάρτα"]}
         prices={[
-          { type: "LCA προς Πισσούρι", pax: "Έως 4 επιβάτες", price: "€120" },
-          { type: "LCA προς Πάφο", pax: "Έως 4 επιβάτες", price: "€130" },
-          { type: "LCA προς Coral Bay", pax: "Έως 4 επιβάτες", price: "€150" },
+          { type: "LCA προς Πισσούρι", pax: "Έως 4 επιβάτες", price: "€130" },
+          { type: "LCA προς Πάφο", pax: "Έως 4 επιβάτες", price: "€140" },
+          { type: "LCA προς Coral Bay", pax: "Έως 4 επιβάτες", price: "€170" },
         ]}
-        nearbyAreas={["Λάρνακα", "Λεμεσός", "Αγία Νάπα", "Πρωταράς", "Λευκωσία", "Πάφος", "Coral Bay", "Πέγεια", "Πισσούρι"]}
+        nearbyAreas={["Λάρνακα", "Αγία Νάπα", "Πρωταράς", "Λευκωσία", "Πάφος", "Coral Bay", "Πέγεια", "Πισσούρι"]}
         faqs={sharedFAQsEl}
         relatedLinks={[
           { to: "/larnaca-airport-to-paphos", label: "LCA προς Πάφο" },
-          { to: "/taxi-to-limassol", label: "LCA προς Λεμεσό" },
           { to: "/taxi-to-coral-bay", label: "LCA προς Coral Bay" },
           { to: "/cyprus-airport-transfers", label: "Όλες οι διαδρομές" },
         ]}

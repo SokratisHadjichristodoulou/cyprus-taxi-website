@@ -7,9 +7,9 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Такси из аэропорта Ларнаки в Пафос — Фиксированная цена €95 | Taxi Cyprus 24" },
-      { name: "description", content: "Частное такси из аэропорта Ларнаки в Пафос от €95. Фиксированная цена, встреча, бесплатные детские кресла, отслеживание рейса. Бронирование 24/7." },
-      { property: "og:title", content: "Такси из аэропорта Ларнаки в Пафос от €95" },
+      { title: "Такси из аэропорта Ларнаки в Пафос — Фиксированная цена €140 | Taxi Cyprus 24" },
+      { name: "description", content: "Частное такси из аэропорта Ларнаки в Пафос от €140. Фиксированная цена, встреча, бесплатные детские кресла, отслеживание рейса. Бронирование 24/7." },
+      { property: "og:title", content: "Такси из аэропорта Ларнаки в Пафос от €140" },
       { property: "og:description", content: "Частный трансфер по фиксированной цене из Ларнаки в Пафос со встречей." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "ru_RU" },
@@ -44,9 +44,9 @@ export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
         "Принимаем наличные и карты",
       ]}
       prices={[
-        { type: "Executive Sedan", pax: "До 3 пассажиров", price: "€95" },
-        { type: "Premium Van", pax: "До 7 пассажиров", price: "€130" },
-        { type: "Люксовый S-Class", pax: "До 3 пассажиров", price: "€160" },
+        { type: "Executive Sedan", pax: "До 4 пассажиров", price: "€140" },
+        { type: "Premium Van (6 мест)", pax: "До 6 пассажиров", price: "€180" },
+        { type: "Большой Van (12 мест)", pax: "До 12 пассажиров", price: "€240" },
       ]}
       nearbyAreas={["Корал-Бей", "Пейя", "Хлорака", "Като-Пафос", "Гробницы царей", "Героскипу", "Гавань Пафоса", "Латси", "Полис"]}
       faqs={sharedFAQsRu.slice(0, 6)}
