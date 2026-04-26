@@ -60,7 +60,7 @@ const features = [
   { icon: Baby, title: "Free child seats", desc: "Free baby seats, child seats, and booster seats included with every private Cyprus airport transfer." },
   { icon: ShieldCheck, title: "Licensed drivers", desc: "Professional licensed English-speaking drivers providing safe, reliable, and comfortable Cyprus taxi transfers." },
   { icon: Clock, title: "24/7 service", desc: "24/7 Cyprus airport taxi service available day and night, including weekends and public holidays." },
-  { icon: CreditCard, title: "Pay your way", desc: "Card online, bank transfer, or cash to driver in EUR or GBP." },
+  { icon: CreditCard, title: "Pay your way", desc: "Pay online by card, bank transfer, or cash in EUR or GBP for any Cyprus private taxi transfer." },
 ];
 
 const fleet = [
