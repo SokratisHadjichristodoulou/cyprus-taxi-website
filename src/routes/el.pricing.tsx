@@ -66,11 +66,11 @@ function PricingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <PriceTable
             pricing={pricingFromPaphos}
-            subtitle="Από το Διεθνές Αεροδρόμιο Πάφου (PFO) προς προορισμούς σε όλη την Κύπρο."
+            subtitle="Από/προς το Διεθνές Αεροδρόμιο Πάφου (PFO) σε προορισμούς σε όλη την Κύπρο."
           />
           <PriceTable
             pricing={pricingFromLarnaca}
-            subtitle="Από το Διεθνές Αεροδρόμιο Λάρνακας (LCA) προς προορισμούς σε όλη την Κύπρο."
+            subtitle="Από/προς το Διεθνές Αεροδρόμιο Λάρνακας (LCA) σε προορισμούς σε όλη την Κύπρο."
           />
         </div>
 
