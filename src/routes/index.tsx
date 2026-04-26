@@ -58,7 +58,7 @@ const features = [
   { icon: BadgeCheck, title: "Fixed prices", desc: "Fixed-price Cyprus airport transfers with no hidden fees, no surge pricing, and guaranteed transparent taxi rates." },
   { icon: Plane, title: "Flight tracking", desc: "Real-time flight tracking for all Larnaca and Paphos airport taxi transfers, including delayed arrivals." },
   { icon: Baby, title: "Free child seats", desc: "Free baby seats, child seats, and booster seats included with every private Cyprus airport transfer." },
-  { icon: ShieldCheck, title: "Licensed drivers", desc: "Professional, English-speaking drivers in immaculate vehicles." },
+  { icon: ShieldCheck, title: "Licensed drivers", desc: "Professional licensed English-speaking drivers providing safe, reliable, and comfortable Cyprus taxi transfers." },
   { icon: Clock, title: "24/7 service", desc: "Day, night, weekends, holidays — at Cyprus Taxi 24 we operate around the clock." },
   { icon: CreditCard, title: "Pay your way", desc: "Card online, bank transfer, or cash to driver in EUR or GBP." },
 ];
