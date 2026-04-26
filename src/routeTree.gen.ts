@@ -49,6 +49,7 @@ import { Route as ElTaxiToLimassolRouteImport } from './routes/el.taxi-to-limass
 import { Route as ElTaxiToCoralBayRouteImport } from './routes/el.taxi-to-coral-bay'
 import { Route as ElTaxiToChlorakaRouteImport } from './routes/el.taxi-to-chloraka'
 import { Route as ElReviewsRouteImport } from './routes/el.reviews'
+import { Route as ElPricingRouteImport } from './routes/el.pricing'
 import { Route as ElPaphosAirportTransfersRouteImport } from './routes/el.paphos-airport-transfers'
 import { Route as ElLarnacaAirportTransfersRouteImport } from './routes/el.larnaca-airport-transfers'
 import { Route as ElLarnacaAirportToPaphosRouteImport } from './routes/el.larnaca-airport-to-paphos'
@@ -270,6 +271,11 @@ const ElReviewsRoute = ElReviewsRouteImport.update({
   path: '/reviews',
   getParentRoute: () => ElRoute,
 } as any)
+const ElPricingRoute = ElPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => ElRoute,
+} as any)
 const ElPaphosAirportTransfersRoute =
   ElPaphosAirportTransfersRouteImport.update({
     id: '/paphos-airport-transfers',
@@ -396,6 +402,7 @@ export interface FileRoutesByFullPath {
   '/el/larnaca-airport-to-paphos': typeof ElLarnacaAirportToPaphosRoute
   '/el/larnaca-airport-transfers': typeof ElLarnacaAirportTransfersRoute
   '/el/paphos-airport-transfers': typeof ElPaphosAirportTransfersRoute
+  '/el/pricing': typeof ElPricingRoute
   '/el/reviews': typeof ElReviewsRoute
   '/el/taxi-to-chloraka': typeof ElTaxiToChlorakaRoute
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
@@ -452,6 +459,7 @@ export interface FileRoutesByTo {
   '/el/larnaca-airport-to-paphos': typeof ElLarnacaAirportToPaphosRoute
   '/el/larnaca-airport-transfers': typeof ElLarnacaAirportTransfersRoute
   '/el/paphos-airport-transfers': typeof ElPaphosAirportTransfersRoute
+  '/el/pricing': typeof ElPricingRoute
   '/el/reviews': typeof ElReviewsRoute
   '/el/taxi-to-chloraka': typeof ElTaxiToChlorakaRoute
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
@@ -511,6 +519,7 @@ export interface FileRoutesById {
   '/el/larnaca-airport-to-paphos': typeof ElLarnacaAirportToPaphosRoute
   '/el/larnaca-airport-transfers': typeof ElLarnacaAirportTransfersRoute
   '/el/paphos-airport-transfers': typeof ElPaphosAirportTransfersRoute
+  '/el/pricing': typeof ElPricingRoute
   '/el/reviews': typeof ElReviewsRoute
   '/el/taxi-to-chloraka': typeof ElTaxiToChlorakaRoute
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
@@ -571,6 +580,7 @@ export interface FileRouteTypes {
     | '/el/larnaca-airport-to-paphos'
     | '/el/larnaca-airport-transfers'
     | '/el/paphos-airport-transfers'
+    | '/el/pricing'
     | '/el/reviews'
     | '/el/taxi-to-chloraka'
     | '/el/taxi-to-coral-bay'
@@ -627,6 +637,7 @@ export interface FileRouteTypes {
     | '/el/larnaca-airport-to-paphos'
     | '/el/larnaca-airport-transfers'
     | '/el/paphos-airport-transfers'
+    | '/el/pricing'
     | '/el/reviews'
     | '/el/taxi-to-chloraka'
     | '/el/taxi-to-coral-bay'
@@ -685,6 +696,7 @@ export interface FileRouteTypes {
     | '/el/larnaca-airport-to-paphos'
     | '/el/larnaca-airport-transfers'
     | '/el/paphos-airport-transfers'
+    | '/el/pricing'
     | '/el/reviews'
     | '/el/taxi-to-chloraka'
     | '/el/taxi-to-coral-bay'
@@ -1019,6 +1031,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ElReviewsRouteImport
       parentRoute: typeof ElRoute
     }
+    '/el/pricing': {
+      id: '/el/pricing'
+      path: '/pricing'
+      fullPath: '/el/pricing'
+      preLoaderRoute: typeof ElPricingRouteImport
+      parentRoute: typeof ElRoute
+    }
     '/el/paphos-airport-transfers': {
       id: '/el/paphos-airport-transfers'
       path: '/paphos-airport-transfers'
@@ -1144,6 +1163,7 @@ interface ElRouteChildren {
   ElLarnacaAirportToPaphosRoute: typeof ElLarnacaAirportToPaphosRoute
   ElLarnacaAirportTransfersRoute: typeof ElLarnacaAirportTransfersRoute
   ElPaphosAirportTransfersRoute: typeof ElPaphosAirportTransfersRoute
+  ElPricingRoute: typeof ElPricingRoute
   ElReviewsRoute: typeof ElReviewsRoute
   ElTaxiToChlorakaRoute: typeof ElTaxiToChlorakaRoute
   ElTaxiToCoralBayRoute: typeof ElTaxiToCoralBayRoute
@@ -1162,6 +1182,7 @@ const ElRouteChildren: ElRouteChildren = {
   ElLarnacaAirportToPaphosRoute: ElLarnacaAirportToPaphosRoute,
   ElLarnacaAirportTransfersRoute: ElLarnacaAirportTransfersRoute,
   ElPaphosAirportTransfersRoute: ElPaphosAirportTransfersRoute,
+  ElPricingRoute: ElPricingRoute,
   ElReviewsRoute: ElReviewsRoute,
   ElTaxiToChlorakaRoute: ElTaxiToChlorakaRoute,
   ElTaxiToCoralBayRoute: ElTaxiToCoralBayRoute,
