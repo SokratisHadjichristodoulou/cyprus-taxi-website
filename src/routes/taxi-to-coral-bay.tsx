@@ -28,10 +28,13 @@ export const Route = createFileRoute("/taxi-to-coral-bay")({
       toLocation="Coral Bay"
       duration="25 min / 1h 40m"
       distance="25 km / 150 km"
-      intro="Coral Bay is one of the most popular tourist resorts in western Cyprus, famous for its turquoise water, sandy beach and family-friendly hotels. Our private airport transfer to Coral Bay drops you directly at your hotel or villa, with no waiting and no shared rides."
+      intro="Coral Bay is one of the most popular beach resorts in Cyprus, known for its turquoise water, sandy beaches, luxury villas, and family-friendly hotels. Taxicyprus24 provides reliable private airport transfers to Coral Bay from both Paphos Airport and Larnaca Airport with fixed prices, professional drivers, and 24/7 service."
       bodyParagraphs={[
-        "From Paphos Airport, Coral Bay is just a 25-minute drive along the coastal road — a beautiful introduction to the area. From Larnaca Airport, the journey takes around 1 hour 40 minutes via the A6 motorway.",
-        "We cover all hotels in Coral Bay, including Coral Beach Hotel & Resort, Mayfair Hotel, Corallia Beach Hotel, Coral Star Apartments and the dozens of private villas in the surrounding hills.",
+        "Avoid long taxi queues, crowded shuttle buses, and shared rides. Our private Coral Bay airport taxi service offers direct door-to-door transfers to your hotel, villa, apartment, or resort anywhere in the Coral Bay area.",
+        "From Paphos Airport, Coral Bay is approximately 25 minutes away along the scenic coastal road. Transfers from Larnaca Airport to Coral Bay usually take around 1 hour 40 minutes via the A6 motorway.",
+        "We provide airport transfers to all major Coral Bay hotels and accommodations, including Coral Beach Hotel & Resort, Mayfair Hotel, Corallia Beach Hotel, Coral Star Apartments, and private holiday villas throughout Coral Bay, Peyia, and the surrounding Paphos region.",
+        "Every Coral Bay airport transfer includes fixed-price taxi rates with no hidden fees, meet & greet at the airport, flight monitoring for delayed arrivals, free baby and child seats, comfortable air-conditioned vehicles, and payment by card, bank transfer, or cash in EUR or GBP.",
+        "Whether you need a taxi from Paphos Airport to Coral Bay or a private transfer from Larnaca Airport to Coral Bay, Taxicyprus24 guarantees safe, comfortable, and stress-free travel across Cyprus.",
       ]}
       highlights={["Direct to your Coral Bay hotel", "Mercedes-Benz vehicles", "Fixed price guarantee", "Free child seats", "24/7 night arrivals", "Meet & greet included"]}
       prices={[
