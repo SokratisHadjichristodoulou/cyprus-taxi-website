@@ -25,7 +25,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 const posts = [
-  { img: coralBayImg, title: "Best beaches in Paphos & Coral Bay", excerpt: "From the famous Coral Bay sands to hidden coves around Lara Beach — the ultimate Paphos beach guide.", date: "April 2025", read: "6 min", to: "/blog/best-beaches-paphos-coral-bay" as const },
+  { img: coralBayImg, title: "Best beaches in Paphos & Coral Bay", excerpt: "Paphos and Coral Bay are home to some of the most beautiful beaches in Cyprus, attracting visitors with crystal-clear waters, golden sand, and stunning coastal views. Whether you are looking for a family-friendly beach, hidden swimming spots, or the perfect sunset location, the west coast of Cyprus has something for everyone.", date: "April 2025", read: "6 min", to: "/blog/best-beaches-paphos-coral-bay" as const },
   { img: heroImg, title: "How to travel from Larnaca Airport to Paphos", excerpt: "Public bus, rental car or private transfer — we compare every option for the LCA to Paphos journey.", date: "April 2025", read: "5 min" },
   { img: peyiaImg, title: "Top hotels & villas in Coral Bay and Peyia", excerpt: "Where to stay on Cyprus's western coast, from family resorts to private hillside villas with sea views.", date: "March 2025", read: "8 min" },
   { img: paphosImg, title: "Things to do in Paphos — local guide", excerpt: "Tombs of the Kings, Paphos Mosaics, the Old Harbour and our favourite tavernas off the tourist trail.", date: "March 2025", read: "7 min" },
