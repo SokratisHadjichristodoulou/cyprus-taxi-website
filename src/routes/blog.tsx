@@ -66,12 +66,10 @@ function BlogPage() {
                 </div>
               </article>
             );
-            return "to" in p && p.to ? (
+            return (
               <Link key={p.title} to={p.to} className="block">
                 {card}
               </Link>
-            ) : (
-              <div key={p.title}>{card}</div>
             );
           })}
         </div>
