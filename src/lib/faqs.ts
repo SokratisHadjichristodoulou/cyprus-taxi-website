@@ -33,4 +33,8 @@ export const sharedFAQs: FAQItem[] = [
     q: "Are transfers private?",
     a: "Every airport transfer with Taxicyprus24 is completely private and exclusive to your group. Your vehicle is reserved only for your party, ensuring a comfortable, direct, and stress-free journey anywhere in Cyprus. Unlike shared shuttle services, our private taxi transfers from Larnaca Airport, Paphos Airport, Limassol, and across Cyprus include no shared rides, no waiting for other passengers, and no unnecessary stops.",
   },
+  {
+    q: "Where can I find a taxi near me in Cyprus?",
+    a: "Taxicyprus24 provides reliable 24/7 airport taxi services across Cyprus. Whether you are searching for a taxi near me, airport taxi near me, or private taxi service near me, we offer fixed-price transfers from Larnaca Airport, Paphos Airport, Limassol, Coral Bay, Peyia, and all Cyprus destinations.",
+  },
 ];
