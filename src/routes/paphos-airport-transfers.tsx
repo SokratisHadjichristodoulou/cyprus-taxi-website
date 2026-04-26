@@ -31,10 +31,12 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
         toLocation="All Cyprus"
         duration="20 min – 2h"
         distance="20–250 km"
-        intro="Paphos International Airport (PFO) is the second-largest airport in Cyprus and the gateway to the western coast. Our private airport taxis offer the fastest, most comfortable transfer to your hotel or villa — with no waiting, no queues and no shared rides."
+        intro="Paphos International Airport (PFO) is the second-largest airport in Cyprus and the main gateway for travellers visiting Paphos, Coral Bay, Peyia, Limassol, and western Cyprus. Taxicyprus24 provides reliable private airport taxi transfers from Paphos Airport with fixed prices, professional drivers, and 24/7 service."
         bodyParagraphs={[
-          "We meet you in the arrivals hall with a personal name sign, help with your luggage and walk you straight to a clean, air-conditioned Mercedes-Benz. From Paphos Airport, Coral Bay is around 25 minutes, Peyia around 30 minutes, Limassol around 50 minutes and Larnaca around 1h 45m.",
-          "Every booking includes free child and baby seats, complimentary water on board, and free cancellation up to 24 hours before your transfer. Pay online by card or in cash to your driver in EUR or GBP.",
+          "Skip long taxi queues, crowded shuttle buses, and shared transfers. Our private Cyprus airport transfer service offers direct door-to-door transport to hotels, villas, resorts, and apartments anywhere in Cyprus — with no waiting and no shared rides.",
+          "Your driver will meet you inside the arrivals hall with a personalised name sign, assist with luggage, and escort you directly to a clean, air-conditioned Mercedes-Benz vehicle. Popular transfer times from Paphos Airport include Coral Bay (approximately 25 minutes), Peyia (approximately 30 minutes), Limassol (approximately 50 minutes), and Larnaca (approximately 1 hour 45 minutes).",
+          "Every Paphos Airport transfer includes free baby and child seats, complimentary bottled water, flight monitoring, and free cancellation up to 24 hours before pickup. Pay securely online by card or directly to your driver in EUR or GBP.",
+          "Whether you need a taxi from Paphos Airport to Coral Bay, Peyia, Limassol, Larnaca, or any destination in Cyprus, Taxicyprus24 guarantees comfortable, fixed-price private transfers with no hidden fees.",
         ]}
         highlights={[
           "Direct from Paphos Airport (PFO)",
