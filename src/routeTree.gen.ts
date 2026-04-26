@@ -14,6 +14,7 @@ import { Route as TaxiToLimassolRouteImport } from './routes/taxi-to-limassol'
 import { Route as TaxiToCoralBayRouteImport } from './routes/taxi-to-coral-bay'
 import { Route as TaxiToChlorakaRouteImport } from './routes/taxi-to-chloraka'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PaphosAirportTransfersRouteImport } from './routes/paphos-airport-transfers'
 import { Route as LarnacaAirportTransfersRouteImport } from './routes/larnaca-airport-transfers'
 import { Route as LarnacaAirportToPaphosRouteImport } from './routes/larnaca-airport-to-paphos'
@@ -71,6 +72,11 @@ const TaxiToChlorakaRoute = TaxiToChlorakaRouteImport.update({
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PaphosAirportTransfersRoute = PaphosAirportTransfersRouteImport.update({
@@ -261,6 +267,7 @@ export interface FileRoutesByFullPath {
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
   '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
+  '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
@@ -300,6 +307,7 @@ export interface FileRoutesByTo {
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
   '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
+  '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
@@ -341,6 +349,7 @@ export interface FileRoutesById {
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
   '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
+  '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
@@ -383,6 +392,7 @@ export interface FileRouteTypes {
     | '/larnaca-airport-to-paphos'
     | '/larnaca-airport-transfers'
     | '/paphos-airport-transfers'
+    | '/pricing'
     | '/reviews'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
@@ -422,6 +432,7 @@ export interface FileRouteTypes {
     | '/larnaca-airport-to-paphos'
     | '/larnaca-airport-transfers'
     | '/paphos-airport-transfers'
+    | '/pricing'
     | '/reviews'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
@@ -462,6 +473,7 @@ export interface FileRouteTypes {
     | '/larnaca-airport-to-paphos'
     | '/larnaca-airport-transfers'
     | '/paphos-airport-transfers'
+    | '/pricing'
     | '/reviews'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
@@ -503,6 +515,7 @@ export interface RootRouteChildren {
   LarnacaAirportToPaphosRoute: typeof LarnacaAirportToPaphosRoute
   LarnacaAirportTransfersRoute: typeof LarnacaAirportTransfersRoute
   PaphosAirportTransfersRoute: typeof PaphosAirportTransfersRoute
+  PricingRoute: typeof PricingRoute
   ReviewsRoute: typeof ReviewsRoute
   TaxiToChlorakaRoute: typeof TaxiToChlorakaRoute
   TaxiToCoralBayRoute: typeof TaxiToCoralBayRoute
@@ -552,6 +565,13 @@ declare module '@tanstack/react-router' {
       path: '/reviews'
       fullPath: '/reviews'
       preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/paphos-airport-transfers': {
@@ -838,6 +858,7 @@ const rootRouteChildren: RootRouteChildren = {
   LarnacaAirportToPaphosRoute: LarnacaAirportToPaphosRoute,
   LarnacaAirportTransfersRoute: LarnacaAirportTransfersRoute,
   PaphosAirportTransfersRoute: PaphosAirportTransfersRoute,
+  PricingRoute: PricingRoute,
   ReviewsRoute: ReviewsRoute,
   TaxiToChlorakaRoute: TaxiToChlorakaRoute,
   TaxiToCoralBayRoute: TaxiToCoralBayRoute,
