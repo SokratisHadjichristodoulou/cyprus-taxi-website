@@ -110,7 +110,8 @@ type TranslationKey =
 const translations: Record<TranslationKey, Record<Locale, string>> = {
   // Navigation
   "nav.home": { en: "Home", el: "Αρχική" },
-  "nav.transfers": { en: "Transfers", el: "Μεταφορές" },
+ "nav.transfers": { en: "Transfers", el: "Μεταφορές" },
+ "nav.pricing": { en: "Pricing", el: "Τιμές" },
   "nav.fleet": { en: "Fleet", el: "Στόλος" },
   "nav.reviews": { en: "Reviews", el: "Κριτικές" },
   "nav.blog": { en: "Travel Guide", el: "Οδηγός Ταξιδιού" },
