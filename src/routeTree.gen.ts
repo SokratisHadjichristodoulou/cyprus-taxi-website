@@ -24,6 +24,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogBestBeachesPaphosCoralBayRouteImport } from './routes/blog.best-beaches-paphos-coral-bay'
 
 const TaxiToPeyiaRoute = TaxiToPeyiaRouteImport.update({
   id: '/taxi-to-peyia',
@@ -100,11 +101,17 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogBestBeachesPaphosCoralBayRoute =
+  BlogBestBeachesPaphosCoralBayRouteImport.update({
+    id: '/best-beaches-paphos-coral-bay',
+    path: '/best-beaches-paphos-coral-bay',
+    getParentRoute: () => BlogRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
   '/faq': typeof FaqRoute
@@ -117,11 +124,12 @@ export interface FileRoutesByFullPath {
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
+  '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
   '/faq': typeof FaqRoute
@@ -134,12 +142,13 @@ export interface FileRoutesByTo {
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
+  '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
   '/faq': typeof FaqRoute
@@ -152,6 +161,7 @@ export interface FileRoutesById {
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
+  '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -171,6 +181,7 @@ export interface FileRouteTypes {
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
+    | '/blog/best-beaches-paphos-coral-bay'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -188,6 +199,7 @@ export interface FileRouteTypes {
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
+    | '/blog/best-beaches-paphos-coral-bay'
   id:
     | '__root__'
     | '/'
@@ -205,12 +217,13 @@ export interface FileRouteTypes {
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
+    | '/blog/best-beaches-paphos-coral-bay'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   CyprusAirportTransfersRoute: typeof CyprusAirportTransfersRoute
   FaqRoute: typeof FaqRoute
@@ -332,13 +345,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/best-beaches-paphos-coral-bay': {
+      id: '/blog/best-beaches-paphos-coral-bay'
+      path: '/best-beaches-paphos-coral-bay'
+      fullPath: '/blog/best-beaches-paphos-coral-bay'
+      preLoaderRoute: typeof BlogBestBeachesPaphosCoralBayRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogBestBeachesPaphosCoralBayRoute: typeof BlogBestBeachesPaphosCoralBayRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogBestBeachesPaphosCoralBayRoute: BlogBestBeachesPaphosCoralBayRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   CyprusAirportTransfersRoute: CyprusAirportTransfersRoute,
   FaqRoute: FaqRoute,
