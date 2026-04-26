@@ -43,14 +43,15 @@ export function withLocale(locale: Locale, path: string): string {
 
 // Translation dictionaries — shared UI strings
 type TranslationKey =
-  | "nav.home"
-  | "nav.transfers"
-  | "nav.fleet"
-  | "nav.reviews"
-  | "nav.blog"
-  | "nav.about"
-  | "nav.faq"
-  | "nav.contact"
+ | "nav.home"
+ | "nav.transfers"
+ | "nav.pricing"
+ | "nav.fleet"
+ | "nav.reviews"
+ | "nav.blog"
+ | "nav.about"
+ | "nav.faq"
+ | "nav.contact"
   | "cta.bookNow"
   | "cta.bookYourTransfer"
   | "cta.callUs"
