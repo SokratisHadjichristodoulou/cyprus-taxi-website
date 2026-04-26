@@ -34,7 +34,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#0a1d3a" },
-      { title: "Taxi Cyprus 24/7 | Cyprus Airport Transfers, Larnaca & Pafos" },
+      { title: "Cyprus Airport Taxi & Transfers | Taxi Cyprus 24/7" },
       {
         name: "description",
         content:
@@ -45,8 +45,8 @@ export const Route = createRootRoute({
       { property: "og:site_name", content: "Taxi Cyprus 24" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@TaxiCyprus24" },
-      { property: "og:title", content: "Taxi Cyprus 24/7 | Cyprus Airport Transfers, Larnaca & Pafos" },
-      { name: "twitter:title", content: "Taxi Cyprus 24/7 | Cyprus Airport Transfers, Larnaca & Pafos" },
+      { property: "og:title", content: "Cyprus Airport Taxi & Transfers | Taxi Cyprus 24/7" },
+      { name: "twitter:title", content: "Cyprus Airport Taxi & Transfers | Taxi Cyprus 24/7" },
       { name: "description", content: "Private Cyprus airport taxi transfers from Larnaca & Paphos airports. Fixed prices, professional drivers, 24/7 service & comfortable rides across Cyprus." },
       { property: "og:description", content: "Private Cyprus airport taxi transfers from Larnaca & Paphos airports. Fixed prices, professional drivers, 24/7 service & comfortable rides across Cyprus." },
       { name: "twitter:description", content: "Private Cyprus airport taxi transfers from Larnaca & Paphos airports. Fixed prices, professional drivers, 24/7 service & comfortable rides across Cyprus." },
