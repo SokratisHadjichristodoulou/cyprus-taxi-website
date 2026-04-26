@@ -1,12 +1,18 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Phone, Globe } from "lucide-react";
+import { Menu, X, Phone, Globe, ChevronDown, Check } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { useI18n, withLocale } from "@/lib/i18n";
+import { useI18n, withLocale, LOCALES, localeLabels, localeFullNames, type Locale } from "@/lib/i18n";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const { t, locale, otherLocale, switchPath } = useI18n();
+  const { t, locale, switchPaths } = useI18n();
 
   const navLinks = [
     { path: "/", label: t("nav.home") },
@@ -57,14 +63,33 @@ export function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2 md:gap-3">
-          <Link
-            to={switchPath}
-            className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-navy transition-colors hover:bg-secondary md:inline-flex"
-            aria-label={`Switch to ${otherLocale === "el" ? "Greek" : "English"}`}
-          >
-            <Globe className="h-3.5 w-3.5" />
-            {otherLocale === "el" ? "ΕΛ" : "EN"}
-          </Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-navy transition-colors hover:bg-secondary md:inline-flex"
+              aria-label="Change language"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              {localeLabels[locale]}
+              <ChevronDown className="h-3 w-3 opacity-70" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-[160px]">
+              {LOCALES.map((l: Locale) => (
+                <DropdownMenuItem key={l} asChild>
+                  <Link
+                    to={switchPaths[l]}
+                    className="flex cursor-pointer items-center justify-between gap-3 text-sm"
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="font-semibold text-navy">{localeLabels[l]}</span>
+                      <span className="text-muted-foreground">{localeFullNames[l]}</span>
+                    </span>
+                    {l === locale && <Check className="h-3.5 w-3.5 text-navy" />}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           <a
             href="tel:+35796626844"
             className="hidden h-10 w-10 items-center justify-center rounded-full border border-border text-navy transition-colors hover:bg-secondary md:inline-flex 2xl:hidden"
@@ -111,14 +136,25 @@ export function Header() {
                 </Link>
               );
             })}
-            <Link
-              to={switchPath}
-              onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 border-b border-border/60 py-3 text-base font-medium text-foreground"
-            >
-              <Globe className="h-4 w-4" />
-              {otherLocale === "el" ? "Ελληνικά" : "English"}
-            </Link>
+
+            <div className="mt-3 flex items-center gap-2 border-b border-border/60 py-3">
+              <Globe className="h-4 w-4 text-muted-foreground" />
+              {LOCALES.map((l: Locale) => (
+                <Link
+                  key={l}
+                  to={switchPaths[l]}
+                  onClick={() => setOpen(false)}
+                  className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors ${
+                    l === locale
+                      ? "border-navy bg-navy text-[color:var(--navy-foreground)]"
+                      : "border-border text-navy hover:bg-secondary"
+                  }`}
+                >
+                  {localeLabels[l]}
+                </Link>
+              ))}
+            </div>
+
             <a
               href="tel:+35796626844"
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-[color:var(--navy-foreground)]"

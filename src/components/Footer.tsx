@@ -7,28 +7,68 @@ export function Footer() {
   const { t, locale } = useI18n();
   const wl = (p: string) => withLocale(locale, p);
 
-  const greekLabels: Record<string, string> = {
-    "/larnaca-airport-to-paphos": "Λάρνακα προς Πάφο",
-    "/larnaca-airport-transfers": "Αεροδρόμιο Λάρνακας",
-    "/paphos-airport-transfers": "Αεροδρόμιο Πάφου",
-    "/taxi-to-limassol": "Ταξί προς Λεμεσό",
-    "/taxi-to-coral-bay": "Ταξί προς Coral Bay",
-    "/taxi-to-peyia": "Ταξί προς Πέγεια",
-    "/taxi-to-chloraka": "Ταξί προς Χλώρακα",
+  const transferLabels: Record<"en" | "el" | "ru", Record<string, string>> = {
+    en: {
+      "/larnaca-airport-to-paphos": "Larnaca to Paphos",
+      "/larnaca-airport-transfers": "Larnaca Airport",
+      "/paphos-airport-transfers": "Paphos Airport",
+      "/taxi-to-limassol": "Taxi to Limassol",
+      "/taxi-to-coral-bay": "Taxi to Coral Bay",
+      "/taxi-to-peyia": "Taxi to Peyia",
+      "/taxi-to-chloraka": "Taxi to Chloraka",
+    },
+    el: {
+      "/larnaca-airport-to-paphos": "Λάρνακα προς Πάφο",
+      "/larnaca-airport-transfers": "Αεροδρόμιο Λάρνακας",
+      "/paphos-airport-transfers": "Αεροδρόμιο Πάφου",
+      "/taxi-to-limassol": "Ταξί προς Λεμεσό",
+      "/taxi-to-coral-bay": "Ταξί προς Coral Bay",
+      "/taxi-to-peyia": "Ταξί προς Πέγεια",
+      "/taxi-to-chloraka": "Ταξί προς Χλώρακα",
+    },
+    ru: {
+      "/larnaca-airport-to-paphos": "Ларнака — Пафос",
+      "/larnaca-airport-transfers": "Аэропорт Ларнаки",
+      "/paphos-airport-transfers": "Аэропорт Пафоса",
+      "/taxi-to-limassol": "Такси в Лимассол",
+      "/taxi-to-coral-bay": "Такси в Корал-Бей",
+      "/taxi-to-peyia": "Такси в Пейю",
+      "/taxi-to-chloraka": "Такси в Хлораку",
+    },
   };
 
-  const englishLabels: Record<string, string> = {
-    "/larnaca-airport-to-paphos": "Larnaca to Paphos",
-    "/larnaca-airport-transfers": "Larnaca Airport",
-    "/paphos-airport-transfers": "Paphos Airport",
-    "/taxi-to-limassol": "Taxi to Limassol",
-    "/taxi-to-coral-bay": "Taxi to Coral Bay",
-    "/taxi-to-peyia": "Taxi to Peyia",
-    "/taxi-to-chloraka": "Taxi to Chloraka",
+  const labels = transferLabels[locale];
+  const transferPaths = Object.keys(transferLabels.en);
+
+  const popularSearches: Record<"en" | "el" | "ru", { path: string; label: string }[]> = {
+    en: [
+      { path: "/contact", label: "Taxi Near Me" },
+      { path: "/cyprus-airport-transfers", label: "Airport Taxi Near Me" },
+      { path: "/pricing", label: "24/7 Taxi Cyprus" },
+      { path: "/fleet", label: "Private Taxi Service" },
+      { path: "/pricing", label: "Cheap Airport Transfers Cyprus" },
+    ],
+    el: [
+      { path: "/contact", label: "Ταξί κοντά μου" },
+      { path: "/cyprus-airport-transfers", label: "Ταξί αεροδρομίου κοντά μου" },
+      { path: "/pricing", label: "Ταξί 24/7 Κύπρος" },
+      { path: "/fleet", label: "Ιδιωτική υπηρεσία ταξί" },
+      { path: "/pricing", label: "Φθηνές μεταφορές αεροδρομίου Κύπρος" },
+    ],
+    ru: [
+      { path: "/contact", label: "Такси рядом со мной" },
+      { path: "/cyprus-airport-transfers", label: "Такси из аэропорта рядом" },
+      { path: "/pricing", label: "Такси 24/7 на Кипре" },
+      { path: "/fleet", label: "Частная служба такси" },
+      { path: "/pricing", label: "Дешёвые трансферы из аэропорта Кипра" },
+    ],
   };
 
-  const labels = locale === "el" ? greekLabels : englishLabels;
-  const transferPaths = Object.keys(englishLabels);
+  const popularSearchesTitle: Record<"en" | "el" | "ru", string> = {
+    en: "Popular searches",
+    el: "Δημοφιλείς αναζητήσεις",
+    ru: "Популярные запросы",
+  };
 
   return (
     <footer className="mt-24 border-t border-border bg-navy text-[color:var(--navy-foreground)]">
@@ -67,35 +107,15 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-white">
-            {locale === "el" ? "Δημοφιλείς αναζητήσεις" : "Popular searches"}
-          </h4>
+          <h4 className="text-sm font-semibold text-white">{popularSearchesTitle[locale]}</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/70">
-            <li>
-              <Link to={wl("/contact")} className="hover:text-gold">
-                {locale === "el" ? "Ταξί κοντά μου" : "Taxi Near Me"}
-              </Link>
-            </li>
-            <li>
-              <Link to={wl("/cyprus-airport-transfers")} className="hover:text-gold">
-                {locale === "el" ? "Ταξί αεροδρομίου κοντά μου" : "Airport Taxi Near Me"}
-              </Link>
-            </li>
-            <li>
-              <Link to={wl("/pricing")} className="hover:text-gold">
-                {locale === "el" ? "Ταξί 24/7 Κύπρος" : "24/7 Taxi Cyprus"}
-              </Link>
-            </li>
-            <li>
-              <Link to={wl("/fleet")} className="hover:text-gold">
-                {locale === "el" ? "Ιδιωτική υπηρεσία ταξί" : "Private Taxi Service"}
-              </Link>
-            </li>
-            <li>
-              <Link to={wl("/pricing")} className="hover:text-gold">
-                {locale === "el" ? "Φθηνές μεταφορές αεροδρομίου Κύπρος" : "Cheap Airport Transfers Cyprus"}
-              </Link>
-            </li>
+            {popularSearches[locale].map((s, i) => (
+              <li key={`${s.path}-${i}`}>
+                <Link to={wl(s.path)} className="hover:text-gold">
+                  {s.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
