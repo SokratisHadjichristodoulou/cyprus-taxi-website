@@ -147,7 +147,7 @@ function HomePage() {
               Private Cyprus Airport Taxi Transfers
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">
-              Fixed-price Cyprus airport transfers from Larnaca & Paphos airports with professional drivers, private taxis, and free meet & greet service.
+              Looking for a reliable taxi near me in Cyprus? Taxicyprus24 offers fixed-price private airport transfers, 24/7 taxi service, and professional drivers across Larnaca, Paphos, Limassol, Coral Bay, and all Cyprus destinations.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
