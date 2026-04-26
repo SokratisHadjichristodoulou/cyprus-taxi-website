@@ -13,6 +13,7 @@ import { Route as TaxiToPeyiaRouteImport } from './routes/taxi-to-peyia'
 import { Route as TaxiToLimassolRouteImport } from './routes/taxi-to-limassol'
 import { Route as TaxiToCoralBayRouteImport } from './routes/taxi-to-coral-bay'
 import { Route as TaxiToChlorakaRouteImport } from './routes/taxi-to-chloraka'
+import { Route as RuRouteImport } from './routes/ru'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PaphosAirportTransfersRouteImport } from './routes/paphos-airport-transfers'
@@ -26,7 +27,23 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RuIndexRouteImport } from './routes/ru.index'
 import { Route as ElIndexRouteImport } from './routes/el.index'
+import { Route as RuTaxiToPeyiaRouteImport } from './routes/ru.taxi-to-peyia'
+import { Route as RuTaxiToLimassolRouteImport } from './routes/ru.taxi-to-limassol'
+import { Route as RuTaxiToCoralBayRouteImport } from './routes/ru.taxi-to-coral-bay'
+import { Route as RuTaxiToChlorakaRouteImport } from './routes/ru.taxi-to-chloraka'
+import { Route as RuReviewsRouteImport } from './routes/ru.reviews'
+import { Route as RuPricingRouteImport } from './routes/ru.pricing'
+import { Route as RuPaphosAirportTransfersRouteImport } from './routes/ru.paphos-airport-transfers'
+import { Route as RuLarnacaAirportTransfersRouteImport } from './routes/ru.larnaca-airport-transfers'
+import { Route as RuLarnacaAirportToPaphosRouteImport } from './routes/ru.larnaca-airport-to-paphos'
+import { Route as RuFleetRouteImport } from './routes/ru.fleet'
+import { Route as RuFaqRouteImport } from './routes/ru.faq'
+import { Route as RuCyprusAirportTransfersRouteImport } from './routes/ru.cyprus-airport-transfers'
+import { Route as RuContactRouteImport } from './routes/ru.contact'
+import { Route as RuBlogRouteImport } from './routes/ru.blog'
+import { Route as RuAboutRouteImport } from './routes/ru.about'
 import { Route as ElTaxiToPeyiaRouteImport } from './routes/el.taxi-to-peyia'
 import { Route as ElTaxiToLimassolRouteImport } from './routes/el.taxi-to-limassol'
 import { Route as ElTaxiToCoralBayRouteImport } from './routes/el.taxi-to-coral-bay'
@@ -67,6 +84,11 @@ const TaxiToCoralBayRoute = TaxiToCoralBayRouteImport.update({
 const TaxiToChlorakaRoute = TaxiToChlorakaRouteImport.update({
   id: '/taxi-to-chloraka',
   path: '/taxi-to-chloraka',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RuRoute = RuRouteImport.update({
+  id: '/ru',
+  path: '/ru',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
@@ -134,10 +156,94 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RuIndexRoute = RuIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => RuRoute,
+} as any)
 const ElIndexRoute = ElIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ElRoute,
+} as any)
+const RuTaxiToPeyiaRoute = RuTaxiToPeyiaRouteImport.update({
+  id: '/taxi-to-peyia',
+  path: '/taxi-to-peyia',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuTaxiToLimassolRoute = RuTaxiToLimassolRouteImport.update({
+  id: '/taxi-to-limassol',
+  path: '/taxi-to-limassol',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuTaxiToCoralBayRoute = RuTaxiToCoralBayRouteImport.update({
+  id: '/taxi-to-coral-bay',
+  path: '/taxi-to-coral-bay',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuTaxiToChlorakaRoute = RuTaxiToChlorakaRouteImport.update({
+  id: '/taxi-to-chloraka',
+  path: '/taxi-to-chloraka',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuReviewsRoute = RuReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuPricingRoute = RuPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuPaphosAirportTransfersRoute =
+  RuPaphosAirportTransfersRouteImport.update({
+    id: '/paphos-airport-transfers',
+    path: '/paphos-airport-transfers',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuLarnacaAirportTransfersRoute =
+  RuLarnacaAirportTransfersRouteImport.update({
+    id: '/larnaca-airport-transfers',
+    path: '/larnaca-airport-transfers',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuLarnacaAirportToPaphosRoute =
+  RuLarnacaAirportToPaphosRouteImport.update({
+    id: '/larnaca-airport-to-paphos',
+    path: '/larnaca-airport-to-paphos',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuFleetRoute = RuFleetRouteImport.update({
+  id: '/fleet',
+  path: '/fleet',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuFaqRoute = RuFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuCyprusAirportTransfersRoute =
+  RuCyprusAirportTransfersRouteImport.update({
+    id: '/cyprus-airport-transfers',
+    path: '/cyprus-airport-transfers',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuContactRoute = RuContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuBlogRoute = RuBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuAboutRoute = RuAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => RuRoute,
 } as any)
 const ElTaxiToPeyiaRoute = ElTaxiToPeyiaRouteImport.update({
   id: '/taxi-to-peyia',
@@ -269,6 +375,7 @@ export interface FileRoutesByFullPath {
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
+  '/ru': typeof RuRouteWithChildren
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
@@ -294,7 +401,23 @@ export interface FileRoutesByFullPath {
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
   '/el/taxi-to-limassol': typeof ElTaxiToLimassolRoute
   '/el/taxi-to-peyia': typeof ElTaxiToPeyiaRoute
+  '/ru/about': typeof RuAboutRoute
+  '/ru/blog': typeof RuBlogRoute
+  '/ru/contact': typeof RuContactRoute
+  '/ru/cyprus-airport-transfers': typeof RuCyprusAirportTransfersRoute
+  '/ru/faq': typeof RuFaqRoute
+  '/ru/fleet': typeof RuFleetRoute
+  '/ru/larnaca-airport-to-paphos': typeof RuLarnacaAirportToPaphosRoute
+  '/ru/larnaca-airport-transfers': typeof RuLarnacaAirportTransfersRoute
+  '/ru/paphos-airport-transfers': typeof RuPaphosAirportTransfersRoute
+  '/ru/pricing': typeof RuPricingRoute
+  '/ru/reviews': typeof RuReviewsRoute
+  '/ru/taxi-to-chloraka': typeof RuTaxiToChlorakaRoute
+  '/ru/taxi-to-coral-bay': typeof RuTaxiToCoralBayRoute
+  '/ru/taxi-to-limassol': typeof RuTaxiToLimassolRoute
+  '/ru/taxi-to-peyia': typeof RuTaxiToPeyiaRoute
   '/el/': typeof ElIndexRoute
+  '/ru/': typeof RuIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -334,7 +457,23 @@ export interface FileRoutesByTo {
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
   '/el/taxi-to-limassol': typeof ElTaxiToLimassolRoute
   '/el/taxi-to-peyia': typeof ElTaxiToPeyiaRoute
+  '/ru/about': typeof RuAboutRoute
+  '/ru/blog': typeof RuBlogRoute
+  '/ru/contact': typeof RuContactRoute
+  '/ru/cyprus-airport-transfers': typeof RuCyprusAirportTransfersRoute
+  '/ru/faq': typeof RuFaqRoute
+  '/ru/fleet': typeof RuFleetRoute
+  '/ru/larnaca-airport-to-paphos': typeof RuLarnacaAirportToPaphosRoute
+  '/ru/larnaca-airport-transfers': typeof RuLarnacaAirportTransfersRoute
+  '/ru/paphos-airport-transfers': typeof RuPaphosAirportTransfersRoute
+  '/ru/pricing': typeof RuPricingRoute
+  '/ru/reviews': typeof RuReviewsRoute
+  '/ru/taxi-to-chloraka': typeof RuTaxiToChlorakaRoute
+  '/ru/taxi-to-coral-bay': typeof RuTaxiToCoralBayRoute
+  '/ru/taxi-to-limassol': typeof RuTaxiToLimassolRoute
+  '/ru/taxi-to-peyia': typeof RuTaxiToPeyiaRoute
   '/el': typeof ElIndexRoute
+  '/ru': typeof RuIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -351,6 +490,7 @@ export interface FileRoutesById {
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
+  '/ru': typeof RuRouteWithChildren
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
@@ -376,7 +516,23 @@ export interface FileRoutesById {
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
   '/el/taxi-to-limassol': typeof ElTaxiToLimassolRoute
   '/el/taxi-to-peyia': typeof ElTaxiToPeyiaRoute
+  '/ru/about': typeof RuAboutRoute
+  '/ru/blog': typeof RuBlogRoute
+  '/ru/contact': typeof RuContactRoute
+  '/ru/cyprus-airport-transfers': typeof RuCyprusAirportTransfersRoute
+  '/ru/faq': typeof RuFaqRoute
+  '/ru/fleet': typeof RuFleetRoute
+  '/ru/larnaca-airport-to-paphos': typeof RuLarnacaAirportToPaphosRoute
+  '/ru/larnaca-airport-transfers': typeof RuLarnacaAirportTransfersRoute
+  '/ru/paphos-airport-transfers': typeof RuPaphosAirportTransfersRoute
+  '/ru/pricing': typeof RuPricingRoute
+  '/ru/reviews': typeof RuReviewsRoute
+  '/ru/taxi-to-chloraka': typeof RuTaxiToChlorakaRoute
+  '/ru/taxi-to-coral-bay': typeof RuTaxiToCoralBayRoute
+  '/ru/taxi-to-limassol': typeof RuTaxiToLimassolRoute
+  '/ru/taxi-to-peyia': typeof RuTaxiToPeyiaRoute
   '/el/': typeof ElIndexRoute
+  '/ru/': typeof RuIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -394,6 +550,7 @@ export interface FileRouteTypes {
     | '/paphos-airport-transfers'
     | '/pricing'
     | '/reviews'
+    | '/ru'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
@@ -419,7 +576,23 @@ export interface FileRouteTypes {
     | '/el/taxi-to-coral-bay'
     | '/el/taxi-to-limassol'
     | '/el/taxi-to-peyia'
+    | '/ru/about'
+    | '/ru/blog'
+    | '/ru/contact'
+    | '/ru/cyprus-airport-transfers'
+    | '/ru/faq'
+    | '/ru/fleet'
+    | '/ru/larnaca-airport-to-paphos'
+    | '/ru/larnaca-airport-transfers'
+    | '/ru/paphos-airport-transfers'
+    | '/ru/pricing'
+    | '/ru/reviews'
+    | '/ru/taxi-to-chloraka'
+    | '/ru/taxi-to-coral-bay'
+    | '/ru/taxi-to-limassol'
+    | '/ru/taxi-to-peyia'
     | '/el/'
+    | '/ru/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -459,7 +632,23 @@ export interface FileRouteTypes {
     | '/el/taxi-to-coral-bay'
     | '/el/taxi-to-limassol'
     | '/el/taxi-to-peyia'
+    | '/ru/about'
+    | '/ru/blog'
+    | '/ru/contact'
+    | '/ru/cyprus-airport-transfers'
+    | '/ru/faq'
+    | '/ru/fleet'
+    | '/ru/larnaca-airport-to-paphos'
+    | '/ru/larnaca-airport-transfers'
+    | '/ru/paphos-airport-transfers'
+    | '/ru/pricing'
+    | '/ru/reviews'
+    | '/ru/taxi-to-chloraka'
+    | '/ru/taxi-to-coral-bay'
+    | '/ru/taxi-to-limassol'
+    | '/ru/taxi-to-peyia'
     | '/el'
+    | '/ru'
   id:
     | '__root__'
     | '/'
@@ -475,6 +664,7 @@ export interface FileRouteTypes {
     | '/paphos-airport-transfers'
     | '/pricing'
     | '/reviews'
+    | '/ru'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
@@ -500,7 +690,23 @@ export interface FileRouteTypes {
     | '/el/taxi-to-coral-bay'
     | '/el/taxi-to-limassol'
     | '/el/taxi-to-peyia'
+    | '/ru/about'
+    | '/ru/blog'
+    | '/ru/contact'
+    | '/ru/cyprus-airport-transfers'
+    | '/ru/faq'
+    | '/ru/fleet'
+    | '/ru/larnaca-airport-to-paphos'
+    | '/ru/larnaca-airport-transfers'
+    | '/ru/paphos-airport-transfers'
+    | '/ru/pricing'
+    | '/ru/reviews'
+    | '/ru/taxi-to-chloraka'
+    | '/ru/taxi-to-coral-bay'
+    | '/ru/taxi-to-limassol'
+    | '/ru/taxi-to-peyia'
     | '/el/'
+    | '/ru/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -517,6 +723,7 @@ export interface RootRouteChildren {
   PaphosAirportTransfersRoute: typeof PaphosAirportTransfersRoute
   PricingRoute: typeof PricingRoute
   ReviewsRoute: typeof ReviewsRoute
+  RuRoute: typeof RuRouteWithChildren
   TaxiToChlorakaRoute: typeof TaxiToChlorakaRoute
   TaxiToCoralBayRoute: typeof TaxiToCoralBayRoute
   TaxiToLimassolRoute: typeof TaxiToLimassolRoute
@@ -558,6 +765,13 @@ declare module '@tanstack/react-router' {
       path: '/taxi-to-chloraka'
       fullPath: '/taxi-to-chloraka'
       preLoaderRoute: typeof TaxiToChlorakaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ru': {
+      id: '/ru'
+      path: '/ru'
+      fullPath: '/ru'
+      preLoaderRoute: typeof RuRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reviews': {
@@ -651,12 +865,124 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ru/': {
+      id: '/ru/'
+      path: '/'
+      fullPath: '/ru/'
+      preLoaderRoute: typeof RuIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/el/': {
       id: '/el/'
       path: '/'
       fullPath: '/el/'
       preLoaderRoute: typeof ElIndexRouteImport
       parentRoute: typeof ElRoute
+    }
+    '/ru/taxi-to-peyia': {
+      id: '/ru/taxi-to-peyia'
+      path: '/taxi-to-peyia'
+      fullPath: '/ru/taxi-to-peyia'
+      preLoaderRoute: typeof RuTaxiToPeyiaRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/taxi-to-limassol': {
+      id: '/ru/taxi-to-limassol'
+      path: '/taxi-to-limassol'
+      fullPath: '/ru/taxi-to-limassol'
+      preLoaderRoute: typeof RuTaxiToLimassolRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/taxi-to-coral-bay': {
+      id: '/ru/taxi-to-coral-bay'
+      path: '/taxi-to-coral-bay'
+      fullPath: '/ru/taxi-to-coral-bay'
+      preLoaderRoute: typeof RuTaxiToCoralBayRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/taxi-to-chloraka': {
+      id: '/ru/taxi-to-chloraka'
+      path: '/taxi-to-chloraka'
+      fullPath: '/ru/taxi-to-chloraka'
+      preLoaderRoute: typeof RuTaxiToChlorakaRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/reviews': {
+      id: '/ru/reviews'
+      path: '/reviews'
+      fullPath: '/ru/reviews'
+      preLoaderRoute: typeof RuReviewsRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/pricing': {
+      id: '/ru/pricing'
+      path: '/pricing'
+      fullPath: '/ru/pricing'
+      preLoaderRoute: typeof RuPricingRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/paphos-airport-transfers': {
+      id: '/ru/paphos-airport-transfers'
+      path: '/paphos-airport-transfers'
+      fullPath: '/ru/paphos-airport-transfers'
+      preLoaderRoute: typeof RuPaphosAirportTransfersRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/larnaca-airport-transfers': {
+      id: '/ru/larnaca-airport-transfers'
+      path: '/larnaca-airport-transfers'
+      fullPath: '/ru/larnaca-airport-transfers'
+      preLoaderRoute: typeof RuLarnacaAirportTransfersRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/larnaca-airport-to-paphos': {
+      id: '/ru/larnaca-airport-to-paphos'
+      path: '/larnaca-airport-to-paphos'
+      fullPath: '/ru/larnaca-airport-to-paphos'
+      preLoaderRoute: typeof RuLarnacaAirportToPaphosRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/fleet': {
+      id: '/ru/fleet'
+      path: '/fleet'
+      fullPath: '/ru/fleet'
+      preLoaderRoute: typeof RuFleetRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/faq': {
+      id: '/ru/faq'
+      path: '/faq'
+      fullPath: '/ru/faq'
+      preLoaderRoute: typeof RuFaqRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/cyprus-airport-transfers': {
+      id: '/ru/cyprus-airport-transfers'
+      path: '/cyprus-airport-transfers'
+      fullPath: '/ru/cyprus-airport-transfers'
+      preLoaderRoute: typeof RuCyprusAirportTransfersRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/contact': {
+      id: '/ru/contact'
+      path: '/contact'
+      fullPath: '/ru/contact'
+      preLoaderRoute: typeof RuContactRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog': {
+      id: '/ru/blog'
+      path: '/blog'
+      fullPath: '/ru/blog'
+      preLoaderRoute: typeof RuBlogRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/about': {
+      id: '/ru/about'
+      path: '/about'
+      fullPath: '/ru/about'
+      preLoaderRoute: typeof RuAboutRouteImport
+      parentRoute: typeof RuRoute
     }
     '/el/taxi-to-peyia': {
       id: '/el/taxi-to-peyia'
@@ -846,6 +1172,46 @@ const ElRouteChildren: ElRouteChildren = {
 
 const ElRouteWithChildren = ElRoute._addFileChildren(ElRouteChildren)
 
+interface RuRouteChildren {
+  RuAboutRoute: typeof RuAboutRoute
+  RuBlogRoute: typeof RuBlogRoute
+  RuContactRoute: typeof RuContactRoute
+  RuCyprusAirportTransfersRoute: typeof RuCyprusAirportTransfersRoute
+  RuFaqRoute: typeof RuFaqRoute
+  RuFleetRoute: typeof RuFleetRoute
+  RuLarnacaAirportToPaphosRoute: typeof RuLarnacaAirportToPaphosRoute
+  RuLarnacaAirportTransfersRoute: typeof RuLarnacaAirportTransfersRoute
+  RuPaphosAirportTransfersRoute: typeof RuPaphosAirportTransfersRoute
+  RuPricingRoute: typeof RuPricingRoute
+  RuReviewsRoute: typeof RuReviewsRoute
+  RuTaxiToChlorakaRoute: typeof RuTaxiToChlorakaRoute
+  RuTaxiToCoralBayRoute: typeof RuTaxiToCoralBayRoute
+  RuTaxiToLimassolRoute: typeof RuTaxiToLimassolRoute
+  RuTaxiToPeyiaRoute: typeof RuTaxiToPeyiaRoute
+  RuIndexRoute: typeof RuIndexRoute
+}
+
+const RuRouteChildren: RuRouteChildren = {
+  RuAboutRoute: RuAboutRoute,
+  RuBlogRoute: RuBlogRoute,
+  RuContactRoute: RuContactRoute,
+  RuCyprusAirportTransfersRoute: RuCyprusAirportTransfersRoute,
+  RuFaqRoute: RuFaqRoute,
+  RuFleetRoute: RuFleetRoute,
+  RuLarnacaAirportToPaphosRoute: RuLarnacaAirportToPaphosRoute,
+  RuLarnacaAirportTransfersRoute: RuLarnacaAirportTransfersRoute,
+  RuPaphosAirportTransfersRoute: RuPaphosAirportTransfersRoute,
+  RuPricingRoute: RuPricingRoute,
+  RuReviewsRoute: RuReviewsRoute,
+  RuTaxiToChlorakaRoute: RuTaxiToChlorakaRoute,
+  RuTaxiToCoralBayRoute: RuTaxiToCoralBayRoute,
+  RuTaxiToLimassolRoute: RuTaxiToLimassolRoute,
+  RuTaxiToPeyiaRoute: RuTaxiToPeyiaRoute,
+  RuIndexRoute: RuIndexRoute,
+}
+
+const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
@@ -860,6 +1226,7 @@ const rootRouteChildren: RootRouteChildren = {
   PaphosAirportTransfersRoute: PaphosAirportTransfersRoute,
   PricingRoute: PricingRoute,
   ReviewsRoute: ReviewsRoute,
+  RuRoute: RuRouteWithChildren,
   TaxiToChlorakaRoute: TaxiToChlorakaRoute,
   TaxiToCoralBayRoute: TaxiToCoralBayRoute,
   TaxiToLimassolRoute: TaxiToLimassolRoute,
