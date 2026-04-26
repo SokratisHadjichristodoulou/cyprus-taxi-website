@@ -59,7 +59,7 @@ const features = [
   { icon: Plane, title: "Flight tracking", desc: "We monitor your flight in real time and meet you on arrival — even if delayed." },
   { icon: Baby, title: "Free child seats", desc: "Baby, child and booster seats provided at no extra charge." },
   { icon: ShieldCheck, title: "Licensed drivers", desc: "Professional, English-speaking drivers in immaculate vehicles." },
-  { icon: Clock, title: "24/7 service", desc: "Day, night, weekends, holidays — we operate around the clock." },
+  { icon: Clock, title: "24/7 service", desc: "Day, night, weekends, holidays — at Cyprus Taxi 24 we operate around the clock." },
   { icon: CreditCard, title: "Pay your way", desc: "Card online, bank transfer, or cash to driver in EUR or GBP." },
 ];
 
