@@ -99,8 +99,8 @@ export function TransferPage(p: TransferPageProps) {
             </ul>
           </div>
 
-          <div className="overflow-hidden rounded-3xl shadow-elegant">
-            <img src={p.galleryImage} alt={p.toLocation} loading="lazy" width={1024} height={768} className="h-full w-full object-cover" />
+          <div className="self-start overflow-hidden rounded-3xl shadow-elegant">
+            <img src={p.galleryImage} alt={p.toLocation} loading="lazy" width={1024} height={768} className="aspect-[4/3] w-full object-cover" />
           </div>
         </div>
       </section>
