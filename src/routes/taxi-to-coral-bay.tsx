@@ -36,7 +36,7 @@ export const Route = createFileRoute("/taxi-to-coral-bay")({
         "Every Coral Bay airport transfer includes fixed-price taxi rates with no hidden fees, meet & greet at the airport, flight monitoring for delayed arrivals, free baby and child seats, comfortable air-conditioned vehicles, and payment by card, bank transfer, or cash in EUR or GBP.",
         "Whether you need a taxi from Paphos Airport to Coral Bay or a private transfer from Larnaca Airport to Coral Bay, Taxicyprus24 guarantees safe, comfortable, and stress-free travel across Cyprus.",
       ]}
-      highlights={["Direct to your Coral Bay hotel", "Mercedes-Benz vehicles", "Fixed price guarantee", "Free child seats", "24/7 night arrivals", "Meet & greet included"]}
+      highlights={["Direct to your Coral Bay hotel", "Clean and Luxury cars", "Fixed price guarantee", "Free child seats", "24/7 night arrivals", "Meet & greet included"]}
       prices={[
         { type: "Paphos Airport to Coral Bay", pax: "Up to 3 passengers", price: "€35" },
         { type: "Larnaca Airport to Coral Bay", pax: "Up to 3 passengers", price: "€110" },

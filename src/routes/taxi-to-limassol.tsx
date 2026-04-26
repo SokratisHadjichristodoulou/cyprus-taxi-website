@@ -20,7 +20,7 @@ export const Route = createFileRoute("/taxi-to-limassol")({
     <TransferPage
       eyebrow="Airport to Limassol"
       title="Private Taxi Transfer to Limassol"
-      subtitle="Fixed-price airport transfers to Limassol from Larnaca and Paphos airports. Premium Mercedes-Benz vehicles for business and leisure travellers."
+      subtitle="Fixed-price airport transfers to Limassol from Larnaca and Paphos airports. Premium Clean and Luxury cars for business and leisure travellers."
       heroImage={heroImg}
       galleryImage={limassolImg}
       defaultDropoff="Limassol"
