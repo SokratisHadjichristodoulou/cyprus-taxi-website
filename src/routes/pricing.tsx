@@ -55,7 +55,7 @@ function PricingPage() {
       <PageHero
         eyebrow="Transparent pricing"
         title="Cyprus Airport Transfer Prices"
-        subtitle="Searching for an airport taxi near me at Larnaca Airport or Paphos Airport? Our private Cyprus taxi service is available 24/7 with fixed prices and no hidden fees."
+        subtitle="Searching for a taxi near Larnaca Airport or Paphos Airport? Our private Cyprus taxi service is available 24/7 with fixed prices and no hidden fees."
         image={heroImg}
       />
 
