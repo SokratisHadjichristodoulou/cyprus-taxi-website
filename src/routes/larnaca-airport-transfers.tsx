@@ -38,16 +38,16 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
         ]}
         highlights={["Direct from Larnaca Airport (LCA)", "Meet & greet at arrivals", "Mercedes-Benz vehicles", "Free child seats", "Flight tracking included", "Pay cash or card"]}
         prices={[
-          { type: "LCA → Pissouri", pax: "Up to 4 passengers", price: "€120" },
-          { type: "LCA → Paphos", pax: "Up to 4 passengers", price: "€130" },
-          { type: "LCA → Coral Bay", pax: "Up to 4 passengers", price: "€150" },
+          { type: "LCA to Pissouri", pax: "Up to 4 passengers", price: "€120" },
+          { type: "LCA to Paphos", pax: "Up to 4 passengers", price: "€130" },
+          { type: "LCA to Coral Bay", pax: "Up to 4 passengers", price: "€150" },
         ]}
         nearbyAreas={["Larnaca City", "Limassol", "Ayia Napa", "Protaras", "Nicosia", "Paphos", "Coral Bay", "Peyia", "Pissouri"]}
         faqs={sharedFAQs}
         relatedLinks={[
-          { to: "/larnaca-airport-to-paphos", label: "LCA → Paphos" },
-          { to: "/taxi-to-limassol", label: "LCA → Limassol" },
-          { to: "/taxi-to-coral-bay", label: "LCA → Coral Bay" },
+          { to: "/larnaca-airport-to-paphos", label: "LCA to Paphos" },
+          { to: "/taxi-to-limassol", label: "LCA to Limassol" },
+          { to: "/taxi-to-coral-bay", label: "LCA to Coral Bay" },
           { to: "/cyprus-airport-transfers", label: "All Routes" },
         ]}
       />

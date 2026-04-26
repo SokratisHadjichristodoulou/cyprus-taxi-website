@@ -18,7 +18,7 @@ export const Route = createFileRoute("/taxi-to-peyia")({
   }),
   component: () => (
     <TransferPage
-      eyebrow="Airport → Peyia"
+      eyebrow="Airport to Peyia"
       title="Private Taxi Transfer to Peyia"
       subtitle="Fixed-price airport transfers to Peyia village and the surrounding hillside villas. Private Mercedes-Benz, meet & greet, no surprises."
       heroImage={heroImg}
@@ -35,8 +35,8 @@ export const Route = createFileRoute("/taxi-to-peyia")({
       ]}
       highlights={["Direct to your Peyia villa", "Drivers know all hillside roads", "Mercedes-Benz vehicles", "Fixed price", "Free child seats", "24/7 booking"]}
       prices={[
-        { type: "Paphos Airport → Peyia", pax: "Up to 3 passengers", price: "€35" },
-        { type: "Larnaca Airport → Peyia", pax: "Up to 3 passengers", price: "€115" },
+        { type: "Paphos Airport to Peyia", pax: "Up to 3 passengers", price: "€35" },
+        { type: "Larnaca Airport to Peyia", pax: "Up to 3 passengers", price: "€115" },
         { type: "7-seater Premium Van", pax: "Up to 7 passengers", price: "€55+" },
       ]}
       nearbyAreas={["Sea Caves", "St George Peyia", "Coral Bay", "Akamas", "Kissonerga"]}

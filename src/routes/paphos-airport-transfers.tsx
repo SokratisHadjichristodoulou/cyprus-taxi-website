@@ -45,17 +45,17 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
           "Free flight tracking",
         ]}
         prices={[
-          { type: "PFO → Coral Bay", pax: "Up to 4 passengers", price: "€55" },
-          { type: "PFO → Limassol", pax: "Up to 4 passengers", price: "€80" },
-          { type: "PFO → Larnaca", pax: "Up to 4 passengers", price: "€130" },
+          { type: "PFO to Coral Bay", pax: "Up to 4 passengers", price: "€55" },
+          { type: "PFO to Limassol", pax: "Up to 4 passengers", price: "€80" },
+          { type: "PFO to Larnaca", pax: "Up to 4 passengers", price: "€130" },
         ]}
         nearbyAreas={["Coral Bay", "Peyia", "Chloraka", "Kato Paphos", "Paphos Harbour", "Tombs of the Kings", "Geroskipou", "Latchi", "Polis"]}
         faqs={sharedFAQs}
         relatedLinks={[
-          { to: "/taxi-to-coral-bay", label: "PFO → Coral Bay" },
-          { to: "/taxi-to-peyia", label: "PFO → Peyia" },
-          { to: "/taxi-to-chloraka", label: "PFO → Chloraka" },
-          { to: "/taxi-to-limassol", label: "PFO → Limassol" },
+          { to: "/taxi-to-coral-bay", label: "PFO to Coral Bay" },
+          { to: "/taxi-to-peyia", label: "PFO to Peyia" },
+          { to: "/taxi-to-chloraka", label: "PFO to Chloraka" },
+          { to: "/taxi-to-limassol", label: "PFO to Limassol" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">

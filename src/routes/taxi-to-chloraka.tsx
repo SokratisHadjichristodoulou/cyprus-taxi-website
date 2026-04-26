@@ -18,7 +18,7 @@ export const Route = createFileRoute("/taxi-to-chloraka")({
   }),
   component: () => (
     <TransferPage
-      eyebrow="Airport → Chloraka"
+      eyebrow="Airport to Chloraka"
       title="Private Taxi Transfer to Chloraka"
       subtitle="Fixed-price private airport transfers to Chloraka in a luxury Mercedes-Benz. Quick, comfortable and reliable."
       heroImage={heroImg}
@@ -35,8 +35,8 @@ export const Route = createFileRoute("/taxi-to-chloraka")({
       ]}
       highlights={["Direct to your Chloraka villa", "Mercedes-Benz vehicles", "Fixed price guarantee", "Free child seats", "Meet & greet at airport", "Pay cash or card"]}
       prices={[
-        { type: "Paphos Airport → Chloraka", pax: "Up to 3 passengers", price: "€32" },
-        { type: "Larnaca Airport → Chloraka", pax: "Up to 3 passengers", price: "€110" },
+        { type: "Paphos Airport to Chloraka", pax: "Up to 3 passengers", price: "€32" },
+        { type: "Larnaca Airport to Chloraka", pax: "Up to 3 passengers", price: "€110" },
         { type: "7-seater Premium Van", pax: "Up to 7 passengers", price: "€50+" },
       ]}
       nearbyAreas={["Kissonerga", "Lemba", "Kato Paphos", "Coral Bay", "Tombs of the Kings"]}

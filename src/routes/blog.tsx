@@ -26,7 +26,7 @@ export const Route = createFileRoute("/blog")({
 
 const posts = [
   { img: coralBayImg, title: "Best beaches in Paphos & Coral Bay", excerpt: "From the famous Coral Bay sands to hidden coves around Lara Beach — the ultimate Paphos beach guide.", date: "April 2025", read: "6 min" },
-  { img: heroImg, title: "How to travel from Larnaca Airport to Paphos", excerpt: "Public bus, rental car or private transfer — we compare every option for the LCA → Paphos journey.", date: "April 2025", read: "5 min" },
+  { img: heroImg, title: "How to travel from Larnaca Airport to Paphos", excerpt: "Public bus, rental car or private transfer — we compare every option for the LCA to Paphos journey.", date: "April 2025", read: "5 min" },
   { img: peyiaImg, title: "Top hotels & villas in Coral Bay and Peyia", excerpt: "Where to stay on Cyprus's western coast, from family resorts to private hillside villas with sea views.", date: "March 2025", read: "8 min" },
   { img: paphosImg, title: "Things to do in Paphos — local guide", excerpt: "Tombs of the Kings, Paphos Mosaics, the Old Harbour and our favourite tavernas off the tourist trail.", date: "March 2025", read: "7 min" },
   { img: larnacaImg, title: "Cyprus travel tips for first-time visitors", excerpt: "Everything UK and European travellers should know — currency, driving, weather, dress code and more.", date: "February 2025", read: "6 min" },

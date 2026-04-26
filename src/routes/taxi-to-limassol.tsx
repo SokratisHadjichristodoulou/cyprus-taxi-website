@@ -18,7 +18,7 @@ export const Route = createFileRoute("/taxi-to-limassol")({
   }),
   component: () => (
     <TransferPage
-      eyebrow="Airport → Limassol"
+      eyebrow="Airport to Limassol"
       title="Private Taxi Transfer to Limassol"
       subtitle="Fixed-price airport transfers to Limassol from Larnaca and Paphos airports. Premium Mercedes-Benz vehicles for business and leisure travellers."
       heroImage={heroImg}
@@ -35,8 +35,8 @@ export const Route = createFileRoute("/taxi-to-limassol")({
       ]}
       highlights={["Direct to Limassol hotel or marina", "Premium Mercedes-Benz", "Ideal for business travellers", "Fixed price guarantee", "Meet & greet at airport", "24/7 service"]}
       prices={[
-        { type: "Larnaca Airport → Limassol", pax: "Up to 3 passengers", price: "€55" },
-        { type: "Paphos Airport → Limassol", pax: "Up to 3 passengers", price: "€65" },
+        { type: "Larnaca Airport to Limassol", pax: "Up to 3 passengers", price: "€55" },
+        { type: "Paphos Airport to Limassol", pax: "Up to 3 passengers", price: "€65" },
         { type: "Luxury S-Class", pax: "Up to 3 passengers", price: "€95+" },
       ]}
       nearbyAreas={["Limassol Marina", "Limassol Old Town", "Germasogeia", "Amathus", "Mouttagiaka", "Pissouri", "Governor's Beach"]}

@@ -20,7 +20,7 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-white">Transfers</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/70">
-            <li><Link to="/larnaca-airport-to-paphos" className="hover:text-gold">Larnaca → Paphos</Link></li>
+            <li><Link to="/larnaca-airport-to-paphos" className="hover:text-gold">Larnaca to Paphos</Link></li>
             <li><Link to="/larnaca-airport-transfers" className="hover:text-gold">Larnaca Airport</Link></li>
             <li><Link to="/paphos-airport-transfers" className="hover:text-gold">Paphos Airport</Link></li>
             <li><Link to="/taxi-to-limassol" className="hover:text-gold">Taxi to Limassol</Link></li>
