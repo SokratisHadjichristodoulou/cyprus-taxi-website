@@ -82,7 +82,7 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link to={wl("/")} className="hover:text-gold">
+              <Link to={wl("/pricing")} className="hover:text-gold">
                 {locale === "el" ? "Ταξί 24/7 Κύπρος" : "24/7 Taxi Cyprus"}
               </Link>
             </li>
