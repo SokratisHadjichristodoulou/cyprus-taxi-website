@@ -19,6 +19,8 @@ import { TrustBar } from "@/components/TrustBar";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
+import { FAQAccordion } from "@/components/FAQAccordion";
+import { sharedFAQsRu } from "@/lib/faqs.ru";
 
 export const Route = createFileRoute("/ru/")({
   head: () => ({
