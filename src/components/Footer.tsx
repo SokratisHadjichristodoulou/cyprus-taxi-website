@@ -11,9 +11,8 @@ export function Footer() {
             <img src={logo} alt="Taxi Cyprus 24" width={36} height={36} className="h-9 w-9 object-contain" />
             <div className="font-display text-base font-bold">Taxi Cyprus 24</div>
           </div>
-          <p className="mt-4 max-w-xs text-sm text-white/70">
-            Premium private airport transfers across Cyprus. Fixed prices, professional drivers,
-            24/7 service.
+          <p className="mt-4 max-w-sm text-sm text-white/70">
+            Taxicyprus24 provides premium private airport transfers across Cyprus with fixed prices, professional drivers, and reliable 24/7 taxi service. Whether you need a private transfer from Larnaca Airport, Paphos Airport, Limassol, Nicosia, or any destination in Cyprus, we guarantee comfortable vehicles, meet & greet service, flight monitoring, and transparent pricing with no hidden fees.
           </p>
         </div>
 
