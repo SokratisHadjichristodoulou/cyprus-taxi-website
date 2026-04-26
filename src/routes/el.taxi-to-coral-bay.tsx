@@ -7,9 +7,9 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/taxi-to-coral-bay")({
   head: () => ({
     meta: [
-      { title: "Ταξί προς Coral Bay από €35 — Μεταφορές Αεροδρομίου | Taxi Cyprus 24" },
-      { name: "description", content: "Ιδιωτικό ταξί προς Coral Bay από Αεροδρόμιο Πάφου (€35) και Αεροδρόμιο Λάρνακας (€110). Σταθερή τιμή, υποδοχή, δωρεάν παιδικά καθίσματα, 24/7." },
-      { property: "og:title", content: "Ταξί προς Coral Bay από €35" },
+      { title: "Ταξί προς Coral Bay από €65 — Μεταφορές Αεροδρομίου | Taxi Cyprus 24" },
+      { name: "description", content: "Ιδιωτικό ταξί προς Coral Bay από Αεροδρόμιο Πάφου (€65) και Αεροδρόμιο Λάρνακας (€170). Σταθερή τιμή, υποδοχή, δωρεάν παιδικά καθίσματα, 24/7." },
+      { property: "og:title", content: "Ταξί προς Coral Bay από €65" },
       { property: "og:description", content: "Ιδιωτικό ταξί σταθερής τιμής προς Coral Bay, Κύπρος." },
       { property: "og:image", content: coralBayImg },
       { property: "og:locale", content: "el_GR" },
@@ -39,9 +39,10 @@ export const Route = createFileRoute("/el/taxi-to-coral-bay")({
       ]}
       highlights={["Απευθείας στο ξενοδοχείο σας στο Coral Bay", "Καθαρά και πολυτελή αυτοκίνητα", "Εγγύηση σταθερής τιμής", "Δωρεάν παιδικά καθίσματα", "Νυχτερινές αφίξεις 24/7", "Υποδοχή"]}
       prices={[
-        { type: "Αεροδρόμιο Πάφου προς Coral Bay", pax: "Έως 3 επιβάτες", price: "€35" },
-        { type: "Αεροδρόμιο Λάρνακας προς Coral Bay", pax: "Έως 3 επιβάτες", price: "€110" },
-        { type: "7-θέσιο (οποιοδήποτε αεροδρόμιο)", pax: "Έως 7 επιβάτες", price: "€55+" },
+        { type: "Αεροδρόμιο Πάφου προς Coral Bay (Sedan)", pax: "Έως 4 επιβάτες", price: "€65" },
+        { type: "Αεροδρόμιο Πάφου προς Coral Bay (Van)", pax: "Έως 6 επιβάτες", price: "€85" },
+        { type: "Αεροδρόμιο Λάρνακας προς Coral Bay (Sedan)", pax: "Έως 4 επιβάτες", price: "€170" },
+        { type: "Αεροδρόμιο Λάρνακας προς Coral Bay (Van)", pax: "Έως 6 επιβάτες", price: "€200" },
       ]}
       nearbyAreas={["Coral Beach Hotel", "Mayfair Coral Bay", "Corallia Beach", "Χερσόνησος Ακάμα", "Θαλάσσιες Σπηλιές", "Πέγεια"]}
       faqs={sharedFAQsEl.slice(0, 6)}
