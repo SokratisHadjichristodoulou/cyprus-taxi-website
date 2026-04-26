@@ -52,8 +52,8 @@ function FleetPage() {
     <>
       <PageHero
         eyebrow="Premium Mercedes-Benz fleet"
-        title="Travel in Mercedes-Benz Comfort"
-        subtitle="Every Taxi Cyprus 24 vehicle is a Mercedes-Benz, regularly serviced and meticulously cleaned. Choose the model that fits your party."
+        title="Travel in Clean & Luxury Car Comfort"
+        subtitle="Every Taxi Cyprus 24 vehicle is a clean and luxury car, regularly serviced and meticulously detailed. Choose the model that fits your party."
         image={heroImg}
         showForm={false}
       />
