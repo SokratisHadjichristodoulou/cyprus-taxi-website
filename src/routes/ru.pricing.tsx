@@ -64,11 +64,11 @@ function PricingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <PriceTable
             pricing={pricingFromPaphos}
-            subtitle="Из международного аэропорта Пафоса (PFO) в направления по всему Кипру."
+            subtitle="Из/в международный аэропорт Пафоса (PFO) — направления по всему Кипру."
           />
           <PriceTable
             pricing={pricingFromLarnaca}
-            subtitle="Из международного аэропорта Ларнаки (LCA) в направления по всему Кипру."
+            subtitle="Из/в международный аэропорт Ларнаки (LCA) — направления по всему Кипру."
           />
         </div>
 
