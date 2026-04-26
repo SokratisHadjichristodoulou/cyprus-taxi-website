@@ -1,8 +1,35 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { useI18n, withLocale } from "@/lib/i18n";
 
 export function Footer() {
+  const { t, locale } = useI18n();
+  const wl = (p: string) => withLocale(locale, p);
+
+  const greekLabels: Record<string, string> = {
+    "/larnaca-airport-to-paphos": "Λάρνακα προς Πάφο",
+    "/larnaca-airport-transfers": "Αεροδρόμιο Λάρνακας",
+    "/paphos-airport-transfers": "Αεροδρόμιο Πάφου",
+    "/taxi-to-limassol": "Ταξί προς Λεμεσό",
+    "/taxi-to-coral-bay": "Ταξί προς Coral Bay",
+    "/taxi-to-peyia": "Ταξί προς Πέγεια",
+    "/taxi-to-chloraka": "Ταξί προς Χλώρακα",
+  };
+
+  const englishLabels: Record<string, string> = {
+    "/larnaca-airport-to-paphos": "Larnaca to Paphos",
+    "/larnaca-airport-transfers": "Larnaca Airport",
+    "/paphos-airport-transfers": "Paphos Airport",
+    "/taxi-to-limassol": "Taxi to Limassol",
+    "/taxi-to-coral-bay": "Taxi to Coral Bay",
+    "/taxi-to-peyia": "Taxi to Peyia",
+    "/taxi-to-chloraka": "Taxi to Chloraka",
+  };
+
+  const labels = locale === "el" ? greekLabels : englishLabels;
+  const transferPaths = Object.keys(englishLabels);
+
   return (
     <footer className="mt-24 border-t border-border bg-navy text-[color:var(--navy-foreground)]">
       <div className="container-tight grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
@@ -11,38 +38,36 @@ export function Footer() {
             <img src={logo} alt="Taxi Cyprus 24" width={36} height={36} className="h-9 w-9 object-contain" />
             <div className="font-display text-base font-bold">Taxi Cyprus 24</div>
           </div>
-          <p className="mt-4 max-w-sm text-sm text-white/70">
-            Taxicyprus24 provides premium private airport transfers across Cyprus with fixed prices, professional drivers, and reliable 24/7 taxi service. Whether you need a private transfer from Larnaca Airport, Paphos Airport, Limassol, Nicosia, or any destination in Cyprus, we guarantee comfortable vehicles, meet & greet service, flight monitoring, and transparent pricing with no hidden fees.
-          </p>
+          <p className="mt-4 max-w-sm text-sm text-white/70">{t("footer.tagline")}</p>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-white">Transfers</h4>
+          <h4 className="text-sm font-semibold text-white">{t("footer.transfers")}</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/70">
-            <li><Link to="/larnaca-airport-to-paphos" className="hover:text-gold">Larnaca to Paphos</Link></li>
-            <li><Link to="/larnaca-airport-transfers" className="hover:text-gold">Larnaca Airport</Link></li>
-            <li><Link to="/paphos-airport-transfers" className="hover:text-gold">Paphos Airport</Link></li>
-            <li><Link to="/taxi-to-limassol" className="hover:text-gold">Taxi to Limassol</Link></li>
-            <li><Link to="/taxi-to-coral-bay" className="hover:text-gold">Taxi to Coral Bay</Link></li>
-            <li><Link to="/taxi-to-peyia" className="hover:text-gold">Taxi to Peyia</Link></li>
-            <li><Link to="/taxi-to-chloraka" className="hover:text-gold">Taxi to Chloraka</Link></li>
+            {transferPaths.map((p) => (
+              <li key={p}>
+                <Link to={wl(p)} className="hover:text-gold">
+                  {labels[p]}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-white">Company</h4>
+          <h4 className="text-sm font-semibold text-white">{t("footer.company")}</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/70">
-            <li><Link to="/about" className="hover:text-gold">About Us</Link></li>
-            <li><Link to="/fleet" className="hover:text-gold">Our Fleet</Link></li>
-            <li><Link to="/reviews" className="hover:text-gold">Reviews</Link></li>
-            <li><Link to="/blog" className="hover:text-gold">Travel Guide</Link></li>
-            <li><Link to="/faq" className="hover:text-gold">FAQ</Link></li>
-            <li><Link to="/contact" className="hover:text-gold">Contact</Link></li>
+            <li><Link to={wl("/about")} className="hover:text-gold">{t("footer.aboutUs")}</Link></li>
+            <li><Link to={wl("/fleet")} className="hover:text-gold">{t("footer.ourFleet")}</Link></li>
+            <li><Link to={wl("/reviews")} className="hover:text-gold">{t("nav.reviews")}</Link></li>
+            <li><Link to={wl("/blog")} className="hover:text-gold">{t("footer.travelGuide")}</Link></li>
+            <li><Link to={wl("/faq")} className="hover:text-gold">{t("nav.faq")}</Link></li>
+            <li><Link to={wl("/contact")} className="hover:text-gold">{t("footer.contact")}</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-white">Contact</h4>
+          <h4 className="text-sm font-semibold text-white">{t("footer.contact")}</h4>
           <ul className="mt-4 space-y-3 text-sm text-white/70">
             <li className="flex items-start gap-2.5">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
@@ -54,7 +79,7 @@ export function Footer() {
             </li>
             <li className="flex items-start gap-2.5">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
-              Serving Larnaca & Paphos airports, all Cyprus
+              {t("footer.serving")}
             </li>
           </ul>
         </div>
@@ -62,8 +87,8 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-tight flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/60 md:flex-row">
-          <div>© {new Date().getFullYear()} Taxi Cyprus 24. All rights reserved.</div>
-          <div>Licensed transportation provider · Cyprus</div>
+          <div>© {new Date().getFullYear()} Taxi Cyprus 24. {t("footer.rights")}</div>
+          <div>{t("footer.licensed")}</div>
         </div>
       </div>
     </footer>

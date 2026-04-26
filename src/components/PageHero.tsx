@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { BookingForm } from "./BookingForm";
+import { useI18n, withLocale } from "@/lib/i18n";
 
 interface Props {
   eyebrow: string;
@@ -21,6 +22,9 @@ export function PageHero({
   defaultPickup,
   defaultDropoff,
 }: Props) {
+  const { t, locale, isGreek } = useI18n();
+  const contactPath = withLocale(locale, "/contact");
+
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
@@ -46,10 +50,10 @@ export function PageHero({
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
-              to="/contact"
+              to={contactPath}
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-navy shadow-elegant transition-transform hover:scale-[1.02]"
             >
-              Book Your Transfer <ArrowRight className="h-4 w-4" />
+              {t("cta.bookYourTransfer")} <ArrowRight className="h-4 w-4" />
             </Link>
             <a
               href="https://wa.me/35796626844"
@@ -57,7 +61,7 @@ export function PageHero({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/20"
             >
-              WhatsApp Quote
+              {isGreek ? "Προσφορά WhatsApp" : "WhatsApp Quote"}
             </a>
           </div>
         </div>
