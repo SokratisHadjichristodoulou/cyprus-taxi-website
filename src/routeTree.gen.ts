@@ -24,6 +24,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogLarnacaAirportToPaphosTravelGuideRouteImport } from './routes/blog_.larnaca-airport-to-paphos-travel-guide'
 import { Route as BlogBestBeachesPaphosCoralBayRouteImport } from './routes/blog_.best-beaches-paphos-coral-bay'
 
 const TaxiToPeyiaRoute = TaxiToPeyiaRouteImport.update({
@@ -101,6 +102,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogLarnacaAirportToPaphosTravelGuideRoute =
+  BlogLarnacaAirportToPaphosTravelGuideRouteImport.update({
+    id: '/blog_/larnaca-airport-to-paphos-travel-guide',
+    path: '/blog/larnaca-airport-to-paphos-travel-guide',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogBestBeachesPaphosCoralBayRoute =
   BlogBestBeachesPaphosCoralBayRouteImport.update({
     id: '/blog_/best-beaches-paphos-coral-bay',
@@ -125,6 +132,7 @@ export interface FileRoutesByFullPath {
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
+  '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -143,6 +151,7 @@ export interface FileRoutesByTo {
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
+  '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -162,6 +171,7 @@ export interface FileRoutesById {
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog_/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
+  '/blog_/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -182,6 +192,7 @@ export interface FileRouteTypes {
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
     | '/blog/best-beaches-paphos-coral-bay'
+    | '/blog/larnaca-airport-to-paphos-travel-guide'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -200,6 +211,7 @@ export interface FileRouteTypes {
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
     | '/blog/best-beaches-paphos-coral-bay'
+    | '/blog/larnaca-airport-to-paphos-travel-guide'
   id:
     | '__root__'
     | '/'
@@ -218,6 +230,7 @@ export interface FileRouteTypes {
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
     | '/blog_/best-beaches-paphos-coral-bay'
+    | '/blog_/larnaca-airport-to-paphos-travel-guide'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -237,6 +250,7 @@ export interface RootRouteChildren {
   TaxiToLimassolRoute: typeof TaxiToLimassolRoute
   TaxiToPeyiaRoute: typeof TaxiToPeyiaRoute
   BlogBestBeachesPaphosCoralBayRoute: typeof BlogBestBeachesPaphosCoralBayRoute
+  BlogLarnacaAirportToPaphosTravelGuideRoute: typeof BlogLarnacaAirportToPaphosTravelGuideRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -346,6 +360,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/larnaca-airport-to-paphos-travel-guide': {
+      id: '/blog_/larnaca-airport-to-paphos-travel-guide'
+      path: '/blog/larnaca-airport-to-paphos-travel-guide'
+      fullPath: '/blog/larnaca-airport-to-paphos-travel-guide'
+      preLoaderRoute: typeof BlogLarnacaAirportToPaphosTravelGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/best-beaches-paphos-coral-bay': {
       id: '/blog_/best-beaches-paphos-coral-bay'
       path: '/blog/best-beaches-paphos-coral-bay'
@@ -373,6 +394,8 @@ const rootRouteChildren: RootRouteChildren = {
   TaxiToLimassolRoute: TaxiToLimassolRoute,
   TaxiToPeyiaRoute: TaxiToPeyiaRoute,
   BlogBestBeachesPaphosCoralBayRoute: BlogBestBeachesPaphosCoralBayRoute,
+  BlogLarnacaAirportToPaphosTravelGuideRoute:
+    BlogLarnacaAirportToPaphosTravelGuideRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
