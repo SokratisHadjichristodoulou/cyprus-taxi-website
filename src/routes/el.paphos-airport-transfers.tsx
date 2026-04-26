@@ -9,9 +9,9 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/paphos-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Μεταφορές & Ταξί Αεροδρομίου Πάφου από €25 | Taxi Cyprus 24" },
+      { title: "Μεταφορές & Ταξί Αεροδρομίου Πάφου από €35 | Taxi Cyprus 24" },
       { name: "description", content: "Ιδιωτικές μεταφορές από Αεροδρόμιο Πάφου (PFO) προς Coral Bay, Πέγεια, Χλώρακα, Κάτω Πάφο και όλη την Κύπρο. Σταθερές τιμές, υποδοχή, 24/7." },
-      { property: "og:title", content: "Μεταφορές Αεροδρομίου Πάφου από €25" },
+      { property: "og:title", content: "Μεταφορές Αεροδρομίου Πάφου από €35" },
       { property: "og:description", content: "Premium ταξί από Αεροδρόμιο Πάφου προς όλους τους προορισμούς της Κύπρου." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "el_GR" },
@@ -48,9 +48,9 @@ export const Route = createFileRoute("/el/paphos-airport-transfers")({
           "Δωρεάν παρακολούθηση πτήσης",
         ]}
         prices={[
-          { type: "PFO προς Coral Bay", pax: "Έως 4 επιβάτες", price: "€55" },
-          { type: "PFO προς Λεμεσό", pax: "Έως 4 επιβάτες", price: "€80" },
-          { type: "PFO προς Λάρνακα", pax: "Έως 4 επιβάτες", price: "€130" },
+          { type: "PFO προς Coral Bay", pax: "Έως 4 επιβάτες", price: "€65" },
+          { type: "PFO προς Λεμεσό", pax: "Έως 4 επιβάτες", price: "€90" },
+          { type: "PFO προς Λάρνακα", pax: "Έως 4 επιβάτες", price: "€140" },
         ]}
         nearbyAreas={["Coral Bay", "Πέγεια", "Χλώρακα", "Κάτω Πάφος", "Λιμάνι Πάφου", "Τάφοι των Βασιλέων", "Γεροσκήπου", "Λάτσι", "Πόλη Χρυσοχούς"]}
         faqs={sharedFAQsEl}

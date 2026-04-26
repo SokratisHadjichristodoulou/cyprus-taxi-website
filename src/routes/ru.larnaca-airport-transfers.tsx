@@ -9,9 +9,9 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Трансферы и такси из аэропорта Ларнаки от €35 | Taxi Cyprus 24" },
-      { name: "description", content: "Частные трансферы из аэропорта Ларнаки (LCA) в Пафос, Лимассол, Айя-Напу, Протарас, Никосию и по всему Кипру. Фиксированные цены, встреча, 24/7." },
-      { property: "og:title", content: "Трансферы из аэропорта Ларнаки от €35" },
+      { title: "Трансферы и такси из аэропорта Ларнаки от €130 | Taxi Cyprus 24" },
+      { name: "description", content: "Частные трансферы из аэропорта Ларнаки (LCA) в Пафос, Айя-Напу, Протарас, Никосию и по всему Кипру. Фиксированные цены, встреча, 24/7." },
+      { property: "og:title", content: "Трансферы из аэропорта Ларнаки от €130" },
       { property: "og:description", content: "Премиальное такси из аэропорта Ларнаки во все направления Кипра." },
       { property: "og:image", content: larnacaImg },
       { property: "og:locale", content: "ru_RU" },
@@ -42,15 +42,14 @@ export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
         ]}
         highlights={["Прямо из аэропорта Ларнаки", "Встреча в зале прилёта", "Чистые и люксовые автомобили", "Бесплатные детские кресла", "Отслеживание рейса", "Оплата наличными или картой"]}
         prices={[
-          { type: "LCA — Писсури", pax: "До 4 пассажиров", price: "€120" },
-          { type: "LCA — Пафос", pax: "До 4 пассажиров", price: "€130" },
-          { type: "LCA — Корал-Бей", pax: "До 4 пассажиров", price: "€150" },
+          { type: "LCA — Писсури", pax: "До 4 пассажиров", price: "€130" },
+          { type: "LCA — Пафос", pax: "До 4 пассажиров", price: "€140" },
+          { type: "LCA — Корал-Бей", pax: "До 4 пассажиров", price: "€170" },
         ]}
-        nearbyAreas={["Ларнака", "Лимассол", "Айя-Напа", "Протарас", "Никосия", "Пафос", "Корал-Бей", "Пейя", "Писсури"]}
+        nearbyAreas={["Ларнака", "Айя-Напа", "Протарас", "Никосия", "Пафос", "Корал-Бей", "Пейя", "Писсури"]}
         faqs={sharedFAQsRu}
         relatedLinks={[
           { to: "/larnaca-airport-to-paphos", label: "LCA — Пафос" },
-          { to: "/taxi-to-limassol", label: "LCA — Лимассол" },
           { to: "/taxi-to-coral-bay", label: "LCA — Корал-Бей" },
           { to: "/cyprus-airport-transfers", label: "Все маршруты" },
         ]}

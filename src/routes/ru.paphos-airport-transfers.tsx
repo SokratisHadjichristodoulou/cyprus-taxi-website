@@ -9,9 +9,9 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 export const Route = createFileRoute("/ru/paphos-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Трансферы и такси из аэропорта Пафоса от €25 | Taxi Cyprus 24" },
+      { title: "Трансферы и такси из аэропорта Пафоса от €35 | Taxi Cyprus 24" },
       { name: "description", content: "Частные трансферы из аэропорта Пафоса (PFO) в Корал-Бей, Пейю, Хлораку, Като-Пафос и по всему Кипру. Фиксированные цены, встреча, 24/7." },
-      { property: "og:title", content: "Трансферы из аэропорта Пафоса от €25" },
+      { property: "og:title", content: "Трансферы из аэропорта Пафоса от €35" },
       { property: "og:description", content: "Премиальное такси из аэропорта Пафоса во все направления Кипра." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "ru_RU" },
@@ -48,9 +48,9 @@ export const Route = createFileRoute("/ru/paphos-airport-transfers")({
           "Бесплатное отслеживание рейса",
         ]}
         prices={[
-          { type: "PFO — Корал-Бей", pax: "До 4 пассажиров", price: "€55" },
-          { type: "PFO — Лимассол", pax: "До 4 пассажиров", price: "€80" },
-          { type: "PFO — Ларнака", pax: "До 4 пассажиров", price: "€130" },
+          { type: "PFO — Корал-Бей", pax: "До 4 пассажиров", price: "€65" },
+          { type: "PFO — Лимассол", pax: "До 4 пассажиров", price: "€90" },
+          { type: "PFO — Ларнака", pax: "До 4 пассажиров", price: "€140" },
         ]}
         nearbyAreas={["Корал-Бей", "Пейя", "Хлорака", "Като-Пафос", "Гавань Пафоса", "Гробницы царей", "Героскипу", "Латси", "Полис"]}
         faqs={sharedFAQsRu}
