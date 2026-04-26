@@ -19,11 +19,15 @@ import { Route as LarnacaAirportTransfersRouteImport } from './routes/larnaca-ai
 import { Route as LarnacaAirportToPaphosRouteImport } from './routes/larnaca-airport-to-paphos'
 import { Route as FleetRouteImport } from './routes/fleet'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ElRouteImport } from './routes/el'
 import { Route as CyprusAirportTransfersRouteImport } from './routes/cyprus-airport-transfers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ElIndexRouteImport } from './routes/el.index'
+import { Route as ElFaqRouteImport } from './routes/el.faq'
+import { Route as ElContactRouteImport } from './routes/el.contact'
 import { Route as BlogTopHotelsVillasCoralBayPeyiaRouteImport } from './routes/blog_.top-hotels-villas-coral-bay-peyia'
 import { Route as BlogThingsToDoInPaphosRouteImport } from './routes/blog_.things-to-do-in-paphos'
 import { Route as BlogLarnacaAirportToPaphosTravelGuideRouteImport } from './routes/blog_.larnaca-airport-to-paphos-travel-guide'
@@ -82,6 +86,11 @@ const FaqRoute = FaqRouteImport.update({
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ElRoute = ElRouteImport.update({
+  id: '/el',
+  path: '/el',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CyprusAirportTransfersRoute = CyprusAirportTransfersRouteImport.update({
   id: '/cyprus-airport-transfers',
   path: '/cyprus-airport-transfers',
@@ -106,6 +115,21 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ElIndexRoute = ElIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ElRoute,
+} as any)
+const ElFaqRoute = ElFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => ElRoute,
+} as any)
+const ElContactRoute = ElContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => ElRoute,
 } as any)
 const BlogTopHotelsVillasCoralBayPeyiaRoute =
   BlogTopHotelsVillasCoralBayPeyiaRouteImport.update({
@@ -155,6 +179,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
+  '/el': typeof ElRouteWithChildren
   '/faq': typeof FaqRoute
   '/fleet': typeof FleetRoute
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
@@ -172,6 +197,9 @@ export interface FileRoutesByFullPath {
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
+  '/el/contact': typeof ElContactRoute
+  '/el/faq': typeof ElFaqRoute
+  '/el/': typeof ElIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -196,6 +224,9 @@ export interface FileRoutesByTo {
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
+  '/el/contact': typeof ElContactRoute
+  '/el/faq': typeof ElFaqRoute
+  '/el': typeof ElIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -204,6 +235,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
+  '/el': typeof ElRouteWithChildren
   '/faq': typeof FaqRoute
   '/fleet': typeof FleetRoute
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
@@ -221,6 +253,9 @@ export interface FileRoutesById {
   '/blog_/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog_/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog_/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
+  '/el/contact': typeof ElContactRoute
+  '/el/faq': typeof ElFaqRoute
+  '/el/': typeof ElIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -230,6 +265,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/cyprus-airport-transfers'
+    | '/el'
     | '/faq'
     | '/fleet'
     | '/larnaca-airport-to-paphos'
@@ -247,6 +283,9 @@ export interface FileRouteTypes {
     | '/blog/larnaca-airport-to-paphos-travel-guide'
     | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
+    | '/el/contact'
+    | '/el/faq'
+    | '/el/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -271,6 +310,9 @@ export interface FileRouteTypes {
     | '/blog/larnaca-airport-to-paphos-travel-guide'
     | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
+    | '/el/contact'
+    | '/el/faq'
+    | '/el'
   id:
     | '__root__'
     | '/'
@@ -278,6 +320,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/contact'
     | '/cyprus-airport-transfers'
+    | '/el'
     | '/faq'
     | '/fleet'
     | '/larnaca-airport-to-paphos'
@@ -295,6 +338,9 @@ export interface FileRouteTypes {
     | '/blog_/larnaca-airport-to-paphos-travel-guide'
     | '/blog_/things-to-do-in-paphos'
     | '/blog_/top-hotels-villas-coral-bay-peyia'
+    | '/el/contact'
+    | '/el/faq'
+    | '/el/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -303,6 +349,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
   CyprusAirportTransfersRoute: typeof CyprusAirportTransfersRoute
+  ElRoute: typeof ElRouteWithChildren
   FaqRoute: typeof FaqRoute
   FleetRoute: typeof FleetRoute
   LarnacaAirportToPaphosRoute: typeof LarnacaAirportToPaphosRoute
@@ -394,6 +441,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/el': {
+      id: '/el'
+      path: '/el'
+      fullPath: '/el'
+      preLoaderRoute: typeof ElRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cyprus-airport-transfers': {
       id: '/cyprus-airport-transfers'
       path: '/cyprus-airport-transfers'
@@ -428,6 +482,27 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/el/': {
+      id: '/el/'
+      path: '/'
+      fullPath: '/el/'
+      preLoaderRoute: typeof ElIndexRouteImport
+      parentRoute: typeof ElRoute
+    }
+    '/el/faq': {
+      id: '/el/faq'
+      path: '/faq'
+      fullPath: '/el/faq'
+      preLoaderRoute: typeof ElFaqRouteImport
+      parentRoute: typeof ElRoute
+    }
+    '/el/contact': {
+      id: '/el/contact'
+      path: '/contact'
+      fullPath: '/el/contact'
+      preLoaderRoute: typeof ElContactRouteImport
+      parentRoute: typeof ElRoute
     }
     '/blog_/top-hotels-villas-coral-bay-peyia': {
       id: '/blog_/top-hotels-villas-coral-bay-peyia'
@@ -481,12 +556,27 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface ElRouteChildren {
+  ElContactRoute: typeof ElContactRoute
+  ElFaqRoute: typeof ElFaqRoute
+  ElIndexRoute: typeof ElIndexRoute
+}
+
+const ElRouteChildren: ElRouteChildren = {
+  ElContactRoute: ElContactRoute,
+  ElFaqRoute: ElFaqRoute,
+  ElIndexRoute: ElIndexRoute,
+}
+
+const ElRouteWithChildren = ElRoute._addFileChildren(ElRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
   CyprusAirportTransfersRoute: CyprusAirportTransfersRoute,
+  ElRoute: ElRouteWithChildren,
   FaqRoute: FaqRoute,
   FleetRoute: FleetRoute,
   LarnacaAirportToPaphosRoute: LarnacaAirportToPaphosRoute,
