@@ -65,7 +65,7 @@ const features = [
 
 const fleet = [
   { img: sedanImg, name: "Executive Sedan", capacity: "Up to 3 passengers · 3 bags", model: "Mercedes E-Class or similar", priceFrom: "from €35" },
-  { img: vanImg, name: "Premium 7-Seater Van", capacity: "Up to 7 passengers · 7 bags", model: "Ford Tourneo Custom or similar", priceFrom: "from €60" },
+  { img: vanImg, name: "Premium 7-Seater Van", capacity: "Up to 8 passengers · 10 big luggages", model: "Ford Tourneo Custom or similar", priceFrom: "from €60" },
 ];
 
 function HomePage() {
