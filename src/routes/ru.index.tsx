@@ -293,6 +293,92 @@ function HomePage() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="bg-secondary/40 py-20 md:py-28">
+        <div className="container-tight">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">
+              Отзывы на TripAdvisor
+            </span>
+            <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
+              4.9★ на TripAdvisor — 120+ отзывов
+            </h2>
+            <p className="mt-4 text-sm text-muted-foreground md:text-base">
+              #6 из 94 транспортных компаний в Пафосе. Проверенные отзывы реальных путешественников.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                name: "Dmitry O",
+                from: "Графство Лимерик, Ирландия · TripAdvisor",
+                date: "Июнь 2025",
+                text: "Владимирос — отличный и безопасный водитель, всегда вовремя, по разумной цене и с новым минивэном. Мы пользовались его услугами на протяжении всей поездки — от встречи в аэропорту до отеля. Очень рекомендую.",
+              },
+              {
+                name: "Rayaa K",
+                from: "TripAdvisor",
+                date: "Май 2025",
+                text: "Спасибо, Влад! Очень добрый и приветливый, отличная пунктуальность и забота на протяжении всей поездки. 10/10, однозначно рекомендую.",
+              },
+              {
+                name: "Joep D",
+                from: "TripAdvisor",
+                date: "Июль 2025",
+                text: "Очень приятный опыт — мы пользовались этим такси несколько раз, всегда вовремя, и водитель дал отличные советы для поездок по разным городам.",
+              },
+            ].map((t) => (
+              <div key={t.name} className="rounded-2xl border border-border bg-card p-7 shadow-card-soft">
+                <div className="flex items-center justify-between">
+                  <div className="flex">
+                    {[0, 1, 2, 3, 4].map((i) => (
+                      <Star key={i} className="h-4 w-4 fill-gold text-gold" />
+                    ))}
+                  </div>
+                  <span className="text-xs text-muted-foreground">{t.date}</span>
+                </div>
+                <p className="mt-4 text-[15px] leading-relaxed text-foreground">"{t.text}"</p>
+                <div className="mt-5 border-t border-border pt-4">
+                  <div className="font-semibold text-navy">{t.name}</div>
+                  <div className="text-xs text-muted-foreground">{t.from}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/ru/reviews"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
+            >
+              Читать все 120+ отзывов на TripAdvisor <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="container-tight py-20 md:py-28">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
+          <div>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">Вопросы и ответы</span>
+            <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
+              Часто задаваемые вопросы
+            </h2>
+            <p className="mt-5 text-base text-muted-foreground">
+              Всё, что нужно знать о трансферах из аэропортов Кипра.
+            </p>
+            <div className="mt-8 hidden lg:block">
+              <Link to="/ru/faq" className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline">
+                Все вопросы и ответы <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+          <FAQAccordion items={sharedFAQsRu.slice(0, 6)} />
+        </div>
+      </section>
+
       <CTASection />
     </>
   );
