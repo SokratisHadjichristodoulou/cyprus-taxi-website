@@ -20,20 +20,49 @@ export const Route = createFileRoute("/about")({
       { name: "twitter:title", content: "About Taxicyprus24 — Cyprus Airport Transfers Since 2010" },
       { name: "twitter:description", content: "Family-run private Cyprus taxi service. Fixed prices, 4.9★ rated, 24/7 airport transfers." },
       { name: "twitter:image", content: heroImg },
-      { link: [{ rel: "canonical", href: "https://taxicyprus24.com/about" }] } as never,
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About Taxicyprus24",
+          url: "https://taxicyprus24.com/about",
+          description:
+            "Taxicyprus24 is a family-run private airport transfer company in Cyprus, providing fixed-price taxi services from Larnaca and Paphos Airports since 2010.",
+          mainEntity: {
+            "@type": "LocalBusiness",
+            "@id": "https://taxicyprus24.com/#business",
+            name: "Taxicyprus24",
+            image: heroImg,
+            telephone: "+35796626844",
+            url: "https://taxicyprus24.com",
+            priceRange: "€€",
+            areaServed: { "@type": "Country", name: "Cyprus" },
+            address: { "@type": "PostalAddress", addressCountry: "CY" },
+            foundingDate: "2010",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              reviewCount: "120",
+            },
+          },
+        }),
+      },
+    ],
   }),
-
   component: AboutPage,
 });
 
 const values = [
-  { icon: ShieldCheck, title: "Trust", desc: "Licensed, insured and DBS-checked drivers — fully transparent pricing." },
-  { icon: Award, title: "Quality", desc: "Mercedes-Benz fleet, English-speaking drivers and meticulous attention to detail." },
-  { icon: Heart, title: "Care", desc: "We treat every guest like family — from your first call to drop-off." },
-  { icon: Clock, title: "Reliability", desc: "Punctual every time, with real-time flight tracking and 24/7 support." },
+  { icon: ShieldCheck, title: "Trust", desc: "Licensed, insured and DBS-checked drivers — fully transparent fixed-price taxi service across Cyprus." },
+  { icon: Award, title: "Quality", desc: "Clean and luxury vehicles, English-speaking drivers and meticulous attention to detail on every airport transfer." },
+  { icon: Heart, title: "Care", desc: "We treat every guest like family — from your first booking enquiry to door-to-door drop-off." },
+  { icon: Clock, title: "Reliability", desc: "Punctual every time, with real-time flight tracking, meet & greet and 24/7 customer support." },
 ];
+
 
 function AboutPage() {
   return (
