@@ -9,31 +9,68 @@ import { TrustBar } from "@/components/TrustBar";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Taxi Cyprus 24 — Premium Airport Transfers" },
-      { name: "description", content: "Learn about Taxi Cyprus 24 — a family-run premium airport transfer company serving Cyprus since 2010 with 5,000+ happy customers and a 4.9 Google rating." },
-      { property: "og:title", content: "About Taxi Cyprus 24" },
-      { property: "og:description", content: "Family-run premium Cyprus airport transfer company." },
+      { title: "About Taxicyprus24 — Trusted Cyprus Airport Transfers Since 2010" },
+      { name: "description", content: "Discover Taxicyprus24 — a family-run private airport transfer company in Cyprus since 2010. Fixed-price taxi from Larnaca & Paphos Airports, 5,000+ happy customers, 4.9★ rating, 24/7 service." },
+      { name: "keywords", content: "about Taxicyprus24, Cyprus airport transfer company, private taxi Cyprus, Larnaca airport taxi, Paphos airport taxi, family-run taxi service Cyprus, fixed price taxi Cyprus" },
+      { property: "og:title", content: "About Taxicyprus24 — Trusted Cyprus Airport Transfers Since 2010" },
+      { property: "og:description", content: "Family-run private Cyprus airport transfer company. Fixed prices, professional English-speaking drivers, free child seats and 24/7 service from Larnaca and Paphos Airports." },
+      { property: "og:type", content: "website" },
       { property: "og:image", content: heroImg },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About Taxicyprus24 — Cyprus Airport Transfers Since 2010" },
+      { name: "twitter:description", content: "Family-run private Cyprus taxi service. Fixed prices, 4.9★ rated, 24/7 airport transfers." },
       { name: "twitter:image", content: heroImg },
+    ],
+    links: [{ rel: "canonical", href: "https://taxicyprus24.com/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About Taxicyprus24",
+          url: "https://taxicyprus24.com/about",
+          description:
+            "Taxicyprus24 is a family-run private airport transfer company in Cyprus, providing fixed-price taxi services from Larnaca and Paphos Airports since 2010.",
+          mainEntity: {
+            "@type": "LocalBusiness",
+            "@id": "https://taxicyprus24.com/#business",
+            name: "Taxicyprus24",
+            image: heroImg,
+            telephone: "+35796626844",
+            url: "https://taxicyprus24.com",
+            priceRange: "€€",
+            areaServed: { "@type": "Country", name: "Cyprus" },
+            address: { "@type": "PostalAddress", addressCountry: "CY" },
+            foundingDate: "2010",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              reviewCount: "120",
+            },
+          },
+        }),
+      },
     ],
   }),
   component: AboutPage,
 });
 
 const values = [
-  { icon: ShieldCheck, title: "Trust", desc: "Licensed, insured and DBS-checked drivers — fully transparent pricing." },
-  { icon: Award, title: "Quality", desc: "Mercedes-Benz fleet, English-speaking drivers and meticulous attention to detail." },
-  { icon: Heart, title: "Care", desc: "We treat every guest like family — from your first call to drop-off." },
-  { icon: Clock, title: "Reliability", desc: "Punctual every time, with real-time flight tracking and 24/7 support." },
+  { icon: ShieldCheck, title: "Trust", desc: "Licensed, insured and DBS-checked drivers — fully transparent fixed-price taxi service across Cyprus." },
+  { icon: Award, title: "Quality", desc: "Clean and luxury vehicles, English-speaking drivers and meticulous attention to detail on every airport transfer." },
+  { icon: Heart, title: "Care", desc: "We treat every guest like family — from your first booking enquiry to door-to-door drop-off." },
+  { icon: Clock, title: "Reliability", desc: "Punctual every time, with real-time flight tracking, meet & greet and 24/7 customer support." },
 ];
+
 
 function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About us"
-        title="Cyprus airport transfers, done properly"
-        subtitle="Taxi Cyprus 24 is a family-run premium transfer company that has been moving travellers across Cyprus since 2010. Today we've grown to a fleet of Clean and Luxury cars and a team of professional drivers — but our values haven't changed."
+        eyebrow="About Taxicyprus24"
+        title="Trusted Cyprus Airport Transfers Since 2010"
+        subtitle="Taxicyprus24 is a family-run private airport transfer company providing reliable, fixed-price taxi services from Larnaca Airport, Paphos Airport and across Cyprus. Over a decade of experience, 5,000+ happy customers and a 4.9★ rating."
         image={heroImg}
         showForm={false}
       />
@@ -43,18 +80,39 @@ function AboutPage() {
       <section className="container-tight py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="overflow-hidden rounded-3xl shadow-elegant">
-            <img src={meetGreetImg} alt="Taxi Cyprus 24 driver" loading="lazy" width={1280} height={896} className="h-full w-full object-cover" />
+            <img
+              src={meetGreetImg}
+              alt="Professional Taxicyprus24 driver providing meet & greet service at Larnaca Airport arrivals"
+              loading="lazy"
+              width={1280}
+              height={896}
+              className="h-full w-full object-cover"
+            />
           </div>
           <div>
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">Our story</span>
-            <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-4xl">A taxi service built on trust</h2>
+            <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-4xl">
+              A Cyprus airport taxi service built on trust
+            </h2>
             <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
-              <p>Taxi Cyprus 24 began with a single Mercedes E-Class and a simple promise: every traveller would be met on time, in a clean car, by a driver who genuinely cared.</p>
-              <p>More than a decade and 5,000+ transfers later, that promise still defines how we operate. Our fixed-price model, free child seats, complimentary meet & greet and 24/7 availability are not features — they are the standard.</p>
-              <p>Today we serve guests from across the UK, Europe and beyond, including business travellers, families and tour groups. Our 4.9-star TripAdvisor rating and 120+ verified reviews tell the rest of the story.</p>
+              <p>
+                Taxicyprus24 began in 2010 with a single Mercedes E-Class and a simple promise: every traveller arriving in Cyprus would be met on time, in a clean and luxury car, by a professional English-speaking driver who genuinely cared.
+              </p>
+              <p>
+                More than a decade and 5,000+ private airport transfers later, that promise still defines how we operate. Our fixed-price taxi model, free baby and child seats, complimentary meet & greet at Larnaca and Paphos Airports, and 24/7 availability are not optional extras — they are the standard on every booking.
+              </p>
+              <p>
+                Today we serve guests from across the UK, Europe and beyond — including business travellers, families, honeymooners and tour groups. From Larnaca Airport to Paphos, Coral Bay, Peyia, Limassol, Ayia Napa, Protaras and Nicosia, we cover every destination in Cyprus with the same professional door-to-door service.
+              </p>
+              <p>
+                Our 4.9-star TripAdvisor rating and 120+ verified customer reviews speak for the experience. Whether you need a private taxi from Larnaca Airport, a Paphos Airport transfer to your villa, or executive chauffeur service across the island, Taxicyprus24 delivers comfortable, safe and stress-free travel — every time.
+              </p>
             </div>
-            <Link to="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-[color:var(--navy-foreground)]">
-              Book a transfer <ArrowRight className="h-4 w-4" />
+            <Link
+              to="/contact"
+              className="mt-7 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-[color:var(--navy-foreground)]"
+            >
+              Book your Cyprus airport transfer <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -62,7 +120,12 @@ function AboutPage() {
 
       <section className="bg-secondary/40 py-20">
         <div className="container-tight">
-          <h2 className="text-center font-display text-3xl font-bold text-navy md:text-4xl">What we stand for</h2>
+          <h2 className="text-center font-display text-3xl font-bold text-navy md:text-4xl">
+            Why travellers choose Taxicyprus24
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-muted-foreground">
+            Four core values guide every Cyprus airport transfer we provide — from your first booking enquiry to door-to-door drop-off at your hotel, villa or apartment.
+          </p>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
               <div key={v.title} className="rounded-2xl border border-border bg-card p-7 shadow-card-soft">
