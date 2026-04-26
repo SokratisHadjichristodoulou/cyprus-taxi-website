@@ -27,6 +27,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogTopHotelsVillasCoralBayPeyiaRouteImport } from './routes/blog_.top-hotels-villas-coral-bay-peyia'
 import { Route as BlogThingsToDoInPaphosRouteImport } from './routes/blog_.things-to-do-in-paphos'
 import { Route as BlogLarnacaAirportToPaphosTravelGuideRouteImport } from './routes/blog_.larnaca-airport-to-paphos-travel-guide'
+import { Route as BlogCyprusTravelTipsFirstTimeVisitorsRouteImport } from './routes/blog_.cyprus-travel-tips-first-time-visitors'
 import { Route as BlogBestBeachesPaphosCoralBayRouteImport } from './routes/blog_.best-beaches-paphos-coral-bay'
 
 const TaxiToPeyiaRoute = TaxiToPeyiaRouteImport.update({
@@ -121,6 +122,12 @@ const BlogLarnacaAirportToPaphosTravelGuideRoute =
     path: '/blog/larnaca-airport-to-paphos-travel-guide',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogCyprusTravelTipsFirstTimeVisitorsRoute =
+  BlogCyprusTravelTipsFirstTimeVisitorsRouteImport.update({
+    id: '/blog_/cyprus-travel-tips-first-time-visitors',
+    path: '/blog/cyprus-travel-tips-first-time-visitors',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogBestBeachesPaphosCoralBayRoute =
   BlogBestBeachesPaphosCoralBayRouteImport.update({
     id: '/blog_/best-beaches-paphos-coral-bay',
@@ -145,6 +152,7 @@ export interface FileRoutesByFullPath {
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
+  '/blog/cyprus-travel-tips-first-time-visitors': typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -166,6 +174,7 @@ export interface FileRoutesByTo {
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
+  '/blog/cyprus-travel-tips-first-time-visitors': typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -188,6 +197,7 @@ export interface FileRoutesById {
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog_/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
+  '/blog_/cyprus-travel-tips-first-time-visitors': typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
   '/blog_/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog_/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog_/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -211,6 +221,7 @@ export interface FileRouteTypes {
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
     | '/blog/best-beaches-paphos-coral-bay'
+    | '/blog/cyprus-travel-tips-first-time-visitors'
     | '/blog/larnaca-airport-to-paphos-travel-guide'
     | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
@@ -232,6 +243,7 @@ export interface FileRouteTypes {
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
     | '/blog/best-beaches-paphos-coral-bay'
+    | '/blog/cyprus-travel-tips-first-time-visitors'
     | '/blog/larnaca-airport-to-paphos-travel-guide'
     | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
@@ -253,6 +265,7 @@ export interface FileRouteTypes {
     | '/taxi-to-limassol'
     | '/taxi-to-peyia'
     | '/blog_/best-beaches-paphos-coral-bay'
+    | '/blog_/cyprus-travel-tips-first-time-visitors'
     | '/blog_/larnaca-airport-to-paphos-travel-guide'
     | '/blog_/things-to-do-in-paphos'
     | '/blog_/top-hotels-villas-coral-bay-peyia'
@@ -275,6 +288,7 @@ export interface RootRouteChildren {
   TaxiToLimassolRoute: typeof TaxiToLimassolRoute
   TaxiToPeyiaRoute: typeof TaxiToPeyiaRoute
   BlogBestBeachesPaphosCoralBayRoute: typeof BlogBestBeachesPaphosCoralBayRoute
+  BlogCyprusTravelTipsFirstTimeVisitorsRoute: typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
   BlogLarnacaAirportToPaphosTravelGuideRoute: typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   BlogThingsToDoInPaphosRoute: typeof BlogThingsToDoInPaphosRoute
   BlogTopHotelsVillasCoralBayPeyiaRoute: typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -408,6 +422,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogLarnacaAirportToPaphosTravelGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/cyprus-travel-tips-first-time-visitors': {
+      id: '/blog_/cyprus-travel-tips-first-time-visitors'
+      path: '/blog/cyprus-travel-tips-first-time-visitors'
+      fullPath: '/blog/cyprus-travel-tips-first-time-visitors'
+      preLoaderRoute: typeof BlogCyprusTravelTipsFirstTimeVisitorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/best-beaches-paphos-coral-bay': {
       id: '/blog_/best-beaches-paphos-coral-bay'
       path: '/blog/best-beaches-paphos-coral-bay'
@@ -435,6 +456,8 @@ const rootRouteChildren: RootRouteChildren = {
   TaxiToLimassolRoute: TaxiToLimassolRoute,
   TaxiToPeyiaRoute: TaxiToPeyiaRoute,
   BlogBestBeachesPaphosCoralBayRoute: BlogBestBeachesPaphosCoralBayRoute,
+  BlogCyprusTravelTipsFirstTimeVisitorsRoute:
+    BlogCyprusTravelTipsFirstTimeVisitorsRoute,
   BlogLarnacaAirportToPaphosTravelGuideRoute:
     BlogLarnacaAirportToPaphosTravelGuideRoute,
   BlogThingsToDoInPaphosRoute: BlogThingsToDoInPaphosRoute,
