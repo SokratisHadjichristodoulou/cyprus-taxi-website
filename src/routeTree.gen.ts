@@ -25,6 +25,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogTopHotelsVillasCoralBayPeyiaRouteImport } from './routes/blog_.top-hotels-villas-coral-bay-peyia'
+import { Route as BlogThingsToDoInPaphosRouteImport } from './routes/blog_.things-to-do-in-paphos'
 import { Route as BlogLarnacaAirportToPaphosTravelGuideRouteImport } from './routes/blog_.larnaca-airport-to-paphos-travel-guide'
 import { Route as BlogBestBeachesPaphosCoralBayRouteImport } from './routes/blog_.best-beaches-paphos-coral-bay'
 
@@ -109,6 +110,11 @@ const BlogTopHotelsVillasCoralBayPeyiaRoute =
     path: '/blog/top-hotels-villas-coral-bay-peyia',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogThingsToDoInPaphosRoute = BlogThingsToDoInPaphosRouteImport.update({
+  id: '/blog_/things-to-do-in-paphos',
+  path: '/blog/things-to-do-in-paphos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogLarnacaAirportToPaphosTravelGuideRoute =
   BlogLarnacaAirportToPaphosTravelGuideRouteImport.update({
     id: '/blog_/larnaca-airport-to-paphos-travel-guide',
@@ -140,6 +146,7 @@ export interface FileRoutesByFullPath {
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
+  '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
 }
 export interface FileRoutesByTo {
@@ -160,6 +167,7 @@ export interface FileRoutesByTo {
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
+  '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
 }
 export interface FileRoutesById {
@@ -181,6 +189,7 @@ export interface FileRoutesById {
   '/taxi-to-peyia': typeof TaxiToPeyiaRoute
   '/blog_/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
   '/blog_/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
+  '/blog_/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog_/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
 }
 export interface FileRouteTypes {
@@ -203,6 +212,7 @@ export interface FileRouteTypes {
     | '/taxi-to-peyia'
     | '/blog/best-beaches-paphos-coral-bay'
     | '/blog/larnaca-airport-to-paphos-travel-guide'
+    | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -223,6 +233,7 @@ export interface FileRouteTypes {
     | '/taxi-to-peyia'
     | '/blog/best-beaches-paphos-coral-bay'
     | '/blog/larnaca-airport-to-paphos-travel-guide'
+    | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
   id:
     | '__root__'
@@ -243,6 +254,7 @@ export interface FileRouteTypes {
     | '/taxi-to-peyia'
     | '/blog_/best-beaches-paphos-coral-bay'
     | '/blog_/larnaca-airport-to-paphos-travel-guide'
+    | '/blog_/things-to-do-in-paphos'
     | '/blog_/top-hotels-villas-coral-bay-peyia'
   fileRoutesById: FileRoutesById
 }
@@ -264,6 +276,7 @@ export interface RootRouteChildren {
   TaxiToPeyiaRoute: typeof TaxiToPeyiaRoute
   BlogBestBeachesPaphosCoralBayRoute: typeof BlogBestBeachesPaphosCoralBayRoute
   BlogLarnacaAirportToPaphosTravelGuideRoute: typeof BlogLarnacaAirportToPaphosTravelGuideRoute
+  BlogThingsToDoInPaphosRoute: typeof BlogThingsToDoInPaphosRoute
   BlogTopHotelsVillasCoralBayPeyiaRoute: typeof BlogTopHotelsVillasCoralBayPeyiaRoute
 }
 
@@ -381,6 +394,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogTopHotelsVillasCoralBayPeyiaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/things-to-do-in-paphos': {
+      id: '/blog_/things-to-do-in-paphos'
+      path: '/blog/things-to-do-in-paphos'
+      fullPath: '/blog/things-to-do-in-paphos'
+      preLoaderRoute: typeof BlogThingsToDoInPaphosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/larnaca-airport-to-paphos-travel-guide': {
       id: '/blog_/larnaca-airport-to-paphos-travel-guide'
       path: '/blog/larnaca-airport-to-paphos-travel-guide'
@@ -417,6 +437,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogBestBeachesPaphosCoralBayRoute: BlogBestBeachesPaphosCoralBayRoute,
   BlogLarnacaAirportToPaphosTravelGuideRoute:
     BlogLarnacaAirportToPaphosTravelGuideRoute,
+  BlogThingsToDoInPaphosRoute: BlogThingsToDoInPaphosRoute,
   BlogTopHotelsVillasCoralBayPeyiaRoute: BlogTopHotelsVillasCoralBayPeyiaRoute,
 }
 export const routeTree = rootRouteImport
