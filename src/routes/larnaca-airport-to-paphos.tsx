@@ -37,7 +37,7 @@ export const Route = createFileRoute("/larnaca-airport-to-paphos")({
       highlights={[
         "Fixed total price — no extras",
         "Meet & greet at Larnaca arrivals",
-        "Mercedes-Benz vehicles",
+        "Clean and Luxury cars",
         "Free baby and child seats",
         "Real-time flight tracking",
         "Cash or card accepted",

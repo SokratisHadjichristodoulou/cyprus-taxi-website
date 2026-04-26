@@ -39,7 +39,7 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
           "Every Larnaca Airport taxi transfer includes fixed-price airport taxi rates, meet & greet service, real-time flight monitoring, free baby and child seats, complimentary bottled water, and card, bank transfer, or cash payment options in EUR or GBP.",
           "Whether you need a taxi from Larnaca Airport to Limassol, Paphos, Coral Bay, Ayia Napa, Nicosia, or anywhere else in Cyprus, Taxicyprus24 guarantees reliable, comfortable, and stress-free private airport transfers with no hidden fees.",
         ]}
-        highlights={["Direct from Larnaca Airport (LCA)", "Meet & greet at arrivals", "Mercedes-Benz vehicles", "Free child seats", "Flight tracking included", "Pay cash or card"]}
+        highlights={["Direct from Larnaca Airport (LCA)", "Meet & greet at arrivals", "Clean and Luxury cars", "Free child seats", "Flight tracking included", "Pay cash or card"]}
         prices={[
           { type: "LCA to Pissouri", pax: "Up to 4 passengers", price: "€120" },
           { type: "LCA to Paphos", pax: "Up to 4 passengers", price: "€130" },

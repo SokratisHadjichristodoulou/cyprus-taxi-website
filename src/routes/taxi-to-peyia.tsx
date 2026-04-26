@@ -35,7 +35,7 @@ export const Route = createFileRoute("/taxi-to-peyia")({
         "Every Peyia airport transfer includes fixed-price private taxi service, meet & greet at the airport, real-time flight tracking, free baby and child seats, clean and luxury air-conditioned vehicles, and flexible payment by card, bank transfer, or cash in EUR or GBP.",
         "Whether you need a taxi from Paphos Airport to Peyia, a private transfer from Larnaca Airport to Coral Bay, or transport to a luxury villa in western Cyprus, Taxicyprus24 guarantees comfortable, safe, and stress-free airport transfers with no hidden fees.",
       ]}
-      highlights={["Direct to your Peyia villa", "Drivers know all hillside roads", "Mercedes-Benz vehicles", "Fixed price", "Free child seats", "24/7 booking"]}
+      highlights={["Direct to your Peyia villa", "Drivers know all hillside roads", "Clean and Luxury cars", "Fixed price", "Free child seats", "24/7 booking"]}
       prices={[
         { type: "Paphos Airport to Peyia", pax: "Up to 3 passengers", price: "€35" },
         { type: "Larnaca Airport to Peyia", pax: "Up to 3 passengers", price: "€115" },

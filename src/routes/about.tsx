@@ -33,7 +33,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="Cyprus airport transfers, done properly"
-        subtitle="Taxi Cyprus 24 is a family-run premium transfer company that has been moving travellers across Cyprus since 2010. Today we've grown to a fleet of Mercedes-Benz vehicles and a team of professional drivers — but our values haven't changed."
+        subtitle="Taxi Cyprus 24 is a family-run premium transfer company that has been moving travellers across Cyprus since 2010. Today we've grown to a fleet of Clean and Luxury cars and a team of professional drivers — but our values haven't changed."
         image={heroImg}
         showForm={false}
       />

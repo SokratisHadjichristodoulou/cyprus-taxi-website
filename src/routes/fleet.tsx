@@ -12,7 +12,7 @@ export const Route = createFileRoute("/fleet")({
       { title: "Our Mercedes-Benz Fleet | Taxi Cyprus 24" },
       { name: "description", content: "Premium Mercedes-Benz fleet for Cyprus airport transfers — Executive E-Class sedans, V-Class 7-seater vans and luxury S-Class vehicles." },
       { property: "og:title", content: "Mercedes-Benz Fleet | Taxi Cyprus 24" },
-      { property: "og:description", content: "Premium Mercedes-Benz vehicles for Cyprus airport transfers." },
+      { property: "og:description", content: "Premium Clean and Luxury cars for Cyprus airport transfers." },
       { property: "og:image", content: heroImg },
       { name: "twitter:image", content: heroImg },
     ],
