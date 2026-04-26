@@ -108,7 +108,18 @@ type TranslationKey =
   | "trust.fixedPrices"
   | "trust.meetGreet"
   | "trust.support247"
-  | "trust.freeCancel";
+  | "trust.freeCancel"
+  | "price.from"
+  | "price.fixedFrom"
+  | "price.totalPerVehicle"
+  | "price.destination"
+  | "price.seater4"
+  | "price.seater6"
+  | "price.seater12"
+  | "airport.paphos"
+  | "airport.larnaca"
+  | "wa.ariaLabel"
+  | "wa.prefilledMessage";
 
 const translations: Record<TranslationKey, Record<Locale, string>> = {
   // Navigation
