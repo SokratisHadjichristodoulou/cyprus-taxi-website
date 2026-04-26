@@ -67,6 +67,39 @@ export function Footer() {
         </div>
 
         <div>
+          <h4 className="text-sm font-semibold text-white">
+            {locale === "el" ? "Δημοφιλείς αναζητήσεις" : "Popular searches"}
+          </h4>
+          <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+            <li>
+              <Link to={wl("/contact")} className="hover:text-gold">
+                {locale === "el" ? "Ταξί κοντά μου" : "Taxi Near Me"}
+              </Link>
+            </li>
+            <li>
+              <Link to={wl("/cyprus-airport-transfers")} className="hover:text-gold">
+                {locale === "el" ? "Ταξί αεροδρομίου κοντά μου" : "Airport Taxi Near Me"}
+              </Link>
+            </li>
+            <li>
+              <Link to={wl("/")} className="hover:text-gold">
+                {locale === "el" ? "Ταξί 24/7 Κύπρος" : "24/7 Taxi Cyprus"}
+              </Link>
+            </li>
+            <li>
+              <Link to={wl("/fleet")} className="hover:text-gold">
+                {locale === "el" ? "Ιδιωτική υπηρεσία ταξί" : "Private Taxi Service"}
+              </Link>
+            </li>
+            <li>
+              <Link to={wl("/pricing")} className="hover:text-gold">
+                {locale === "el" ? "Φθηνές μεταφορές αεροδρομίου Κύπρος" : "Cheap Airport Transfers Cyprus"}
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
           <h4 className="text-sm font-semibold text-white">{t("footer.contact")}</h4>
           <ul className="mt-4 space-y-3 text-sm text-white/70">
             <li className="flex items-start gap-2.5">
