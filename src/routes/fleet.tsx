@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Users, Briefcase, Wifi, Snowflake, Baby } from "lucide-react";
+import { ArrowRight, Users, Briefcase, Snowflake, Baby } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import sedanImg from "@/assets/fleet-sedan.jpg";
 import vanImg from "@/assets/fleet-van.jpg";
@@ -43,7 +43,6 @@ const fleet = [
 
 const features = [
   { icon: Snowflake, label: "Climate control" },
-  { icon: Wifi, label: "Free Wi-Fi" },
   { icon: Baby, label: "Free child seats" },
   { icon: Briefcase, label: "Generous luggage" },
 ];
