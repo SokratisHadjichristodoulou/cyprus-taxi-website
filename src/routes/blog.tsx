@@ -25,7 +25,7 @@ export const Route = createFileRoute("/blog")({
 });
 
 const posts = [
-  { img: coralBayImg, title: "Best beaches in Paphos & Coral Bay", excerpt: "From the famous Coral Bay sands to hidden coves around Lara Beach — the ultimate Paphos beach guide.", date: "April 2025", read: "6 min" },
+  { img: coralBayImg, title: "Best beaches in Paphos & Coral Bay", excerpt: "From the famous Coral Bay sands to hidden coves around Lara Beach — the ultimate Paphos beach guide.", date: "April 2025", read: "6 min", to: "/blog/best-beaches-paphos-coral-bay" as const },
   { img: heroImg, title: "How to travel from Larnaca Airport to Paphos", excerpt: "Public bus, rental car or private transfer — we compare every option for the LCA to Paphos journey.", date: "April 2025", read: "5 min" },
   { img: peyiaImg, title: "Top hotels & villas in Coral Bay and Peyia", excerpt: "Where to stay on Cyprus's western coast, from family resorts to private hillside villas with sea views.", date: "March 2025", read: "8 min" },
   { img: paphosImg, title: "Things to do in Paphos — local guide", excerpt: "Tombs of the Kings, Paphos Mosaics, the Old Harbour and our favourite tavernas off the tourist trail.", date: "March 2025", read: "7 min" },
@@ -47,24 +47,33 @@ function BlogPage() {
 
       <section className="container-tight py-16 md:py-20">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((p) => (
-            <article key={p.title} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={p.img} alt={p.title} loading="lazy" width={1024} height={768} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                  <span className="inline-flex items-center gap-1"><Calendar className="h-3 w-3" /> {p.date}</span>
-                  <span>· {p.read} read</span>
+          {posts.map((p) => {
+            const card = (
+              <article className="group h-full overflow-hidden rounded-2xl border border-border bg-card shadow-card-soft transition-all hover:-translate-y-1 hover:shadow-elegant">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={p.img} alt={p.title} loading="lazy" width={1024} height={768} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
-                <h2 className="mt-3 font-display text-lg font-bold text-navy">{p.title}</h2>
-                <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
-                <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
-                  Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <div className="p-6">
+                  <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                    <span className="inline-flex items-center gap-1"><Calendar className="h-3 w-3" /> {p.date}</span>
+                    <span>· {p.read} read</span>
+                  </div>
+                  <h2 className="mt-3 font-display text-lg font-bold text-navy">{p.title}</h2>
+                  <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
+                  <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
+                    Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+            return "to" in p && p.to ? (
+              <Link key={p.title} to={p.to} className="block">
+                {card}
+              </Link>
+            ) : (
+              <div key={p.title}>{card}</div>
+            );
+          })}
         </div>
 
         <div className="mt-12 text-center">
