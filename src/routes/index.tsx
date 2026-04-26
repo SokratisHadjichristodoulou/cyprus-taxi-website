@@ -252,37 +252,6 @@ function HomePage() {
         </div>
       </section>
 
-      {/* FULL PRICING TABLES */}
-      <section className="container-tight py-20 md:py-28">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">Transparent pricing</span>
-          <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
-            All Cyprus transfer prices
-          </h2>
-          <p className="mt-4 text-pretty text-base text-muted-foreground md:text-lg">
-            Fixed totals per vehicle from both airports — including tolls, child seats and meet & greet.
-            No hidden fees, no surge pricing.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <PriceTable
-            pricing={pricingFromPaphos}
-            subtitle="From Paphos International Airport (PFO) to all destinations across Cyprus."
-          />
-          <PriceTable
-            pricing={pricingFromLarnaca}
-            subtitle="From Larnaca International Airport (LCA) to all destinations across Cyprus."
-          />
-        </div>
-
-        <div className="mt-8 text-center">
-          <Link to="/cyprus-airport-transfers" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3.5 text-sm font-semibold text-[color:var(--navy-foreground)] shadow-elegant transition-transform hover:scale-[1.02]">
-            View all routes <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
-
 
       <section className="container-tight py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
