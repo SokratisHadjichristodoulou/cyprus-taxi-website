@@ -117,7 +117,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-white/70">
             {popularSearches[locale].map((s, i) => (
               <li key={`${s.path}-${i}`}>
-                <Link to={wl(s.path)} className="hover:text-gold">
+                <Link to={wl(s.path)} hash={s.hash} className="hover:text-gold">
                   {s.label}
                 </Link>
               </li>
