@@ -92,7 +92,7 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
   const [error, setError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const dropoffOptions = dropoffByPickup[pickup] ?? [];
+  const dropoffOptions: string[] = getDropoffOptions(pickup);
 
   const quote = useMemo(() => {
     if (!dropoff) return null;
@@ -100,7 +100,7 @@ export function BookingForm({ variant = "hero", defaultPickup = "", defaultDropo
     const idx = passengerOptions.indexOf(passengers);
     const englishLabel = idx >= 0 ? passengerOptionsEn[idx] : passengers;
     const vehicle = passengerLabelToVehicle(englishLabel);
-    const price = findPrice(pickup, dropoff, vehicle);
+    const price = resolvePrice(pickup, dropoff, vehicle);
     if (price == null) return null;
     return { price, vehicle };
   }, [pickup, dropoff, passengers, passengerOptions]);
