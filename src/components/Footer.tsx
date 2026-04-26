@@ -40,13 +40,15 @@ export function Footer() {
   const labels = transferLabels[locale];
   const transferPaths = Object.keys(transferLabels.en);
 
-  const popularSearches: Record<"en" | "el" | "ru", { path: string; label: string }[]> = {
+  const popularSearches: Record<"en" | "el" | "ru", { path: string; label: string; hash?: string }[]> = {
     en: [
       { path: "/contact", label: "Taxi Near Me" },
       { path: "/cyprus-airport-transfers", label: "Airport Taxi Near Me" },
       { path: "/pricing", label: "24/7 Taxi Cyprus near me" },
       { path: "/fleet", label: "Private Taxi Service near me" },
       { path: "/pricing", label: "Cheap Airport Transfers Cyprus near me" },
+      { path: "/about", hash: "our-story", label: "Vladimir Taxi" },
+      { path: "/about", hash: "our-story", label: "Vladimir Taxi Cyprus" },
     ],
     el: [
       { path: "/contact", label: "Ταξί κοντά μου" },
@@ -54,6 +56,8 @@ export function Footer() {
       { path: "/pricing", label: "Ταξί 24/7 Κύπρος κοντά μου" },
       { path: "/fleet", label: "Ιδιωτική υπηρεσία ταξί κοντά μου" },
       { path: "/pricing", label: "Φθηνές μεταφορές αεροδρομίου Κύπρος κοντά μου" },
+      { path: "/about", hash: "our-story", label: "Vladimir Taxi" },
+      { path: "/about", hash: "our-story", label: "Vladimir Taxi Cyprus" },
     ],
     ru: [
       { path: "/contact", label: "Такси рядом со мной" },
@@ -61,6 +65,8 @@ export function Footer() {
       { path: "/pricing", label: "Такси 24/7 на Кипре рядом со мной" },
       { path: "/fleet", label: "Частная служба такси рядом со мной" },
       { path: "/pricing", label: "Дешёвые трансферы из аэропорта Кипра рядом со мной" },
+      { path: "/about", hash: "our-story", label: "Vladimir Taxi" },
+      { path: "/about", hash: "our-story", label: "Vladimir Taxi Cyprus" },
     ],
   };
 
@@ -111,7 +117,7 @@ export function Footer() {
           <ul className="mt-4 space-y-2.5 text-sm text-white/70">
             {popularSearches[locale].map((s, i) => (
               <li key={`${s.path}-${i}`}>
-                <Link to={wl(s.path)} className="hover:text-gold">
+                <Link to={wl(s.path)} hash={s.hash} className="hover:text-gold">
                   {s.label}
                 </Link>
               </li>
