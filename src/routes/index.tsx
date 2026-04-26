@@ -21,8 +21,6 @@ import { sharedFAQs } from "@/lib/faqs";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
-import { PriceTable } from "@/components/PriceTable";
-import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
 
 export const Route = createFileRoute("/")({
   head: () => ({
