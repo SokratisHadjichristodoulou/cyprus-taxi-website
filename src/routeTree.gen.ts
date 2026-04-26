@@ -27,6 +27,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogTopHotelsVillasCoralBayPeyiaRouteImport } from './routes/blog_.top-hotels-villas-coral-bay-peyia'
 import { Route as BlogThingsToDoInPaphosRouteImport } from './routes/blog_.things-to-do-in-paphos'
 import { Route as BlogLarnacaAirportToPaphosTravelGuideRouteImport } from './routes/blog_.larnaca-airport-to-paphos-travel-guide'
+import { Route as BlogHiddenGemsChlorakaKissonergaRouteImport } from './routes/blog_.hidden-gems-chloraka-kissonerga'
 import { Route as BlogCyprusTravelTipsFirstTimeVisitorsRouteImport } from './routes/blog_.cyprus-travel-tips-first-time-visitors'
 import { Route as BlogCompleteCyprusAirportTransferGuideRouteImport } from './routes/blog_.complete-cyprus-airport-transfer-guide'
 import { Route as BlogBestBeachesPaphosCoralBayRouteImport } from './routes/blog_.best-beaches-paphos-coral-bay'
@@ -123,6 +124,12 @@ const BlogLarnacaAirportToPaphosTravelGuideRoute =
     path: '/blog/larnaca-airport-to-paphos-travel-guide',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BlogHiddenGemsChlorakaKissonergaRoute =
+  BlogHiddenGemsChlorakaKissonergaRouteImport.update({
+    id: '/blog_/hidden-gems-chloraka-kissonerga',
+    path: '/blog/hidden-gems-chloraka-kissonerga',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogCyprusTravelTipsFirstTimeVisitorsRoute =
   BlogCyprusTravelTipsFirstTimeVisitorsRouteImport.update({
     id: '/blog_/cyprus-travel-tips-first-time-visitors',
@@ -161,6 +168,7 @@ export interface FileRoutesByFullPath {
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
   '/blog/complete-cyprus-airport-transfer-guide': typeof BlogCompleteCyprusAirportTransferGuideRoute
   '/blog/cyprus-travel-tips-first-time-visitors': typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
+  '/blog/hidden-gems-chloraka-kissonerga': typeof BlogHiddenGemsChlorakaKissonergaRoute
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -184,6 +192,7 @@ export interface FileRoutesByTo {
   '/blog/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
   '/blog/complete-cyprus-airport-transfer-guide': typeof BlogCompleteCyprusAirportTransferGuideRoute
   '/blog/cyprus-travel-tips-first-time-visitors': typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
+  '/blog/hidden-gems-chloraka-kissonerga': typeof BlogHiddenGemsChlorakaKissonergaRoute
   '/blog/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -208,6 +217,7 @@ export interface FileRoutesById {
   '/blog_/best-beaches-paphos-coral-bay': typeof BlogBestBeachesPaphosCoralBayRoute
   '/blog_/complete-cyprus-airport-transfer-guide': typeof BlogCompleteCyprusAirportTransferGuideRoute
   '/blog_/cyprus-travel-tips-first-time-visitors': typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
+  '/blog_/hidden-gems-chloraka-kissonerga': typeof BlogHiddenGemsChlorakaKissonergaRoute
   '/blog_/larnaca-airport-to-paphos-travel-guide': typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   '/blog_/things-to-do-in-paphos': typeof BlogThingsToDoInPaphosRoute
   '/blog_/top-hotels-villas-coral-bay-peyia': typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -233,6 +243,7 @@ export interface FileRouteTypes {
     | '/blog/best-beaches-paphos-coral-bay'
     | '/blog/complete-cyprus-airport-transfer-guide'
     | '/blog/cyprus-travel-tips-first-time-visitors'
+    | '/blog/hidden-gems-chloraka-kissonerga'
     | '/blog/larnaca-airport-to-paphos-travel-guide'
     | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
@@ -256,6 +267,7 @@ export interface FileRouteTypes {
     | '/blog/best-beaches-paphos-coral-bay'
     | '/blog/complete-cyprus-airport-transfer-guide'
     | '/blog/cyprus-travel-tips-first-time-visitors'
+    | '/blog/hidden-gems-chloraka-kissonerga'
     | '/blog/larnaca-airport-to-paphos-travel-guide'
     | '/blog/things-to-do-in-paphos'
     | '/blog/top-hotels-villas-coral-bay-peyia'
@@ -279,6 +291,7 @@ export interface FileRouteTypes {
     | '/blog_/best-beaches-paphos-coral-bay'
     | '/blog_/complete-cyprus-airport-transfer-guide'
     | '/blog_/cyprus-travel-tips-first-time-visitors'
+    | '/blog_/hidden-gems-chloraka-kissonerga'
     | '/blog_/larnaca-airport-to-paphos-travel-guide'
     | '/blog_/things-to-do-in-paphos'
     | '/blog_/top-hotels-villas-coral-bay-peyia'
@@ -303,6 +316,7 @@ export interface RootRouteChildren {
   BlogBestBeachesPaphosCoralBayRoute: typeof BlogBestBeachesPaphosCoralBayRoute
   BlogCompleteCyprusAirportTransferGuideRoute: typeof BlogCompleteCyprusAirportTransferGuideRoute
   BlogCyprusTravelTipsFirstTimeVisitorsRoute: typeof BlogCyprusTravelTipsFirstTimeVisitorsRoute
+  BlogHiddenGemsChlorakaKissonergaRoute: typeof BlogHiddenGemsChlorakaKissonergaRoute
   BlogLarnacaAirportToPaphosTravelGuideRoute: typeof BlogLarnacaAirportToPaphosTravelGuideRoute
   BlogThingsToDoInPaphosRoute: typeof BlogThingsToDoInPaphosRoute
   BlogTopHotelsVillasCoralBayPeyiaRoute: typeof BlogTopHotelsVillasCoralBayPeyiaRoute
@@ -436,6 +450,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogLarnacaAirportToPaphosTravelGuideRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog_/hidden-gems-chloraka-kissonerga': {
+      id: '/blog_/hidden-gems-chloraka-kissonerga'
+      path: '/blog/hidden-gems-chloraka-kissonerga'
+      fullPath: '/blog/hidden-gems-chloraka-kissonerga'
+      preLoaderRoute: typeof BlogHiddenGemsChlorakaKissonergaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog_/cyprus-travel-tips-first-time-visitors': {
       id: '/blog_/cyprus-travel-tips-first-time-visitors'
       path: '/blog/cyprus-travel-tips-first-time-visitors'
@@ -481,6 +502,7 @@ const rootRouteChildren: RootRouteChildren = {
     BlogCompleteCyprusAirportTransferGuideRoute,
   BlogCyprusTravelTipsFirstTimeVisitorsRoute:
     BlogCyprusTravelTipsFirstTimeVisitorsRoute,
+  BlogHiddenGemsChlorakaKissonergaRoute: BlogHiddenGemsChlorakaKissonergaRoute,
   BlogLarnacaAirportToPaphosTravelGuideRoute:
     BlogLarnacaAirportToPaphosTravelGuideRoute,
   BlogThingsToDoInPaphosRoute: BlogThingsToDoInPaphosRoute,

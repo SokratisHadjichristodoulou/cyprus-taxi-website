@@ -31,7 +31,7 @@ const posts = [
   { img: paphosImg, title: "Things to do in Paphos — local guide", excerpt: "Paphos is one of the most popular holiday destinations in Cyprus, famous for its beaches, ancient history, traditional villages, and vibrant harbour area. Whether you are visiting for a relaxing beach holiday, sightseeing, or local food experiences, Paphos offers something for every traveller.", date: "March 2025", read: "7 min", to: "/blog/things-to-do-in-paphos" as const },
   { img: larnacaImg, title: "Cyprus travel tips for first-time visitors", excerpt: "Cyprus is one of the most popular Mediterranean holiday destinations for UK and European travellers, offering beautiful beaches, warm weather, historic sites, and welcoming local culture. If you are visiting Cyprus for the first time, knowing a few important travel tips can help make your holiday smoother, safer, and more enjoyable.", date: "February 2025", read: "6 min", to: "/blog/cyprus-travel-tips-first-time-visitors" as const },
   { img: limassolImg, title: "The complete Cyprus airport transfer guide", excerpt: "Travelling to Cyprus for a holiday or business trip? Choosing the right airport transfer can make your arrival faster, easier, and far less stressful. Whether you land at Larnaca International Airport or Paphos International Airport, this guide compares taxis, private airport transfers, rental cars, and public transport options across Cyprus.", date: "February 2025", read: "9 min", to: "/blog/complete-cyprus-airport-transfer-guide" as const },
-  { img: chlorakaImg, title: "Hidden gems near Chloraka and Kissonerga", excerpt: "Skip the crowds — our favourite quiet beaches, viewpoints and family tavernas in this beautiful corner of Paphos.", date: "January 2025", read: "5 min" },
+  { img: chlorakaImg, title: "Hidden gems near Chloraka and Kissonerga", excerpt: "Chloraka and Kissonerga are two of the most underrated coastal areas in western Cyprus. Located between Paphos and Coral Bay, these peaceful seaside villages offer quiet beaches, scenic viewpoints, local tavernas, and a more authentic Cyprus experience away from crowded tourist resorts.", date: "January 2025", read: "5 min", to: "/blog/hidden-gems-chloraka-kissonerga" as const },
 ];
 
 function BlogPage() {
@@ -66,12 +66,10 @@ function BlogPage() {
                 </div>
               </article>
             );
-            return "to" in p && p.to ? (
+            return (
               <Link key={p.title} to={p.to} className="block">
                 {card}
               </Link>
-            ) : (
-              <div key={p.title}>{card}</div>
             );
           })}
         </div>
