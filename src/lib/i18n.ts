@@ -43,14 +43,15 @@ export function withLocale(locale: Locale, path: string): string {
 
 // Translation dictionaries — shared UI strings
 type TranslationKey =
-  | "nav.home"
-  | "nav.transfers"
-  | "nav.fleet"
-  | "nav.reviews"
-  | "nav.blog"
-  | "nav.about"
-  | "nav.faq"
-  | "nav.contact"
+ | "nav.home"
+ | "nav.transfers"
+ | "nav.pricing"
+ | "nav.fleet"
+ | "nav.reviews"
+ | "nav.blog"
+ | "nav.about"
+ | "nav.faq"
+ | "nav.contact"
   | "cta.bookNow"
   | "cta.bookYourTransfer"
   | "cta.callUs"
@@ -109,7 +110,8 @@ type TranslationKey =
 const translations: Record<TranslationKey, Record<Locale, string>> = {
   // Navigation
   "nav.home": { en: "Home", el: "Αρχική" },
-  "nav.transfers": { en: "Transfers", el: "Μεταφορές" },
+ "nav.transfers": { en: "Transfers", el: "Μεταφορές" },
+ "nav.pricing": { en: "Pricing", el: "Τιμές" },
   "nav.fleet": { en: "Fleet", el: "Στόλος" },
   "nav.reviews": { en: "Reviews", el: "Κριτικές" },
   "nav.blog": { en: "Travel Guide", el: "Οδηγός Ταξιδιού" },

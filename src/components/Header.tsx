@@ -11,6 +11,7 @@ export function Header() {
   const navLinks = [
     { path: "/", label: t("nav.home") },
     { path: "/cyprus-airport-transfers", label: t("nav.transfers") },
+    { path: "/pricing", label: t("nav.pricing") },
     { path: "/fleet", label: t("nav.fleet") },
     { path: "/reviews", label: t("nav.reviews") },
     { path: "/blog", label: t("nav.blog") },
