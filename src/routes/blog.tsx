@@ -59,7 +59,7 @@ function BlogPage() {
                     <span>· {p.read} read</span>
                   </div>
                   <h2 className="mt-3 font-display text-lg font-bold text-navy">{p.title}</h2>
-                  <p className="mt-2 text-sm text-muted-foreground">{p.excerpt}</p>
+                  <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{p.excerpt}</p>
                   <div className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
                     Read article <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
