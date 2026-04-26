@@ -55,7 +55,7 @@ const destinations = [
 ];
 
 const features = [
-  { icon: BadgeCheck, title: "Fixed prices", desc: "No surge pricing, no hidden fees. The price you see is the price you pay." },
+  { icon: BadgeCheck, title: "Fixed prices", desc: "Fixed-price Cyprus airport transfers with no hidden fees, no surge pricing, and guaranteed transparent taxi rates." },
   { icon: Plane, title: "Flight tracking", desc: "We monitor your flight in real time and meet you on arrival — even if delayed." },
   { icon: Baby, title: "Free child seats", desc: "Baby, child and booster seats provided at no extra charge." },
   { icon: ShieldCheck, title: "Licensed drivers", desc: "Professional, English-speaking drivers in immaculate vehicles." },
