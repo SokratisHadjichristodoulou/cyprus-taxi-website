@@ -18,7 +18,7 @@ export const Route = createFileRoute("/larnaca-airport-to-paphos")({
   }),
   component: () => (
     <TransferPage
-      eyebrow="Larnaca Airport → Paphos"
+      eyebrow="Larnaca Airport to Paphos"
       title="Larnaca Airport to Paphos Taxi Transfer"
       subtitle="Private fixed-price transfers from Larnaca International Airport to Paphos in a luxury Mercedes-Benz. Meet & greet at arrivals, free child seats, flight tracking included."
       heroImage={heroImg}
@@ -50,9 +50,9 @@ export const Route = createFileRoute("/larnaca-airport-to-paphos")({
       nearbyAreas={["Coral Bay", "Peyia", "Chloraka", "Kato Paphos", "Tombs of the Kings", "Geroskipou", "Paphos Harbour", "Latchi", "Polis"]}
       faqs={sharedFAQs.slice(0, 6)}
       relatedLinks={[
-        { to: "/taxi-to-coral-bay", label: "Larnaca → Coral Bay" },
-        { to: "/taxi-to-peyia", label: "Larnaca → Peyia" },
-        { to: "/taxi-to-limassol", label: "Larnaca → Limassol" },
+        { to: "/taxi-to-coral-bay", label: "Larnaca to Coral Bay" },
+        { to: "/taxi-to-peyia", label: "Larnaca to Peyia" },
+        { to: "/taxi-to-limassol", label: "Larnaca to Limassol" },
         { to: "/paphos-airport-transfers", label: "Paphos Airport Transfers" },
       ]}
     />

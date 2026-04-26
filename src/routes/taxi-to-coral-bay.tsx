@@ -18,7 +18,7 @@ export const Route = createFileRoute("/taxi-to-coral-bay")({
   }),
   component: () => (
     <TransferPage
-      eyebrow="Airport → Coral Bay"
+      eyebrow="Airport to Coral Bay"
       title="Private Taxi Transfer to Coral Bay"
       subtitle="Fixed-price airport transfers to Coral Bay from Paphos and Larnaca airports. Private Mercedes-Benz, meet & greet, free child seats."
       heroImage={heroImg}
@@ -35,8 +35,8 @@ export const Route = createFileRoute("/taxi-to-coral-bay")({
       ]}
       highlights={["Direct to your Coral Bay hotel", "Mercedes-Benz vehicles", "Fixed price guarantee", "Free child seats", "24/7 night arrivals", "Meet & greet included"]}
       prices={[
-        { type: "Paphos Airport → Coral Bay", pax: "Up to 3 passengers", price: "€35" },
-        { type: "Larnaca Airport → Coral Bay", pax: "Up to 3 passengers", price: "€110" },
+        { type: "Paphos Airport to Coral Bay", pax: "Up to 3 passengers", price: "€35" },
+        { type: "Larnaca Airport to Coral Bay", pax: "Up to 3 passengers", price: "€110" },
         { type: "7-seater (any airport)", pax: "Up to 7 passengers", price: "€55+" },
       ]}
       nearbyAreas={["Coral Beach Hotel", "Mayfair Coral Bay", "Corallia Beach", "Akamas Peninsula", "Sea Caves", "Peyia"]}
