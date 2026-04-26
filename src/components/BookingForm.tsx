@@ -4,11 +4,45 @@ import { z } from "zod";
 import { allPricing, findPrice, passengerLabelToVehicle } from "@/lib/pricing";
 import { useI18n } from "@/lib/i18n";
 
-const pickupLocations = allPricing.map((p) => p.airport);
+const airportLocations = allPricing.map((p) => p.airport);
 
-const dropoffByPickup: Record<string, string[]> = Object.fromEntries(
-  allPricing.map((p) => [p.airport, p.destinations.map((d) => d.destination)]),
-);
+// Unique destinations from all airports
+const allDestinations = Array.from(
+  new Set(allPricing.flatMap((p) => p.destinations.map((d) => d.destination))),
+).sort((a, b) => a.localeCompare(b));
+
+// Area presets (broad regions)
+const areaLocations = ["Paphos area", "Limassol area", "Larnaca area", "Nicosia area"];
+
+// All pickup options: airports first, then areas, then specific destinations
+const pickupLocations = [...airportLocations, ...areaLocations, ...allDestinations];
+
+// For dropoff: if pickup is an airport, show that airport's destinations + areas.
+// If pickup is an area or a destination, the dropoff must be an airport (reverse trip).
+function getDropoffOptions(pickup: string): string[] {
+  const airportPricing = allPricing.find((p) => p.airport === pickup);
+  if (airportPricing) {
+    return [...airportPricing.destinations.map((d) => d.destination), ...areaLocations];
+  }
+  return airportLocations;
+}
+
+// Resolve a price for any pickup/dropoff combo by normalizing to airport→destination lookup.
+function resolvePrice(
+  pickup: string,
+  dropoff: string,
+  vehicle: ReturnType<typeof passengerLabelToVehicle>,
+): number | null {
+  // Direct: pickup is airport
+  if (airportLocations.includes(pickup)) {
+    return findPrice(pickup, dropoff, vehicle);
+  }
+  // Reverse: dropoff is airport
+  if (airportLocations.includes(dropoff)) {
+    return findPrice(dropoff, pickup, vehicle);
+  }
+  return null;
+}
 
 const passengerOptionsEn = [
   "1 Passenger",
