@@ -41,7 +41,7 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
         highlights={[
           "Direct from Paphos Airport (PFO)",
           "Meet & greet at arrivals",
-          "Mercedes-Benz vehicles only",
+          "Clean and Luxury cars",
           "Fixed prices — no surge",
           "24/7 night-time arrivals",
           "Free flight tracking",
