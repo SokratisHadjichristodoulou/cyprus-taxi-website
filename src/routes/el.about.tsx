@@ -47,7 +47,7 @@ function AboutPage() {
 
       <TrustBar />
 
-      <section className="container-tight py-20">
+      <section id="our-story" className="container-tight py-20 scroll-mt-24">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="self-start overflow-hidden rounded-3xl shadow-elegant">
             <img
