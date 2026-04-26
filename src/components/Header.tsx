@@ -98,7 +98,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background xl:hidden">
+        <div className="border-t border-border bg-background">
           <nav className="container-tight flex flex-col py-4">
             {navLinks.map((l) => {
               const href = withLocale(locale, l.path);
