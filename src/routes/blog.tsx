@@ -40,7 +40,7 @@ function BlogPage() {
       <PageHero
         eyebrow="Travel guide"
         title="Cyprus Travel Guide & Inspiration"
-        subtitle="Local insider guides to Paphos, Coral Bay, Limassol, Larnaca and the rest of Cyprus — written by people who know the island."
+        subtitle="Discover local insider guides to Paphos, Coral Bay, Limassol, Larnaca, and destinations across Cyprus — written by people who truly know the island. From hidden beaches and traditional villages to airport transfer tips, restaurants, hotels, and family attractions, Taxicyprus24 shares expert travel advice to help you explore Cyprus like a local."
         image={heroImg}
         showForm={false}
       />
