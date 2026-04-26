@@ -28,10 +28,12 @@ export const Route = createFileRoute("/taxi-to-peyia")({
       toLocation="Peyia"
       duration="30 min / 1h 45m"
       distance="22 km / 152 km"
-      intro="Peyia is a charming traditional village set on the hillside above Coral Bay, popular for its private holiday villas, sea views and family-run tavernas. Our private taxi service takes you directly to your villa, however hidden the road may be."
+      intro="Peyia is one of the most popular holiday villa destinations in western Cyprus, known for panoramic sea views, luxury private villas, traditional tavernas, and its peaceful location above Coral Bay. Taxicyprus24 provides reliable private airport transfers to Peyia from both Paphos Airport and Larnaca Airport with fixed prices, professional drivers, and 24/7 service."
       bodyParagraphs={[
-        "Many Peyia villas are located on narrow hillside roads — our drivers know the area inside out and will navigate to the exact GPS coordinates of your accommodation. From Paphos Airport, Peyia is around 30 minutes; from Larnaca Airport it takes about 1h 45m.",
-        "We cover the entire Peyia area including Sea Caves, the area near St George's church, the upper hillside villas and the streets around Coral Bay junction.",
+        "Our private Cyprus airport taxi service takes you directly to your villa, hotel, apartment, or holiday accommodation — with no waiting, no shared rides, and no hidden charges. Many Peyia villas are located on hillside roads and quieter residential areas, but our experienced local drivers know the region in detail and navigate directly to your exact GPS location.",
+        "Transfer times to Peyia: from Paphos Airport approximately 30 minutes, and from Larnaca Airport approximately 1 hour 45 minutes. We provide airport transfers across the entire Peyia region including Sea Caves, the Coral Bay area, the St George area, the upper hillside villas, and Peyia village centre.",
+        "Every Peyia airport transfer includes fixed-price private taxi service, meet & greet at the airport, real-time flight tracking, free baby and child seats, clean and luxury air-conditioned vehicles, and flexible payment by card, bank transfer, or cash in EUR or GBP.",
+        "Whether you need a taxi from Paphos Airport to Peyia, a private transfer from Larnaca Airport to Coral Bay, or transport to a luxury villa in western Cyprus, Taxicyprus24 guarantees comfortable, safe, and stress-free airport transfers with no hidden fees.",
       ]}
       highlights={["Direct to your Peyia villa", "Drivers know all hillside roads", "Mercedes-Benz vehicles", "Fixed price", "Free child seats", "24/7 booking"]}
       prices={[
