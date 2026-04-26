@@ -1,26 +1,54 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import heroImg from "@/assets/hero-mercedes-coast.jpg";
+import peyiaImg from "@/assets/dest-peyia.jpg";
+import { TransferPage } from "@/components/TransferPage";
+import { sharedFAQsEl } from "@/lib/faqs.el";
 
 export const Route = createFileRoute("/el/taxi-to-peyia")({
   head: () => ({
     meta: [
-      { title: "taxi to peyia — Taxi Cyprus 24" },
-      { name: "description", content: "Premium ιδιωτικές μεταφορές αεροδρομίου σε όλη την Κύπρο." },
+      { title: "Ταξί προς Πέγεια από €35 — Μεταφορές Αεροδρομίου | Taxi Cyprus 24" },
+      { name: "description", content: "Ιδιωτικό ταξί προς Πέγεια από Αεροδρόμιο Πάφου (€35) και Αεροδρόμιο Λάρνακας (€115). Σταθερή τιμή, επαγγελματίας οδηγός, δωρεάν παιδικά καθίσματα, 24/7." },
+      { property: "og:title", content: "Ταξί προς Πέγεια από €35" },
+      { property: "og:description", content: "Ιδιωτικό ταξί σταθερής τιμής προς Πέγεια, Κύπρος." },
+      { property: "og:image", content: peyiaImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "twitter:image", content: peyiaImg },
     ],
+    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/taxi-to-peyia" }],
   }),
-  component: Page,
+  component: () => (
+    <TransferPage
+      eyebrow="Αεροδρόμιο προς Πέγεια"
+      title="Ιδιωτικό Ταξί προς Πέγεια"
+      subtitle="Μεταφορές αεροδρομίου σταθερής τιμής προς το χωριό Πέγεια και τις γύρω βίλες στους λόφους. Ιδιωτικό Mercedes-Benz, υποδοχή, χωρίς εκπλήξεις."
+      heroImage={heroImg}
+      galleryImage={peyiaImg}
+      defaultDropoff="Πέγεια"
+      fromLocation="Πάφος / Λάρνακα"
+      toLocation="Πέγεια"
+      duration="30 λ / 1ω 45λ"
+      distance="22 χλμ / 152 χλμ"
+      intro="Η Πέγεια είναι ένας από τους πιο δημοφιλείς προορισμούς διακοπών σε βίλες στη δυτική Κύπρο, γνωστή για την πανοραμική θέα στη θάλασσα, τις πολυτελείς ιδιωτικές βίλες, τις παραδοσιακές ταβέρνες και την ήσυχη τοποθεσία της πάνω από το Coral Bay. Η Taxicyprus24 παρέχει αξιόπιστες ιδιωτικές μεταφορές προς Πέγεια από αεροδρόμια Πάφου και Λάρνακας με σταθερές τιμές και υπηρεσία 24/7."
+      bodyParagraphs={[
+        "Η ιδιωτική μας υπηρεσία ταξί σας μεταφέρει απευθείας στη βίλα, ξενοδοχείο ή κατάλυμά σας — χωρίς αναμονή, χωρίς κοινόχρηστες διαδρομές και χωρίς κρυφές χρεώσεις. Πολλές βίλες της Πέγειας βρίσκονται σε δρόμους στους λόφους και ήσυχες περιοχές, αλλά οι έμπειροι τοπικοί οδηγοί μας γνωρίζουν την περιοχή λεπτομερώς και πλοηγούνται απευθείας στη GPS τοποθεσία σας.",
+        "Χρόνοι μεταφοράς προς Πέγεια: από Αεροδρόμιο Πάφου περίπου 30 λεπτά, από Αεροδρόμιο Λάρνακας περίπου 1 ώρα και 45 λεπτά. Παρέχουμε μεταφορές σε όλη την περιοχή της Πέγειας: Θαλάσσιες Σπηλιές, περιοχή Coral Bay, περιοχή Αγίου Γεωργίου, ψηλές βίλες στους λόφους και κέντρο του χωριού.",
+        "Κάθε μεταφορά περιλαμβάνει ιδιωτική υπηρεσία σταθερής τιμής, υποδοχή στο αεροδρόμιο, παρακολούθηση πτήσης σε πραγματικό χρόνο, δωρεάν παιδικά καθίσματα, καθαρά και πολυτελή κλιματιζόμενα οχήματα και ευέλικτη πληρωμή με κάρτα, τραπεζικό έμβασμα ή μετρητά σε EUR ή GBP.",
+        "Είτε χρειάζεστε ταξί από Αεροδρόμιο Πάφου προς Πέγεια, είτε ιδιωτική μεταφορά από Αεροδρόμιο Λάρνακας προς Coral Bay, είτε μεταφορά σε πολυτελή βίλα, η Taxicyprus24 εγγυάται άνετες, ασφαλείς και χωρίς άγχος μεταφορές χωρίς κρυφές χρεώσεις.",
+      ]}
+      highlights={["Απευθείας στη βίλα σας στην Πέγεια", "Οδηγοί γνωρίζουν τους δρόμους στους λόφους", "Καθαρά και πολυτελή αυτοκίνητα", "Σταθερή τιμή", "Δωρεάν παιδικά καθίσματα", "Κράτηση 24/7"]}
+      prices={[
+        { type: "Αεροδρόμιο Πάφου προς Πέγεια", pax: "Έως 3 επιβάτες", price: "€35" },
+        { type: "Αεροδρόμιο Λάρνακας προς Πέγεια", pax: "Έως 3 επιβάτες", price: "€115" },
+        { type: "7-θέσιο Premium Van", pax: "Έως 7 επιβάτες", price: "€55+" },
+      ]}
+      nearbyAreas={["Θαλάσσιες Σπηλιές", "Άγιος Γεώργιος Πέγειας", "Coral Bay", "Ακάμας", "Κισσόνεργα"]}
+      faqs={sharedFAQsEl.slice(0, 6)}
+      relatedLinks={[
+        { to: "/taxi-to-coral-bay", label: "Ταξί προς Coral Bay" },
+        { to: "/taxi-to-chloraka", label: "Ταξί προς Χλώρακα" },
+        { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
+      ]}
+    />
+  ),
 });
-
-function Page() {
-  return (
-    <div className="container-tight py-20">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">Σύντομα</span>
-      <h1 className="mt-3 font-display text-4xl font-bold text-navy">Η ελληνική έκδοση ετοιμάζεται</h1>
-      <p className="mt-4 max-w-2xl text-muted-foreground">Αυτή η σελίδα μεταφράζεται. Στο μεταξύ, μπορείτε να δείτε την αγγλική έκδοση ή να επικοινωνήσετε μαζί μας απευθείας στο +357 96 626 844.</p>
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Link to="/taxi-to-peyia" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-[color:var(--navy-foreground)]">View English version</Link>
-        <Link to="/el/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-navy">Επικοινωνία</Link>
-      </div>
-    </div>
-  );
-}

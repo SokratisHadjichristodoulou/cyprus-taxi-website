@@ -1,26 +1,55 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import heroImg from "@/assets/hero-mercedes-coast.jpg";
+import limassolImg from "@/assets/dest-limassol.jpg";
+import { TransferPage } from "@/components/TransferPage";
+import { sharedFAQsEl } from "@/lib/faqs.el";
 
 export const Route = createFileRoute("/el/taxi-to-limassol")({
   head: () => ({
     meta: [
-      { title: "taxi to limassol — Taxi Cyprus 24" },
-      { name: "description", content: "Premium ιδιωτικές μεταφορές αεροδρομίου σε όλη την Κύπρο." },
+      { title: "Ταξί προς Λεμεσό — Μεταφορά Αεροδρομίου από €55 | Taxi Cyprus 24" },
+      { name: "description", content: "Ιδιωτικό ταξί προς Λεμεσό από Αεροδρόμιο Λάρνακας (€55) και Αεροδρόμιο Πάφου (€65). Σταθερή τιμή, Mercedes-Benz, υποδοχή, 24/7." },
+      { property: "og:title", content: "Μεταφορά Αεροδρομίου προς Λεμεσό από €55" },
+      { property: "og:description", content: "Ιδιωτικό ταξί σταθερής τιμής προς Λεμεσό, Κύπρος." },
+      { property: "og:image", content: limassolImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "twitter:image", content: limassolImg },
     ],
+    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/taxi-to-limassol" }],
   }),
-  component: Page,
+  component: () => (
+    <TransferPage
+      eyebrow="Αεροδρόμιο προς Λεμεσό"
+      title="Ιδιωτικό Ταξί προς Λεμεσό"
+      subtitle="Μεταφορές αεροδρομίου σταθερής τιμής προς Λεμεσό από αεροδρόμια Λάρνακας και Πάφου. Premium καθαρά και πολυτελή αυτοκίνητα για επαγγελματικά και τουριστικά ταξίδια."
+      heroImage={heroImg}
+      galleryImage={limassolImg}
+      defaultDropoff="Λεμεσός"
+      fromLocation="Λάρνακα / Πάφος"
+      toLocation="Λεμεσός"
+      duration="45 λ / 50 λ"
+      distance="70 χλμ / 65 χλμ"
+      intro="Η Λεμεσός είναι η δεύτερη μεγαλύτερη πόλη της Κύπρου και ένας από τους κορυφαίους προορισμούς για επαγγελματικά ταξίδια, πολυτελή θέρετρα, παραλίες και ζωή στη μαρίνα. Η Taxicyprus24 παρέχει αξιόπιστες ιδιωτικές μεταφορές προς Λεμεσό από αεροδρόμια Λάρνακας και Πάφου με σταθερές τιμές, επαγγελματίες οδηγούς και υπηρεσία 24/7."
+      bodyParagraphs={[
+        "Η ιδιωτική μας υπηρεσία ταξί προς Λεμεσό προσφέρει απευθείας μεταφορά door-to-door σε ξενοδοχεία, διαμερίσματα στη μαρίνα, επιχειρηματικά κέντρα, βίλες και παραθαλάσσια θέρετρα — χωρίς αναμονή, χωρίς κοινόχρηστες διαδρομές, χωρίς κρυφές χρεώσεις.",
+        "Από Αεροδρόμιο Λάρνακας, η Λεμεσός απέχει περίπου 45 λεπτά μέσω του αυτοκινητοδρόμου Α1/Α5. Από Αεροδρόμιο Πάφου, η διαδρομή διαρκεί περίπου 50 λεπτά μέσω του αυτοκινητοδρόμου Α6.",
+        "Καλύπτουμε όλες τις περιοχές της Λεμεσού: Μαρίνα Λεμεσού, Παλιά Πόλη, Γερμασόγεια, τουριστική περιοχή Αμαθούντας, Μουττάγιακα και Πύργος. Επαγγελματίες ταξιδιώτες και VIP καλεσμένοι μπορούν επίσης να κρατήσουν εκ των προτέρων πολυτελείς μεταφορές Mercedes S-Class για premium άνεση.",
+        "Κάθε μεταφορά περιλαμβάνει σταθερές τιμές, υποδοχή, παρακολούθηση πτήσης, δωρεάν παιδικά καθίσματα, κλιματιζόμενα οχήματα Mercedes και επιλογές πληρωμής με κάρτα, τραπεζικό έμβασμα ή μετρητά σε EUR ή GBP.",
+        "Είτε χρειάζεστε ταξί από Λάρνακα προς Λεμεσό, ιδιωτική μεταφορά από Πάφο ή εκτελεστική υπηρεσία σοφέρ, η Taxicyprus24 εγγυάται άνετα, επαγγελματικά και χωρίς άγχος ταξίδια.",
+      ]}
+      highlights={["Απευθείας στο ξενοδοχείο/μαρίνα", "Premium Mercedes-Benz", "Ιδανικό για επαγγελματίες", "Εγγύηση σταθερής τιμής", "Υποδοχή στο αεροδρόμιο", "Υπηρεσία 24/7"]}
+      prices={[
+        { type: "Αεροδρόμιο Λάρνακας προς Λεμεσό", pax: "Έως 3 επιβάτες", price: "€55" },
+        { type: "Αεροδρόμιο Πάφου προς Λεμεσό", pax: "Έως 3 επιβάτες", price: "€65" },
+        { type: "Πολυτελές S-Class", pax: "Έως 3 επιβάτες", price: "€95+" },
+      ]}
+      nearbyAreas={["Μαρίνα Λεμεσού", "Παλιά Πόλη Λεμεσού", "Γερμασόγεια", "Αμαθούντα", "Μουττάγιακα", "Πισσούρι", "Παραλία Κυβερνήτη"]}
+      faqs={sharedFAQsEl.slice(0, 6)}
+      relatedLinks={[
+        { to: "/larnaca-airport-transfers", label: "Μεταφορές Αεροδρομίου Λάρνακας" },
+        { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
+        { to: "/cyprus-airport-transfers", label: "Όλες οι διαδρομές" },
+      ]}
+    />
+  ),
 });
-
-function Page() {
-  return (
-    <div className="container-tight py-20">
-      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">Σύντομα</span>
-      <h1 className="mt-3 font-display text-4xl font-bold text-navy">Η ελληνική έκδοση ετοιμάζεται</h1>
-      <p className="mt-4 max-w-2xl text-muted-foreground">Αυτή η σελίδα μεταφράζεται. Στο μεταξύ, μπορείτε να δείτε την αγγλική έκδοση ή να επικοινωνήσετε μαζί μας απευθείας στο +357 96 626 844.</p>
-      <div className="mt-8 flex flex-wrap gap-3">
-        <Link to="/taxi-to-limassol" className="inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-[color:var(--navy-foreground)]">View English version</Link>
-        <Link to="/el/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-navy">Επικοινωνία</Link>
-      </div>
-    </div>
-  );
-}
