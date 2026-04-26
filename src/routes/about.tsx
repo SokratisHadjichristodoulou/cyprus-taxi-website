@@ -79,14 +79,14 @@ function AboutPage() {
 
       <section className="container-tight py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="overflow-hidden rounded-3xl shadow-elegant">
+          <div className="self-start overflow-hidden rounded-3xl shadow-elegant">
             <img
               src={meetGreetImg}
               alt="Professional Taxicyprus24 driver providing meet & greet service at Larnaca Airport arrivals"
               loading="lazy"
               width={1280}
               height={896}
-              className="h-full w-full object-cover"
+              className="aspect-[10/7] w-full object-cover"
             />
           </div>
           <div>
