@@ -9,14 +9,22 @@ import { TrustBar } from "@/components/TrustBar";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Taxi Cyprus 24 — Premium Airport Transfers" },
-      { name: "description", content: "Learn about Taxi Cyprus 24 — a family-run premium airport transfer company serving Cyprus since 2010 with 5,000+ happy customers and a 4.9 Google rating." },
-      { property: "og:title", content: "About Taxi Cyprus 24" },
-      { property: "og:description", content: "Family-run premium Cyprus airport transfer company." },
+      { title: "About Taxicyprus24 — Trusted Cyprus Airport Transfers Since 2010" },
+      { name: "description", content: "Discover Taxicyprus24 — a family-run private airport transfer company in Cyprus since 2010. Fixed-price taxi from Larnaca & Paphos Airports, 5,000+ happy customers, 4.9★ rating, 24/7 service." },
+      { name: "keywords", content: "about Taxicyprus24, Cyprus airport transfer company, private taxi Cyprus, Larnaca airport taxi, Paphos airport taxi, family-run taxi service Cyprus, fixed price taxi Cyprus" },
+      { property: "og:title", content: "About Taxicyprus24 — Trusted Cyprus Airport Transfers Since 2010" },
+      { property: "og:description", content: "Family-run private Cyprus airport transfer company. Fixed prices, professional English-speaking drivers, free child seats and 24/7 service from Larnaca and Paphos Airports." },
+      { property: "og:type", content: "website" },
       { property: "og:image", content: heroImg },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About Taxicyprus24 — Cyprus Airport Transfers Since 2010" },
+      { name: "twitter:description", content: "Family-run private Cyprus taxi service. Fixed prices, 4.9★ rated, 24/7 airport transfers." },
       { name: "twitter:image", content: heroImg },
+      { link: [{ rel: "canonical", href: "https://taxicyprus24.com/about" }] } as never,
     ],
+    links: [{ rel: "canonical", href: "https://taxicyprus24.com/about" }],
   }),
+
   component: AboutPage,
 });
 
