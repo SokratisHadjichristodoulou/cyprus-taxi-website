@@ -3,7 +3,7 @@ import type { FAQItem } from "@/components/FAQAccordion";
 export const sharedFAQs: FAQItem[] = [
   {
     q: "How much is a taxi from Larnaca Airport to Paphos?",
-    a: "A private fixed-price taxi from Larnaca Airport to Paphos costs from €95 in our standard sedan and from €130 in a luxury Mercedes S-Class. The price is fixed — no surge, no surprises, and includes meet & greet, flight tracking and free child seats.",
+    a: "Looking for a private taxi from Larnaca Airport to Paphos? Taxicyprus24 offers fixed-price Cyprus airport transfers from only €95 in a Mercedes E-Class sedan and €130 in a premium van. Our 24/7 airport taxi service includes meet & greet, flight monitoring, free child seats, professional drivers, and no hidden fees. Book your reliable Larnaca Airport transfer to Paphos today.",
   },
   {
     q: "How long does the airport transfer take?",
