@@ -7,9 +7,9 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο — Σταθερή τιμή €95 | Taxi Cyprus 24" },
-      { name: "description", content: "Ιδιωτικό ταξί από Αεροδρόμιο Λάρνακας προς Πάφο από €95. Σταθερή τιμή, υποδοχή, δωρεάν παιδικά καθίσματα, παρακολούθηση πτήσης. Κράτηση 24/7." },
-      { property: "og:title", content: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο από €95" },
+      { title: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο — Σταθερή τιμή €140 | Taxi Cyprus 24" },
+      { name: "description", content: "Ιδιωτικό ταξί από Αεροδρόμιο Λάρνακας προς Πάφο από €140. Σταθερή τιμή, υποδοχή, δωρεάν παιδικά καθίσματα, παρακολούθηση πτήσης. Κράτηση 24/7." },
+      { property: "og:title", content: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο από €140" },
       { property: "og:description", content: "Ιδιωτική μεταφορά σταθερής τιμής από Λάρνακα προς Πάφο με υποδοχή." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "el_GR" },
@@ -44,9 +44,9 @@ export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
         "Δεκτά μετρητά ή κάρτα",
       ]}
       prices={[
-        { type: "Executive Sedan", pax: "Έως 3 επιβάτες", price: "€95" },
-        { type: "Premium Van", pax: "Έως 7 επιβάτες", price: "€130" },
-        { type: "Πολυτελές S-Class", pax: "Έως 3 επιβάτες", price: "€160" },
+        { type: "Executive Sedan", pax: "Έως 4 επιβάτες", price: "€140" },
+        { type: "Premium Van (6 θέσεων)", pax: "Έως 6 επιβάτες", price: "€180" },
+        { type: "Μεγάλο Van (12 θέσεων)", pax: "Έως 12 επιβάτες", price: "€240" },
       ]}
       nearbyAreas={["Coral Bay", "Πέγεια", "Χλώρακα", "Κάτω Πάφος", "Τάφοι των Βασιλέων", "Γεροσκήπου", "Λιμάνι Πάφου", "Λάτσι", "Πόλη Χρυσοχούς"]}
       faqs={sharedFAQsEl.slice(0, 6)}
