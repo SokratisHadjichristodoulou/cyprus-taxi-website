@@ -10,7 +10,7 @@ const allFAQs = [
   ...sharedFAQs,
   {
     q: "How do I book an airport transfer?",
-    a: "You can book in three ways: (1) fill in the booking form on our website, (2) message us on WhatsApp at +357 96 626 844, or (3) call us. You'll receive a confirmation within minutes.",
+    a: "Booking your Cyprus airport transfer with Taxicyprus24 is quick and easy. You can reserve your private taxi in three convenient ways: (1) complete the online booking form on our website, (2) send us a message on WhatsApp at +357 96 626 844, or (3) call our team directly. Whether you need a taxi from Larnaca Airport, Paphos Airport, Limassol, or anywhere in Cyprus, you will receive a fast booking confirmation within minutes.",
   },
   {
     q: "What is your cancellation policy?",
