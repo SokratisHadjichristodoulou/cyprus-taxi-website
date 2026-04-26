@@ -6,12 +6,17 @@ export function TrustBar() {
       <div className="container-tight grid grid-cols-2 gap-y-6 py-7 text-center md:grid-cols-4">
         <Stat label="Happy customers" value="5,000+" />
         <Stat
-          label="Google rating"
+          label="TripAdvisor rating"
           value={
-            <span className="inline-flex items-center gap-1">
+            <a
+              href="https://www.tripadvisor.com/Attraction_Review-g190384-d8567084-Reviews-Taxi_Cyprus_Paphos-Paphos_Paphos_District.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 transition-opacity hover:opacity-80"
+            >
               4.9
               <Star className="h-4 w-4 fill-gold text-gold" />
-            </span>
+            </a>
           }
         />
         <Stat label="Available" value="24 / 7" />
