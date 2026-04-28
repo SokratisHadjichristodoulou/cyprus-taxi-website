@@ -32,11 +32,12 @@ export function FAQAccordion({ items, className = "" }: Props) {
                 className={`h-5 w-5 shrink-0 text-navy transition-transform ${isOpen ? "rotate-180" : ""}`}
               />
             </button>
-            {isOpen && (
-              <div className="px-5 pb-5 text-[15px] leading-relaxed text-muted-foreground md:px-7 md:pb-7">
-                {item.a}
-              </div>
-            )}
+            <div
+              className={`px-5 text-[15px] leading-relaxed text-muted-foreground md:px-7 ${isOpen ? "pb-5 md:pb-7" : "h-0 overflow-hidden pb-0"}`}
+              aria-hidden={!isOpen}
+            >
+              {item.a}
+            </div>
           </div>
         );
       })}
