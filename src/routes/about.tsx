@@ -96,16 +96,41 @@ function AboutPage() {
             </h2>
             <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                Taxicyprus24 was founded in 2010 by Vladimir, widely known by many returning customers as <strong>"Vladimir Taxi"</strong>, with a single Mercedes E-Class and one clear promise: every traveller arriving in Cyprus would receive reliable, professional, and comfortable private airport transfers with exceptional service from start to finish.
+                Founded in 2010 by Vladimir — known by many loyal customers as <strong>"Vladimir Taxi"</strong> — Taxicyprus24 started with one Mercedes E-Class and a simple mission: to provide reliable, professional, and comfortable Cyprus taxi and airport transfer services for every traveller arriving on the island.
               </p>
               <p>
-                More than a decade and 5,000+ private airport transfers later, that promise still defines how we operate. Our fixed-price Cyprus airport taxi service, free baby and child seats, complimentary meet & greet at Larnaca and Paphos Airports, and 24/7 availability are included with every booking as standard.
+                Today, after more than 5,000 successful transfers, Taxicyprus24 has become one of the trusted names for Paphos taxi, Larnaca Airport transfers, and private transportation across Cyprus. Whether you are searching for a taxi in Paphos near me, a private airport transfer, or an executive chauffeur service, we provide safe, punctual, and stress-free travel 24/7.
               </p>
               <p>
-                Today, <strong>Vladimir Taxi Cyprus</strong> and Taxicyprus24 serve travellers from across the UK, Europe, and beyond — including families, business travellers, honeymooners, and private tour groups. We provide professional door-to-door airport transfers from Larnaca Airport and Paphos Airport to Limassol, Coral Bay, Peyia, Ayia Napa, Protaras, Nicosia, and all Cyprus destinations.
+                Our professional drivers offer fixed-price Cyprus airport taxi services with no hidden charges, including:
+              </p>
+              <ul className="ml-5 list-disc space-y-1.5">
+                <li>Free baby and child seats</li>
+                <li>Complimentary meet &amp; greet at Larnaca and Paphos Airports</li>
+                <li>Flight monitoring for delayed arrivals</li>
+                <li>Door-to-door private transfers</li>
+                <li>Luxury and executive vehicle options</li>
+              </ul>
+              <p>
+                <strong>Vladimir Taxi Cyprus</strong> proudly serves travellers from the UK, Europe, and around the world, including families, couples, business travellers, honeymooners, and private groups. We provide reliable transfers from Paphos Airport and Larnaca Airport to all major Cyprus destinations, including:
+              </p>
+              <ul className="ml-5 list-disc space-y-1.5">
+                <li>Paphos</li>
+                <li>Coral Bay</li>
+                <li>Peyia</li>
+                <li>Limassol</li>
+                <li>Ayia Napa</li>
+                <li>Protaras</li>
+                <li>Nicosia</li>
+                <li>Latchi</li>
+                <li>Polis</li>
+                <li>All resorts and hotels across Cyprus</li>
+              </ul>
+              <p>
+                With a <strong>4.9-star TripAdvisor rating</strong> and 120+ verified reviews, Taxicyprus24 is recognised for outstanding customer service, clean vehicles, professional drivers, and dependable airport transportation.
               </p>
               <p>
-                Our 4.9-star TripAdvisor rating and 120+ verified customer reviews reflect the quality and reliability of our service. Whether you need a private taxi from Larnaca Airport, a Paphos Airport transfer to your villa, or executive chauffeur service across Cyprus, Taxicyprus24 delivers safe, luxury, and stress-free travel every time.
+                Whether you need a Paphos airport taxi, a luxury taxi in Paphos, a transfer from Larnaca Airport, or a trusted Cyprus taxi service, Taxicyprus24 and Vladimir Taxi are committed to delivering premium travel experiences every time.
               </p>
             </div>
             <Link
