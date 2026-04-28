@@ -16,6 +16,7 @@ export const Route = createFileRoute("/el/reviews")({
       { property: "og:description", content: "Επιβεβαιωμένες κριτικές 4.9★ στο TripAdvisor για μεταφορές αεροδρομίου Κύπρου." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "κριτικές Taxicyprus24, αξιολογήσεις ταξί Κύπρος, TripAdvisor ταξί Κύπρος, εμπειρίες πελατών μεταφορά αεροδρομίου, καλύτερο ταξί Κύπρος" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/reviews" }],
