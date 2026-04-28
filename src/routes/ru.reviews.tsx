@@ -16,7 +16,6 @@ export const Route = createFileRoute("/ru/reviews")({
       { property: "og:description", content: "Подтверждённые отзывы 4.9★ на TripAdvisor о трансферах на Кипре." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "отзывы Taxicyprus24, рейтинги такси Кипр, TripAdvisor такси Кипр, отзывы клиентов трансфер аэропорта, лучшее такси Кипр" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/reviews" }],

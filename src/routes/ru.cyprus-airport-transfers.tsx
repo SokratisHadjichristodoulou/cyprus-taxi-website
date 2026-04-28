@@ -30,7 +30,6 @@ export const Route = createFileRoute("/ru/cyprus-airport-transfers")({
       { property: "og:description", content: "Фиксированные цены на трансферы из аэропортов Кипра в любое направление." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "трансферы из аэропортов Кипра, такси аэропорт Ларнака, такси аэропорт Пафос, маршруты такси Кипр, фиксированные цены трансфер, частное такси аэропорт, трансфер LCA, трансфер PFO" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/cyprus-airport-transfers" }],

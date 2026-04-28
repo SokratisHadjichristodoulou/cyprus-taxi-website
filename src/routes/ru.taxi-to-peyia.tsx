@@ -13,7 +13,6 @@ export const Route = createFileRoute("/ru/taxi-to-peyia")({
       { property: "og:description", content: "Частное такси по фиксированной цене в Пейю, Кипр." },
       { property: "og:image", content: peyiaImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "такси Пейя, трансфер аэропорт Пафоса Пейя, такси из аэропорта Пафоса в Пейю, PFO Пейя, частное такси Пейя Кипр" },
       { name: "twitter:image", content: peyiaImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/taxi-to-peyia" }],

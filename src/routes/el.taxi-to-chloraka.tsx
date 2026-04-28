@@ -47,7 +47,6 @@ export const Route = createFileRoute("/el/taxi-to-chloraka")({
       { property: "og:description", content: "Ιδιωτικές μεταφορές σταθερής τιμής προς Χλώρακα από αεροδρόμια Λάρνακας και Πάφου." },
       { property: "og:image", content: chlorakaImg },
       { property: "og:locale", content: "el_GR" },
-      { name: "keywords", content: "ταξί Χλώρακα, μεταφορά αεροδρομίου Πάφου Χλώρακα, ταξί από αεροδρόμιο Πάφου Χλώρακα, PFO Χλώρακα, ιδιωτικό ταξί Χλώρακα Κύπρος" },
       { name: "twitter:image", content: chlorakaImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/taxi-to-chloraka" }],

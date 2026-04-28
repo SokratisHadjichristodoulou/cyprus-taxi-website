@@ -47,7 +47,6 @@ export const Route = createFileRoute("/ru/taxi-to-chloraka")({
       { property: "og:description", content: "Частные трансферы по фиксированной цене в Хлораку из аэропортов Ларнаки и Пафоса." },
       { property: "og:image", content: chlorakaImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "такси Хлорака, трансфер аэропорт Пафоса Хлорака, такси из аэропорта Пафоса в Хлораку, PFO Хлорака, частное такси Хлорака Кипр" },
       { name: "twitter:image", content: chlorakaImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/taxi-to-chloraka" }],

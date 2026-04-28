@@ -15,7 +15,6 @@ export const Route = createFileRoute("/ru/fleet")({
       { property: "og:description", content: "Премиальные чистые и люксовые автомобили для трансферов на Кипре." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "автопарк такси Кипр, Mercedes E-Class Кипр, частное такси 7 мест, минивэн 12 мест Кипр, премиум такси аэропорт, executive sedan Кипр, минивэн Кипр" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/fleet" }],

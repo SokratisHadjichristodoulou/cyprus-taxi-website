@@ -19,7 +19,6 @@ export const Route = createFileRoute("/ru/blog")({
       { property: "og:description", content: "Гиды и советы для поездки на Кипр." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "путеводитель по Кипру, блог о Кипре, что посмотреть в Пафосе, пляжи Пафоса, такси Кипр блог, Корал Бей путеводитель, трансфер Ларнака Пафос, советы для отдыха на Кипре" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/blog" }],

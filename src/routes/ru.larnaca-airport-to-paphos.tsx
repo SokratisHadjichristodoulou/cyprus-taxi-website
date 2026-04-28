@@ -13,7 +13,6 @@ export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
       { property: "og:description", content: "Частный трансфер по фиксированной цене из Ларнаки в Пафос со встречей." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "такси Ларнака Пафос, такси из аэропорта Ларнаки в Пафос, трансфер Ларнака Пафос цена, LCA в Пафос, трансфер аэропорт Ларнаки Пафос, частное такси Ларнака Пафос" },
       { name: "twitter:image", content: paphosImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/larnaca-airport-to-paphos" }],

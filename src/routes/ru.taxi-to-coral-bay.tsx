@@ -13,7 +13,6 @@ export const Route = createFileRoute("/ru/taxi-to-coral-bay")({
       { property: "og:description", content: "Частное такси по фиксированной цене в Корал-Бей, Кипр." },
       { property: "og:image", content: coralBayImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "такси Корал Бей, трансфер аэропорт Пафоса Корал Бей, такси из аэропорта Пафоса в Корал Бей, PFO Корал Бей, частное такси Корал Бей Кипр" },
       { name: "twitter:image", content: coralBayImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/taxi-to-coral-bay" }],

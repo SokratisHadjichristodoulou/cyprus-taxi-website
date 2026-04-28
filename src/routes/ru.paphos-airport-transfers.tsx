@@ -15,7 +15,6 @@ export const Route = createFileRoute("/ru/paphos-airport-transfers")({
       { property: "og:description", content: "Премиальное такси из аэропорта Пафоса во все направления Кипра." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "трансферы из аэропорта Пафоса, такси аэропорт Пафос, PFO такси, такси из аэропорта Пафоса, частный трансфер Пафос, аэропорт Пафос Корал Бей, аэропорт Пафос Лимассол" },
       { name: "twitter:image", content: paphosImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/paphos-airport-transfers" }],

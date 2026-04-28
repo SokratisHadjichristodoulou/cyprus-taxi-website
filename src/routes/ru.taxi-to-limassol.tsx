@@ -13,7 +13,6 @@ export const Route = createFileRoute("/ru/taxi-to-limassol")({
       { property: "og:description", content: "Частное такси по фиксированной цене в Лимассол, Кипр." },
       { property: "og:image", content: limassolImg },
       { property: "og:locale", content: "ru_RU" },
-      { name: "keywords", content: "такси Лимассол, трансфер аэропорт Пафоса Лимассол, такси из аэропорта Ларнаки в Лимассол, частное такси Лимассол, трансфер аэропорта Лимассол Кипр" },
       { name: "twitter:image", content: limassolImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/taxi-to-limassol" }],

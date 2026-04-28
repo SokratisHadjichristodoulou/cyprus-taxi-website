@@ -11,7 +11,6 @@ export const Route = createFileRoute("/el/contact")({
       { property: "og:title", content: "Επικοινωνία & Κράτηση — Taxi Cyprus 24" },
       { property: "og:description", content: "Κλείστε τη μεταφορά αεροδρομίου Κύπρου 24/7." },
       { property: "og:locale", content: "el_GR" },
-      { name: "keywords", content: "επικοινωνία Taxicyprus24, κράτηση ταξί Κύπρος, WhatsApp ταξί Κύπρος, τηλέφωνο ταξί αεροδρομίου, κράτηση μεταφοράς αεροδρομίου, ταξί Κύπρος 24/7, +357 96 626 844" },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/contact" }],
   }),
