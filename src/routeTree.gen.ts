@@ -13,6 +13,7 @@ import { Route as TaxiToPeyiaRouteImport } from './routes/taxi-to-peyia'
 import { Route as TaxiToLimassolRouteImport } from './routes/taxi-to-limassol'
 import { Route as TaxiToCoralBayRouteImport } from './routes/taxi-to-coral-bay'
 import { Route as TaxiToChlorakaRouteImport } from './routes/taxi-to-chloraka'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as PricingRouteImport } from './routes/pricing'
@@ -85,6 +86,11 @@ const TaxiToCoralBayRoute = TaxiToCoralBayRouteImport.update({
 const TaxiToChlorakaRoute = TaxiToChlorakaRouteImport.update({
   id: '/taxi-to-chloraka',
   path: '/taxi-to-chloraka',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RuRoute = RuRouteImport.update({
@@ -382,6 +388,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
   '/ru': typeof RuRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
@@ -439,6 +446,7 @@ export interface FileRoutesByTo {
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
@@ -499,6 +507,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/reviews': typeof ReviewsRoute
   '/ru': typeof RuRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/taxi-to-chloraka': typeof TaxiToChlorakaRoute
   '/taxi-to-coral-bay': typeof TaxiToCoralBayRoute
   '/taxi-to-limassol': typeof TaxiToLimassolRoute
@@ -560,6 +569,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/reviews'
     | '/ru'
+    | '/sitemap.xml'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
@@ -617,6 +627,7 @@ export interface FileRouteTypes {
     | '/paphos-airport-transfers'
     | '/pricing'
     | '/reviews'
+    | '/sitemap.xml'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
@@ -676,6 +687,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/reviews'
     | '/ru'
+    | '/sitemap.xml'
     | '/taxi-to-chloraka'
     | '/taxi-to-coral-bay'
     | '/taxi-to-limassol'
@@ -736,6 +748,7 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   ReviewsRoute: typeof ReviewsRoute
   RuRoute: typeof RuRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TaxiToChlorakaRoute: typeof TaxiToChlorakaRoute
   TaxiToCoralBayRoute: typeof TaxiToCoralBayRoute
   TaxiToLimassolRoute: typeof TaxiToLimassolRoute
@@ -777,6 +790,13 @@ declare module '@tanstack/react-router' {
       path: '/taxi-to-chloraka'
       fullPath: '/taxi-to-chloraka'
       preLoaderRoute: typeof TaxiToChlorakaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ru': {
@@ -1248,6 +1268,7 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   ReviewsRoute: ReviewsRoute,
   RuRoute: RuRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TaxiToChlorakaRoute: TaxiToChlorakaRoute,
   TaxiToCoralBayRoute: TaxiToCoralBayRoute,
   TaxiToLimassolRoute: TaxiToLimassolRoute,
