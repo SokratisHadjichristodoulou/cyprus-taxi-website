@@ -52,6 +52,12 @@ export const Route = createRootRoute({
       { name: "twitter:description", content: "Private Cyprus airport taxi transfers from Larnaca & Paphos airports. Fixed prices, professional drivers, 24/7 service & comfortable rides across Cyprus." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wmsz0aV3y5YpI4DtnooPQnlf3LG3/social-images/social-1777198205711-taxicyprus24Social.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wmsz0aV3y5YpI4DtnooPQnlf3LG3/social-images/social-1777198205711-taxicyprus24Social.webp" },
+      // Geo targeting (helps both classical search & generative engines understand service area)
+      { name: "geo.region", content: "CY" },
+      { name: "geo.placename", content: "Cyprus" },
+      { name: "geo.position", content: "34.9003;33.6232" },
+      { name: "ICBM", content: "34.9003, 33.6232" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
