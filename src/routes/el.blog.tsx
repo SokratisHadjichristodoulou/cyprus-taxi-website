@@ -19,6 +19,7 @@ export const Route = createFileRoute("/el/blog")({
       { property: "og:description", content: "Οδηγοί και συμβουλές για επίσκεψη στην Κύπρο." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "ταξιδιωτικός οδηγός Κύπρου, blog Κύπρος, τι να κάνετε στην Πάφο, παραλίες Πάφου, ταξί Κύπρος blog, Coral Bay οδηγός, Λάρνακα Πάφος μεταφορά, συμβουλές διακοπών Κύπρος" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/blog" }],

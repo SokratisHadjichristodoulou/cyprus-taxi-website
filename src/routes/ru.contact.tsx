@@ -11,6 +11,7 @@ export const Route = createFileRoute("/ru/contact")({
       { property: "og:title", content: "Контакты и бронирование — Taxi Cyprus 24" },
       { property: "og:description", content: "Забронируйте трансфер из аэропорта Кипра 24/7." },
       { property: "og:locale", content: "ru_RU" },
+      { name: "keywords", content: "контакты Taxicyprus24, заказать такси Кипр, WhatsApp такси Кипр, телефон такси аэропорт, бронирование трансфера аэропорта, такси Кипр 24/7, +357 96 626 844" },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/contact" }],
   }),

@@ -30,6 +30,7 @@ export const Route = createFileRoute("/el/cyprus-airport-transfers")({
       { property: "og:description", content: "Σταθερές τιμές μεταφορών αεροδρομίου Κύπρου σε κάθε προορισμό." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "μεταφορές αεροδρομίου Κύπρου, ταξί αεροδρομίου Λάρνακας, ταξί αεροδρομίου Πάφου, διαδρομές ταξί Κύπρος, σταθερές τιμές μεταφοράς, ιδιωτικό ταξί αεροδρομίου, μεταφορά LCA, μεταφορά PFO" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/cyprus-airport-transfers" }],

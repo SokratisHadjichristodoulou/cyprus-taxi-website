@@ -13,6 +13,7 @@ export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
       { property: "og:description", content: "Ιδιωτική μεταφορά σταθερής τιμής από Λάρνακα προς Πάφο με υποδοχή." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "ταξί Λάρνακα Πάφος, ταξί από αεροδρόμιο Λάρνακας στην Πάφο, μεταφορά Λάρνακα Πάφος τιμή, LCA σε Πάφο, μεταφορά αεροδρομίου Λάρνακας Πάφος, ιδιωτικό ταξί Λάρνακα προς Πάφο" },
       { name: "twitter:image", content: paphosImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/larnaca-airport-to-paphos" }],

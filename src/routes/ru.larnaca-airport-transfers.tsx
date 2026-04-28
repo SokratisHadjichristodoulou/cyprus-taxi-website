@@ -15,6 +15,7 @@ export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
       { property: "og:description", content: "Премиальное такси из аэропорта Ларнаки во все направления Кипра." },
       { property: "og:image", content: larnacaImg },
       { property: "og:locale", content: "ru_RU" },
+      { name: "keywords", content: "трансферы из аэропорта Ларнаки, такси аэропорт Ларнака, LCA такси, такси из аэропорта Ларнаки, частный трансфер Ларнака, аэропорт Ларнака Айя-Напа, аэропорт Ларнака Протарас" },
       { name: "twitter:image", content: larnacaImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/larnaca-airport-transfers" }],

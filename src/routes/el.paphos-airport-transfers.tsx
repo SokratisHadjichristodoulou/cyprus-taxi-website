@@ -15,6 +15,7 @@ export const Route = createFileRoute("/el/paphos-airport-transfers")({
       { property: "og:description", content: "Premium ταξί από Αεροδρόμιο Πάφου προς όλους τους προορισμούς της Κύπρου." },
       { property: "og:image", content: paphosImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "μεταφορές αεροδρομίου Πάφου, ταξί αεροδρόμιο Πάφος, PFO ταξί, ταξί από αεροδρόμιο Πάφου, ιδιωτική μεταφορά Πάφος, αεροδρόμιο Πάφου προς Coral Bay, αεροδρόμιο Πάφου προς Λεμεσό" },
       { name: "twitter:image", content: paphosImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/paphos-airport-transfers" }],

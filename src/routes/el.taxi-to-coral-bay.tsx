@@ -13,6 +13,7 @@ export const Route = createFileRoute("/el/taxi-to-coral-bay")({
       { property: "og:description", content: "Ιδιωτικό ταξί σταθερής τιμής προς Coral Bay, Κύπρος." },
       { property: "og:image", content: coralBayImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "ταξί Coral Bay, μεταφορά αεροδρομίου Πάφου Coral Bay, ταξί από αεροδρόμιο Πάφου Coral Bay, PFO Coral Bay, ιδιωτικό ταξί Coral Bay Κύπρος, Κοραλλιάς ταξί" },
       { name: "twitter:image", content: coralBayImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/taxi-to-coral-bay" }],

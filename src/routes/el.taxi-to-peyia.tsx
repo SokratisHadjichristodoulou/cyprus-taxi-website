@@ -13,6 +13,7 @@ export const Route = createFileRoute("/el/taxi-to-peyia")({
       { property: "og:description", content: "Ιδιωτικό ταξί σταθερής τιμής προς Πέγεια, Κύπρος." },
       { property: "og:image", content: peyiaImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "ταξί Πέγεια, μεταφορά αεροδρομίου Πάφου Πέγεια, ταξί από αεροδρόμιο Πάφου Πέγεια, PFO Πέγεια, ιδιωτικό ταξί Πέγεια Κύπρος" },
       { name: "twitter:image", content: peyiaImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/taxi-to-peyia" }],

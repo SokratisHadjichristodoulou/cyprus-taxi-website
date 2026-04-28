@@ -15,6 +15,7 @@ export const Route = createFileRoute("/el/fleet")({
       { property: "og:description", content: "Premium καθαρά και πολυτελή αυτοκίνητα για μεταφορές αεροδρομίου Κύπρου." },
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "στόλος ταξί Κύπρος, Mercedes E-Class Κύπρος, ιδιωτικό ταξί 7 θέσεων, βαν 12 θέσεων Κύπρος, πολυτελές ταξί αεροδρομίου, executive sedan Κύπρος, μίνιβαν Κύπρος" },
       { name: "twitter:image", content: heroImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/fleet" }],

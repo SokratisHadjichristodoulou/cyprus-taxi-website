@@ -15,6 +15,7 @@ export const Route = createFileRoute("/el/larnaca-airport-transfers")({
       { property: "og:description", content: "Premium ταξί από το Αεροδρόμιο Λάρνακας προς όλους τους προορισμούς της Κύπρου." },
       { property: "og:image", content: larnacaImg },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "μεταφορές αεροδρομίου Λάρνακας, ταξί αεροδρόμιο Λάρνακα, LCA ταξί, ταξί από αεροδρόμιο Λάρνακας, ιδιωτική μεταφορά Λάρνακα, αεροδρόμιο Λάρνακας προς Αγία Νάπα, αεροδρόμιο Λάρνακας προς Πρωταρά" },
       { name: "twitter:image", content: larnacaImg },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/larnaca-airport-transfers" }],

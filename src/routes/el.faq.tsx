@@ -15,6 +15,7 @@ export const Route = createFileRoute("/el/faq")({
       { property: "og:title", content: "Συχνές Ερωτήσεις — Taxi Cyprus 24" },
       { property: "og:description", content: "Όλες οι απαντήσεις για τις μεταφορές αεροδρομίου Κύπρου." },
       { property: "og:locale", content: "el_GR" },
+      { name: "keywords", content: "συχνές ερωτήσεις ταξί Κύπρος, FAQ μεταφορά αεροδρομίου, πόσο κοστίζει ταξί Κύπρος, ακύρωση ταξί Κύπρος, παιδικά καθίσματα ταξί, παρακολούθηση πτήσης Κύπρος" },
     ],
     links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/faq" }],
   }),
