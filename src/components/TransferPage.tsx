@@ -63,28 +63,63 @@ export function TransferPage(p: TransferPageProps) {
       <StructuredData
         data={{
           "@context": "https://schema.org",
-          "@type": "TaxiService",
-          name: p.title,
-          description: p.subtitle,
-          areaServed: { "@type": "Country", name: "Cyprus" },
-          provider: {
-            "@type": "LocalBusiness",
-            name: "Taxi Cyprus 24",
-            telephone: "+35796626844",
-            url: "https://taxicyprus24.com",
-            areaServed: { "@type": "Country", name: "Cyprus" },
-          },
-        }}
-      />
-      <StructuredData
-        data={{
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: p.faqs.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
+          "@graph": [
+            {
+              "@type": "TaxiService",
+              name: p.title,
+              description: p.subtitle,
+              areaServed: { "@type": "Country", name: "Cyprus" },
+              provider: {
+                "@type": "LocalBusiness",
+                "@id": "https://taxicyprus24.com/#business",
+                name: "Taxi Cyprus 24",
+                telephone: "+35796626844",
+                url: "https://taxicyprus24.com",
+                priceRange: "€€",
+                areaServed: { "@type": "Country", name: "Cyprus" },
+              },
+              offers: p.prices.map((pr) => ({
+                "@type": "Offer",
+                priceCurrency: "EUR",
+                price: pr.price.replace(/[^0-9.]/g, ""),
+                name: `${p.fromLocation} → ${p.toLocation} — ${pr.type}`,
+                description: pr.pax,
+                availability: "https://schema.org/InStock",
+              })),
+            },
+            {
+              "@type": "Trip",
+              name: `${p.fromLocation} to ${p.toLocation}`,
+              description: p.intro,
+              itinerary: [
+                { "@type": "Place", name: p.fromLocation, address: { "@type": "PostalAddress", addressCountry: "CY" } },
+                { "@type": "Place", name: p.toLocation, address: { "@type": "PostalAddress", addressCountry: "CY" } },
+              ],
+              provider: { "@id": "https://taxicyprus24.com/#business" },
+              offers: {
+                "@type": "Offer",
+                priceCurrency: "EUR",
+                price: p.prices[0]?.price.replace(/[^0-9.]/g, "") ?? "",
+                availability: "https://schema.org/InStock",
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://taxicyprus24.com/" },
+                { "@type": "ListItem", position: 2, name: "Cyprus Airport Transfers", item: "https://taxicyprus24.com/cyprus-airport-transfers" },
+                { "@type": "ListItem", position: 3, name: p.title },
+              ],
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: p.faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            },
+          ],
         }}
       />
 
