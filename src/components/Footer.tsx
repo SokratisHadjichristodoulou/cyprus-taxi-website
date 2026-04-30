@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useI18n, withLocale } from "@/lib/i18n";
-import { INSTAGRAM_URL, INSTAGRAM_DISPLAY } from "@/lib/social";
+import { INSTAGRAM_URL, FACEBOOK_URL } from "@/lib/social";
 
 export function Footer() {
   const { t, locale } = useI18n();
@@ -95,6 +95,15 @@ export function Footer() {
               className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#515BD4] text-white shadow-card-soft transition-transform hover:scale-110"
             >
               <Instagram className="h-5 w-5" />
+            </a>
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow Taxi Cyprus 24 on Facebook"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-card-soft transition-transform hover:scale-110"
+            >
+              <Facebook className="h-5 w-5" />
             </a>
           </div>
         </div>
