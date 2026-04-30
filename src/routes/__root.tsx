@@ -1,4 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
 import { Header } from "@/components/Header";
@@ -90,11 +90,22 @@ export const Route = createRootRoute({
   notFoundComponent: NotFoundComponent,
 });
 
+const SITE_ORIGIN = "https://taxicyprus24.com";
+
+function CanonicalLink() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  // Strip trailing slash (except root) so /about/ and /about resolve to one canonical
+  const cleanPath = pathname !== "/" && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  const href = `${SITE_ORIGIN}${cleanPath === "/" ? "/" : cleanPath}`;
+  return <link rel="canonical" href={href} />;
+}
+
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <CanonicalLink />
       </head>
       <body>
         {children}
