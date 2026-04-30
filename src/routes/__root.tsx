@@ -8,19 +8,31 @@ import { MobileBookingBar } from "@/components/MobileBookingBar";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
+    <div className="flex min-h-screen items-center justify-center bg-background px-4 py-16">
+      <div className="max-w-lg text-center">
         <h1 className="font-display text-7xl font-bold text-navy">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+        <h2 className="mt-4 text-2xl font-semibold text-foreground">
+          Page not found
+        </h2>
+        <p className="mt-3 text-sm text-muted-foreground">
+          The page you're looking for doesn't exist or has been moved. Try one
+          of our most popular pages instead:
         </p>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          <Link to="/" className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-accent">Home</Link>
+          <Link to="/cyprus-airport-transfers" className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-accent">Airport Transfers</Link>
+          <Link to="/larnaca-airport-transfers" className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-accent">Larnaca Airport</Link>
+          <Link to="/paphos-airport-transfers" className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-accent">Paphos Airport</Link>
+          <Link to="/fleet" className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-accent">Our Fleet</Link>
+          <Link to="/pricing" className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-accent">Pricing</Link>
+          <Link to="/contact" className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-accent">Contact</Link>
+        </div>
+        <div className="mt-8">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 text-sm font-semibold text-[color:var(--navy-foreground)] transition-colors hover:opacity-90"
           >
-            Go home
+            Go to homepage
           </Link>
         </div>
       </div>
