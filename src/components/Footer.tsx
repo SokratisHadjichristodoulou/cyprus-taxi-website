@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useI18n, withLocale } from "@/lib/i18n";
+import { INSTAGRAM_URL, INSTAGRAM_DISPLAY } from "@/lib/social";
 
 export function Footer() {
   const { t, locale } = useI18n();
@@ -85,6 +86,17 @@ export function Footer() {
             <div className="font-display text-base font-bold">Taxi Cyprus 24</div>
           </div>
           <p className="mt-4 max-w-sm text-sm text-white/70">{t("footer.tagline")}</p>
+          <div className="mt-5 flex items-center gap-3">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Follow Taxicyprus24 on Instagram (${INSTAGRAM_DISPLAY})`}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#515BD4] text-white shadow-card-soft transition-transform hover:scale-110"
+            >
+              <Instagram className="h-5 w-5" />
+            </a>
+          </div>
         </div>
 
         <div>
