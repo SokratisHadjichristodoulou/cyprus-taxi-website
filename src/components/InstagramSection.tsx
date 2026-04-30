@@ -1,5 +1,7 @@
 import { Instagram, ArrowRight, Heart, Camera } from "lucide-react";
-import { INSTAGRAM_URL, INSTAGRAM_DISPLAY, INSTAGRAM_HANDLE } from "@/lib/social";
+import { INSTAGRAM_URL, INSTAGRAM_DISPLAY } from "@/lib/social";
+
+const INSTAGRAM_ARIA = "Follow Taxi Cyprus 24 on Instagram";
 
 const tiles = [
   { icon: Camera, label: "Behind the wheel", desc: "Daily transfers across Cyprus" },
