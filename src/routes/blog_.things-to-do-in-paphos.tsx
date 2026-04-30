@@ -114,6 +114,18 @@ function ArticlePage() {
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
+            Visit Pafos Zoo
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            Pafos Zoo is one of the most popular family attractions in Cyprus and a great place
+            to visit for both adults and children. Located near Peyia and Coral Bay, the zoo is
+            home to a large variety of animals, exotic birds, reptiles, monkeys, and giraffes.
+            Visitors can also enjoy parrot shows, animal encounters, and beautiful sea views
+            from the surrounding area. Pafos Zoo is an ideal day trip for families staying in
+            Paphos and is easily accessible by taxi or private transfer.
+          </p>
+
+          <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Discover Coral Bay & Sea Caves
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
