@@ -117,12 +117,23 @@ function ArticlePage() {
             Visit Pafos Zoo
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Pafos Zoo is one of the most popular family attractions in Cyprus and a great place
-            to visit for both adults and children. Located near Peyia and Coral Bay, the zoo is
-            home to a large variety of animals, exotic birds, reptiles, monkeys, and giraffes.
-            Visitors can also enjoy parrot shows, animal encounters, and beautiful sea views
-            from the surrounding area. Pafos Zoo is an ideal day trip for families staying in
-            Paphos and is easily accessible by taxi or private transfer.
+            Pafos Zoo is one of the top family attractions in Paphos and one of the most visited
+            zoos in Cyprus. Located near Coral Bay and Peyia, Pafos Zoo is home to a wide
+            variety of animals including giraffes, monkeys, reptiles, parrots, flamingos, and
+            exotic birds from around the world.
+          </p>
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            The zoo is especially popular with families visiting Paphos with children, offering
+            daily parrot shows, animal experiences, and large outdoor areas with beautiful views
+            of the Mediterranean coastline. Many tourists visiting Coral Bay, Sea Caves, and
+            Peyia combine their trip with a visit to Pafos Zoo for a full day of sightseeing and
+            family activities in Cyprus.
+          </p>
+          <p className="mt-4 leading-relaxed text-muted-foreground">
+            Pafos Zoo is easily accessible from Paphos Harbour, Coral Bay, Peyia, and nearby
+            tourist areas by private taxi or transfer service. Taxicyprus24 provides reliable
+            taxi transfers to Pafos Zoo from hotels, airports, resorts, and attractions across
+            Cyprus.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
