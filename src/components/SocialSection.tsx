@@ -1,4 +1,4 @@
-import { Instagram, Facebook, ArrowRight, MessageCircle, Star } from "lucide-react";
+import { Instagram, Facebook, ArrowRight, Star } from "lucide-react";
 import {
   INSTAGRAM_URL,
   INSTAGRAM_DISPLAY,
@@ -101,16 +101,6 @@ export function SocialSection() {
               <Facebook className="h-4 w-4" />
               Follow on Facebook
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a
-              href={`${FACEBOOK_URL}/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Message Taxi Cyprus 24 on Facebook"
-              className="inline-flex items-center gap-2 rounded-full border border-navy/20 bg-white px-5 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-[color:var(--navy-foreground)]"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Message us
             </a>
           </div>
         </article>
