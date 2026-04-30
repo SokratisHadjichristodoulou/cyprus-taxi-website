@@ -21,8 +21,8 @@ import { sharedFAQs } from "@/lib/faqs";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
-import { InstagramSection } from "@/components/InstagramSection";
-import { INSTAGRAM_URL } from "@/lib/social";
+import { SocialSection } from "@/components/SocialSection";
+import { INSTAGRAM_URL, FACEBOOK_URL } from "@/lib/social";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -123,7 +123,7 @@ function HomePage() {
                 geoRadius: "120000",
               },
               knowsLanguage: ["en", "el", "ru"],
-              sameAs: ["https://wa.me/35796626844", INSTAGRAM_URL],
+              sameAs: ["https://wa.me/35796626844", INSTAGRAM_URL, FACEBOOK_URL],
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.9",
@@ -479,7 +479,7 @@ function HomePage() {
         </div>
       </section>
 
-      <InstagramSection />
+      <SocialSection />
 
       <CTASection />
     </>
