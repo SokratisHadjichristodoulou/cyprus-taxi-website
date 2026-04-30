@@ -91,7 +91,7 @@ export function Footer() {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={`Follow Taxicyprus24 on Instagram (${INSTAGRAM_DISPLAY})`}
+              aria-label="Follow Taxi Cyprus 24 on Instagram"
               className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#515BD4] text-white shadow-card-soft transition-transform hover:scale-110"
             >
               <Instagram className="h-5 w-5" />

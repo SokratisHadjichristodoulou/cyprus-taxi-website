@@ -33,7 +33,7 @@ export function InstagramSection() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Follow Taxicyprus24 on Instagram (${INSTAGRAM_DISPLAY})`}
+                aria-label={INSTAGRAM_ARIA}
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#F58529] via-[#DD2A7B] to-[#8134AF] px-6 py-3.5 text-sm font-semibold text-white shadow-elegant transition-transform hover:scale-[1.03]"
               >
                 <Instagram className="h-4 w-4" />
@@ -44,7 +44,7 @@ export function InstagramSection() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Open Instagram profile in a new tab"
+                aria-label={INSTAGRAM_ARIA}
                 className="inline-flex items-center gap-2 rounded-full border border-navy/20 bg-white px-6 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-[color:var(--navy-foreground)]"
               >
                 View profile
@@ -59,7 +59,7 @@ export function InstagramSection() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${t.label} — open ${INSTAGRAM_DISPLAY} on Instagram`}
+                aria-label={INSTAGRAM_ARIA}
                 className="group relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#515BD4] p-[2px] shadow-card-soft transition-transform hover:-translate-y-1 hover:shadow-elegant"
                 style={{ animationDelay: `${i * 80}ms` }}
               >
