@@ -4,6 +4,7 @@ import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import meetGreetImg from "@/assets/meet-greet.jpg";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { SocialSection } from "@/components/SocialSection";
 import { TrustBar } from "@/components/TrustBar";
 
 export const Route = createFileRoute("/about")({
@@ -165,6 +166,7 @@ function AboutPage() {
         </div>
       </section>
 
+      <SocialSection />
       <CTASection />
     </>
   );

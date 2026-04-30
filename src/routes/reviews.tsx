@@ -3,6 +3,7 @@ import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { SocialSection } from "@/components/SocialSection";
 import { StructuredData } from "@/components/StructuredData";
 
 const TRIPADVISOR_URL =
@@ -225,6 +226,7 @@ function ReviewsPage() {
         </div>
       </section>
 
+      <SocialSection />
       <CTASection />
     </>
   );

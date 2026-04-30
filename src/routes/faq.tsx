@@ -3,6 +3,7 @@ import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import { PageHero } from "@/components/PageHero";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
+import { SocialSection } from "@/components/SocialSection";
 import { sharedFAQs } from "@/lib/faqs";
 import { StructuredData } from "@/components/StructuredData";
 
@@ -69,6 +70,7 @@ function FAQPage() {
         <FAQAccordion items={allFAQs} />
       </section>
 
+      <SocialSection />
       <CTASection />
     </>
   );
