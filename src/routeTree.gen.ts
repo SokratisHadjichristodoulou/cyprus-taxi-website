@@ -48,6 +48,7 @@ import { Route as RuCyprusAirportTransfersRouteImport } from './routes/ru.cyprus
 import { Route as RuContactRouteImport } from './routes/ru.contact'
 import { Route as RuBlogRouteImport } from './routes/ru.blog'
 import { Route as RuAboutRouteImport } from './routes/ru.about'
+import { Route as RuSplatRouteImport } from './routes/ru.$'
 import { Route as ElTaxiToPeyiaRouteImport } from './routes/el.taxi-to-peyia'
 import { Route as ElTaxiToLimassolRouteImport } from './routes/el.taxi-to-limassol'
 import { Route as ElTaxiToCoralBayRouteImport } from './routes/el.taxi-to-coral-bay'
@@ -270,6 +271,11 @@ const RuAboutRoute = RuAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => RuRoute,
 } as any)
+const RuSplatRoute = RuSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => RuRoute,
+} as any)
 const ElTaxiToPeyiaRoute = ElTaxiToPeyiaRouteImport.update({
   id: '/taxi-to-peyia',
   path: '/taxi-to-peyia',
@@ -436,6 +442,7 @@ export interface FileRoutesByFullPath {
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
   '/el/taxi-to-limassol': typeof ElTaxiToLimassolRoute
   '/el/taxi-to-peyia': typeof ElTaxiToPeyiaRoute
+  '/ru/$': typeof RuSplatRoute
   '/ru/about': typeof RuAboutRoute
   '/ru/blog': typeof RuBlogRoute
   '/ru/contact': typeof RuContactRoute
@@ -497,6 +504,7 @@ export interface FileRoutesByTo {
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
   '/el/taxi-to-limassol': typeof ElTaxiToLimassolRoute
   '/el/taxi-to-peyia': typeof ElTaxiToPeyiaRoute
+  '/ru/$': typeof RuSplatRoute
   '/ru/about': typeof RuAboutRoute
   '/ru/blog': typeof RuBlogRoute
   '/ru/contact': typeof RuContactRoute
@@ -561,6 +569,7 @@ export interface FileRoutesById {
   '/el/taxi-to-coral-bay': typeof ElTaxiToCoralBayRoute
   '/el/taxi-to-limassol': typeof ElTaxiToLimassolRoute
   '/el/taxi-to-peyia': typeof ElTaxiToPeyiaRoute
+  '/ru/$': typeof RuSplatRoute
   '/ru/about': typeof RuAboutRoute
   '/ru/blog': typeof RuBlogRoute
   '/ru/contact': typeof RuContactRoute
@@ -626,6 +635,7 @@ export interface FileRouteTypes {
     | '/el/taxi-to-coral-bay'
     | '/el/taxi-to-limassol'
     | '/el/taxi-to-peyia'
+    | '/ru/$'
     | '/ru/about'
     | '/ru/blog'
     | '/ru/contact'
@@ -687,6 +697,7 @@ export interface FileRouteTypes {
     | '/el/taxi-to-coral-bay'
     | '/el/taxi-to-limassol'
     | '/el/taxi-to-peyia'
+    | '/ru/$'
     | '/ru/about'
     | '/ru/blog'
     | '/ru/contact'
@@ -750,6 +761,7 @@ export interface FileRouteTypes {
     | '/el/taxi-to-coral-bay'
     | '/el/taxi-to-limassol'
     | '/el/taxi-to-peyia'
+    | '/ru/$'
     | '/ru/about'
     | '/ru/blog'
     | '/ru/contact'
@@ -1076,6 +1088,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuAboutRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/$': {
+      id: '/ru/$'
+      path: '/$'
+      fullPath: '/ru/$'
+      preLoaderRoute: typeof RuSplatRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/el/taxi-to-peyia': {
       id: '/el/taxi-to-peyia'
       path: '/taxi-to-peyia'
@@ -1274,6 +1293,7 @@ const ElRouteChildren: ElRouteChildren = {
 const ElRouteWithChildren = ElRoute._addFileChildren(ElRouteChildren)
 
 interface RuRouteChildren {
+  RuSplatRoute: typeof RuSplatRoute
   RuAboutRoute: typeof RuAboutRoute
   RuBlogRoute: typeof RuBlogRoute
   RuContactRoute: typeof RuContactRoute
@@ -1293,6 +1313,7 @@ interface RuRouteChildren {
 }
 
 const RuRouteChildren: RuRouteChildren = {
+  RuSplatRoute: RuSplatRoute,
   RuAboutRoute: RuAboutRoute,
   RuBlogRoute: RuBlogRoute,
   RuContactRoute: RuContactRoute,
