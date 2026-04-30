@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import { PageHero } from "@/components/PageHero";
+import { SocialSection } from "@/components/SocialSection";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -48,6 +49,8 @@ function ContactPage() {
           </div>
         </div>
       </section>
+
+      <SocialSection />
     </>
   );
 }
