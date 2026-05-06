@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import "@tanstack/start-client-core";
 
 // Legacy URL from the previous WordPress site → 301 to homepage.
 export const Route = createFileRoute("/index.php")({

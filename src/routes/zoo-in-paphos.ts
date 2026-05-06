@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import "@tanstack/start-client-core";
 
 // Legacy excursion URL → 301 to closest matching content (things to do in Paphos).
 export const Route = createFileRoute("/zoo-in-paphos")({
