@@ -186,7 +186,10 @@ function HomePage() {
               Private Cyprus Airport Taxi Transfers
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">
-              Looking for a reliable taxi near me in Cyprus? Taxicyprus24 offers fixed-price private airport transfers, 24/7 taxi service, and professional drivers across Larnaca, Paphos, Limassol, Coral Bay, and all Cyprus destinations.
+              Looking for a reliable taxi in Cyprus? Taxicyprus24 provides trusted, fixed-price Cyprus taxi and private airport transfer services available 24/7. We specialise in professional Paphos taxi services, Larnaca Airport transfers, and comfortable door-to-door transportation across Cyprus, including Limassol, Coral Bay, Peyia, Ayia Napa, Protaras, Nicosia, and nearby destinations.
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">
+              Whether you need a taxi near Paphos, a private transfer from Larnaca Airport, or executive chauffeur service anywhere in Cyprus, our experienced drivers guarantee safe, punctual, and stress-free travel. Taxicyprus24 is trusted by tourists, families, business travellers, and returning visitors searching for dependable Vladimir Taxi Cyprus services, luxury vehicles, airport meet & greet, transfers to nearby cities, and transparent pricing with no hidden charges.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-3">
