@@ -70,6 +70,7 @@ export const Route = createRootRoute({
       { name: "geo.position", content: "34.9003;33.6232" },
       { name: "ICBM", content: "34.9003, 33.6232" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "google-site-verification", content: "PCl6CG_EryKUrEnK_3YT4TN-I_hC8SPub-xldlNHuzs" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
