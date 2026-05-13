@@ -58,20 +58,29 @@
 - Paphos Airport → Coral Bay / Peyia: ~25–30 min
 - Paphos Airport → Limassol: ~50 min, 65 km
 
-## Key pages
+## Pages
 
-- Home: https://taxicyprus24.com/
-- All Cyprus airport transfers: https://taxicyprus24.com/cyprus-airport-transfers
-- Larnaca Airport transfers: https://taxicyprus24.com/larnaca-airport-transfers
-- Paphos Airport transfers: https://taxicyprus24.com/paphos-airport-transfers
-- Larnaca → Paphos route: https://taxicyprus24.com/larnaca-airport-to-paphos
-- Pricing table: https://taxicyprus24.com/pricing
-- Fleet: https://taxicyprus24.com/fleet
-- Reviews: https://taxicyprus24.com/reviews
-- FAQ: https://taxicyprus24.com/faq
-- Contact / booking: https://taxicyprus24.com/contact
-- Greek site: https://taxicyprus24.com/el
-- Russian site: https://taxicyprus24.com/ru
+- [Home](/): Premium private airport taxi transfers across Cyprus, 24/7.
+- [Cyprus Airport Transfers](/cyprus-airport-transfers): Overview of all fixed-price transfers from LCA and PFO.
+- [Larnaca Airport Transfers](/larnaca-airport-transfers): Private transfers from Larnaca International Airport to anywhere in Cyprus.
+- [Paphos Airport Transfers](/paphos-airport-transfers): Private transfers from Paphos International Airport across Cyprus.
+- [Larnaca to Paphos](/larnaca-airport-to-paphos): Direct fixed-price route from LCA to Paphos.
+- [Taxi to Coral Bay](/taxi-to-coral-bay): Fixed-price transfers from Paphos Airport to Coral Bay.
+- [Taxi to Peyia](/taxi-to-peyia): Fixed-price transfers from Paphos Airport to Peyia.
+- [Taxi to Chloraka](/taxi-to-chloraka): Fixed-price transfers from Paphos Airport to Chloraka.
+- [Taxi to Limassol](/taxi-to-limassol): Fixed-price transfers from Paphos Airport to Limassol.
+- [Pricing](/pricing): Full transparent fixed-price table for all routes and vehicles.
+- [Fleet](/fleet): Mercedes-Benz E-Class sedans, 6-seater and 12-seater premium vans.
+- [Reviews](/reviews): Customer reviews from TripAdvisor and Google (4.9/5 average).
+- [FAQ](/faq): Answers to common questions about booking, payment, and service.
+- [About](/about): About Taxi Cyprus 24 and our drivers.
+- [Contact](/contact): Booking form, WhatsApp and phone contact.
+- [Blog](/blog): Travel guides and tips for visiting Cyprus.
+
+## Optional
+
+- [Greek site (Ελληνικά)](/el): Greek-language version of the site.
+- [Russian site (Русский)](/ru): Russian-language version of the site.
 
 ## How to book
 
