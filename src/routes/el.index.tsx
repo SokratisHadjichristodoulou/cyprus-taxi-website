@@ -252,7 +252,7 @@ function HomePage() {
             <h2 className="mt-3 font-display text-3xl font-bold text-white md:text-5xl">
               Ταξιδέψτε με άνεση Mercedes-Benz
             </h2>
-            <p className="mt-4 text-pretty text-base text-white/70 md:text-lg">
+            <p className="mt-4 text-pretty text-base text-white/85 md:text-lg">
               Από executive sedans μέχρι ευρύχωρα 7θέσια βαν — επιλέξτε το όχημα που ταιριάζει στην παρέα σας.
             </p>
           </div>
