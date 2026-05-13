@@ -14,6 +14,7 @@ export const Route = createFileRoute("/blog_/best-beaches-paphos-coral-bay")({
           "Discover the best beaches in Paphos and Coral Bay — Coral Bay Beach, Lara Beach, Potima Bay and Sea Caves. The ultimate Cyprus west coast beach guide.",
       },
       { property: "og:title", content: "Best Beaches in Paphos & Coral Bay" },
+      { property: "og:type", content: "article" },
       {
         property: "og:description",
         content: "The ultimate guide to the most beautiful beaches around Paphos and Coral Bay in Cyprus.",

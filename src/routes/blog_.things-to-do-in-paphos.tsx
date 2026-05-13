@@ -14,6 +14,7 @@ export const Route = createFileRoute("/blog_/things-to-do-in-paphos")({
           "Local guide to Paphos — Tombs of the Kings, Paphos Mosaics, the Old Harbour, Coral Bay, Sea Caves and traditional Cypriot villages.",
       },
       { property: "og:title", content: "Things to Do in Paphos — Local Guide" },
+      { property: "og:type", content: "article" },
       {
         property: "og:description",
         content: "Top attractions, beaches and traditional villages around Paphos in Cyprus.",

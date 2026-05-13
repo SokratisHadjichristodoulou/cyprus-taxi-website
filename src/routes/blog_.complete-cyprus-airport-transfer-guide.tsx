@@ -14,6 +14,7 @@ export const Route = createFileRoute("/blog_/complete-cyprus-airport-transfer-gu
           "Compare taxis, private transfers and rental cars from Larnaca and Paphos airports — prices, travel times and the best option for your Cyprus trip.",
       },
       { property: "og:title", content: "The Complete Cyprus Airport Transfer Guide" },
+      { property: "og:type", content: "article" },
       {
         property: "og:description",
         content: "Prices, travel times and tips for Larnaca and Paphos airport transfers.",

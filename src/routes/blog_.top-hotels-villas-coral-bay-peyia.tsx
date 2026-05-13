@@ -14,6 +14,7 @@ export const Route = createFileRoute("/blog_/top-hotels-villas-coral-bay-peyia")
           "Where to stay in Coral Bay and Peyia — best hotels, luxury villas, sea-view resorts and tips for families visiting the western coast of Cyprus.",
       },
       { property: "og:title", content: "Top Hotels & Villas in Coral Bay and Peyia" },
+      { property: "og:type", content: "article" },
       {
         property: "og:description",
         content: "Best hotels and luxury villas on Cyprus's western coast.",

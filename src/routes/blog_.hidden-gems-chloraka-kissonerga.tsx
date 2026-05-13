@@ -14,6 +14,7 @@ export const Route = createFileRoute("/blog_/hidden-gems-chloraka-kissonerga")({
           "Quiet beaches, sunset viewpoints and traditional tavernas in Chloraka and Kissonerga — the hidden side of western Cyprus near Paphos and Coral Bay.",
       },
       { property: "og:title", content: "Hidden Gems Near Chloraka and Kissonerga" },
+      { property: "og:type", content: "article" },
       {
         property: "og:description",
         content: "Quiet beaches, viewpoints and tavernas in this peaceful corner of Paphos.",

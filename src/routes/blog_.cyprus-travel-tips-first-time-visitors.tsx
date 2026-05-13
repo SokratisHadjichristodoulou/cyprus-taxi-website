@@ -14,6 +14,7 @@ export const Route = createFileRoute("/blog_/cyprus-travel-tips-first-time-visit
           "First-time visitor guide to Cyprus — currency, driving on the left, weather, dress code, airport transfers and useful tips for UK and European travellers.",
       },
       { property: "og:title", content: "Cyprus Travel Tips for First-Time Visitors" },
+      { property: "og:type", content: "article" },
       {
         property: "og:description",
         content: "Currency, driving, weather, culture and transport tips for visiting Cyprus.",
