@@ -43,6 +43,9 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: heroImg },
       { name: "keywords", content: "Cyprus airport taxi, Larnaca airport taxi, Paphos airport transfer, Cyprus taxi service, Larnaca to Paphos taxi" },
     ],
+    links: [
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+    ],
   }),
   component: HomePage,
 });
