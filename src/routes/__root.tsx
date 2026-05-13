@@ -59,7 +59,7 @@ export const Route = createRootRoute({
       { name: "twitter:site", content: "@TaxiCyprus24" },
       { property: "og:title", content: "Cyprus Airport Taxi & Transfers | Taxi Cyprus 24/7" },
       { name: "twitter:title", content: "Cyprus Airport Taxi & Transfers | Taxi Cyprus 24/7" },
-      { name: "description", content: "Private Cyprus airport taxi transfers from Larnaca & Paphos airports. Fixed prices, professional drivers, 24/7 service & comfortable rides across Cyprus." },
+      
       { property: "og:description", content: "Private Cyprus airport taxi transfers from Larnaca & Paphos airports. Fixed prices, professional drivers, 24/7 service & comfortable rides across Cyprus." },
       { name: "twitter:description", content: "Private Cyprus airport taxi transfers from Larnaca & Paphos airports. Fixed prices, professional drivers, 24/7 service & comfortable rides across Cyprus." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wmsz0aV3y5YpI4DtnooPQnlf3LG3/social-images/social-1777198205711-taxicyprus24Social.webp" },
