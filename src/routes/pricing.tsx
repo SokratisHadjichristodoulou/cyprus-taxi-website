@@ -13,7 +13,7 @@ import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Cyprus Taxi Transfer Prices — Fixed Rates from PFO & LCA | Taxi Cyprus 24" },
+      { title: "Cyprus Taxi Prices — Fixed Rates | Taxi Cyprus 24" },
       {
         name: "description",
         content:
