@@ -18,7 +18,6 @@ export const Route = createFileRoute("/el/reviews")({
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/reviews" }],
   }),
   component: ReviewsPage,
 });

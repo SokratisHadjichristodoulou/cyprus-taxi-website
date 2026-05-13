@@ -22,7 +22,6 @@ export const Route = createFileRoute("/about")({
       { name: "twitter:description", content: "Family-run private Cyprus taxi service. Fixed prices, 4.9★ rated, 24/7 airport transfers." },
       { name: "twitter:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/about" }],
     scripts: [
       {
         type: "application/ld+json",

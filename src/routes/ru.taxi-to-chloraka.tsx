@@ -49,7 +49,6 @@ export const Route = createFileRoute("/ru/taxi-to-chloraka")({
       { property: "og:locale", content: "ru_RU" },
       { name: "twitter:image", content: chlorakaImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/taxi-to-chloraka" }],
   }),
   component: () => (
     <TransferPage

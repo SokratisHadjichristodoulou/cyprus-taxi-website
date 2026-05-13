@@ -12,7 +12,6 @@ export const Route = createFileRoute("/el/contact")({
       { property: "og:description", content: "Κλείστε τη μεταφορά αεροδρομίου Κύπρου 24/7." },
       { property: "og:locale", content: "el_GR" },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/contact" }],
   }),
   component: ContactPage,
 });

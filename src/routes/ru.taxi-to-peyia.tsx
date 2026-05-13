@@ -15,7 +15,6 @@ export const Route = createFileRoute("/ru/taxi-to-peyia")({
       { property: "og:locale", content: "ru_RU" },
       { name: "twitter:image", content: peyiaImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/taxi-to-peyia" }],
   }),
   component: () => (
     <TransferPage

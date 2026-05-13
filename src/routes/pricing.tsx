@@ -33,7 +33,6 @@ export const Route = createFileRoute("/pricing")({
           "Cyprus taxi prices, Paphos airport taxi price, Larnaca airport transfer cost, Cyprus transfer rates",
       },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/pricing" }],
   }),
   component: PricingPage,
 });

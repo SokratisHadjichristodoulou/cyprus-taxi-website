@@ -42,7 +42,6 @@ export const Route = createFileRoute("/el/")({
       { name: "twitter:image", content: heroImg },
       { name: "keywords", content: "ταξί Κύπρος, αεροδρόμιο Λάρνακας ταξί, αεροδρόμιο Πάφου ταξί, μεταφορά αεροδρομίου Κύπρου, ιδιωτικό ταξί Κύπρος" },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el" }],
   }),
   component: HomePage,
 });

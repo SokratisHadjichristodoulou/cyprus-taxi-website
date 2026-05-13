@@ -34,7 +34,6 @@ export const Route = createFileRoute("/el/pricing")({
           "τιμές ταξί Κύπρος, τιμή ταξί αεροδρόμιο Πάφου, κόστος μεταφοράς αεροδρόμιο Λάρνακας, τιμές μεταφορών Κύπρος",
       },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/pricing" }],
   }),
   component: PricingPage,
 });

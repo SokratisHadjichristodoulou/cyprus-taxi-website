@@ -15,7 +15,6 @@ export const Route = createFileRoute("/el/taxi-to-limassol")({
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: limassolImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/taxi-to-limassol" }],
   }),
   component: () => (
     <TransferPage
