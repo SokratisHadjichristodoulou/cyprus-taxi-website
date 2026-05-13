@@ -15,7 +15,6 @@ export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: paphosImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/larnaca-airport-to-paphos" }],
   }),
   component: () => (
     <TransferPage

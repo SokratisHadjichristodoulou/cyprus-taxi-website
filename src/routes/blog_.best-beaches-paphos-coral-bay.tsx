@@ -7,7 +7,7 @@ import { StructuredData } from "@/components/StructuredData";
 export const Route = createFileRoute("/blog_/best-beaches-paphos-coral-bay")({
   head: () => ({
     meta: [
-      { title: "Best Beaches in Paphos & Coral Bay — Cyprus Beach Guide | Taxi Cyprus 24" },
+      { title: "Best Beaches in Paphos & Coral Bay | Taxi Cyprus 24" },
       {
         name: "description",
         content:

@@ -22,7 +22,6 @@ export const Route = createFileRoute("/el/about")({
       { name: "twitter:description", content: "Οικογενειακή υπηρεσία ταξί Κύπρου. Σταθερές τιμές, αξιολόγηση 4.9★, μεταφορές αεροδρομίου 24/7." },
       { name: "twitter:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/about" }],
   }),
   component: AboutPage,
 });

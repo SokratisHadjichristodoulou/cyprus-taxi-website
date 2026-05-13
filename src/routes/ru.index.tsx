@@ -42,7 +42,6 @@ export const Route = createFileRoute("/ru/")({
       { name: "twitter:image", content: heroImg },
       { name: "keywords", content: "такси Кипр, такси аэропорт Ларнака, такси аэропорт Пафос, трансфер аэропорт Кипр, частное такси Кипр" },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru" }],
   }),
   component: HomePage,
 });

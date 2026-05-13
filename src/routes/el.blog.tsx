@@ -21,7 +21,6 @@ export const Route = createFileRoute("/el/blog")({
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/blog" }],
   }),
   component: BlogPage,
 });

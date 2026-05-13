@@ -7,7 +7,7 @@ import { StructuredData } from "@/components/StructuredData";
 export const Route = createFileRoute("/blog_/larnaca-airport-to-paphos-travel-guide")({
   head: () => ({
     meta: [
-      { title: "How to Travel from Larnaca Airport to Paphos | Taxi Cyprus 24" },
+      { title: "Larnaca Airport to Paphos: Travel Guide | Taxi Cyprus 24" },
       {
         name: "description",
         content:

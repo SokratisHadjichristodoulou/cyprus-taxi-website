@@ -16,7 +16,6 @@ export const Route = createFileRoute("/el/faq")({
       { property: "og:description", content: "Όλες οι απαντήσεις για τις μεταφορές αεροδρομίου Κύπρου." },
       { property: "og:locale", content: "el_GR" },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/faq" }],
   }),
   component: FAQPage,
 });

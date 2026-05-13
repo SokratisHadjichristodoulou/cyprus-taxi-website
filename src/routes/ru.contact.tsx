@@ -12,7 +12,6 @@ export const Route = createFileRoute("/ru/contact")({
       { property: "og:description", content: "Забронируйте трансфер из аэропорта Кипра 24/7." },
       { property: "og:locale", content: "ru_RU" },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/contact" }],
   }),
   component: ContactPage,
 });

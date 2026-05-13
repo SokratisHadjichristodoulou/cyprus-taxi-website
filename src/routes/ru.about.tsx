@@ -22,7 +22,6 @@ export const Route = createFileRoute("/ru/about")({
       { name: "twitter:description", content: "Семейный сервис такси на Кипре. Фиксированные цены, рейтинг 4.9★, трансферы 24/7." },
       { name: "twitter:image", content: heroImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/about" }],
   }),
   component: AboutPage,
 });

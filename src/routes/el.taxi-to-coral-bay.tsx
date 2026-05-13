@@ -15,7 +15,6 @@ export const Route = createFileRoute("/el/taxi-to-coral-bay")({
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: coralBayImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/el/taxi-to-coral-bay" }],
   }),
   component: () => (
     <TransferPage

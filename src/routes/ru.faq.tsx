@@ -16,7 +16,6 @@ export const Route = createFileRoute("/ru/faq")({
       { property: "og:description", content: "Все ответы о трансферах из аэропортов Кипра." },
       { property: "og:locale", content: "ru_RU" },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/faq" }],
   }),
   component: FAQPage,
 });

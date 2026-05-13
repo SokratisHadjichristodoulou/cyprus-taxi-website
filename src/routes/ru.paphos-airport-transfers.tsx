@@ -17,7 +17,6 @@ export const Route = createFileRoute("/ru/paphos-airport-transfers")({
       { property: "og:locale", content: "ru_RU" },
       { name: "twitter:image", content: paphosImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/paphos-airport-transfers" }],
   }),
   component: () => (
     <>

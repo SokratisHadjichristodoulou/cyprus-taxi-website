@@ -13,7 +13,7 @@ import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Cyprus Taxi Transfer Prices — Fixed Rates from PFO & LCA | Taxi Cyprus 24" },
+      { title: "Cyprus Taxi Prices — Fixed Rates | Taxi Cyprus 24" },
       {
         name: "description",
         content:
@@ -33,7 +33,6 @@ export const Route = createFileRoute("/pricing")({
           "Cyprus taxi prices, Paphos airport taxi price, Larnaca airport transfer cost, Cyprus transfer rates",
       },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/pricing" }],
   }),
   component: PricingPage,
 });

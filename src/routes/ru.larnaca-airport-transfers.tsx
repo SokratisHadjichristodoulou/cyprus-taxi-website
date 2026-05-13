@@ -17,7 +17,6 @@ export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
       { property: "og:locale", content: "ru_RU" },
       { name: "twitter:image", content: larnacaImg },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/larnaca-airport-transfers" }],
   }),
   component: () => (
     <>

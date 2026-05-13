@@ -33,7 +33,6 @@ export const Route = createFileRoute("/ru/pricing")({
         content: "цены такси Кипр, стоимость такси аэропорт Пафос, тариф трансфер Ларнака, цены трансфер Кипр",
       },
     ],
-    links: [{ rel: "canonical", href: "https://taxicyprus24.com/ru/pricing" }],
   }),
   component: PricingPage,
 });
