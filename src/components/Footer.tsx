@@ -85,7 +85,7 @@ export function Footer() {
             <img src={logo} alt="Taxi Cyprus 24" width={36} height={36} className="h-9 w-9 object-contain" />
             <div className="font-display text-base font-bold">Taxi Cyprus 24</div>
           </div>
-          <p className="mt-4 max-w-sm text-sm text-white/70">{t("footer.tagline")}</p>
+          <p className="mt-4 max-w-sm text-sm text-white/85">{t("footer.tagline")}</p>
           <div className="mt-5 flex items-center gap-3">
             <a
               href={INSTAGRAM_URL}
@@ -110,7 +110,7 @@ export function Footer() {
 
         <div>
           <h4 className="text-sm font-semibold text-white">{t("footer.transfers")}</h4>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+          <ul className="mt-4 space-y-2.5 text-sm text-white/85">
             {transferPaths.map((p) => (
               <li key={p}>
                 <Link to={wl(p)} className="hover:text-gold">
@@ -123,7 +123,7 @@ export function Footer() {
 
         <div>
           <h4 className="text-sm font-semibold text-white">{t("footer.company")}</h4>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+          <ul className="mt-4 space-y-2.5 text-sm text-white/85">
             <li><Link to={wl("/about")} className="hover:text-gold">{t("footer.aboutUs")}</Link></li>
             <li><Link to={wl("/fleet")} className="hover:text-gold">{t("footer.ourFleet")}</Link></li>
             <li><Link to={wl("/reviews")} className="hover:text-gold">{t("nav.reviews")}</Link></li>
@@ -135,7 +135,7 @@ export function Footer() {
 
         <div>
           <h4 className="text-sm font-semibold text-white">{popularSearchesTitle[locale]}</h4>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+          <ul className="mt-4 space-y-2.5 text-sm text-white/85">
             {popularSearches[locale].map((s, i) => (
               <li key={`${s.path}-${i}`}>
                 <Link to={wl(s.path)} hash={s.hash} className="hover:text-gold">
@@ -148,7 +148,7 @@ export function Footer() {
 
         <div>
           <h4 className="text-sm font-semibold text-white">{t("footer.contact")}</h4>
-          <ul className="mt-4 space-y-3 text-sm text-white/70">
+          <ul className="mt-4 space-y-3 text-sm text-white/85">
             <li className="flex items-start gap-2.5">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
               <a href="tel:+35796626844">+357 96 626 844</a>
@@ -166,7 +166,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-tight flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/60 md:flex-row">
+        <div className="container-tight flex flex-col items-center justify-between gap-3 py-6 text-xs text-white/80 md:flex-row">
           <div>© {new Date().getFullYear()} Taxi Cyprus 24. {t("footer.rights")}</div>
           <div>{t("footer.licensed")}</div>
         </div>
