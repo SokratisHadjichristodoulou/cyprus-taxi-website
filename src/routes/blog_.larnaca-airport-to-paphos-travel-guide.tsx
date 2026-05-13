@@ -14,6 +14,7 @@ export const Route = createFileRoute("/blog_/larnaca-airport-to-paphos-travel-gu
           "Compare bus, rental car and private taxi transfer from Larnaca Airport to Paphos — distance, travel time, prices and the best option for families.",
       },
       { property: "og:title", content: "How to Travel from Larnaca Airport to Paphos" },
+      { property: "og:type", content: "article" },
       {
         property: "og:description",
         content: "Bus, rental car or private transfer — the complete LCA to Paphos travel guide.",
