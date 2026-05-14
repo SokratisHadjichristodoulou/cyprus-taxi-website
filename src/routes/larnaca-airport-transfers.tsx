@@ -49,6 +49,8 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
         faqs={sharedFAQs}
         relatedLinks={[
           { to: "/larnaca-airport-to-paphos", label: "LCA to Paphos" },
+          { to: "/larnaca-airport-to-ayia-napa", label: "LCA to Ayia Napa" },
+          { to: "/larnaca-airport-to-protaras", label: "LCA to Protaras" },
           { to: "/taxi-to-coral-bay", label: "LCA to Coral Bay" },
           { to: "/cyprus-airport-transfers", label: "All Routes" },
         ]}
