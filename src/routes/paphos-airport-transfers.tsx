@@ -9,10 +9,10 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/paphos-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Paphos Airport Transfers & Taxi from €35 | Taxi Cyprus 24" },
-      { name: "description", content: "Private Paphos Airport (PFO) transfers to Coral Bay, Peyia, Chloraka, Kato Paphos & all of Cyprus. Fixed prices, meet & greet, 24/7 service." },
-      { property: "og:title", content: "Paphos Airport Transfers from €35" },
-      { property: "og:description", content: "Premium Paphos Airport taxi to all Cyprus destinations." },
+      { title: "Paphos Airport Transfers — Private Taxi from €35" },
+      { name: "description", content: "Paphos Airport transfers to Coral Bay, Peyia, Chloraka, Kato Paphos & all Cyprus. Fixed prices from €35, meet & greet, 24/7." },
+      { property: "og:title", content: "Paphos Airport Transfers — Private Taxi from €35" },
+      { property: "og:description", content: "Fixed-price Paphos Airport transfers to every Cyprus destination. Meet & greet, free child seats, 24/7." },
       { property: "og:image", content: paphosImg },
       { name: "twitter:image", content: paphosImg },
       { name: "keywords", content: "Paphos airport transfer, Paphos airport taxi, taxi from Paphos airport" },
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
     <>
       <TransferPage
         eyebrow="Paphos Airport (PFO)"
-        title="Paphos Airport Transfers & Private Taxi"
+        title="Paphos Airport Transfers"
         subtitle="Fixed-price transfers from Paphos International Airport to Coral Bay, Peyia, Chloraka, Kato Paphos and every destination in Cyprus."
         heroImage={heroImg}
         galleryImage={paphosImg}

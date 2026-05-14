@@ -21,7 +21,9 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PaphosAirportTransfersRouteImport } from './routes/paphos-airport-transfers'
 import { Route as MercedesW213VipRouteImport } from './routes/mercedes-w213-vip'
 import { Route as LarnacaAirportTransfersRouteImport } from './routes/larnaca-airport-transfers'
+import { Route as LarnacaAirportToProtarasRouteImport } from './routes/larnaca-airport-to-protaras'
 import { Route as LarnacaAirportToPaphosRouteImport } from './routes/larnaca-airport-to-paphos'
+import { Route as LarnacaAirportToAyiaNapaRouteImport } from './routes/larnaca-airport-to-ayia-napa'
 import { Route as IndexDotphpRouteImport } from './routes/index[.]php'
 import { Route as FleetRouteImport } from './routes/fleet'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -132,11 +134,23 @@ const LarnacaAirportTransfersRoute = LarnacaAirportTransfersRouteImport.update({
   path: '/larnaca-airport-transfers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LarnacaAirportToProtarasRoute =
+  LarnacaAirportToProtarasRouteImport.update({
+    id: '/larnaca-airport-to-protaras',
+    path: '/larnaca-airport-to-protaras',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LarnacaAirportToPaphosRoute = LarnacaAirportToPaphosRouteImport.update({
   id: '/larnaca-airport-to-paphos',
   path: '/larnaca-airport-to-paphos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LarnacaAirportToAyiaNapaRoute =
+  LarnacaAirportToAyiaNapaRouteImport.update({
+    id: '/larnaca-airport-to-ayia-napa',
+    path: '/larnaca-airport-to-ayia-napa',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexDotphpRoute = IndexDotphpRouteImport.update({
   id: '/index.php',
   path: '/index.php',
@@ -407,7 +421,9 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/fleet': typeof FleetRoute
   '/index.php': typeof IndexDotphpRoute
+  '/larnaca-airport-to-ayia-napa': typeof LarnacaAirportToAyiaNapaRoute
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
+  '/larnaca-airport-to-protaras': typeof LarnacaAirportToProtarasRoute
   '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
   '/mercedes-w213-vip': typeof MercedesW213VipRoute
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
@@ -470,7 +486,9 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/fleet': typeof FleetRoute
   '/index.php': typeof IndexDotphpRoute
+  '/larnaca-airport-to-ayia-napa': typeof LarnacaAirportToAyiaNapaRoute
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
+  '/larnaca-airport-to-protaras': typeof LarnacaAirportToProtarasRoute
   '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
   '/mercedes-w213-vip': typeof MercedesW213VipRoute
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
@@ -534,7 +552,9 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/fleet': typeof FleetRoute
   '/index.php': typeof IndexDotphpRoute
+  '/larnaca-airport-to-ayia-napa': typeof LarnacaAirportToAyiaNapaRoute
   '/larnaca-airport-to-paphos': typeof LarnacaAirportToPaphosRoute
+  '/larnaca-airport-to-protaras': typeof LarnacaAirportToProtarasRoute
   '/larnaca-airport-transfers': typeof LarnacaAirportTransfersRoute
   '/mercedes-w213-vip': typeof MercedesW213VipRoute
   '/paphos-airport-transfers': typeof PaphosAirportTransfersRoute
@@ -600,7 +620,9 @@ export interface FileRouteTypes {
     | '/faq'
     | '/fleet'
     | '/index.php'
+    | '/larnaca-airport-to-ayia-napa'
     | '/larnaca-airport-to-paphos'
+    | '/larnaca-airport-to-protaras'
     | '/larnaca-airport-transfers'
     | '/mercedes-w213-vip'
     | '/paphos-airport-transfers'
@@ -663,7 +685,9 @@ export interface FileRouteTypes {
     | '/faq'
     | '/fleet'
     | '/index.php'
+    | '/larnaca-airport-to-ayia-napa'
     | '/larnaca-airport-to-paphos'
+    | '/larnaca-airport-to-protaras'
     | '/larnaca-airport-transfers'
     | '/mercedes-w213-vip'
     | '/paphos-airport-transfers'
@@ -726,7 +750,9 @@ export interface FileRouteTypes {
     | '/faq'
     | '/fleet'
     | '/index.php'
+    | '/larnaca-airport-to-ayia-napa'
     | '/larnaca-airport-to-paphos'
+    | '/larnaca-airport-to-protaras'
     | '/larnaca-airport-transfers'
     | '/mercedes-w213-vip'
     | '/paphos-airport-transfers'
@@ -791,7 +817,9 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   FleetRoute: typeof FleetRoute
   IndexDotphpRoute: typeof IndexDotphpRoute
+  LarnacaAirportToAyiaNapaRoute: typeof LarnacaAirportToAyiaNapaRoute
   LarnacaAirportToPaphosRoute: typeof LarnacaAirportToPaphosRoute
+  LarnacaAirportToProtarasRoute: typeof LarnacaAirportToProtarasRoute
   LarnacaAirportTransfersRoute: typeof LarnacaAirportTransfersRoute
   MercedesW213VipRoute: typeof MercedesW213VipRoute
   PaphosAirportTransfersRoute: typeof PaphosAirportTransfersRoute
@@ -899,11 +927,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LarnacaAirportTransfersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/larnaca-airport-to-protaras': {
+      id: '/larnaca-airport-to-protaras'
+      path: '/larnaca-airport-to-protaras'
+      fullPath: '/larnaca-airport-to-protaras'
+      preLoaderRoute: typeof LarnacaAirportToProtarasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/larnaca-airport-to-paphos': {
       id: '/larnaca-airport-to-paphos'
       path: '/larnaca-airport-to-paphos'
       fullPath: '/larnaca-airport-to-paphos'
       preLoaderRoute: typeof LarnacaAirportToPaphosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/larnaca-airport-to-ayia-napa': {
+      id: '/larnaca-airport-to-ayia-napa'
+      path: '/larnaca-airport-to-ayia-napa'
+      fullPath: '/larnaca-airport-to-ayia-napa'
+      preLoaderRoute: typeof LarnacaAirportToAyiaNapaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/index.php': {
@@ -1344,7 +1386,9 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   FleetRoute: FleetRoute,
   IndexDotphpRoute: IndexDotphpRoute,
+  LarnacaAirportToAyiaNapaRoute: LarnacaAirportToAyiaNapaRoute,
   LarnacaAirportToPaphosRoute: LarnacaAirportToPaphosRoute,
+  LarnacaAirportToProtarasRoute: LarnacaAirportToProtarasRoute,
   LarnacaAirportTransfersRoute: LarnacaAirportTransfersRoute,
   MercedesW213VipRoute: MercedesW213VipRoute,
   PaphosAirportTransfersRoute: PaphosAirportTransfersRoute,
@@ -1371,12 +1415,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
