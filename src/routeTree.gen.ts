@@ -43,7 +43,9 @@ import { Route as RuReviewsRouteImport } from './routes/ru.reviews'
 import { Route as RuPricingRouteImport } from './routes/ru.pricing'
 import { Route as RuPaphosAirportTransfersRouteImport } from './routes/ru.paphos-airport-transfers'
 import { Route as RuLarnacaAirportTransfersRouteImport } from './routes/ru.larnaca-airport-transfers'
+import { Route as RuLarnacaAirportToProtarasRouteImport } from './routes/ru.larnaca-airport-to-protaras'
 import { Route as RuLarnacaAirportToPaphosRouteImport } from './routes/ru.larnaca-airport-to-paphos'
+import { Route as RuLarnacaAirportToAyiaNapaRouteImport } from './routes/ru.larnaca-airport-to-ayia-napa'
 import { Route as RuFleetRouteImport } from './routes/ru.fleet'
 import { Route as RuFaqRouteImport } from './routes/ru.faq'
 import { Route as RuCyprusAirportTransfersRouteImport } from './routes/ru.cyprus-airport-transfers'
@@ -59,7 +61,9 @@ import { Route as ElReviewsRouteImport } from './routes/el.reviews'
 import { Route as ElPricingRouteImport } from './routes/el.pricing'
 import { Route as ElPaphosAirportTransfersRouteImport } from './routes/el.paphos-airport-transfers'
 import { Route as ElLarnacaAirportTransfersRouteImport } from './routes/el.larnaca-airport-transfers'
+import { Route as ElLarnacaAirportToProtarasRouteImport } from './routes/el.larnaca-airport-to-protaras'
 import { Route as ElLarnacaAirportToPaphosRouteImport } from './routes/el.larnaca-airport-to-paphos'
+import { Route as ElLarnacaAirportToAyiaNapaRouteImport } from './routes/el.larnaca-airport-to-ayia-napa'
 import { Route as ElFleetRouteImport } from './routes/el.fleet'
 import { Route as ElFaqRouteImport } from './routes/el.faq'
 import { Route as ElCyprusAirportTransfersRouteImport } from './routes/el.cyprus-airport-transfers'
@@ -248,10 +252,22 @@ const RuLarnacaAirportTransfersRoute =
     path: '/larnaca-airport-transfers',
     getParentRoute: () => RuRoute,
   } as any)
+const RuLarnacaAirportToProtarasRoute =
+  RuLarnacaAirportToProtarasRouteImport.update({
+    id: '/larnaca-airport-to-protaras',
+    path: '/larnaca-airport-to-protaras',
+    getParentRoute: () => RuRoute,
+  } as any)
 const RuLarnacaAirportToPaphosRoute =
   RuLarnacaAirportToPaphosRouteImport.update({
     id: '/larnaca-airport-to-paphos',
     path: '/larnaca-airport-to-paphos',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuLarnacaAirportToAyiaNapaRoute =
+  RuLarnacaAirportToAyiaNapaRouteImport.update({
+    id: '/larnaca-airport-to-ayia-napa',
+    path: '/larnaca-airport-to-ayia-napa',
     getParentRoute: () => RuRoute,
   } as any)
 const RuFleetRoute = RuFleetRouteImport.update({
@@ -332,10 +348,22 @@ const ElLarnacaAirportTransfersRoute =
     path: '/larnaca-airport-transfers',
     getParentRoute: () => ElRoute,
   } as any)
+const ElLarnacaAirportToProtarasRoute =
+  ElLarnacaAirportToProtarasRouteImport.update({
+    id: '/larnaca-airport-to-protaras',
+    path: '/larnaca-airport-to-protaras',
+    getParentRoute: () => ElRoute,
+  } as any)
 const ElLarnacaAirportToPaphosRoute =
   ElLarnacaAirportToPaphosRouteImport.update({
     id: '/larnaca-airport-to-paphos',
     path: '/larnaca-airport-to-paphos',
+    getParentRoute: () => ElRoute,
+  } as any)
+const ElLarnacaAirportToAyiaNapaRoute =
+  ElLarnacaAirportToAyiaNapaRouteImport.update({
+    id: '/larnaca-airport-to-ayia-napa',
+    path: '/larnaca-airport-to-ayia-napa',
     getParentRoute: () => ElRoute,
   } as any)
 const ElFleetRoute = ElFleetRouteImport.update({
@@ -449,7 +477,9 @@ export interface FileRoutesByFullPath {
   '/el/cyprus-airport-transfers': typeof ElCyprusAirportTransfersRoute
   '/el/faq': typeof ElFaqRoute
   '/el/fleet': typeof ElFleetRoute
+  '/el/larnaca-airport-to-ayia-napa': typeof ElLarnacaAirportToAyiaNapaRoute
   '/el/larnaca-airport-to-paphos': typeof ElLarnacaAirportToPaphosRoute
+  '/el/larnaca-airport-to-protaras': typeof ElLarnacaAirportToProtarasRoute
   '/el/larnaca-airport-transfers': typeof ElLarnacaAirportTransfersRoute
   '/el/paphos-airport-transfers': typeof ElPaphosAirportTransfersRoute
   '/el/pricing': typeof ElPricingRoute
@@ -465,7 +495,9 @@ export interface FileRoutesByFullPath {
   '/ru/cyprus-airport-transfers': typeof RuCyprusAirportTransfersRoute
   '/ru/faq': typeof RuFaqRoute
   '/ru/fleet': typeof RuFleetRoute
+  '/ru/larnaca-airport-to-ayia-napa': typeof RuLarnacaAirportToAyiaNapaRoute
   '/ru/larnaca-airport-to-paphos': typeof RuLarnacaAirportToPaphosRoute
+  '/ru/larnaca-airport-to-protaras': typeof RuLarnacaAirportToProtarasRoute
   '/ru/larnaca-airport-transfers': typeof RuLarnacaAirportTransfersRoute
   '/ru/paphos-airport-transfers': typeof RuPaphosAirportTransfersRoute
   '/ru/pricing': typeof RuPricingRoute
@@ -513,7 +545,9 @@ export interface FileRoutesByTo {
   '/el/cyprus-airport-transfers': typeof ElCyprusAirportTransfersRoute
   '/el/faq': typeof ElFaqRoute
   '/el/fleet': typeof ElFleetRoute
+  '/el/larnaca-airport-to-ayia-napa': typeof ElLarnacaAirportToAyiaNapaRoute
   '/el/larnaca-airport-to-paphos': typeof ElLarnacaAirportToPaphosRoute
+  '/el/larnaca-airport-to-protaras': typeof ElLarnacaAirportToProtarasRoute
   '/el/larnaca-airport-transfers': typeof ElLarnacaAirportTransfersRoute
   '/el/paphos-airport-transfers': typeof ElPaphosAirportTransfersRoute
   '/el/pricing': typeof ElPricingRoute
@@ -529,7 +563,9 @@ export interface FileRoutesByTo {
   '/ru/cyprus-airport-transfers': typeof RuCyprusAirportTransfersRoute
   '/ru/faq': typeof RuFaqRoute
   '/ru/fleet': typeof RuFleetRoute
+  '/ru/larnaca-airport-to-ayia-napa': typeof RuLarnacaAirportToAyiaNapaRoute
   '/ru/larnaca-airport-to-paphos': typeof RuLarnacaAirportToPaphosRoute
+  '/ru/larnaca-airport-to-protaras': typeof RuLarnacaAirportToProtarasRoute
   '/ru/larnaca-airport-transfers': typeof RuLarnacaAirportTransfersRoute
   '/ru/paphos-airport-transfers': typeof RuPaphosAirportTransfersRoute
   '/ru/pricing': typeof RuPricingRoute
@@ -580,7 +616,9 @@ export interface FileRoutesById {
   '/el/cyprus-airport-transfers': typeof ElCyprusAirportTransfersRoute
   '/el/faq': typeof ElFaqRoute
   '/el/fleet': typeof ElFleetRoute
+  '/el/larnaca-airport-to-ayia-napa': typeof ElLarnacaAirportToAyiaNapaRoute
   '/el/larnaca-airport-to-paphos': typeof ElLarnacaAirportToPaphosRoute
+  '/el/larnaca-airport-to-protaras': typeof ElLarnacaAirportToProtarasRoute
   '/el/larnaca-airport-transfers': typeof ElLarnacaAirportTransfersRoute
   '/el/paphos-airport-transfers': typeof ElPaphosAirportTransfersRoute
   '/el/pricing': typeof ElPricingRoute
@@ -596,7 +634,9 @@ export interface FileRoutesById {
   '/ru/cyprus-airport-transfers': typeof RuCyprusAirportTransfersRoute
   '/ru/faq': typeof RuFaqRoute
   '/ru/fleet': typeof RuFleetRoute
+  '/ru/larnaca-airport-to-ayia-napa': typeof RuLarnacaAirportToAyiaNapaRoute
   '/ru/larnaca-airport-to-paphos': typeof RuLarnacaAirportToPaphosRoute
+  '/ru/larnaca-airport-to-protaras': typeof RuLarnacaAirportToProtarasRoute
   '/ru/larnaca-airport-transfers': typeof RuLarnacaAirportTransfersRoute
   '/ru/paphos-airport-transfers': typeof RuPaphosAirportTransfersRoute
   '/ru/pricing': typeof RuPricingRoute
@@ -648,7 +688,9 @@ export interface FileRouteTypes {
     | '/el/cyprus-airport-transfers'
     | '/el/faq'
     | '/el/fleet'
+    | '/el/larnaca-airport-to-ayia-napa'
     | '/el/larnaca-airport-to-paphos'
+    | '/el/larnaca-airport-to-protaras'
     | '/el/larnaca-airport-transfers'
     | '/el/paphos-airport-transfers'
     | '/el/pricing'
@@ -664,7 +706,9 @@ export interface FileRouteTypes {
     | '/ru/cyprus-airport-transfers'
     | '/ru/faq'
     | '/ru/fleet'
+    | '/ru/larnaca-airport-to-ayia-napa'
     | '/ru/larnaca-airport-to-paphos'
+    | '/ru/larnaca-airport-to-protaras'
     | '/ru/larnaca-airport-transfers'
     | '/ru/paphos-airport-transfers'
     | '/ru/pricing'
@@ -712,7 +756,9 @@ export interface FileRouteTypes {
     | '/el/cyprus-airport-transfers'
     | '/el/faq'
     | '/el/fleet'
+    | '/el/larnaca-airport-to-ayia-napa'
     | '/el/larnaca-airport-to-paphos'
+    | '/el/larnaca-airport-to-protaras'
     | '/el/larnaca-airport-transfers'
     | '/el/paphos-airport-transfers'
     | '/el/pricing'
@@ -728,7 +774,9 @@ export interface FileRouteTypes {
     | '/ru/cyprus-airport-transfers'
     | '/ru/faq'
     | '/ru/fleet'
+    | '/ru/larnaca-airport-to-ayia-napa'
     | '/ru/larnaca-airport-to-paphos'
+    | '/ru/larnaca-airport-to-protaras'
     | '/ru/larnaca-airport-transfers'
     | '/ru/paphos-airport-transfers'
     | '/ru/pricing'
@@ -778,7 +826,9 @@ export interface FileRouteTypes {
     | '/el/cyprus-airport-transfers'
     | '/el/faq'
     | '/el/fleet'
+    | '/el/larnaca-airport-to-ayia-napa'
     | '/el/larnaca-airport-to-paphos'
+    | '/el/larnaca-airport-to-protaras'
     | '/el/larnaca-airport-transfers'
     | '/el/paphos-airport-transfers'
     | '/el/pricing'
@@ -794,7 +844,9 @@ export interface FileRouteTypes {
     | '/ru/cyprus-airport-transfers'
     | '/ru/faq'
     | '/ru/fleet'
+    | '/ru/larnaca-airport-to-ayia-napa'
     | '/ru/larnaca-airport-to-paphos'
+    | '/ru/larnaca-airport-to-protaras'
     | '/ru/larnaca-airport-transfers'
     | '/ru/paphos-airport-transfers'
     | '/ru/pricing'
@@ -1081,11 +1133,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuLarnacaAirportTransfersRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/larnaca-airport-to-protaras': {
+      id: '/ru/larnaca-airport-to-protaras'
+      path: '/larnaca-airport-to-protaras'
+      fullPath: '/ru/larnaca-airport-to-protaras'
+      preLoaderRoute: typeof RuLarnacaAirportToProtarasRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/ru/larnaca-airport-to-paphos': {
       id: '/ru/larnaca-airport-to-paphos'
       path: '/larnaca-airport-to-paphos'
       fullPath: '/ru/larnaca-airport-to-paphos'
       preLoaderRoute: typeof RuLarnacaAirportToPaphosRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/larnaca-airport-to-ayia-napa': {
+      id: '/ru/larnaca-airport-to-ayia-napa'
+      path: '/larnaca-airport-to-ayia-napa'
+      fullPath: '/ru/larnaca-airport-to-ayia-napa'
+      preLoaderRoute: typeof RuLarnacaAirportToAyiaNapaRouteImport
       parentRoute: typeof RuRoute
     }
     '/ru/fleet': {
@@ -1193,11 +1259,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ElLarnacaAirportTransfersRouteImport
       parentRoute: typeof ElRoute
     }
+    '/el/larnaca-airport-to-protaras': {
+      id: '/el/larnaca-airport-to-protaras'
+      path: '/larnaca-airport-to-protaras'
+      fullPath: '/el/larnaca-airport-to-protaras'
+      preLoaderRoute: typeof ElLarnacaAirportToProtarasRouteImport
+      parentRoute: typeof ElRoute
+    }
     '/el/larnaca-airport-to-paphos': {
       id: '/el/larnaca-airport-to-paphos'
       path: '/larnaca-airport-to-paphos'
       fullPath: '/el/larnaca-airport-to-paphos'
       preLoaderRoute: typeof ElLarnacaAirportToPaphosRouteImport
+      parentRoute: typeof ElRoute
+    }
+    '/el/larnaca-airport-to-ayia-napa': {
+      id: '/el/larnaca-airport-to-ayia-napa'
+      path: '/larnaca-airport-to-ayia-napa'
+      fullPath: '/el/larnaca-airport-to-ayia-napa'
+      preLoaderRoute: typeof ElLarnacaAirportToAyiaNapaRouteImport
       parentRoute: typeof ElRoute
     }
     '/el/fleet': {
@@ -1301,7 +1381,9 @@ interface ElRouteChildren {
   ElCyprusAirportTransfersRoute: typeof ElCyprusAirportTransfersRoute
   ElFaqRoute: typeof ElFaqRoute
   ElFleetRoute: typeof ElFleetRoute
+  ElLarnacaAirportToAyiaNapaRoute: typeof ElLarnacaAirportToAyiaNapaRoute
   ElLarnacaAirportToPaphosRoute: typeof ElLarnacaAirportToPaphosRoute
+  ElLarnacaAirportToProtarasRoute: typeof ElLarnacaAirportToProtarasRoute
   ElLarnacaAirportTransfersRoute: typeof ElLarnacaAirportTransfersRoute
   ElPaphosAirportTransfersRoute: typeof ElPaphosAirportTransfersRoute
   ElPricingRoute: typeof ElPricingRoute
@@ -1320,7 +1402,9 @@ const ElRouteChildren: ElRouteChildren = {
   ElCyprusAirportTransfersRoute: ElCyprusAirportTransfersRoute,
   ElFaqRoute: ElFaqRoute,
   ElFleetRoute: ElFleetRoute,
+  ElLarnacaAirportToAyiaNapaRoute: ElLarnacaAirportToAyiaNapaRoute,
   ElLarnacaAirportToPaphosRoute: ElLarnacaAirportToPaphosRoute,
+  ElLarnacaAirportToProtarasRoute: ElLarnacaAirportToProtarasRoute,
   ElLarnacaAirportTransfersRoute: ElLarnacaAirportTransfersRoute,
   ElPaphosAirportTransfersRoute: ElPaphosAirportTransfersRoute,
   ElPricingRoute: ElPricingRoute,
@@ -1342,7 +1426,9 @@ interface RuRouteChildren {
   RuCyprusAirportTransfersRoute: typeof RuCyprusAirportTransfersRoute
   RuFaqRoute: typeof RuFaqRoute
   RuFleetRoute: typeof RuFleetRoute
+  RuLarnacaAirportToAyiaNapaRoute: typeof RuLarnacaAirportToAyiaNapaRoute
   RuLarnacaAirportToPaphosRoute: typeof RuLarnacaAirportToPaphosRoute
+  RuLarnacaAirportToProtarasRoute: typeof RuLarnacaAirportToProtarasRoute
   RuLarnacaAirportTransfersRoute: typeof RuLarnacaAirportTransfersRoute
   RuPaphosAirportTransfersRoute: typeof RuPaphosAirportTransfersRoute
   RuPricingRoute: typeof RuPricingRoute
@@ -1362,7 +1448,9 @@ const RuRouteChildren: RuRouteChildren = {
   RuCyprusAirportTransfersRoute: RuCyprusAirportTransfersRoute,
   RuFaqRoute: RuFaqRoute,
   RuFleetRoute: RuFleetRoute,
+  RuLarnacaAirportToAyiaNapaRoute: RuLarnacaAirportToAyiaNapaRoute,
   RuLarnacaAirportToPaphosRoute: RuLarnacaAirportToPaphosRoute,
+  RuLarnacaAirportToProtarasRoute: RuLarnacaAirportToProtarasRoute,
   RuLarnacaAirportTransfersRoute: RuLarnacaAirportTransfersRoute,
   RuPaphosAirportTransfersRoute: RuPaphosAirportTransfersRoute,
   RuPricingRoute: RuPricingRoute,
@@ -1415,12 +1503,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}
