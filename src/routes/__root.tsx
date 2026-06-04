@@ -94,7 +94,7 @@ export const Route = createRootRoute({
         async: true,
       },
       {
-        children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-N5DQPGXYEX');`,
+        children: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-N5DQPGXYEX');gtag('config', 'AW-18120551333');`,
       },
     ],
   }),
