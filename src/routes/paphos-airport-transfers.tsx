@@ -31,7 +31,7 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
         toLocation="All Cyprus"
         duration="20 min – 2h"
         distance="20–250 km"
-        intro="Paphos International Airport (PFO) is the second-largest airport in Cyprus and the main gateway for travellers visiting Paphos, Coral Bay, Peyia, Limassol, and western Cyprus. Taxicyprus24 provides reliable private airport taxi transfers from Paphos Airport with fixed prices, professional drivers, and 24/7 service."
+        intro="Paphos International Airport (PFO) is the second-largest airport in Cyprus and the main gateway for travellers visiting Paphos, Coral Bay, Peyia, Limassol, and western Cyprus. Taxicyprus24 specialises in private taxi transfers from/to Paphos, covering the whole of Cyprus with fixed prices, professional drivers, and 24/7 service."
         bodyParagraphs={[
           "Skip long taxi queues, crowded shuttle buses, and shared transfers. Our private Cyprus airport transfer service offers direct door-to-door transport to hotels, villas, resorts, and apartments anywhere in Cyprus — with no waiting and no shared rides.",
           "Your driver will meet you inside the arrivals hall with a personalised name sign, assist with luggage, and escort you directly to a clean, air-conditioned Mercedes-Benz vehicle. Popular transfer times from Paphos Airport include Coral Bay (approximately 25 minutes), Peyia (approximately 30 minutes), Limassol (approximately 50 minutes), and Larnaca (approximately 1 hour 45 minutes).",
