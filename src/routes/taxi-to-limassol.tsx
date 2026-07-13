@@ -28,7 +28,7 @@ export const Route = createFileRoute("/taxi-to-limassol")({
       toLocation="Limassol"
       duration="50 min"
       distance="65 km"
-      intro="Limassol is the second-largest city in Cyprus and one of the island's top destinations for business travel, luxury resorts, beaches, and marina lifestyle. Taxicyprus24 provides reliable private airport transfers to Limassol from Paphos Airport with fixed prices, professional drivers, and 24/7 service."
+      intro="Limassol is the second-largest city in Cyprus and one of the island's top destinations for business travel, luxury resorts, beaches, and marina lifestyle. Taxicyprus24 provides reliable private transfers from/to Paphos and Limassol with fixed prices, professional drivers, and 24/7 service across Cyprus."
       bodyParagraphs={[
         "Our private Limassol airport taxi service offers direct door-to-door transfers to hotels, marina apartments, business centres, villas, and beachfront resorts — with no waiting, no shared rides, and no hidden fees.",
         "From Paphos Airport to Limassol the journey usually takes around 50 minutes via the A6 motorway.",

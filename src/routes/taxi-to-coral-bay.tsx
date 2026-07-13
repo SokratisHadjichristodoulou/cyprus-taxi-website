@@ -28,7 +28,7 @@ export const Route = createFileRoute("/taxi-to-coral-bay")({
       toLocation="Coral Bay"
       duration="25 min / 1h 40m"
       distance="25 km / 150 km"
-      intro="Coral Bay is one of the most popular beach resorts in Cyprus, known for its turquoise water, sandy beaches, luxury villas, and family-friendly hotels. Taxicyprus24 provides reliable private airport transfers to Coral Bay from both Paphos Airport and Larnaca Airport with fixed prices, professional drivers, and 24/7 service."
+      intro="Coral Bay is one of the most popular beach resorts in Cyprus, known for its turquoise water, sandy beaches, luxury villas, and family-friendly hotels. Taxicyprus24 provides reliable private airport transfers from/to Paphos and across Cyprus to Coral Bay from both Paphos Airport and Larnaca Airport with fixed prices, professional drivers, and 24/7 service."
       bodyParagraphs={[
         "Avoid long taxi queues, crowded shuttle buses, and shared rides. Our private Coral Bay airport taxi service offers direct door-to-door transfers to your hotel, villa, apartment, or resort anywhere in the Coral Bay area.",
         "From Paphos Airport, Coral Bay is approximately 25 minutes away along the scenic coastal road. Transfers from Larnaca Airport to Coral Bay usually take around 1 hour 40 minutes via the A6 motorway.",
