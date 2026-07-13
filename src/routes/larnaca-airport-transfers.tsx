@@ -31,7 +31,7 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
         toLocation="All Cyprus"
         duration="15 min – 1h 45m"
         distance="10–180 km"
-        intro="Larnaca International Airport (LCA) is the largest and busiest airport in Cyprus, serving millions of international travellers from the UK and Europe every year. Taxicyprus24 provides premium private airport transfers from Larnaca Airport with fixed prices, professional drivers, flight tracking, and 24/7 service across Cyprus."
+        intro="Larnaca International Airport (LCA) is the largest and busiest airport in Cyprus, serving millions of international travellers from the UK and Europe every year. Taxicyprus24 provides premium private airport transfers from/to Paphos and across Cyprus from Larnaca Airport, with fixed prices, professional drivers, flight tracking, and 24/7 service."
         bodyParagraphs={[
           "Skip long taxi queues, crowded shuttle buses, and expensive last-minute airport taxis. Our private Cyprus airport transfer service offers direct door-to-door transport to hotels, villas, apartments, resorts, and business destinations anywhere on the island.",
           "Your professional driver will meet you inside the arrivals hall with a personalised name sign, assist with luggage, and escort you directly to a clean, air-conditioned Mercedes vehicle. We monitor your flight in real time, so delayed arrivals never affect your airport transfer booking.",
