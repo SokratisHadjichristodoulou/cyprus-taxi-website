@@ -119,10 +119,10 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-white">{t("footer.transfers")}</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/85">
-            {transferPaths.map((p) => (
-              <li key={p}>
-                <Link to={wl(p)} className="hover:text-gold">
-                  {labels[p]}
+            {links.map((link, i) => (
+              <li key={`${link.path}-${i}`}>
+                <Link to={wl(link.path)} className="hover:text-gold">
+                  {link.label}
                 </Link>
               </li>
             ))}
