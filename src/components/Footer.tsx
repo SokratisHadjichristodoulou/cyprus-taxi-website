@@ -8,38 +8,46 @@ export function Footer() {
   const { t, locale } = useI18n();
   const wl = (p: string) => withLocale(locale, p);
 
-  const transferLabels: Record<"en" | "el" | "ru", Record<string, string>> = {
-    en: {
-      "/larnaca-airport-to-paphos": "Larnaca to Paphos",
-      "/larnaca-airport-transfers": "Larnaca Airport",
-      "/paphos-airport-transfers": "Paphos Airport",
-      "/taxi-to-limassol": "Taxi to Limassol",
-      "/taxi-to-coral-bay": "Taxi to Coral Bay",
-      "/taxi-to-peyia": "Taxi to Peyia",
-      "/taxi-to-chloraka": "Taxi to Chloraka",
-    },
-    el: {
-      "/larnaca-airport-to-paphos": "Λάρνακα προς Πάφο",
-      "/larnaca-airport-transfers": "Αεροδρόμιο Λάρνακας",
-      "/paphos-airport-transfers": "Αεροδρόμιο Πάφου",
-      "/taxi-to-limassol": "Ταξί προς Λεμεσό",
-      "/taxi-to-coral-bay": "Ταξί προς Coral Bay",
-      "/taxi-to-peyia": "Ταξί προς Πέγεια",
-      "/taxi-to-chloraka": "Ταξί προς Χλώρακα",
-    },
-    ru: {
-      "/larnaca-airport-to-paphos": "Ларнака — Пафос",
-      "/larnaca-airport-transfers": "Аэропорт Ларнаки",
-      "/paphos-airport-transfers": "Аэропорт Пафоса",
-      "/taxi-to-limassol": "Такси в Лимассол",
-      "/taxi-to-coral-bay": "Такси в Корал-Бей",
-      "/taxi-to-peyia": "Такси в Пейю",
-      "/taxi-to-chloraka": "Такси в Хлораку",
-    },
+  const transferLinks: Record<"en" | "el" | "ru", { path: string; label: string }[]> = {
+    en: [
+      { path: "/larnaca-airport-to-paphos", label: "Larnaca to Paphos" },
+      { path: "/larnaca-airport-transfers", label: "Larnaca Airport" },
+      { path: "/paphos-airport-transfers", label: "Paphos Airport" },
+      { path: "/taxi-to-limassol", label: "Taxi to Limassol" },
+      { path: "/taxi-to-coral-bay", label: "Taxi to Coral Bay" },
+      { path: "/taxi-to-peyia", label: "Taxi to Peyia" },
+      { path: "/taxi-to-chloraka", label: "Taxi to Chloraka" },
+      { path: "/cyprus-airport-transfers", label: "Larnaca to Ayia Napa" },
+      { path: "/cyprus-airport-transfers", label: "Larnaca to Protaras" },
+      { path: "/cyprus-airport-transfers", label: "Larnaca to Nicosia" },
+    ],
+    el: [
+      { path: "/larnaca-airport-to-paphos", label: "Λάρνακα προς Πάφο" },
+      { path: "/larnaca-airport-transfers", label: "Αεροδρόμιο Λάρνακας" },
+      { path: "/paphos-airport-transfers", label: "Αεροδρόμιο Πάφου" },
+      { path: "/taxi-to-limassol", label: "Ταξί προς Λεμεσό" },
+      { path: "/taxi-to-coral-bay", label: "Ταξί προς Coral Bay" },
+      { path: "/taxi-to-peyia", label: "Ταξί προς Πέγεια" },
+      { path: "/taxi-to-chloraka", label: "Ταξί προς Χλώρακα" },
+      { path: "/cyprus-airport-transfers", label: "Λάρνακα προς Αγία Νάπα" },
+      { path: "/cyprus-airport-transfers", label: "Λάρνακα προς Πρωταρά" },
+      { path: "/cyprus-airport-transfers", label: "Λάρνακα προς Λευκωσία" },
+    ],
+    ru: [
+      { path: "/larnaca-airport-to-paphos", label: "Ларнака — Пафос" },
+      { path: "/larnaca-airport-transfers", label: "Аэропорт Ларнаки" },
+      { path: "/paphos-airport-transfers", label: "Аэропорт Пафоса" },
+      { path: "/taxi-to-limassol", label: "Такси в Лимассол" },
+      { path: "/taxi-to-coral-bay", label: "Такси в Корал-Бей" },
+      { path: "/taxi-to-peyia", label: "Такси в Пейю" },
+      { path: "/taxi-to-chloraka", label: "Такси в Хлораку" },
+      { path: "/cyprus-airport-transfers", label: "Ларнака — Айя-Напа" },
+      { path: "/cyprus-airport-transfers", label: "Ларнака — Протарас" },
+      { path: "/cyprus-airport-transfers", label: "Ларнака — Никосия" },
+    ],
   };
 
-  const labels = transferLabels[locale];
-  const transferPaths = Object.keys(transferLabels.en);
+  const links = transferLinks[locale];
 
   const popularSearches: Record<"en" | "el" | "ru", { path: string; label: string; hash?: string }[]> = {
     en: [
@@ -111,10 +119,10 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-white">{t("footer.transfers")}</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/85">
-            {transferPaths.map((p) => (
-              <li key={p}>
-                <Link to={wl(p)} className="hover:text-gold">
-                  {labels[p]}
+            {links.map((link, i) => (
+              <li key={`${link.path}-${i}`}>
+                <Link to={wl(link.path)} className="hover:text-gold">
+                  {link.label}
                 </Link>
               </li>
             ))}
