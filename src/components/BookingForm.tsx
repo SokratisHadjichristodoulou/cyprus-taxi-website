@@ -21,10 +21,11 @@ const pickupLocations = [...airportLocations, ...areaLocations, ...allDestinatio
 // that airport's destinations + areas. Otherwise (area/destination pickup), only airports.
 function getDropoffOptions(pickup: string): string[] {
   const airportPricing = allPricing.find((p) => p.airport === pickup);
-  if (airportPricing) {
-    return [...airportLocations, ...airportPricing.destinations.map((d) => d.destination), ...areaLocations];
-  }
-  return airportLocations;
+  const base = airportPricing
+    ? [...airportLocations, ...airportPricing.destinations.map((d) => d.destination), ...areaLocations]
+    : airportLocations;
+  // Remove duplicates (e.g. Nicosia appearing as both a destination and an area)
+  return Array.from(new Set(base));
 }
 
 // Resolve a price for any pickup/dropoff combo by normalizing to airport→destination lookup.
