@@ -81,7 +81,7 @@ export function PriceTable({ pricing, title, subtitle }: Props) {
                 {(["4 Seater", "6 Seater", "12 Seater"] as const).map((v) => (
                   <div key={v} className="rounded-lg bg-card p-2">
                     <div className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">{seaterLabels[v]}</div>
-                    <div className="mt-0.5 font-display text-base font-bold text-navy">€{d.prices[v]}</div>
+                    <div className="mt-0.5 font-display text-base font-bold text-navy">{d.prices[v] > 0 ? `€${d.prices[v]}` : "—"}</div>
                   </div>
                 ))}
               </div>
