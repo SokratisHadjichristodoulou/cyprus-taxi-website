@@ -71,7 +71,7 @@ export const pricingFromLarnaca: AirportPricing = {
     },
     { destination: "Pissouri", prices: { "4 Seater": 130, "6 Seater": 180, "12 Seater": 240 } },
     { destination: "Ayia Napa", prices: { "4 Seater": 80, "6 Seater": 100, "12 Seater": 0 } },
-    { destination: "Protaras", prices: { "4 Seater": 90, "6 Seater": 110, "12 Seater": 160 } },
+    { destination: "Protaras", prices: { "4 Seater": 90, "6 Seater": 110, "12 Seater": 0 } },
     { destination: "Polis – Lachi", prices: { "4 Seater": 200, "6 Seater": 250, "12 Seater": 320 } },
   ],
 };
