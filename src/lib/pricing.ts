@@ -42,7 +42,8 @@ export const pricingFromPaphos: AirportPricing = {
     { destination: "Limassol", prices: { "4 Seater": 90, "6 Seater": 120, "12 Seater": 160 } },
     { destination: "Nicosia", prices: { "4 Seater": 150, "6 Seater": 180, "12 Seater": 240 } },
     { destination: "Larnaka", prices: { "4 Seater": 140, "6 Seater": 180, "12 Seater": 240 } },
-    { destination: "Ayia Napa / Protaras", prices: { "4 Seater": 200, "6 Seater": 240, "12 Seater": 300 } },
+    { destination: "Ayia Napa", prices: { "4 Seater": 200, "6 Seater": 240, "12 Seater": 300 } },
+    { destination: "Protaras", prices: { "4 Seater": 200, "6 Seater": 240, "12 Seater": 300 } },
   ],
 };
 
