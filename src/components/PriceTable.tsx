@@ -56,9 +56,9 @@ export function PriceTable({ pricing, title, subtitle }: Props) {
                   <div className="font-semibold text-navy">{d.destination}</div>
                   {d.note && <div className="text-xs text-muted-foreground">{d.note}</div>}
                 </td>
-                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">€{d.prices["4 Seater"]}</td>
-                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">€{d.prices["6 Seater"]}</td>
-                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">€{d.prices["12 Seater"]}</td>
+                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["4 Seater"] > 0 ? `€${d.prices["4 Seater"]}` : "—"}</td>
+                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["6 Seater"] > 0 ? `€${d.prices["6 Seater"]}` : "—"}</td>
+                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["12 Seater"] > 0 ? `€${d.prices["12 Seater"]}` : "—"}</td>
               </tr>
             ))}
           </tbody>
