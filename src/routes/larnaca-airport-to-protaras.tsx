@@ -7,9 +7,9 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/larnaca-airport-to-protaras")({
   head: () => ({
     meta: [
-      { title: "Larnaca Airport to Protaras Taxi — Fixed €60 | Taxi Cyprus 24" },
-      { name: "description", content: "Private Larnaca Airport to Protaras taxi from €60. Fixed price, meet & greet, free child seats, flight tracking. 24/7 booking." },
-      { property: "og:title", content: "Larnaca Airport to Protaras Taxi from €60" },
+      { title: "Larnaca Airport to Protaras Taxi — Fixed €90 | Taxi Cyprus 24" },
+      { name: "description", content: "Private Larnaca Airport to Protaras taxi from €90. Fixed price, meet & greet, free child seats, flight tracking. 24/7 booking." },
+      { property: "og:title", content: "Larnaca Airport to Protaras Taxi from €90" },
       { property: "og:description", content: "Private fixed-price Larnaca Airport to Protaras transfer with meet & greet." },
       { property: "og:image", content: larnacaImg },
       { name: "twitter:image", content: larnacaImg },

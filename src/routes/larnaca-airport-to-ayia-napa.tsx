@@ -7,9 +7,9 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/larnaca-airport-to-ayia-napa")({
   head: () => ({
     meta: [
-      { title: "Larnaca Airport to Ayia Napa Taxi — Fixed €55 | Taxi Cyprus 24" },
-      { name: "description", content: "Private Larnaca Airport to Ayia Napa taxi from €55. Fixed price, meet & greet, free child seats, flight tracking. 24/7 booking." },
-      { property: "og:title", content: "Larnaca Airport to Ayia Napa Taxi from €55" },
+      { title: "Larnaca Airport to Ayia Napa Taxi — Fixed €80 | Taxi Cyprus 24" },
+      { name: "description", content: "Private Larnaca Airport to Ayia Napa taxi from €80. Fixed price, meet & greet, free child seats, flight tracking. 24/7 booking." },
+      { property: "og:title", content: "Larnaca Airport to Ayia Napa Taxi from €80" },
       { property: "og:description", content: "Private fixed-price Larnaca Airport to Ayia Napa transfer with meet & greet." },
       { property: "og:image", content: larnacaImg },
       { name: "twitter:image", content: larnacaImg },
@@ -43,7 +43,7 @@ export const Route = createFileRoute("/larnaca-airport-to-ayia-napa")({
         "Cash or card accepted",
       ]}
       prices={[
-        { type: "Executive Sedan", pax: "Up to 4 passengers", price: "€55" },
+        { type: "Executive Sedan", pax: "Up to 4 passengers", price: "€80" },
         { type: "Premium Van (6 seats)", pax: "Up to 6 passengers", price: "€70" },
         { type: "Large Van (12 seats)", pax: "Up to 12 passengers", price: "€95" },
       ]}

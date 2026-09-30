@@ -10,14 +10,13 @@ import { withLocale } from "@/lib/i18n";
 
 const allRoutes = [
   { slug: "/larnaca-airport-to-paphos", name: "Аэропорт Ларнаки — Пафос", fromAirport: "Ларнака", duration: "1ч 30м", distance: "140 км", priceFrom: 95 },
-  { slug: "/taxi-to-limassol", name: "Аэропорт Ларнаки — Лимассол", fromAirport: "Ларнака", duration: "45 мин", distance: "70 км", priceFrom: 55 },
-  { slug: "/taxi-to-coral-bay", name: "Аэропорт Пафоса — Корал-Бей", fromAirport: "Пафос", duration: "30 мин", distance: "25 км", priceFrom: 35 },
-  { slug: "/taxi-to-peyia", name: "Аэропорт Пафоса — Пейя", fromAirport: "Пафос", duration: "30 мин", distance: "22 км", priceFrom: 35 },
-  { slug: "/taxi-to-chloraka", name: "Аэропорт Пафоса — Хлорака", fromAirport: "Пафос", duration: "25 мин", distance: "20 км", priceFrom: 32 },
+  { slug: "/taxi-to-limassol", name: "Аэропорт Пафоса — Лимассол", fromAirport: "Пафос", duration: "50 мин", distance: "65 км", priceFrom: 90 },
+  { slug: "/taxi-to-coral-bay", name: "Аэропорт Пафоса — Корал-Бей", fromAirport: "Пафос", duration: "30 мин", distance: "25 км", priceFrom: 65 },
+  { slug: "/taxi-to-peyia", name: "Аэропорт Пафоса — Пейя", fromAirport: "Пафос", duration: "30 мин", distance: "22 км", priceFrom: 65 },
+  { slug: "/taxi-to-chloraka", name: "Аэропорт Пафоса — Хлорака", fromAirport: "Пафос", duration: "25 мин", distance: "20 км", priceFrom: 45 },
   { slug: "/larnaca-airport-transfers", name: "Трансферы из аэропорта Ларнаки", fromAirport: "Ларнака", duration: "По-разному", distance: "По всему Кипру", priceFrom: 35 },
-  { slug: "/taxi-to-limassol", name: "Аэропорт Пафоса — Лимассол", fromAirport: "Пафос", duration: "50 мин", distance: "65 км", priceFrom: 65 },
-  { slug: "/larnaca-airport-transfers", name: "Аэропорт Ларнаки — Айя-Напа", fromAirport: "Ларнака", duration: "45 мин", distance: "55 км", priceFrom: 55 },
-  { slug: "/larnaca-airport-transfers", name: "Аэропорт Ларнаки — Протарас", fromAirport: "Ларнака", duration: "50 мин", distance: "65 км", priceFrom: 60 },
+  { slug: "/larnaca-airport-transfers", name: "Аэропорт Ларнаки — Айя-Напа", fromAirport: "Ларнака", duration: "45 мин", distance: "55 км", priceFrom: 80 },
+  { slug: "/larnaca-airport-transfers", name: "Аэропорт Ларнаки — Протарас", fromAirport: "Ларнака", duration: "50 мин", distance: "65 км", priceFrom: 90 },
   { slug: "/larnaca-airport-transfers", name: "Аэропорт Ларнаки — Никосия", fromAirport: "Ларнака", duration: "40 мин", distance: "50 км", priceFrom: 50 },
 ] as const;
 
@@ -52,7 +51,7 @@ function AllTransfersPage() {
         <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Все маршруты трансферов по Кипру</h2>
         <p className="mt-3 max-w-2xl text-muted-foreground">
           Мы предоставляем частные трансферы из аэропортов в каждый город, деревню, отель и курорт на Кипре.
-          Все цены ниже — итоговые фиксированные суммы, включающие платные дороги, детские кресла и встречу.
+          Указанные цены относятся к автомобилю на 4 пассажира. Для более вместительных автомобилей или большего количества пассажиров смотрите нашу страницу с ценами. Все цены ниже — итоговые фиксированные суммы, включающие платные дороги, детские кресла и встречу.
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -89,3 +88,4 @@ function AllTransfersPage() {
     </>
   );
 }
+

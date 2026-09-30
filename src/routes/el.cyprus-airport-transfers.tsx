@@ -10,14 +10,13 @@ import { withLocale } from "@/lib/i18n";
 
 const allRoutes = [
   { slug: "/larnaca-airport-to-paphos", name: "Αεροδρόμιο Λάρνακας προς Πάφο", fromAirport: "Λάρνακα", duration: "1ω 30λ", distance: "140 χλμ", priceFrom: 95 },
-  { slug: "/taxi-to-limassol", name: "Αεροδρόμιο Λάρνακας προς Λεμεσό", fromAirport: "Λάρνακα", duration: "45 λεπτά", distance: "70 χλμ", priceFrom: 55 },
-  { slug: "/taxi-to-coral-bay", name: "Αεροδρόμιο Πάφου προς Coral Bay", fromAirport: "Πάφος", duration: "30 λεπτά", distance: "25 χλμ", priceFrom: 35 },
-  { slug: "/taxi-to-peyia", name: "Αεροδρόμιο Πάφου προς Πέγεια", fromAirport: "Πάφος", duration: "30 λεπτά", distance: "22 χλμ", priceFrom: 35 },
-  { slug: "/taxi-to-chloraka", name: "Αεροδρόμιο Πάφου προς Χλώρακα", fromAirport: "Πάφος", duration: "25 λεπτά", distance: "20 χλμ", priceFrom: 32 },
+  { slug: "/taxi-to-limassol", name: "Αεροδρόμιο Πάφου προς Λεμεσό", fromAirport: "Πάφος", duration: "50 λεπτά", distance: "65 χλμ", priceFrom: 90 },
+  { slug: "/taxi-to-coral-bay", name: "Αεροδρόμιο Πάφου προς Coral Bay", fromAirport: "Πάφος", duration: "30 λεπτά", distance: "25 χλμ", priceFrom: 65 },
+  { slug: "/taxi-to-peyia", name: "Αεροδρόμιο Πάφου προς Πέγεια", fromAirport: "Πάφος", duration: "30 λεπτά", distance: "22 χλμ", priceFrom: 65 },
+  { slug: "/taxi-to-chloraka", name: "Αεροδρόμιο Πάφου προς Χλώρακα", fromAirport: "Πάφος", duration: "25 λεπτά", distance: "20 χλμ", priceFrom: 45 },
   { slug: "/larnaca-airport-transfers", name: "Μεταφορές Αεροδρομίου Λάρνακας", fromAirport: "Λάρνακα", duration: "Ποικίλει", distance: "Όλη η Κύπρος", priceFrom: 35 },
-  { slug: "/taxi-to-limassol", name: "Αεροδρόμιο Πάφου προς Λεμεσό", fromAirport: "Πάφος", duration: "50 λεπτά", distance: "65 χλμ", priceFrom: 65 },
-  { slug: "/larnaca-airport-transfers", name: "Αεροδρόμιο Λάρνακας προς Αγία Νάπα", fromAirport: "Λάρνακα", duration: "45 λεπτά", distance: "55 χλμ", priceFrom: 55 },
-  { slug: "/larnaca-airport-transfers", name: "Αεροδρόμιο Λάρνακας προς Πρωταρά", fromAirport: "Λάρνακα", duration: "50 λεπτά", distance: "65 χλμ", priceFrom: 60 },
+  { slug: "/larnaca-airport-transfers", name: "Αεροδρόμιο Λάρνακας προς Αγία Νάπα", fromAirport: "Λάρνακα", duration: "45 λεπτά", distance: "55 χλμ", priceFrom: 80 },
+  { slug: "/larnaca-airport-transfers", name: "Αεροδρόμιο Λάρνακας προς Πρωταρά", fromAirport: "Λάρνακα", duration: "50 λεπτά", distance: "65 χλμ", priceFrom: 90 },
   { slug: "/larnaca-airport-transfers", name: "Αεροδρόμιο Λάρνακας προς Λευκωσία", fromAirport: "Λάρνακα", duration: "40 λεπτά", distance: "50 χλμ", priceFrom: 50 },
 ] as const;
 
@@ -52,6 +51,7 @@ function AllTransfersPage() {
         <h2 className="font-display text-3xl font-bold text-navy md:text-4xl">Όλες οι διαδρομές μεταφοράς Κύπρου</h2>
         <p className="mt-3 max-w-2xl text-muted-foreground">
           Παρέχουμε ιδιωτικές μεταφορές αεροδρομίου σε κάθε πόλη, χωριό, ξενοδοχείο και θέρετρο στην Κύπρο.
+          Οι τιμές που εμφανίζονται αφορούν όχημα 4 θέσεων. Για μεγαλύτερα οχήματα ή περισσότερες θέσεις επιβατών, δείτε τη σελίδα τιμών μας.
           Όλες οι παρακάτω τιμές είναι σταθερά σύνολα — περιλαμβάνουν διόδια, παιδικά καθίσματα και υποδοχή.
         </p>
 
