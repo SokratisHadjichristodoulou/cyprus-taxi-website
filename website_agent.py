@@ -1,5 +1,8 @@
 from agents import Agent, Runner, function_tool
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 @function_tool
@@ -155,18 +158,75 @@ Always finish by reporting:
 result = Runner.run_sync(
     agent,
     """
-    Fix ONLY these two meta descriptions:
+    Audit the TaxiCyprus24 website for SEO, GEO, and technical issues.
 
-    1. In src/routes/larnaca-airport-to-ayia-napa.tsx:
-       change €55 to €80 in the meta description.
+    Main business goal:
+    Increase visibility and traffic for Paphos-related searches.
 
-    2. In src/routes/larnaca-airport-to-protaras.tsx:
-       change €60 to €90 in the meta description.
+    Focus on:
 
-    Do not change anything else.
+    1. Paphos SEO
+       - Paphos Airport transfers
+       - Paphos to Coral Bay
+       - Paphos to Peyia
+       - Paphos to Chloraka
+       - Paphos to Limassol
+       - Paphos to Larnaca
+       - Paphos to Nicosia
+
+    2. Technical SEO
+       - broken links
+       - soft 404 risks
+       - missing pages
+       - incorrect redirects
+       - canonical problems
+       - sitemap problems
+       - accidental noindex
+       - duplicate titles/descriptions
+       - weak internal linking
+
+    3. On-page SEO
+       - title tags
+       - meta descriptions
+       - H1/H2 structure
+       - page intent
+       - keyword relevance
+       - local relevance
+       - duplicate or thin content
+
+    4. GEO / AI search visibility
+       - clear business identity
+       - location/service descriptions
+       - structured factual content
+       - FAQ opportunities
+       - schema markup
+       - local entity clarity
+
+    5. Structured data
+       - LocalBusiness
+       - TaxiService
+       - FAQ where appropriate
+       - route/service information
+
+    Rules:
+    - Do not edit anything.
+    - Only audit and report.
+    - Prioritize findings as:
+      HIGH
+      MEDIUM
+      LOW
+    - For each issue say:
+      file/page
+      problem
+      why it matters
+      recommended fix
     """,
-    max_turns=10
+    max_turns=30
 )
 
 
 print(result.final_output)
+Path("seo_audit.txt").write_text(
+    result.final_output,
+    encoding="utf-8"
+)

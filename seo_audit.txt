@@ -1,0 +1,116 @@
+# TaxiCyprus24 SEO/GEO/Technical Audit
+
+## HIGH
+
+### 1. Incorrect sitemap hreflang structure
+- **File/page:** `src/routes/sitemap[.]xml.ts`
+- **Problem:** For each localized URL, the sitemap outputs the same three hreflang alternates, but the route URLs are language-prefixed only in the sitemap. The root app uses one shared `<html lang="en">`, and no route-level language handling was found.
+- **Why it matters:** Search engines may misunderstand language versions and display the wrong page.
+- **Recommended fix:** Verify locale routing and rendered language metadata. Add correct `hreflang` tags per page, including self-referencing alternates, and validate all sitemap URLs return the intended language content.
+
+### 2. Missing Paphos-to-Nicosia route
+- **File/page:** Sitemap and route tree
+- **Problem:** No clear route for Paphos → Nicosia was found.
+- **Why it matters:** This is a stated priority search intent with no dedicated landing page.
+- **Recommended fix:** Create a dedicated page only after confirming the exact route and 4-seater price on `/pricing`.
+
+### 3. No dedicated Paphos-to-Larnaca route
+- **File/page:** Existing page `src/routes/larnaca-airport-to-paphos.tsx`
+- **Problem:** The page targets Larnaca Airport → Paphos, while the reverse Paphos → Larnaca intent is not clearly represented as its own page.
+- **Why it matters:** Directional route searches have distinct intent and may require separate content.
+- **Recommended fix:** Add a dedicated reverse-route page only if it is a valid, distinct pricing-table route.
+
+### 4. Structured data is incomplete for the business entity
+- **File/page:** `src/components/StructuredData.tsx`; route usage
+- **Problem:** The component exists, and FAQ schema is used, but no clear site-wide `LocalBusiness`, `TaxiService`, or comprehensive organization schema was found.
+- **Why it matters:** Search engines and AI systems lack strong machine-readable identity, service-area, and business information.
+- **Recommended fix:** Add validated `LocalBusiness`/`TaxiService` schema with business name, URL, phone, service area, hours, and same-as links. Avoid unsupported claims.
+
+### 5. Potentially misleading route pricing/content
+- **File/page:** `src/routes/taxi-to-coral-bay.tsx`, `taxi-to-peyia.tsx`, `taxi-to-chloraka.tsx`, `taxi-to-limassol.tsx`
+- **Problem:** Several pages state route prices directly. The audit cannot confirm all values against the English `/pricing` source of truth from the files inspected.
+- **Why it matters:** Incorrect structured or visible prices damage trust and can create search-quality and conversion problems.
+- **Recommended fix:** Reconcile every displayed 4-seater price against `/pricing`, matching both origin and destination. Remove or correct any unsupported value.
+
+## MEDIUM
+
+### 6. Paphos landing page lacks Nicosia coverage
+- **File/page:** `src/routes/paphos-airport-transfers.tsx`
+- **Problem:** The page mentions Coral Bay, Peyia, Chloraka, Limassol, and Larnaca, but not Nicosia.
+- **Why it matters:** The primary Paphos hub page should support all priority destinations through visible copy and internal links.
+- **Recommended fix:** Add a factual Paphos-to-Nicosia section and link to a dedicated route page once pricing is verified.
+
+### 7. Weak internal linking for priority routes
+- **File/page:** `src/routes/paphos-airport-transfers.tsx`, `taxi-to-limassol.tsx`, `larnaca-airport-to-paphos.tsx`
+- **Problem:** Paphos hub links to four destination pages but omits Larnaca and Nicosia. Limassol page has limited related links.
+- **Why it matters:** Internal links distribute authority and clarify the route-topic cluster.
+- **Recommended fix:** Build a clear Paphos hub → destination-page structure, including all valid priority routes and reciprocal links.
+
+### 8. Route pages use generic or reused FAQs
+- **File/page:** `taxi-to-coral-bay.tsx`, `taxi-to-peyia.tsx`, `taxi-to-limassol.tsx`, `larnaca-airport-to-paphos.tsx`
+- **Problem:** Most pages reuse `sharedFAQs.slice(0, 6)` rather than route-specific questions.
+- **Why it matters:** Generic FAQs weaken topical relevance and GEO factual coverage.
+- **Recommended fix:** Add unique, route-specific FAQs covering origin, destination, journey time, booking, vehicle capacity, and verified pricing.
+
+### 9. H1/H2 structure requires rendered-page validation
+- **File/page:** `src/components/TransferPage.tsx` and route pages
+- **Problem:** Route files pass titles into a shared component; heading hierarchy is not visible from the inspected route files.
+- **Why it matters:** A shared component could accidentally create multiple H1s or weak heading structure.
+- **Recommended fix:** Confirm each page has one descriptive H1, logical H2 sections, and no heading used solely for styling.
+
+### 10. Global language declaration appears incorrect for localized pages
+- **File/page:** `src/routes/__root.tsx`
+- **Problem:** `<html lang="en">` is hardcoded for all routes, including `/el/*` and `/ru/*`.
+- **Why it matters:** This is a direct language and accessibility signal and may reduce correct regional visibility.
+- **Recommended fix:** Set `lang="el"` and `lang="ru"` for localized route trees.
+
+### 11. Sitemap uses dynamic current date for every URL
+- **File/page:** `src/routes/sitemap[.]xml.ts`
+- **Problem:** Every request assigns today’s date to every URL.
+- **Why it matters:** This can falsely signal that all pages were updated daily and reduce trust in sitemap freshness signals.
+- **Recommended fix:** Use actual content modification dates or omit `<lastmod>` where unavailable.
+
+### 12. Sitemap coverage should be checked against route tree
+- **File/page:** `src/routes/sitemap[.]xml.ts`
+- **Problem:** Sitemap uses manually maintained route arrays, creating risk of missing valid pages or listing incorrect assumptions.
+- **Why it matters:** Missing important URLs limits discovery; stale URLs create crawl waste.
+- **Recommended fix:** Compare sitemap entries programmatically or through a repeatable audit against the generated route tree and live HTTP status responses.
+
+## LOW
+
+### 13. Meta keywords are unnecessary
+- **File/page:** Paphos and route pages
+- **Problem:** Pages include `keywords` meta tags.
+- **Why it matters:** Major search engines generally ignore them; they add maintenance noise.
+- **Recommended fix:** Remove or deprioritize them in favor of unique titles, descriptions, headings, and body content.
+
+### 14. GEO positioning metadata is weakly useful
+- **File/page:** `src/routes/__root.tsx`
+- **Problem:** `geo.region`, `geo.placename`, `geo.position`, and `ICBM` are present, but these are not substitutes for strong entity and service schema.
+- **Why it matters:** They provide limited modern SEO value.
+- **Recommended fix:** Prioritize consistent business schema, service areas, contact details, and factual route content.
+
+### 15. Canonical implementation needs production testing
+- **File/page:** `src/routes/__root.tsx`
+- **Problem:** Canonical URLs are generated client-side from router state.
+- **Why it matters:** If server-rendered HTML does not contain the correct canonical, crawlers may receive incomplete or inconsistent signals.
+- **Recommended fix:** Test raw server responses for every locale, trailing-slash variant, query-string variant, and 404 route.
+
+## Missing audit evidence
+
+The repository inspection did not prove:
+- Live broken links or HTTP redirect chains
+- Actual soft 404 responses
+- Duplicate title/description output across rendered pages
+- Production response status codes
+- Whether all listed sitemap URLs return 200
+- Whether `/pricing` confirms every route price
+- Presence of `LocalBusiness`/`TaxiService` schema in rendered HTML
+
+These require a live crawl, HTTP status check, and rendered HTML/schema validation.
+
+**Files changed:** None.  
+**Exact text replaced:** None.  
+**Old value:** None.  
+**New value:** None.  
+**Unresolved:** Live link/status testing, complete pricing reconciliation, rendered heading/meta duplication checks, and confirmation of production schema output.

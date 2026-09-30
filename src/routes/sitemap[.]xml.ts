@@ -42,7 +42,6 @@ function urlFor(locale: "en" | "el" | "ru", path: string): string {
 }
 
 function buildSitemap(): string {
-  const today = new Date().toISOString().split("T")[0];
   const urls: string[] = [];
 
   for (const path of localizedPaths) {
@@ -55,14 +54,14 @@ function buildSitemap(): string {
         .join("");
       const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${urlFor("en", path)}" />`;
       urls.push(
-        `<url><loc>${urlFor(loc, path)}</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>${path === "/" ? "1.0" : "0.8"}</priority>${links}${xDefault}</url>`,
+        `<url><loc>${urlFor(loc, path)}</loc><changefreq>weekly</changefreq><priority>${path === "/" ? "1.0" : "0.8"}</priority>${links}${xDefault}</url>`,
       );
     }
   }
 
   for (const path of englishOnlyPaths) {
     urls.push(
-      `<url><loc>${urlFor("en", path)}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>`,
+      `<url><loc>${urlFor("en", path)}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`,
     );
   }
 

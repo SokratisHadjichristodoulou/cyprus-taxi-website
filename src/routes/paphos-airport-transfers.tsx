@@ -36,7 +36,8 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
           "Skip long taxi queues, crowded shuttle buses, and shared transfers. Our private Cyprus airport transfer service offers direct door-to-door transport to hotels, villas, resorts, and apartments anywhere in Cyprus — with no waiting and no shared rides.",
           "Your driver will meet you inside the arrivals hall with a personalised name sign, assist with luggage, and escort you directly to a clean, air-conditioned Mercedes-Benz vehicle. Popular transfer times from Paphos Airport include Coral Bay (approximately 25 minutes), Peyia (approximately 30 minutes), Limassol (approximately 50 minutes), and Larnaca (approximately 1 hour 45 minutes).",
           "Every Paphos Airport transfer includes free baby and child seats, complimentary bottled water, flight monitoring, and free cancellation up to 24 hours before pickup. Pay securely online by card or directly to your driver in EUR or GBP.",
-          "Whether you need a taxi from Paphos Airport to Coral Bay, Peyia, Limassol, Larnaca, or any destination in Cyprus, Taxicyprus24 guarantees comfortable, fixed-price private transfers with no hidden fees.",
+          "Whether you need a taxi from Paphos Airport to Coral Bay, Peyia, Limassol, Larnaca, Nicosia, or any destination in Cyprus, Taxicyprus24 guarantees comfortable, fixed-price private transfers with no hidden fees.",
+          "Paphos Airport to Nicosia is listed at €150 for a 4-seater vehicle in our fixed-price table. See the full pricing table for larger vehicle options and other destinations.",
         ]}
         highlights={[
           "Direct from Paphos Airport (PFO)",
@@ -50,6 +51,7 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
           { type: "PFO to Coral Bay", pax: "Up to 4 passengers", price: "€65" },
           { type: "PFO to Limassol", pax: "Up to 4 passengers", price: "€90" },
           { type: "PFO to Larnaca", pax: "Up to 4 passengers", price: "€140" },
+          { type: "PFO to Nicosia", pax: "Up to 4 passengers", price: "€150" },
         ]}
         nearbyAreas={["Coral Bay", "Peyia", "Chloraka", "Kato Paphos", "Paphos Harbour", "Tombs of the Kings", "Geroskipou", "Latchi", "Polis"]}
         faqs={sharedFAQs}
@@ -58,6 +60,7 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
           { to: "/taxi-to-peyia", label: "PFO to Peyia" },
           { to: "/taxi-to-chloraka", label: "PFO to Chloraka" },
           { to: "/taxi-to-limassol", label: "PFO to Limassol" },
+          { to: "/pricing", label: "PFO to Nicosia pricing" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">
