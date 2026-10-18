@@ -16,13 +16,20 @@ const localizedPaths = [
   "/larnaca-airport-to-paphos",
   "/larnaca-airport-to-protaras",
   "/larnaca-airport-transfers",
+  "/paphos-airport-to-larnaca",
+  "/paphos-airport-to-nicosia",
   "/paphos-airport-transfers",
   "/pricing",
   "/reviews",
+  "/taxi-to-aphrodite-hills",
   "/taxi-to-chloraka",
   "/taxi-to-coral-bay",
+  "/taxi-to-kato-paphos",
+  "/taxi-to-kissonerga",
   "/taxi-to-limassol",
   "/taxi-to-peyia",
+  "/taxi-to-pissouri",
+  "/taxi-to-polis-latchi",
 ];
 
 // Date of the last significant content change, per path (applies to every locale of that path).
@@ -32,13 +39,20 @@ const lastModified: Record<string, string> = {
   "/about": "2026-10-18",
   "/larnaca-airport-to-paphos": "2026-10-18",
   "/larnaca-airport-transfers": "2026-10-18",
+  "/paphos-airport-to-larnaca": "2026-10-18",
+  "/paphos-airport-to-nicosia": "2026-10-18",
   "/paphos-airport-transfers": "2026-10-18",
   "/pricing": "2026-10-18",
   "/reviews": "2026-10-18",
+  "/taxi-to-aphrodite-hills": "2026-10-18",
   "/taxi-to-chloraka": "2026-10-18",
   "/taxi-to-coral-bay": "2026-10-18",
+  "/taxi-to-kato-paphos": "2026-10-18",
+  "/taxi-to-kissonerga": "2026-10-18",
   "/taxi-to-limassol": "2026-10-18",
   "/taxi-to-peyia": "2026-10-18",
+  "/taxi-to-pissouri": "2026-10-18",
+  "/taxi-to-polis-latchi": "2026-10-18",
 };
 
 function lastmodTag(path: string): string {

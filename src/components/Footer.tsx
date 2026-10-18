@@ -40,22 +40,43 @@ export function Footer() {
   // Dedicated Paphos Airport destination pages.
   const paphosLinks: Record<"en" | "el" | "ru", { path: string; label: string }[]> = {
     en: [
+      { path: "/taxi-to-kato-paphos", label: "Taxi to Kato Paphos" },
       { path: "/taxi-to-coral-bay", label: "Taxi to Coral Bay" },
       { path: "/taxi-to-peyia", label: "Taxi to Peyia" },
       { path: "/taxi-to-chloraka", label: "Taxi to Chloraka" },
+      { path: "/taxi-to-kissonerga", label: "Taxi to Kissonerga" },
+      { path: "/taxi-to-polis-latchi", label: "Taxi to Polis & Latchi" },
+      { path: "/taxi-to-aphrodite-hills", label: "Taxi to Aphrodite Hills" },
+      { path: "/taxi-to-pissouri", label: "Taxi to Pissouri" },
       { path: "/taxi-to-limassol", label: "Taxi to Limassol" },
+      { path: "/paphos-airport-to-larnaca", label: "Paphos Airport to Larnaca" },
+      { path: "/paphos-airport-to-nicosia", label: "Paphos Airport to Nicosia" },
     ],
     el: [
+      { path: "/taxi-to-kato-paphos", label: "Ταξί προς Κάτω Πάφο" },
       { path: "/taxi-to-coral-bay", label: "Ταξί προς Coral Bay" },
       { path: "/taxi-to-peyia", label: "Ταξί προς Πέγεια" },
       { path: "/taxi-to-chloraka", label: "Ταξί προς Χλώρακα" },
+      { path: "/taxi-to-kissonerga", label: "Ταξί προς Κισσόνεργα" },
+      { path: "/taxi-to-polis-latchi", label: "Ταξί προς Πόλη & Λατσί" },
+      { path: "/taxi-to-aphrodite-hills", label: "Ταξί προς Aphrodite Hills" },
+      { path: "/taxi-to-pissouri", label: "Ταξί προς Πισσούρι" },
       { path: "/taxi-to-limassol", label: "Ταξί προς Λεμεσό" },
+      { path: "/paphos-airport-to-larnaca", label: "Αεροδρόμιο Πάφου προς Λάρνακα" },
+      { path: "/paphos-airport-to-nicosia", label: "Αεροδρόμιο Πάφου προς Λευκωσία" },
     ],
     ru: [
+      { path: "/taxi-to-kato-paphos", label: "Такси в Като-Пафос" },
       { path: "/taxi-to-coral-bay", label: "Такси в Корал-Бей" },
       { path: "/taxi-to-peyia", label: "Такси в Пейю" },
       { path: "/taxi-to-chloraka", label: "Такси в Хлораку" },
+      { path: "/taxi-to-kissonerga", label: "Такси в Киссонергу" },
+      { path: "/taxi-to-polis-latchi", label: "Такси в Полис и Лачи" },
+      { path: "/taxi-to-aphrodite-hills", label: "Такси в Афродита Хиллз" },
+      { path: "/taxi-to-pissouri", label: "Такси в Писсури" },
       { path: "/taxi-to-limassol", label: "Такси в Лимассол" },
+      { path: "/paphos-airport-to-larnaca", label: "Аэропорт Пафоса — Ларнака" },
+      { path: "/paphos-airport-to-nicosia", label: "Аэропорт Пафоса — Никосия" },
     ],
   };
 

@@ -98,10 +98,17 @@ export const Route = createFileRoute("/paphos-airport-transfers")({
         nearbyAreas={["Coral Bay", "Peyia", "Chloraka", "Kato Paphos", "Paphos Harbour", "Tombs of the Kings", "Geroskipou", "Latchi", "Polis"]}
         faqs={paphosAirportFAQs}
         relatedLinks={[
+          { to: "/taxi-to-kato-paphos", label: "Paphos Airport to Kato Paphos" },
           { to: "/taxi-to-coral-bay", label: "Paphos Airport to Coral Bay" },
           { to: "/taxi-to-peyia", label: "Paphos Airport to Peyia" },
           { to: "/taxi-to-chloraka", label: "Paphos Airport to Chloraka" },
+          { to: "/taxi-to-kissonerga", label: "Paphos Airport to Kissonerga" },
+          { to: "/taxi-to-polis-latchi", label: "Paphos Airport to Polis & Latchi" },
+          { to: "/taxi-to-aphrodite-hills", label: "Paphos Airport to Aphrodite Hills" },
+          { to: "/taxi-to-pissouri", label: "Paphos Airport to Pissouri" },
           { to: "/taxi-to-limassol", label: "Paphos Airport to Limassol" },
+          { to: "/paphos-airport-to-larnaca", label: "Paphos Airport to Larnaca" },
+          { to: "/paphos-airport-to-nicosia", label: "Paphos Airport to Nicosia" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">

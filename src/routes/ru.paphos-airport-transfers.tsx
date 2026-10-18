@@ -89,10 +89,17 @@ export const Route = createFileRoute("/ru/paphos-airport-transfers")({
         nearbyAreas={["Корал-Бей", "Пейя", "Хлорака", "Като-Пафос", "Гавань Пафоса", "Гробницы царей", "Героскипу", "Латси", "Полис"]}
         faqs={paphosAirportFAQs}
         relatedLinks={[
+          { to: "/taxi-to-kato-paphos", label: "Аэропорт Пафоса — Като-Пафос" },
           { to: "/taxi-to-coral-bay", label: "Аэропорт Пафоса — Корал-Бей" },
           { to: "/taxi-to-peyia", label: "Аэропорт Пафоса — Пейя" },
           { to: "/taxi-to-chloraka", label: "Аэропорт Пафоса — Хлорака" },
+          { to: "/taxi-to-kissonerga", label: "Аэропорт Пафоса — Киссонерга" },
+          { to: "/taxi-to-polis-latchi", label: "Аэропорт Пафоса — Полис и Лачи" },
+          { to: "/taxi-to-aphrodite-hills", label: "Аэропорт Пафоса — Афродита Хиллз" },
+          { to: "/taxi-to-pissouri", label: "Аэропорт Пафоса — Писсури" },
           { to: "/taxi-to-limassol", label: "Аэропорт Пафоса — Лимассол" },
+          { to: "/paphos-airport-to-larnaca", label: "Аэропорт Пафоса — Ларнака" },
+          { to: "/paphos-airport-to-nicosia", label: "Аэропорт Пафоса — Никосия" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">

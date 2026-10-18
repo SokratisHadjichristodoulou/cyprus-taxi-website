@@ -89,10 +89,17 @@ export const Route = createFileRoute("/el/paphos-airport-transfers")({
         nearbyAreas={["Coral Bay", "Πέγεια", "Χλώρακα", "Κάτω Πάφος", "Λιμάνι Πάφου", "Τάφοι των Βασιλέων", "Γεροσκήπου", "Λάτσι", "Πόλη Χρυσοχούς"]}
         faqs={paphosAirportFAQs}
         relatedLinks={[
+          { to: "/taxi-to-kato-paphos", label: "Αεροδρόμιο Πάφου προς Κάτω Πάφο" },
           { to: "/taxi-to-coral-bay", label: "Αεροδρόμιο Πάφου προς Coral Bay" },
           { to: "/taxi-to-peyia", label: "Αεροδρόμιο Πάφου προς Πέγεια" },
           { to: "/taxi-to-chloraka", label: "Αεροδρόμιο Πάφου προς Χλώρακα" },
+          { to: "/taxi-to-kissonerga", label: "Αεροδρόμιο Πάφου προς Κισσόνεργα" },
+          { to: "/taxi-to-polis-latchi", label: "Αεροδρόμιο Πάφου προς Πόλη & Λατσί" },
+          { to: "/taxi-to-aphrodite-hills", label: "Αεροδρόμιο Πάφου προς Aphrodite Hills" },
+          { to: "/taxi-to-pissouri", label: "Αεροδρόμιο Πάφου προς Πισσούρι" },
           { to: "/taxi-to-limassol", label: "Αεροδρόμιο Πάφου προς Λεμεσό" },
+          { to: "/paphos-airport-to-larnaca", label: "Αεροδρόμιο Πάφου προς Λάρνακα" },
+          { to: "/paphos-airport-to-nicosia", label: "Αεροδρόμιο Πάφου προς Λευκωσία" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">
