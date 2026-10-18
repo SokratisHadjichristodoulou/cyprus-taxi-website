@@ -1,14 +1,14 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { useI18n, withLocale } from "@/lib/i18n";
+import { useI18n, withLocale, type Locale } from "@/lib/i18n";
 import { INSTAGRAM_URL, FACEBOOK_URL } from "@/lib/social";
 
 export function Footer() {
   const { t, locale } = useI18n();
   const wl = (p: string) => withLocale(locale, p);
 
-  const transferLinks: Record<"en" | "el" | "ru", { path: string; label: string }[]> = {
+  const transferLinks: Record<Locale, { path: string; label: string }[]> = {
     en: [
       { path: "/larnaca-airport-to-paphos", label: "Larnaca to Paphos" },
       { path: "/larnaca-airport-transfers", label: "Larnaca Airport" },
@@ -33,12 +33,20 @@ export function Footer() {
       { path: "/larnaca-airport-to-protaras", label: "Ларнака — Протарас" },
       { path: "/cyprus-airport-transfers", label: "Все маршруты" },
     ],
+    de: [
+      { path: "/larnaca-airport-to-paphos", label: "Larnaka – Paphos" },
+      { path: "/larnaca-airport-transfers", label: "Flughafen Larnaka" },
+      { path: "/paphos-airport-transfers", label: "Flughafen Paphos" },
+      { path: "/larnaca-airport-to-ayia-napa", label: "Larnaka – Ayia Napa" },
+      { path: "/larnaca-airport-to-protaras", label: "Larnaka – Protaras" },
+      { path: "/cyprus-airport-transfers", label: "Alle Zypern-Strecken" },
+    ],
   };
 
   const links = transferLinks[locale];
 
   // Dedicated Paphos Airport destination pages.
-  const paphosLinks: Record<"en" | "el" | "ru", { path: string; label: string }[]> = {
+  const paphosLinks: Record<Locale, { path: string; label: string }[]> = {
     en: [
       { path: "/taxi-to-kato-paphos", label: "Taxi to Kato Paphos" },
       { path: "/taxi-to-coral-bay", label: "Taxi to Coral Bay" },
@@ -78,12 +86,26 @@ export function Footer() {
       { path: "/paphos-airport-to-larnaca", label: "Аэропорт Пафоса — Ларнака" },
       { path: "/paphos-airport-to-nicosia", label: "Аэропорт Пафоса — Никосия" },
     ],
+    de: [
+      { path: "/taxi-to-kato-paphos", label: "Taxi nach Kato Paphos" },
+      { path: "/taxi-to-coral-bay", label: "Taxi nach Coral Bay" },
+      { path: "/taxi-to-peyia", label: "Taxi nach Peyia" },
+      { path: "/taxi-to-chloraka", label: "Taxi nach Chloraka" },
+      { path: "/taxi-to-kissonerga", label: "Taxi nach Kissonerga" },
+      { path: "/taxi-to-polis-latchi", label: "Taxi nach Polis & Latchi" },
+      { path: "/taxi-to-aphrodite-hills", label: "Taxi nach Aphrodite Hills" },
+      { path: "/taxi-to-pissouri", label: "Taxi nach Pissouri" },
+      { path: "/taxi-to-limassol", label: "Taxi nach Limassol" },
+      { path: "/paphos-airport-to-larnaca", label: "Flughafen Paphos – Larnaka" },
+      { path: "/paphos-airport-to-nicosia", label: "Flughafen Paphos – Nikosia" },
+    ],
   };
 
-  const paphosLinksTitle: Record<"en" | "el" | "ru", string> = {
+  const paphosLinksTitle: Record<Locale, string> = {
     en: "Paphos transfers",
     el: "Μεταφορές από Πάφο",
     ru: "Трансферы из Пафоса",
+    de: "Transfers ab Paphos",
   };
 
   return (

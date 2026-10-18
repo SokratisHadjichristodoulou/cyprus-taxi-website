@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import "@tanstack/start-client-core";
+import { LOCALES, hasLocalePage, type Locale } from "@/lib/i18n";
 
 const SITE = "https://taxicyprus24.com";
 
-// Pages that exist in all 3 locales (en + el + ru)
+// Pages that exist in en + el + ru (and in de when listed in GERMAN_PATHS, src/lib/i18n.ts)
 const localizedPaths = [
   "/",
   "/about",
@@ -70,7 +71,7 @@ const englishOnlyPaths = [
   "/blog/top-hotels-villas-coral-bay-peyia",
 ];
 
-function urlFor(locale: "en" | "el" | "ru", path: string): string {
+function urlFor(locale: Locale, path: string): string {
   if (locale === "en") return `${SITE}${path === "/" ? "" : path}` || `${SITE}/`;
   return `${SITE}/${locale}${path === "/" ? "" : path}`;
 }
@@ -79,8 +80,10 @@ function buildSitemap(): string {
   const urls: string[] = [];
 
   for (const path of localizedPaths) {
-    for (const loc of ["en", "el", "ru"] as const) {
-      const links = (["en", "el", "ru"] as const)
+    // hreflang alternates only for locales that really have this page (German is partial)
+    const locales = LOCALES.filter((l) => hasLocalePage(l, path));
+    for (const loc of locales) {
+      const links = locales
         .map(
           (alt) =>
             `<xhtml:link rel="alternate" hreflang="${alt}" href="${urlFor(alt, path)}" />`,

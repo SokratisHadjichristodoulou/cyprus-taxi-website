@@ -20,6 +20,9 @@ export function PriceTable({ pricing, title, subtitle, linkMap }: Props) {
   const seater6 = t("price.seater6");
   const seater12 = t("price.seater12");
 
+  // German writes the currency after the amount ("35 €").
+  const money = (n: number) => (locale === "de" ? `${n} €` : `€${n}`);
+
   const destinationLabel = (destination: string) => {
     const path = linkMap?.[destination];
     if (!path) return destination;
@@ -72,9 +75,9 @@ export function PriceTable({ pricing, title, subtitle, linkMap }: Props) {
                   <div className="font-semibold text-navy">{destinationLabel(d.destination)}</div>
                   {d.note && <div className="text-xs text-muted-foreground">{d.note}</div>}
                 </td>
-                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["4 Seater"] > 0 ? `€${d.prices["4 Seater"]}` : "—"}</td>
-                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["6 Seater"] > 0 ? `€${d.prices["6 Seater"]}` : "—"}</td>
-                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["12 Seater"] > 0 ? `€${d.prices["12 Seater"]}` : "—"}</td>
+                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["4 Seater"] > 0 ? money(d.prices["4 Seater"]) : "—"}</td>
+                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["6 Seater"] > 0 ? money(d.prices["6 Seater"]) : "—"}</td>
+                <td className="px-5 py-3.5 font-display text-base font-bold text-navy">{d.prices["12 Seater"] > 0 ? money(d.prices["12 Seater"]) : "—"}</td>
               </tr>
             ))}
           </tbody>
@@ -97,7 +100,7 @@ export function PriceTable({ pricing, title, subtitle, linkMap }: Props) {
                 {(["4 Seater", "6 Seater", "12 Seater"] as const).map((v) => (
                   <div key={v} className="rounded-lg bg-card p-2">
                     <div className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">{seaterLabels[v]}</div>
-                    <div className="mt-0.5 font-display text-base font-bold text-navy">{d.prices[v] > 0 ? `€${d.prices[v]}` : "—"}</div>
+                    <div className="mt-0.5 font-display text-base font-bold text-navy">{d.prices[v] > 0 ? money(d.prices[v]) : "—"}</div>
                   </div>
                 ))}
               </div>
