@@ -1,9 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MessageCircle } from "lucide-react";
-import { useI18n, withLocale } from "@/lib/i18n";
+import { useI18n, withLocale, type Locale } from "@/lib/i18n";
+
+const LABELS: Record<Locale, { call: string; book: string }> = {
+  en: { call: "Call", book: "Book Transfer" },
+  el: { call: "Κλήση", book: "Κράτηση" },
+  ru: { call: "Позвонить", book: "Заказать" },
+  de: { call: "Anrufen", book: "Transfer buchen" },
+};
 
 export function MobileBookingBar() {
-  const { isGreek, locale } = useI18n();
+  const { locale } = useI18n();
+  const labels = LABELS[locale];
   const contactPath = withLocale(locale, "/contact");
 
   return (
@@ -13,7 +21,7 @@ export function MobileBookingBar() {
           href="tel:+35796626844"
           className="flex flex-1 items-center justify-center gap-2 rounded-full border border-border bg-background px-4 py-3 text-sm font-semibold text-navy"
         >
-          <Phone className="h-4 w-4" /> {isGreek ? "Κλήση" : "Call"}
+          <Phone className="h-4 w-4" /> {labels.call}
         </a>
         <a
           href="https://wa.me/35796626844"
@@ -27,7 +35,7 @@ export function MobileBookingBar() {
           to={contactPath}
           className="flex flex-[1.4] items-center justify-center rounded-full bg-navy px-4 py-3 text-sm font-semibold text-[color:var(--navy-foreground)]"
         >
-          {isGreek ? "Κράτηση" : "Book Transfer"}
+          {labels.book}
         </Link>
       </div>
     </div>

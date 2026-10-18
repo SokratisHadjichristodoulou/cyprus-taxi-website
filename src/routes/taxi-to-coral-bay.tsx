@@ -2,24 +2,65 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import coralBayImg from "@/assets/dest-coral-bay.jpg";
 import { TransferPage } from "@/components/TransferPage";
-import { sharedFAQs } from "@/lib/faqs";
+
+const coralBayFAQs = [
+  {
+    q: "How much is a taxi from Paphos Airport to Coral Bay?",
+    a: "A private taxi from Paphos Airport to Coral Bay costs a fixed €65 in a 4-seater car (up to 4 passengers), €85 in a 6-seater van and €120 in a 12-seater van. The price is per vehicle, not per person, and includes meet & greet, flight tracking, luggage and free child seats.",
+  },
+  {
+    q: "How much is a taxi from Larnaca Airport to Coral Bay?",
+    a: "From Larnaca Airport the fixed price to Coral Bay is €170 in a 4-seater car, €200 in a 6-seater van and €270 in a 12-seater van. Meet & greet and flight tracking are included — no hidden fees.",
+  },
+  {
+    q: "How long is the transfer from Paphos Airport to Coral Bay?",
+    a: "Around 25–30 minutes, depending on traffic and where in Coral Bay you are staying. From Larnaca Airport, allow about 1 hour 40 minutes via the A6 motorway.",
+  },
+  {
+    q: "Can I book a return transfer from Coral Bay to Paphos Airport?",
+    a: "Yes. The return trip from Coral Bay to Paphos Airport costs the same fixed price as the arrival transfer, and the same applies to Larnaca Airport. Book both legs together and we will agree a pickup time that gets you to the airport in good time for your flight.",
+  },
+  {
+    q: "Do you drop off at hotels and villas in Coral Bay?",
+    a: "Yes — every transfer is door-to-door. We take you to Coral Bay hotels such as Coral Beach Hotel & Resort, to holiday apartments and to private villas in Coral Bay and on the Peyia hillside. Send us the address or a map pin when you book.",
+  },
+  {
+    q: "Where will the driver meet me at Paphos Airport?",
+    a: "Your driver waits in the arrivals hall with a name sign, helps with your luggage and walks you to the car. Up to 60 minutes of waiting after landing is free, and we track your flight, so a delay never costs extra.",
+  },
+  {
+    q: "Which vehicle do I need for a family or group going to Coral Bay?",
+    a: "Up to 4 passengers travel in the 4-seater car (€65 from Paphos Airport), 5–6 passengers in the 6-seater van (€85) and groups of 7–12 in the 12-seater van (€120). Baby, child and booster seats are free — just tell us the children's ages.",
+  },
+  {
+    q: "Is the Coral Bay transfer available at night?",
+    a: "Yes. We operate 24/7, so late-night and early-morning flights are covered at the same fixed price — there is no night surcharge.",
+  },
+];
 
 export const Route = createFileRoute("/taxi-to-coral-bay")({
   head: () => ({
     meta: [
-      { title: "Taxi to Coral Bay from €65 — Airport Transfers | Taxi Cyprus 24" },
-      { name: "description", content: "Private taxi to Coral Bay from Paphos Airport (€65) and Larnaca Airport (€170). Fixed price, meet & greet, free child seats, 24/7 booking." },
-      { property: "og:title", content: "Taxi to Coral Bay from €65" },
-      { property: "og:description", content: "Private fixed-price airport taxi to Coral Bay, Cyprus." },
+      { title: "Paphos Airport to Coral Bay Taxi – Fixed €65 | Taxi Cyprus 24" },
+      {
+        name: "description",
+        content:
+          "Taxi from Paphos Airport to Coral Bay at a fixed €65 (4 seats) or €85 (6 seats); from Larnaca Airport €170. Meet & greet, free child seats, 24/7.",
+      },
+      { property: "og:title", content: "Paphos Airport to Coral Bay Taxi – Fixed €65" },
+      {
+        property: "og:description",
+        content:
+          "Private fixed-price taxi from Paphos Airport and Larnaca Airport to Coral Bay, Cyprus.",
+      },
       { property: "og:image", content: coralBayImg },
       { name: "twitter:image", content: coralBayImg },
-      { name: "keywords", content: "taxi to Coral Bay, Coral Bay airport transfer, Paphos airport to Coral Bay" },
     ],
   }),
   component: () => (
     <TransferPage
       eyebrow="Airport to Coral Bay"
-      title="Private Taxi Transfer to Coral Bay"
+      title="Paphos Airport to Coral Bay Taxi Transfer"
       subtitle="Fixed-price airport transfers to Coral Bay from Paphos and Larnaca airports. Private Mercedes-Benz, meet & greet, free child seats."
       heroImage={heroImg}
       galleryImage={coralBayImg}
@@ -44,7 +85,7 @@ export const Route = createFileRoute("/taxi-to-coral-bay")({
         { type: "Larnaca Airport to Coral Bay (Van)", pax: "Up to 6 passengers", price: "€200" },
       ]}
       nearbyAreas={["Coral Beach Hotel", "Mayfair Coral Bay", "Corallia Beach", "Akamas Peninsula", "Sea Caves", "Peyia"]}
-      faqs={sharedFAQs.slice(0, 6)}
+      faqs={coralBayFAQs}
       relatedLinks={[
         { to: "/taxi-to-peyia", label: "Taxi to Peyia" },
         { to: "/taxi-to-chloraka", label: "Taxi to Chloraka" },

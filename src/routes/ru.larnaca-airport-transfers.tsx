@@ -4,6 +4,7 @@ import larnacaImg from "@/assets/dest-larnaca.jpg";
 import { TransferPage } from "@/components/TransferPage";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromLarnaca } from "@/lib/pricing";
+import { larnacaRouteLinks } from "@/lib/route-links";
 import { sharedFAQsRu } from "@/lib/faqs.ru";
 
 export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
@@ -26,7 +27,7 @@ export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
         subtitle="Частные трансферы по фиксированной цене из международного аэропорта Ларнаки в Пафос, Лимассол, Айя-Напу, Протарас, Никосию и любое направление Кипра."
         heroImage={heroImg}
         galleryImage={larnacaImg}
-        defaultPickup="Аэропорт Ларнаки"
+        defaultPickup="Larnaca Airport"
         fromLocation="Аэропорт Ларнаки"
         toLocation="Весь Кипр"
         duration="15 мин – 1ч 45м"
@@ -56,6 +57,7 @@ export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
       <section className="container-tight pb-16 md:pb-20">
         <PriceTable
           pricing={pricingFromLarnaca}
+          linkMap={larnacaRouteLinks}
           subtitle="Итог за автомобиль. Та же фиксированная цена 24/7 — отслеживание рейса и встреча включены."
         />
       </section>

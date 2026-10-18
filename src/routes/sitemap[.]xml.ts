@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import "@tanstack/start-client-core";
+import { LOCALES, hasLocalePage, type Locale } from "@/lib/i18n";
 
 const SITE = "https://taxicyprus24.com";
 
-// Pages that exist in all 3 locales (en + el + ru)
+// Pages that exist in en + el + ru (and in de when listed in GERMAN_PATHS, src/lib/i18n.ts)
 const localizedPaths = [
   "/",
   "/about",
@@ -16,14 +17,48 @@ const localizedPaths = [
   "/larnaca-airport-to-paphos",
   "/larnaca-airport-to-protaras",
   "/larnaca-airport-transfers",
+  "/paphos-airport-to-larnaca",
+  "/paphos-airport-to-nicosia",
   "/paphos-airport-transfers",
   "/pricing",
   "/reviews",
+  "/taxi-to-aphrodite-hills",
   "/taxi-to-chloraka",
   "/taxi-to-coral-bay",
+  "/taxi-to-kato-paphos",
+  "/taxi-to-kissonerga",
   "/taxi-to-limassol",
   "/taxi-to-peyia",
+  "/taxi-to-pissouri",
+  "/taxi-to-polis-latchi",
 ];
+
+// Date of the last significant content change, per path (applies to every locale of that path).
+// Only list pages whose content really changed — never stamp every URL with today's date.
+const lastModified: Record<string, string> = {
+  "/": "2026-10-18",
+  "/about": "2026-10-18",
+  "/larnaca-airport-to-paphos": "2026-10-18",
+  "/larnaca-airport-transfers": "2026-10-18",
+  "/paphos-airport-to-larnaca": "2026-10-18",
+  "/paphos-airport-to-nicosia": "2026-10-18",
+  "/paphos-airport-transfers": "2026-10-18",
+  "/pricing": "2026-10-18",
+  "/reviews": "2026-10-18",
+  "/taxi-to-aphrodite-hills": "2026-10-18",
+  "/taxi-to-chloraka": "2026-10-18",
+  "/taxi-to-coral-bay": "2026-10-18",
+  "/taxi-to-kato-paphos": "2026-10-18",
+  "/taxi-to-kissonerga": "2026-10-18",
+  "/taxi-to-limassol": "2026-10-18",
+  "/taxi-to-peyia": "2026-10-18",
+  "/taxi-to-pissouri": "2026-10-18",
+  "/taxi-to-polis-latchi": "2026-10-18",
+};
+
+function lastmodTag(path: string): string {
+  return lastModified[path] ? `<lastmod>${lastModified[path]}</lastmod>` : "";
+}
 
 // English-only routes (blog posts)
 const englishOnlyPaths = [
@@ -36,7 +71,7 @@ const englishOnlyPaths = [
   "/blog/top-hotels-villas-coral-bay-peyia",
 ];
 
-function urlFor(locale: "en" | "el" | "ru", path: string): string {
+function urlFor(locale: Locale, path: string): string {
   if (locale === "en") return `${SITE}${path === "/" ? "" : path}` || `${SITE}/`;
   return `${SITE}/${locale}${path === "/" ? "" : path}`;
 }
@@ -45,8 +80,10 @@ function buildSitemap(): string {
   const urls: string[] = [];
 
   for (const path of localizedPaths) {
-    for (const loc of ["en", "el", "ru"] as const) {
-      const links = (["en", "el", "ru"] as const)
+    // hreflang alternates only for locales that really have this page (German is partial)
+    const locales = LOCALES.filter((l) => hasLocalePage(l, path));
+    for (const loc of locales) {
+      const links = locales
         .map(
           (alt) =>
             `<xhtml:link rel="alternate" hreflang="${alt}" href="${urlFor(alt, path)}" />`,
@@ -54,14 +91,14 @@ function buildSitemap(): string {
         .join("");
       const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${urlFor("en", path)}" />`;
       urls.push(
-        `<url><loc>${urlFor(loc, path)}</loc><changefreq>weekly</changefreq><priority>${path === "/" ? "1.0" : "0.8"}</priority>${links}${xDefault}</url>`,
+        `<url><loc>${urlFor(loc, path)}</loc>${lastmodTag(path)}<changefreq>weekly</changefreq><priority>${path === "/" ? "1.0" : "0.8"}</priority>${links}${xDefault}</url>`,
       );
     }
   }
 
   for (const path of englishOnlyPaths) {
     urls.push(
-      `<url><loc>${urlFor("en", path)}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`,
+      `<url><loc>${urlFor("en", path)}</loc>${lastmodTag(path)}<changefreq>monthly</changefreq><priority>0.6</priority></url>`,
     );
   }
 

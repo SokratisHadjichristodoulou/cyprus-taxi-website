@@ -9,6 +9,7 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 import { StructuredData } from "@/components/StructuredData";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
+import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 
 export const Route = createFileRoute("/el/pricing")({
   head: () => ({
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/el/pricing")({
       {
         name: "description",
         content:
-          "Πλήρης τιμοκατάλογος για ιδιωτικές μεταφορές αεροδρομίου Κύπρου από Πάφο (PFO) και Λάρνακα (LCA). Σταθερά σύνολα ανά όχημα — διόδια, παιδικά καθίσματα & υποδοχή.",
+          "Πλήρης τιμοκατάλογος για ιδιωτικές μεταφορές αεροδρομίου Κύπρου από Πάφο (PFO) και Λάρνακα (LCA). Σταθερά σύνολα ανά όχημα — παιδικά καθίσματα & υποδοχή.",
       },
       { property: "og:title", content: "Τιμές Μεταφορών Ταξί Κύπρου — Σταθερές Τιμές" },
       {
@@ -28,11 +29,6 @@ export const Route = createFileRoute("/el/pricing")({
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: heroImg },
-      {
-        name: "keywords",
-        content:
-          "τιμές ταξί Κύπρος, τιμή ταξί αεροδρόμιο Πάφου, κόστος μεταφοράς αεροδρόμιο Λάρνακας, τιμές μεταφορών Κύπρος",
-      },
     ],
   }),
   component: PricingPage,
@@ -65,10 +61,12 @@ function PricingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <PriceTable
             pricing={pricingFromPaphos}
+            linkMap={paphosRouteLinks}
             subtitle="Από/προς το Διεθνές Αεροδρόμιο Πάφου (PFO) σε προορισμούς σε όλη την Κύπρο."
           />
           <PriceTable
             pricing={pricingFromLarnaca}
+            linkMap={larnacaRouteLinks}
             subtitle="Από/προς το Διεθνές Αεροδρόμιο Λάρνακας (LCA) σε προορισμούς σε όλη την Κύπρο."
           />
         </div>
@@ -76,7 +74,7 @@ function PricingPage() {
         <div className="mt-10 rounded-2xl border border-border bg-secondary/30 p-6 text-sm text-muted-foreground md:p-8">
           <p>
             <strong className="text-navy">Όλες οι τιμές είναι σύνολο ανά όχημα</strong> (όχι ανά
-            άτομο) και περιλαμβάνουν διόδια, παιδικά & booster καθίσματα, υποδοχή στις αφίξεις,
+            άτομο) και περιλαμβάνουν παιδικά & booster καθίσματα, υποδοχή στις αφίξεις,
             παρακολούθηση πτήσης και δωρεάν αναμονή 60 λεπτών μετά την προσγείωση. Πληρωμή online
             με κάρτα, τραπεζικό έμβασμα ή μετρητά (EUR/GBP) απευθείας στον οδηγό.
           </p>

@@ -19,6 +19,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
+import { aggregateRating } from "@/lib/reviews";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { sharedFAQsRu } from "@/lib/faqs.ru";
 
@@ -40,7 +41,6 @@ export const Route = createFileRoute("/ru/")({
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "ru_RU" },
       { name: "twitter:image", content: heroImg },
-      { name: "keywords", content: "такси Кипр, такси аэропорт Ларнака, такси аэропорт Пафос, трансфер аэропорт Кипр, частное такси Кипр" },
     ],
   }),
   component: HomePage,
@@ -84,7 +84,7 @@ function HomePage() {
             name: "Taxi Cyprus 24",
             telephone: "+35796626844",
             url: "https://taxicyprus24.com",
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "1247" },
+            aggregateRating,
           },
         }}
       />

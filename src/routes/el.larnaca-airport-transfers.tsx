@@ -4,6 +4,7 @@ import larnacaImg from "@/assets/dest-larnaca.jpg";
 import { TransferPage } from "@/components/TransferPage";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromLarnaca } from "@/lib/pricing";
+import { larnacaRouteLinks } from "@/lib/route-links";
 import { sharedFAQsEl } from "@/lib/faqs.el";
 
 export const Route = createFileRoute("/el/larnaca-airport-transfers")({
@@ -26,7 +27,7 @@ export const Route = createFileRoute("/el/larnaca-airport-transfers")({
         subtitle="Ιδιωτικές μεταφορές με σταθερή τιμή από το Διεθνές Αεροδρόμιο Λάρνακας προς Πάφο, Λεμεσό, Αγία Νάπα, Πρωταρά, Λευκωσία και κάθε προορισμό στην Κύπρο."
         heroImage={heroImg}
         galleryImage={larnacaImg}
-        defaultPickup="Αεροδρόμιο Λάρνακας"
+        defaultPickup="Larnaca Airport"
         fromLocation="Αεροδρόμιο Λάρνακας"
         toLocation="Όλη η Κύπρος"
         duration="15 λ – 1ω 45λ"
@@ -56,6 +57,7 @@ export const Route = createFileRoute("/el/larnaca-airport-transfers")({
       <section className="container-tight pb-16 md:pb-20">
         <PriceTable
           pricing={pricingFromLarnaca}
+          linkMap={larnacaRouteLinks}
           subtitle="Σύνολο ανά όχημα. Ίδια σταθερή τιμή 24/7 — παρακολούθηση πτήσης και υποδοχή περιλαμβάνονται."
         />
       </section>

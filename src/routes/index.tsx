@@ -23,6 +23,7 @@ import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
 import { SocialSection } from "@/components/SocialSection";
 import { INSTAGRAM_URL, FACEBOOK_URL } from "@/lib/social";
+import { aggregateRating, TRIPADVISOR_URL } from "@/lib/reviews";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,7 +42,6 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:image", content: heroImg },
       { name: "twitter:image", content: heroImg },
-      { name: "keywords", content: "Cyprus airport taxi, Larnaca airport taxi, Paphos airport transfer, Cyprus taxi service, Larnaca to Paphos taxi" },
     ],
     links: [
       { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
@@ -126,14 +126,8 @@ function HomePage() {
                 geoRadius: "120000",
               },
               knowsLanguage: ["en", "el", "ru"],
-              sameAs: ["https://wa.me/35796626844", INSTAGRAM_URL, FACEBOOK_URL],
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "1247",
-                bestRating: "5",
-                worstRating: "1",
-              },
+              sameAs: ["https://wa.me/35796626844", INSTAGRAM_URL, FACEBOOK_URL, TRIPADVISOR_URL],
+              aggregateRating,
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Cyprus Airport Transfer Routes",

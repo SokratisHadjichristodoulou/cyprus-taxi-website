@@ -13,7 +13,6 @@ export const Route = createFileRoute("/larnaca-airport-to-paphos")({
       { property: "og:description", content: "Private fixed-price Larnaca Airport to Paphos transfer with meet & greet." },
       { property: "og:image", content: paphosImg },
       { name: "twitter:image", content: paphosImg },
-      { name: "keywords", content: "Larnaca airport to Paphos taxi, taxi from Larnaca airport to Paphos, Larnaca Paphos transfer" },
     ],
   }),
   component: () => (
@@ -24,7 +23,7 @@ export const Route = createFileRoute("/larnaca-airport-to-paphos")({
       heroImage={heroImg}
       galleryImage={paphosImg}
       defaultPickup="Larnaca Airport"
-      defaultDropoff="Paphos"
+      defaultDropoff="Paphos Town"
       fromLocation="Larnaca Airport"
       toLocation="Paphos"
       duration="1h 30m"
@@ -52,7 +51,7 @@ export const Route = createFileRoute("/larnaca-airport-to-paphos")({
       relatedLinks={[
         { to: "/taxi-to-coral-bay", label: "Larnaca to Coral Bay" },
         { to: "/taxi-to-peyia", label: "Larnaca to Peyia" },
-        { to: "/taxi-to-limassol", label: "Larnaca to Limassol" },
+        { to: "/taxi-to-limassol", label: "Paphos Airport to Limassol" },
         { to: "/paphos-airport-transfers", label: "Paphos Airport Transfers" },
       ]}
     />

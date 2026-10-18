@@ -9,6 +9,7 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 import { StructuredData } from "@/components/StructuredData";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
+import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 
 export const Route = createFileRoute("/ru/pricing")({
   head: () => ({
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/ru/pricing")({
       {
         name: "description",
         content:
-          "Полный прайс-лист на частные трансферы из аэропортов Кипра — Пафос (PFO) и Ларнака (LCA). Фиксированные итоги за автомобиль — включая дороги, детские кресла и встречу.",
+          "Полный прайс-лист на частные трансферы из аэропортов Кипра — Пафос (PFO) и Ларнака (LCA). Фиксированные итоги за автомобиль — включая детские кресла и встречу.",
       },
       { property: "og:title", content: "Цены на трансферы из аэропортов Кипра — фиксированные тарифы" },
       {
@@ -28,10 +29,6 @@ export const Route = createFileRoute("/ru/pricing")({
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "ru_RU" },
       { name: "twitter:image", content: heroImg },
-      {
-        name: "keywords",
-        content: "цены такси Кипр, стоимость такси аэропорт Пафос, тариф трансфер Ларнака, цены трансфер Кипр",
-      },
     ],
   }),
   component: PricingPage,
@@ -63,17 +60,19 @@ function PricingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <PriceTable
             pricing={pricingFromPaphos}
+            linkMap={paphosRouteLinks}
             subtitle="Из/в международный аэропорт Пафоса (PFO) — направления по всему Кипру."
           />
           <PriceTable
             pricing={pricingFromLarnaca}
+            linkMap={larnacaRouteLinks}
             subtitle="Из/в международный аэропорт Ларнаки (LCA) — направления по всему Кипру."
           />
         </div>
 
         <div className="mt-10 rounded-2xl border border-border bg-secondary/30 p-6 text-sm text-muted-foreground md:p-8">
           <p>
-            <strong className="text-navy">Все цены — итог за автомобиль</strong> (не за пассажира) и включают дороги,
+            <strong className="text-navy">Все цены — итог за автомобиль</strong> (не за пассажира) и включают
             детские и бустер-кресла, встречу в зале прилёта, отслеживание рейса и бесплатное ожидание 60 минут после
             посадки. Оплата онлайн картой, банковским переводом или наличными (EUR/GBP) напрямую водителю.
           </p>

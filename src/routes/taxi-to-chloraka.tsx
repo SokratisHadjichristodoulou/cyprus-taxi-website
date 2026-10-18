@@ -6,11 +6,11 @@ import { TransferPage } from "@/components/TransferPage";
 const chlorakaFAQs = [
   {
     q: "How much is a taxi from Larnaca Airport to Chloraka?",
-    a: "Taxicyprus24 offers fixed-price private transfers from Larnaca International Airport to Chloraka from €140 in a Mercedes E-Class sedan (up to 4 passengers) and from €180 in a 6-seater premium van. The price includes motorway tolls, luggage, free child seats, flight monitoring and meet & greet at the airport — no hidden fees.",
+    a: "Taxicyprus24 offers fixed-price private transfers from Larnaca International Airport to Chloraka from €140 in a Mercedes E-Class sedan (up to 4 passengers) and from €180 in a 6-seater premium van. The price includes luggage, free child seats, flight monitoring and meet & greet at the airport — no hidden fees.",
   },
   {
     q: "How much is a taxi from Paphos Airport to Chloraka?",
-    a: "A private taxi from Paphos International Airport to Chloraka starts from €45 in a Mercedes E-Class sedan (up to 4 passengers) and from €60 in a 6-seater premium van. All Taxicyprus24 quotes are fixed and include tolls, luggage, free child seats and meet & greet — exactly the price you book is the price you pay.",
+    a: "A private taxi from Paphos International Airport to Chloraka starts from €45 in a Mercedes E-Class sedan (up to 4 passengers) and from €60 in a 6-seater premium van. All Taxicyprus24 quotes are fixed and include luggage, free child seats and meet & greet — exactly the price you book is the price you pay.",
   },
   {
     q: "How long does the transfer to Chloraka take?",
@@ -41,16 +41,13 @@ const chlorakaFAQs = [
 export const Route = createFileRoute("/taxi-to-chloraka")({
   head: () => ({
     meta: [
-      {
-        title:
-          "Taxi to Chloraka from €45 — Larnaca & Paphos Airport Transfers | Taxi Cyprus 24",
-      },
+      { title: "Paphos Airport to Chloraka Taxi – Fixed €45 | Taxi Cyprus 24" },
       {
         name: "description",
         content:
-          "Fixed-price private taxi to Chloraka from Paphos Airport (€45) and Larnaca Airport (€140). Meet & greet, flight monitoring, free child seats, 24/7 booking.",
+          "Taxi from Paphos Airport to Chloraka at a fixed €45 (4 seats) or €60 (6 seats); from Larnaca Airport €140. Door-to-door, meet & greet, free child seats, 24/7.",
       },
-      { property: "og:title", content: "Taxi to Chloraka from €45 — Cyprus Airport Transfers" },
+      { property: "og:title", content: "Paphos Airport to Chloraka Taxi – Fixed €45" },
       {
         property: "og:description",
         content:
@@ -58,21 +55,16 @@ export const Route = createFileRoute("/taxi-to-chloraka")({
       },
       { property: "og:image", content: chlorakaImg },
       { name: "twitter:image", content: chlorakaImg },
-      {
-        name: "keywords",
-        content:
-          "Chloraka airport taxi, Larnaca airport to Chloraka, Paphos airport to Chloraka, Chloraka taxi transfer, taxi to Chloraka villa, Cyprus airport transfer Chloraka",
-      },
     ],
   }),
   component: () => (
     <TransferPage
       eyebrow="Larnaca & Paphos airport to Chloraka"
-      title="Private Taxi Transfer to Chloraka"
+      title="Paphos Airport to Chloraka Taxi Transfer"
       subtitle="Fixed-price airport transfers from Larnaca and Paphos to Chloraka in a luxury Mercedes-Benz. Door-to-door, meet & greet, free child seats — book in minutes."
       heroImage={heroImg}
       galleryImage={chlorakaImg}
-      defaultDropoff="Chloraka"
+      defaultDropoff="Chlorakas / Empa"
       fromLocation="Paphos / Larnaca"
       toLocation="Chloraka"
       duration="25 min / 1h 40m"

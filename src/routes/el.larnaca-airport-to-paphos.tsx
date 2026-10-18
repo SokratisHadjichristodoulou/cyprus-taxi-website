@@ -23,8 +23,8 @@ export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
       subtitle="Ιδιωτικές μεταφορές σταθερής τιμής από το Διεθνές Αεροδρόμιο Λάρνακας προς Πάφο σε πολυτελές Mercedes-Benz. Υποδοχή στις αφίξεις, δωρεάν παιδικά καθίσματα, παρακολούθηση πτήσης."
       heroImage={heroImg}
       galleryImage={paphosImg}
-      defaultPickup="Αεροδρόμιο Λάρνακας"
-      defaultDropoff="Πάφος"
+      defaultPickup="Larnaca Airport"
+      defaultDropoff="Paphos Town"
       fromLocation="Αεροδρόμιο Λάρνακας"
       toLocation="Πάφος"
       duration="1ω 30λ"
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
       relatedLinks={[
         { to: "/taxi-to-coral-bay", label: "Λάρνακα προς Coral Bay" },
         { to: "/taxi-to-peyia", label: "Λάρνακα προς Πέγεια" },
-        { to: "/taxi-to-limassol", label: "Λάρνακα προς Λεμεσό" },
+        { to: "/taxi-to-limassol", label: "Αεροδρόμιο Πάφου προς Λεμεσό" },
         { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
       ]}
     />

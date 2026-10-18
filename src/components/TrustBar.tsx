@@ -1,28 +1,48 @@
 import { Star } from "lucide-react";
-import { useI18n } from "@/lib/i18n";
+import { useI18n, type Locale } from "@/lib/i18n";
+
+const LABELS: Record<
+  Locale,
+  { happy: string; rating: string; available: string; pricing: string; fixed: string }
+> = {
+  en: {
+    happy: "Happy customers",
+    rating: "TripAdvisor rating",
+    available: "Available",
+    pricing: "Pricing",
+    fixed: "Fixed",
+  },
+  el: {
+    happy: "Ικανοποιημένοι πελάτες",
+    rating: "Βαθμολογία TripAdvisor",
+    available: "Διαθέσιμοι",
+    pricing: "Τιμολόγηση",
+    fixed: "Σταθερές",
+  },
+  ru: {
+    happy: "Довольных клиентов",
+    rating: "Рейтинг TripAdvisor",
+    available: "Работаем",
+    pricing: "Цены",
+    fixed: "Фиксированные",
+  },
+  de: {
+    happy: "Zufriedene Kunden",
+    rating: "TripAdvisor-Bewertung",
+    available: "Erreichbar",
+    pricing: "Preise",
+    fixed: "Festpreise",
+  },
+};
 
 export function TrustBar() {
-  const { isGreek } = useI18n();
-  const labels = isGreek
-    ? {
-        happy: "Ικανοποιημένοι πελάτες",
-        rating: "Βαθμολογία TripAdvisor",
-        available: "Διαθέσιμοι",
-        pricing: "Τιμολόγηση",
-        fixed: "Σταθερές",
-      }
-    : {
-        happy: "Happy customers",
-        rating: "TripAdvisor rating",
-        available: "Available",
-        pricing: "Pricing",
-        fixed: "Fixed",
-      };
+  const { locale } = useI18n();
+  const labels = LABELS[locale];
 
   return (
     <div className="border-y border-border bg-secondary/40">
       <div className="container-tight grid grid-cols-2 gap-y-6 py-7 text-center md:grid-cols-4">
-        <Stat label={labels.happy} value="5,000+" />
+        <Stat label={labels.happy} value={locale === "de" ? "5.000+" : "5,000+"} />
         <Stat
           label={labels.rating}
           value={

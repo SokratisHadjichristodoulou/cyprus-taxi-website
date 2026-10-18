@@ -14,14 +14,14 @@
 - Payment methods: cash, credit/debit card, bank transfer
 - Vehicle classes: Executive Sedan (up to 4 pax), 6-Seater Premium Van, 12-Seater Large Van
 - Fleet: Mercedes-Benz E-Class sedans and Ford Tourneo Custom / Mercedes vans
-- Average rating: 4.9 / 5 across 1,200+ TripAdvisor and Google reviews
+- Average rating: 4.9/5 from 120+ TripAdvisor reviews
 
 ## What is included in every fixed price
 
 - Meet & greet at airport arrivals with name sign
 - Real-time flight tracking — no extra charge for delays
 - Free baby, child and booster seats on request
-- All motorway tolls, taxes and fees
+- All taxes and fees
 - Luggage assistance
 - Bottled water on board
 - Private vehicle (never shared)
@@ -31,9 +31,14 @@
 
 ### From Paphos International Airport (PFO)
 - Paphos town / Kato Paphos: from €35 (sedan) / €50 (6-seater) / €80 (12-seater)
+- Tomb of the Kings: from €40 / €50 / €80
 - Coral Bay: from €65 / €85 / €120
 - Peyia: from €65 / €85 / €120
 - Chloraka / Empa: from €45 / €60 / €80
+- Kissonerga / Tala: from €55 / €70 / €85
+- Kamares: from €55 / €70 / €90
+- Tsada: from €60 / €70 / €90
+- Polis – Latchi: from €95 / €120 / €160
 - Aphrodite Hills (Intercontinental): from €45 / €60 / €80
 - Pissouri: from €60 / €80 / €120
 - Limassol: from €90 / €120 / €160
@@ -43,11 +48,17 @@
 
 ### From Larnaca International Airport (LCA)
 - Paphos town: from €140 / €180 / €240
+- Chloraka / Empa: from €140 / €180 / €240
+- Kissonerga / Tala: from €140 / €180 / €240
+- Kamares: from €150 / €180 / €240
+- Tsada: from €150 / €180 / €240
 - Coral Bay: from €170 / €200 / €270
 - Peyia: from €170 / €200 / €270
 - Aphrodite Hills: from €130 / €180 / €240
 - Pissouri: from €130 / €180 / €240
 - Polis – Latchi: from €200 / €250 / €320
+- Ayia Napa: from €80 / €100 (no 12-seater)
+- Protaras: from €90 / €110 (no 12-seater)
 
 ## Common journey times
 
@@ -57,6 +68,13 @@
 - Larnaca Airport → Ayia Napa: ~45 min, 65 km
 - Paphos Airport → Coral Bay / Peyia: ~25–30 min
 - Paphos Airport → Limassol: ~50 min, 65 km
+- Paphos Airport → Kato Paphos: ~20 min
+- Paphos Airport → Aphrodite Hills: ~20 min
+- Paphos Airport → Pissouri: ~30 min
+- Paphos Airport → Kissonerga / Tala: ~30 min
+- Paphos Airport → Polis / Latchi: ~1 h
+- Paphos Airport → Larnaca: ~1 h 30 min, 140 km
+- Paphos Airport → Nicosia: ~1 h 50 min – 2 h
 
 ## Pages
 
@@ -65,13 +83,22 @@
 - [Larnaca Airport Transfers](/larnaca-airport-transfers): Private transfers from Larnaca International Airport to anywhere in Cyprus.
 - [Paphos Airport Transfers](/paphos-airport-transfers): Private transfers from Paphos International Airport across Cyprus.
 - [Larnaca to Paphos](/larnaca-airport-to-paphos): Direct fixed-price route from LCA to Paphos.
+- [Larnaca to Ayia Napa](/larnaca-airport-to-ayia-napa): Fixed-price route from LCA to Ayia Napa.
+- [Larnaca to Protaras](/larnaca-airport-to-protaras): Fixed-price route from LCA to Protaras.
 - [Taxi to Coral Bay](/taxi-to-coral-bay): Fixed-price transfers from Paphos Airport to Coral Bay.
 - [Taxi to Peyia](/taxi-to-peyia): Fixed-price transfers from Paphos Airport to Peyia.
 - [Taxi to Chloraka](/taxi-to-chloraka): Fixed-price transfers from Paphos Airport to Chloraka.
 - [Taxi to Limassol](/taxi-to-limassol): Fixed-price transfers from Paphos Airport to Limassol.
+- [Taxi to Kato Paphos](/taxi-to-kato-paphos): Fixed-price transfers from Paphos Airport to Kato Paphos and Paphos town (Tomb of the Kings area, Kamares and Tsada included).
+- [Taxi to Kissonerga](/taxi-to-kissonerga): Fixed-price transfers from Paphos Airport to Kissonerga and Tala.
+- [Taxi to Polis & Latchi](/taxi-to-polis-latchi): Fixed-price transfers from Paphos Airport to Polis Chrysochous and Latchi.
+- [Taxi to Aphrodite Hills](/taxi-to-aphrodite-hills): Fixed-price transfers from Paphos Airport to the InterContinental Aphrodite Hills.
+- [Taxi to Pissouri](/taxi-to-pissouri): Fixed-price transfers from Paphos Airport to Pissouri village and Pissouri Bay.
+- [Paphos Airport to Larnaca](/paphos-airport-to-larnaca): Fixed-price transfer from Paphos Airport to Larnaca.
+- [Paphos Airport to Nicosia](/paphos-airport-to-nicosia): Fixed-price transfer from Paphos Airport to Nicosia.
 - [Pricing](/pricing): Full transparent fixed-price table for all routes and vehicles.
 - [Fleet](/fleet): Mercedes-Benz E-Class sedans, 6-seater and 12-seater premium vans.
-- [Reviews](/reviews): Customer reviews from TripAdvisor and Google (4.9/5 average).
+- [Reviews](/reviews): Verified TripAdvisor reviews (4.9/5 from 120+ reviews).
 - [FAQ](/faq): Answers to common questions about booking, payment, and service.
 - [About](/about): About Taxi Cyprus 24 and our drivers.
 - [Contact](/contact): Booking form, WhatsApp and phone contact.

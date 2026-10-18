@@ -4,6 +4,7 @@ import larnacaImg from "@/assets/dest-larnaca.jpg";
 import { TransferPage } from "@/components/TransferPage";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromLarnaca } from "@/lib/pricing";
+import { larnacaRouteLinks } from "@/lib/route-links";
 import { sharedFAQs } from "@/lib/faqs";
 
 export const Route = createFileRoute("/larnaca-airport-transfers")({
@@ -15,7 +16,6 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
       { property: "og:description", content: "Premium Larnaca Airport taxi to all Cyprus destinations." },
       { property: "og:image", content: larnacaImg },
       { name: "twitter:image", content: larnacaImg },
-      { name: "keywords", content: "Larnaca airport taxi, Larnaca airport transfers, taxi from Larnaca airport" },
     ],
   }),
   component: () => (
@@ -58,6 +58,7 @@ export const Route = createFileRoute("/larnaca-airport-transfers")({
       <section className="container-tight pb-16 md:pb-20">
         <PriceTable
           pricing={pricingFromLarnaca}
+          linkMap={larnacaRouteLinks}
           subtitle="Total per vehicle. Same fixed price 24/7 — flight tracking and meet & greet included."
         />
       </section>

@@ -22,7 +22,7 @@ export function PageHero({
   defaultPickup,
   defaultDropoff,
 }: Props) {
-  const { t, locale, isGreek } = useI18n();
+  const { t, locale } = useI18n();
   const contactPath = withLocale(locale, "/contact");
 
   return (
@@ -65,7 +65,7 @@ export function PageHero({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/20"
             >
-              {isGreek ? "Προσφορά WhatsApp" : "WhatsApp Quote"}
+              {t("cta.whatsappQuote")}
             </a>
           </div>
         </div>
