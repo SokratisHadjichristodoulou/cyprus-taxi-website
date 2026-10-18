@@ -18,7 +18,7 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Full price list for private Cyprus airport transfers from Paphos (PFO) and Larnaca (LCA). Fixed totals per vehicle — incl. tolls, child seats & meet & greet.",
+          "Full price list for private Cyprus airport transfers from Paphos (PFO) and Larnaca (LCA). Fixed totals per vehicle — incl. child seats & meet & greet.",
       },
       { property: "og:title", content: "Cyprus Taxi Transfer Prices — Fixed Rates" },
       {
@@ -73,8 +73,8 @@ function PricingPage() {
         <div className="mt-10 rounded-2xl border border-border bg-secondary/30 p-6 text-sm text-muted-foreground md:p-8">
           <p>
             <strong className="text-navy">All prices are total per vehicle</strong> (not per person)
-            and include tolls, child & booster seats, meet & greet at arrivals, flight tracking, and
-            free 60-minute waiting time after landing. Pay online by card, bank transfer, or in cash
+            and include child & booster seats, meet & greet at arrivals, flight tracking, and free
+            60-minute waiting time after landing. Pay online by card, bank transfer, or in cash
             (EUR/GBP) directly to your driver.
           </p>
         </div>

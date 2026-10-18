@@ -6,11 +6,11 @@ import { TransferPage } from "@/components/TransferPage";
 const chlorakaFAQs = [
   {
     q: "Wie viel kostet ein Taxi vom Flughafen Larnaka nach Chloraka?",
-    a: "Taxicyprus24 bietet Privattransfers zum Festpreis vom internationalen Flughafen Larnaka nach Chloraka ab 140 € in der Mercedes E-Klasse (bis zu 4 Fahrgäste) und ab 180 € im Premium-Van mit 6 Sitzen. Der Preis beinhaltet Maut, Gepäck, kostenlose Kindersitze, Flugüberwachung und Meet & Greet am Flughafen – ohne versteckte Kosten.",
+    a: "Taxicyprus24 bietet Privattransfers zum Festpreis vom internationalen Flughafen Larnaka nach Chloraka ab 140 € in der Mercedes E-Klasse (bis zu 4 Fahrgäste) und ab 180 € im Premium-Van mit 6 Sitzen. Der Preis beinhaltet Gepäck, kostenlose Kindersitze, Flugüberwachung und Meet & Greet am Flughafen – ohne versteckte Kosten.",
   },
   {
     q: "Wie viel kostet ein Taxi vom Flughafen Paphos nach Chloraka?",
-    a: "Ein privates Taxi vom internationalen Flughafen Paphos nach Chloraka kostet ab 45 € in der Mercedes E-Klasse (bis zu 4 Fahrgäste) und ab 60 € im Premium-Van mit 6 Sitzen. Alle Angebote von Taxicyprus24 sind Festpreise inklusive Maut, Gepäck, kostenloser Kindersitze und Meet & Greet – Sie zahlen genau den gebuchten Preis.",
+    a: "Ein privates Taxi vom internationalen Flughafen Paphos nach Chloraka kostet ab 45 € in der Mercedes E-Klasse (bis zu 4 Fahrgäste) und ab 60 € im Premium-Van mit 6 Sitzen. Alle Angebote von Taxicyprus24 sind Festpreise inklusive Gepäck, kostenloser Kindersitze und Meet & Greet – Sie zahlen genau den gebuchten Preis.",
   },
   {
     q: "Wie lange dauert der Transfer nach Chloraka?",

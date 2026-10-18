@@ -66,7 +66,7 @@ function AllTransfersPage() {
         <p className="mt-3 max-w-2xl text-muted-foreground">
           We provide private airport transfers to every town, village, hotel and resort in Cyprus.
           Prices shown are for a 4-seater vehicle. For larger vehicles or more passenger space, please see our pricing page.
-          All prices below are fixed totals — they include tolls, child seats and meet & greet.
+          All prices below are fixed totals — they include child seats and meet & greet.
         </p>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2">

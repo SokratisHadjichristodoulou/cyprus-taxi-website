@@ -11,7 +11,7 @@ export const sharedFAQsDe: FAQItem[] = [
   },
   {
     q: "Sind Ihre Preise Festpreise?",
-    a: "Ja – jedes Angebot von Taxicyprus24 ist ein fester Gesamtpreis ohne versteckte Kosten. Unsere Preise für Flughafentransfers auf Zypern beinhalten Maut, Steuern, Hilfe beim Gepäck, kostenlose Kindersitze und Meet & Greet am Flughafen. Sie zahlen immer genau den Preis, der Ihnen genannt wurde.",
+    a: "Ja – jedes Angebot von Taxicyprus24 ist ein fester Gesamtpreis ohne versteckte Kosten. Unsere Preise für Flughafentransfers auf Zypern beinhalten Steuern, Hilfe beim Gepäck, kostenlose Kindersitze und Meet & Greet am Flughafen. Sie zahlen immer genau den Preis, der Ihnen genannt wurde.",
   },
   {
     q: "Gibt es kostenlose Kindersitze?",

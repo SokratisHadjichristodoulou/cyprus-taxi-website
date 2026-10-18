@@ -73,9 +73,9 @@ function PricingPage() {
         <div className="mt-10 rounded-2xl border border-border bg-secondary/30 p-6 text-sm text-muted-foreground md:p-8">
           <p>
             <strong className="text-navy">Alle Preise gelten pro Fahrzeug</strong> (nicht pro
-            Person) und beinhalten Maut, Kinder- und Sitzerhöhungen, Meet & Greet in der
-            Ankunftshalle, Flugüberwachung und 60 Minuten kostenlose Wartezeit nach der Landung.
-            Bezahlung online per Karte, per Banküberweisung oder bar (EUR/GBP) direkt beim Fahrer.
+            Person) und beinhalten Kinder- und Sitzerhöhungen, Meet & Greet in der Ankunftshalle,
+            Flugüberwachung und 60 Minuten kostenlose Wartezeit nach der Landung. Bezahlung online
+            per Karte, per Banküberweisung oder bar (EUR/GBP) direkt beim Fahrer.
           </p>
         </div>
 

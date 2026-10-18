@@ -11,7 +11,7 @@ export const sharedFAQs: FAQItem[] = [
   },
   {
     q: "Are your prices fixed?",
-    a: "Yes — every taxi quote from Taxicyprus24 is a fixed total price with no hidden fees or surprise charges. Our Cyprus airport transfer prices include motorway tolls, taxes, luggage assistance, free child seats, and meet & greet service at the airport. Whether you book a taxi from Larnaca Airport, Paphos Airport, or anywhere in Cyprus, you will always pay exactly the price you were quoted.",
+    a: "Yes — every taxi quote from Taxicyprus24 is a fixed total price with no hidden fees or surprise charges. Our Cyprus airport transfer prices include taxes, luggage assistance, free child seats, and meet & greet service at the airport. Whether you book a taxi from Larnaca Airport, Paphos Airport, or anywhere in Cyprus, you will always pay exactly the price you were quoted.",
   },
   {
     q: "Do you provide free child seats?",
