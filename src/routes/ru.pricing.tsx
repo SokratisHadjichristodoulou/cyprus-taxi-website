@@ -9,6 +9,7 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 import { StructuredData } from "@/components/StructuredData";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
+import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 
 export const Route = createFileRoute("/ru/pricing")({
   head: () => ({
@@ -28,10 +29,6 @@ export const Route = createFileRoute("/ru/pricing")({
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "ru_RU" },
       { name: "twitter:image", content: heroImg },
-      {
-        name: "keywords",
-        content: "цены такси Кипр, стоимость такси аэропорт Пафос, тариф трансфер Ларнака, цены трансфер Кипр",
-      },
     ],
   }),
   component: PricingPage,
@@ -63,10 +60,12 @@ function PricingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <PriceTable
             pricing={pricingFromPaphos}
+            linkMap={paphosRouteLinks}
             subtitle="Из/в международный аэропорт Пафоса (PFO) — направления по всему Кипру."
           />
           <PriceTable
             pricing={pricingFromLarnaca}
+            linkMap={larnacaRouteLinks}
             subtitle="Из/в международный аэропорт Ларнаки (LCA) — направления по всему Кипру."
           />
         </div>

@@ -13,76 +13,56 @@ export function Footer() {
       { path: "/larnaca-airport-to-paphos", label: "Larnaca to Paphos" },
       { path: "/larnaca-airport-transfers", label: "Larnaca Airport" },
       { path: "/paphos-airport-transfers", label: "Paphos Airport" },
-      { path: "/taxi-to-limassol", label: "Taxi to Limassol" },
-      { path: "/taxi-to-coral-bay", label: "Taxi to Coral Bay" },
-      { path: "/taxi-to-peyia", label: "Taxi to Peyia" },
-      { path: "/taxi-to-chloraka", label: "Taxi to Chloraka" },
-      { path: "/cyprus-airport-transfers", label: "Larnaca to Ayia Napa" },
-      { path: "/cyprus-airport-transfers", label: "Larnaca to Protaras" },
-      { path: "/cyprus-airport-transfers", label: "Larnaca to Nicosia" },
+      { path: "/larnaca-airport-to-ayia-napa", label: "Larnaca to Ayia Napa" },
+      { path: "/larnaca-airport-to-protaras", label: "Larnaca to Protaras" },
+      { path: "/cyprus-airport-transfers", label: "All Cyprus routes" },
     ],
     el: [
       { path: "/larnaca-airport-to-paphos", label: "Λάρνακα προς Πάφο" },
       { path: "/larnaca-airport-transfers", label: "Αεροδρόμιο Λάρνακας" },
       { path: "/paphos-airport-transfers", label: "Αεροδρόμιο Πάφου" },
-      { path: "/taxi-to-limassol", label: "Ταξί προς Λεμεσό" },
-      { path: "/taxi-to-coral-bay", label: "Ταξί προς Coral Bay" },
-      { path: "/taxi-to-peyia", label: "Ταξί προς Πέγεια" },
-      { path: "/taxi-to-chloraka", label: "Ταξί προς Χλώρακα" },
-      { path: "/cyprus-airport-transfers", label: "Λάρνακα προς Αγία Νάπα" },
-      { path: "/cyprus-airport-transfers", label: "Λάρνακα προς Πρωταρά" },
-      { path: "/cyprus-airport-transfers", label: "Λάρνακα προς Λευκωσία" },
+      { path: "/larnaca-airport-to-ayia-napa", label: "Λάρνακα προς Αγία Νάπα" },
+      { path: "/larnaca-airport-to-protaras", label: "Λάρνακα προς Πρωταρά" },
+      { path: "/cyprus-airport-transfers", label: "Όλες οι διαδρομές" },
     ],
     ru: [
       { path: "/larnaca-airport-to-paphos", label: "Ларнака — Пафос" },
       { path: "/larnaca-airport-transfers", label: "Аэропорт Ларнаки" },
       { path: "/paphos-airport-transfers", label: "Аэропорт Пафоса" },
-      { path: "/taxi-to-limassol", label: "Такси в Лимассол" },
-      { path: "/taxi-to-coral-bay", label: "Такси в Корал-Бей" },
-      { path: "/taxi-to-peyia", label: "Такси в Пейю" },
-      { path: "/taxi-to-chloraka", label: "Такси в Хлораку" },
-      { path: "/cyprus-airport-transfers", label: "Ларнака — Айя-Напа" },
-      { path: "/cyprus-airport-transfers", label: "Ларнака — Протарас" },
-      { path: "/cyprus-airport-transfers", label: "Ларнака — Никосия" },
+      { path: "/larnaca-airport-to-ayia-napa", label: "Ларнака — Айя-Напа" },
+      { path: "/larnaca-airport-to-protaras", label: "Ларнака — Протарас" },
+      { path: "/cyprus-airport-transfers", label: "Все маршруты" },
     ],
   };
 
   const links = transferLinks[locale];
 
-  const popularSearches: Record<"en" | "el" | "ru", { path: string; label: string; hash?: string }[]> = {
+  // Dedicated Paphos Airport destination pages.
+  const paphosLinks: Record<"en" | "el" | "ru", { path: string; label: string }[]> = {
     en: [
-      { path: "/contact", label: "Taxi Near Me" },
-      { path: "/cyprus-airport-transfers", label: "Airport Taxi Near Me" },
-      { path: "/pricing", label: "24/7 Taxi Cyprus near me" },
-      { path: "/fleet", label: "Private Taxi Service near me" },
-      { path: "/pricing", label: "Cheap Airport Transfers Cyprus near me" },
-      { path: "/about", hash: "our-story", label: "Vladimir Taxi" },
-      { path: "/about", hash: "our-story", label: "Vladimir Taxi Cyprus" },
+      { path: "/taxi-to-coral-bay", label: "Taxi to Coral Bay" },
+      { path: "/taxi-to-peyia", label: "Taxi to Peyia" },
+      { path: "/taxi-to-chloraka", label: "Taxi to Chloraka" },
+      { path: "/taxi-to-limassol", label: "Taxi to Limassol" },
     ],
     el: [
-      { path: "/contact", label: "Ταξί κοντά μου" },
-      { path: "/cyprus-airport-transfers", label: "Ταξί αεροδρομίου κοντά μου" },
-      { path: "/pricing", label: "Ταξί 24/7 Κύπρος κοντά μου" },
-      { path: "/fleet", label: "Ιδιωτική υπηρεσία ταξί κοντά μου" },
-      { path: "/pricing", label: "Φθηνές μεταφορές αεροδρομίου Κύπρος κοντά μου" },
-      { path: "/about", hash: "our-story", label: "Vladimir Taxi" },
-      { path: "/about", hash: "our-story", label: "Vladimir Taxi Cyprus" },
+      { path: "/taxi-to-coral-bay", label: "Ταξί προς Coral Bay" },
+      { path: "/taxi-to-peyia", label: "Ταξί προς Πέγεια" },
+      { path: "/taxi-to-chloraka", label: "Ταξί προς Χλώρακα" },
+      { path: "/taxi-to-limassol", label: "Ταξί προς Λεμεσό" },
     ],
     ru: [
-      { path: "/contact", label: "Такси рядом со мной" },
-      { path: "/cyprus-airport-transfers", label: "Такси из аэропорта рядом" },
-      { path: "/pricing", label: "Такси 24/7 на Кипре рядом со мной" },
-      { path: "/fleet", label: "Частная служба такси рядом со мной" },
-      { path: "/pricing", label: "Дешёвые трансферы из аэропорта Кипра рядом со мной" },
-      { path: "/about", hash: "our-story", label: "Vladimir Taxi" },
-      { path: "/about", hash: "our-story", label: "Vladimir Taxi Cyprus" },
+      { path: "/taxi-to-coral-bay", label: "Такси в Корал-Бей" },
+      { path: "/taxi-to-peyia", label: "Такси в Пейю" },
+      { path: "/taxi-to-chloraka", label: "Такси в Хлораку" },
+      { path: "/taxi-to-limassol", label: "Такси в Лимассол" },
     ],
   };
 
-  const popularSearchesTitle: Record<"en" | "el" | "ru", string> = {
-    en: "Popular searches",
-    el: "Δημοφιλείς αναζητήσεις",
-    ru: "Популярные запросы",
+  const paphosLinksTitle: Record<"en" | "el" | "ru", string> = {
+    en: "Paphos transfers",
+    el: "Μεταφορές από Πάφο",
+    ru: "Трансферы из Пафоса",
   };
 
   return (
@@ -142,12 +122,12 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-semibold text-white">{popularSearchesTitle[locale]}</h4>
+          <h4 className="text-sm font-semibold text-white">{paphosLinksTitle[locale]}</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-white/85">
-            {popularSearches[locale].map((s, i) => (
-              <li key={`${s.path}-${i}`}>
-                <Link to={wl(s.path)} hash={s.hash} className="hover:text-gold">
-                  {s.label}
+            {paphosLinks[locale].map((link) => (
+              <li key={link.path}>
+                <Link to={wl(link.path)} className="hover:text-gold">
+                  {link.label}
                 </Link>
               </li>
             ))}

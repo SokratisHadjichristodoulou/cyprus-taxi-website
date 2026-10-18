@@ -25,6 +25,26 @@ const localizedPaths = [
   "/taxi-to-peyia",
 ];
 
+// Date of the last significant content change, per path (applies to every locale of that path).
+// Only list pages whose content really changed — never stamp every URL with today's date.
+const lastModified: Record<string, string> = {
+  "/": "2026-10-18",
+  "/about": "2026-10-18",
+  "/larnaca-airport-to-paphos": "2026-10-18",
+  "/larnaca-airport-transfers": "2026-10-18",
+  "/paphos-airport-transfers": "2026-10-18",
+  "/pricing": "2026-10-18",
+  "/reviews": "2026-10-18",
+  "/taxi-to-chloraka": "2026-10-18",
+  "/taxi-to-coral-bay": "2026-10-18",
+  "/taxi-to-limassol": "2026-10-18",
+  "/taxi-to-peyia": "2026-10-18",
+};
+
+function lastmodTag(path: string): string {
+  return lastModified[path] ? `<lastmod>${lastModified[path]}</lastmod>` : "";
+}
+
 // English-only routes (blog posts)
 const englishOnlyPaths = [
   "/blog/best-beaches-paphos-coral-bay",
@@ -54,14 +74,14 @@ function buildSitemap(): string {
         .join("");
       const xDefault = `<xhtml:link rel="alternate" hreflang="x-default" href="${urlFor("en", path)}" />`;
       urls.push(
-        `<url><loc>${urlFor(loc, path)}</loc><changefreq>weekly</changefreq><priority>${path === "/" ? "1.0" : "0.8"}</priority>${links}${xDefault}</url>`,
+        `<url><loc>${urlFor(loc, path)}</loc>${lastmodTag(path)}<changefreq>weekly</changefreq><priority>${path === "/" ? "1.0" : "0.8"}</priority>${links}${xDefault}</url>`,
       );
     }
   }
 
   for (const path of englishOnlyPaths) {
     urls.push(
-      `<url><loc>${urlFor("en", path)}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`,
+      `<url><loc>${urlFor("en", path)}</loc>${lastmodTag(path)}<changefreq>monthly</changefreq><priority>0.6</priority></url>`,
     );
   }
 

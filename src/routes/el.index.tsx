@@ -21,6 +21,7 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
+import { aggregateRating } from "@/lib/reviews";
 
 export const Route = createFileRoute("/el/")({
   head: () => ({
@@ -40,7 +41,6 @@ export const Route = createFileRoute("/el/")({
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: heroImg },
-      { name: "keywords", content: "ταξί Κύπρος, αεροδρόμιο Λάρνακας ταξί, αεροδρόμιο Πάφου ταξί, μεταφορά αεροδρομίου Κύπρου, ιδιωτικό ταξί Κύπρος" },
     ],
   }),
   component: HomePage,
@@ -84,7 +84,7 @@ function HomePage() {
             name: "Taxi Cyprus 24",
             telephone: "+35796626844",
             url: "https://taxicyprus24.com",
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "1247" },
+            aggregateRating,
           },
         }}
       />

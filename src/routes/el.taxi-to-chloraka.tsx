@@ -41,9 +41,13 @@ const chlorakaFAQs = [
 export const Route = createFileRoute("/el/taxi-to-chloraka")({
   head: () => ({
     meta: [
-      { title: "Ταξί προς Χλώρακα από €45 — Μεταφορές από Λάρνακα & Πάφο | Taxi Cyprus 24" },
-      { name: "description", content: "Ιδιωτικό ταξί σταθερής τιμής προς Χλώρακα από Αεροδρόμιο Πάφου (€45) και Αεροδρόμιο Λάρνακας (€140). Υποδοχή, παρακολούθηση πτήσης, δωρεάν παιδικά καθίσματα, 24/7." },
-      { property: "og:title", content: "Ταξί προς Χλώρακα από €45" },
+      { title: "Ταξί από Αεροδρόμιο Πάφου προς Χλώρακα – €45 | Taxi Cyprus 24" },
+      {
+        name: "description",
+        content:
+          "Ταξί από το Αεροδρόμιο Πάφου προς Χλώρακα με σταθερή τιμή €45 (4 θέσεις) ή €60 (6 θέσεις)· από το Αεροδρόμιο Λάρνακας €140. Υποδοχή, δωρεάν παιδικά καθίσματα, 24/7.",
+      },
+      { property: "og:title", content: "Ταξί από Αεροδρόμιο Πάφου προς Χλώρακα – €45" },
       { property: "og:description", content: "Ιδιωτικές μεταφορές σταθερής τιμής προς Χλώρακα από αεροδρόμια Λάρνακας και Πάφου." },
       { property: "og:image", content: chlorakaImg },
       { property: "og:locale", content: "el_GR" },
@@ -53,11 +57,11 @@ export const Route = createFileRoute("/el/taxi-to-chloraka")({
   component: () => (
     <TransferPage
       eyebrow="Λάρνακα & Πάφος προς Χλώρακα"
-      title="Ιδιωτικό Ταξί προς Χλώρακα"
+      title="Ταξί από Αεροδρόμιο Πάφου προς Χλώρακα"
       subtitle="Μεταφορές αεροδρομίου σταθερής τιμής από Λάρνακα και Πάφο προς Χλώρακα σε πολυτελές Mercedes-Benz. Door-to-door, υποδοχή, δωρεάν παιδικά καθίσματα."
       heroImage={heroImg}
       galleryImage={chlorakaImg}
-      defaultDropoff="Χλώρακα"
+      defaultDropoff="Chlorakas / Empa"
       fromLocation="Πάφος / Λάρνακα"
       toLocation="Χλώρακα"
       duration="25 λ / 1ω 40λ"

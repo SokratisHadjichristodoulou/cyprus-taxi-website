@@ -13,7 +13,6 @@ export const Route = createFileRoute("/larnaca-airport-to-protaras")({
       { property: "og:description", content: "Private fixed-price Larnaca Airport to Protaras transfer with meet & greet." },
       { property: "og:image", content: larnacaImg },
       { name: "twitter:image", content: larnacaImg },
-      { name: "keywords", content: "Larnaca airport to Protaras taxi, Larnaca to Protaras transfer, taxi from Larnaca airport to Protaras" },
     ],
   }),
   component: () => (

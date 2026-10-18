@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
+import { getLocaleFromPath } from "@/lib/i18n";
 
 function NotFoundComponent() {
   return (
@@ -114,8 +115,10 @@ function CanonicalLink() {
 }
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  // Same pathname source as CanonicalLink, so SSR renders the right language attribute.
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
   return (
-    <html lang="en">
+    <html lang={getLocaleFromPath(pathname)}>
       <head>
         <HeadContent />
         <CanonicalLink />

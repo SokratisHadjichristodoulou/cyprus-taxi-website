@@ -2,24 +2,65 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import limassolImg from "@/assets/dest-limassol.jpg";
 import { TransferPage } from "@/components/TransferPage";
-import { sharedFAQs } from "@/lib/faqs";
+
+const limassolFAQs = [
+  {
+    q: "How much is a taxi from Paphos Airport to Limassol?",
+    a: "A private taxi from Paphos Airport to Limassol costs a fixed €90 in a 4-seater car (up to 4 passengers), €120 in a 6-seater van and €160 in a 12-seater van. The price is per vehicle and includes meet & greet, flight tracking, luggage and free child seats.",
+  },
+  {
+    q: "How long is the drive from Paphos Airport to Limassol?",
+    a: "Usually around 50 minutes via the A6 motorway, depending on traffic and where in Limassol you are going.",
+  },
+  {
+    q: "Can I book a return transfer from Limassol to Paphos Airport?",
+    a: "Yes. The trip from Limassol back to Paphos Airport costs the same fixed price. Book it together with your arrival and we will plan the pickup time around your flight.",
+  },
+  {
+    q: "Which parts of Limassol do you drop off in?",
+    a: "All of them — including Limassol Marina, the Old Town, Germasogeia, the Amathus tourist area, Mouttagiaka and Pyrgos. We take you to the door of your hotel, apartment, villa or office.",
+  },
+  {
+    q: "Is this transfer a good option for business travellers?",
+    a: "Yes. Your driver tracks your flight, meets you in arrivals with a name sign and takes you straight to your hotel or office with no shared stops. Teams travelling together can book the 6-seater van (€120) or the 12-seater van (€160).",
+  },
+  {
+    q: "Is the price per person?",
+    a: "No — the fixed price is for the whole vehicle: €90 for up to 4 passengers, €120 for up to 6 and €160 for up to 12.",
+  },
+  {
+    q: "What happens if my flight is delayed?",
+    a: "Nothing changes for you. We monitor your flight in real time and your driver waits for your actual arrival — delays never cost extra.",
+  },
+  {
+    q: "How do I pay for the Limassol transfer?",
+    a: "Pay online by card, by bank transfer, or in cash to your driver in EUR or GBP.",
+  },
+];
 
 export const Route = createFileRoute("/taxi-to-limassol")({
   head: () => ({
     meta: [
-      { title: "Taxi to Limassol — Paphos Airport Transfer from €90 | Taxi Cyprus 24" },
-      { name: "description", content: "Private taxi to Limassol from Paphos Airport (€90). Fixed price, Mercedes-Benz, meet & greet, 24/7." },
-      { property: "og:title", content: "Limassol Airport Transfer from €90" },
-      { property: "og:description", content: "Private fixed-price airport taxi to Limassol, Cyprus." },
+      { title: "Paphos Airport to Limassol Taxi – Fixed €90 | Taxi Cyprus 24" },
+      {
+        name: "description",
+        content:
+          "Taxi from Paphos Airport to Limassol at a fixed €90 (4 seats), €120 (6 seats) or €160 (12 seats). About 50 minutes via the A6, meet & greet, 24/7.",
+      },
+      { property: "og:title", content: "Paphos Airport to Limassol Taxi – Fixed €90" },
+      {
+        property: "og:description",
+        content:
+          "Private fixed-price taxi from Paphos Airport to Limassol hotels, the marina and business districts.",
+      },
       { property: "og:image", content: limassolImg },
       { name: "twitter:image", content: limassolImg },
-      { name: "keywords", content: "Limassol airport transfer, taxi to Limassol, Larnaca to Limassol taxi" },
     ],
   }),
   component: () => (
     <TransferPage
       eyebrow="Paphos Airport to Limassol"
-      title="Private Taxi Transfer to Limassol"
+      title="Paphos Airport to Limassol Taxi Transfer"
       subtitle="Fixed-price airport transfers to Limassol from Paphos Airport. Premium Clean and Luxury cars for business and leisure travellers."
       heroImage={heroImg}
       galleryImage={limassolImg}
@@ -42,7 +83,7 @@ export const Route = createFileRoute("/taxi-to-limassol")({
         { type: "Paphos Airport to Limassol (Van)", pax: "Up to 6 passengers", price: "€120" },
       ]}
       nearbyAreas={["Limassol Marina", "Limassol Old Town", "Germasogeia", "Amathus", "Mouttagiaka", "Pissouri", "Governor's Beach"]}
-      faqs={sharedFAQs.slice(0, 6)}
+      faqs={limassolFAQs}
       relatedLinks={[
         { to: "/paphos-airport-transfers", label: "Paphos Airport Transfers" },
         { to: "/cyprus-airport-transfers", label: "All Routes" },

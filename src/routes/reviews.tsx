@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { SocialSection } from "@/components/SocialSection";
 import { StructuredData } from "@/components/StructuredData";
+import { aggregateRating } from "@/lib/reviews";
 
 const TRIPADVISOR_URL =
   "https://www.tripadvisor.com/Attraction_Review-g190384-d8567084-Reviews-Taxi_Cyprus_Paphos-Paphos_Paphos_District.html";
@@ -110,13 +111,7 @@ function ReviewsPage() {
           telephone: "+35796626844",
           url: "https://taxicyprus24.com",
           areaServed: { "@type": "Country", name: "Cyprus" },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "1247",
-            bestRating: "5",
-            worstRating: "1",
-          },
+          aggregateRating,
         }}
       />
 

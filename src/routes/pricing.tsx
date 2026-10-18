@@ -9,6 +9,7 @@ import { sharedFAQs } from "@/lib/faqs";
 import { StructuredData } from "@/components/StructuredData";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
+import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -27,11 +28,6 @@ export const Route = createFileRoute("/pricing")({
       },
       { property: "og:image", content: heroImg },
       { name: "twitter:image", content: heroImg },
-      {
-        name: "keywords",
-        content:
-          "Cyprus taxi prices, Paphos airport taxi price, Larnaca airport transfer cost, Cyprus transfer rates",
-      },
     ],
   }),
   component: PricingPage,
@@ -64,10 +60,12 @@ function PricingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <PriceTable
             pricing={pricingFromPaphos}
+            linkMap={paphosRouteLinks}
             subtitle="From/to Paphos International Airport (PFO) to destinations across Cyprus."
           />
           <PriceTable
             pricing={pricingFromLarnaca}
+            linkMap={larnacaRouteLinks}
             subtitle="From/to Larnaca International Airport (LCA) to destinations across Cyprus."
           />
         </div>

@@ -26,7 +26,6 @@ export const Route = createFileRoute("/cyprus-airport-transfers")({
       { property: "og:description", content: "Fixed-price Cyprus airport transfers to every destination." },
       { property: "og:image", content: heroImg },
       { name: "twitter:image", content: heroImg },
-      { name: "keywords", content: "Cyprus airport transfers, Cyprus taxi service, private airport transfer Cyprus" },
     ],
   }),
   component: AllTransfersPage,

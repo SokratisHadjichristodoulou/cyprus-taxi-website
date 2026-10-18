@@ -13,7 +13,6 @@ export const Route = createFileRoute("/larnaca-airport-to-ayia-napa")({
       { property: "og:description", content: "Private fixed-price Larnaca Airport to Ayia Napa transfer with meet & greet." },
       { property: "og:image", content: larnacaImg },
       { name: "twitter:image", content: larnacaImg },
-      { name: "keywords", content: "Larnaca airport to Ayia Napa taxi, Larnaca to Ayia Napa transfer, taxi from Larnaca airport to Ayia Napa" },
     ],
   }),
   component: () => (

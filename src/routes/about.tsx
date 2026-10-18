@@ -6,13 +6,13 @@ import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
 import { SocialSection } from "@/components/SocialSection";
 import { TrustBar } from "@/components/TrustBar";
+import { aggregateRating } from "@/lib/reviews";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Taxicyprus24 — Cyprus Airport Transfers" },
       { name: "description", content: "Family-run private Cyprus airport transfer company since 2010. Fixed prices, 4.9★ rating, 24/7 service from Larnaca & Paphos Airports." },
-      { name: "keywords", content: "about Taxicyprus24, Cyprus airport transfer company, private taxi Cyprus, Larnaca airport taxi, Paphos airport taxi, family-run taxi service Cyprus, fixed price taxi Cyprus" },
       { property: "og:title", content: "About Taxicyprus24 — Cyprus Airport Transfers" },
       { property: "og:description", content: "Family-run private Cyprus airport transfer company. Fixed prices, professional English-speaking drivers, free child seats and 24/7 service from Larnaca and Paphos Airports." },
       { property: "og:type", content: "website" },
@@ -43,11 +43,7 @@ export const Route = createFileRoute("/about")({
             areaServed: { "@type": "Country", name: "Cyprus" },
             address: { "@type": "PostalAddress", addressCountry: "CY" },
             foundingDate: "2010",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              reviewCount: "120",
-            },
+            aggregateRating,
           },
         }),
       },

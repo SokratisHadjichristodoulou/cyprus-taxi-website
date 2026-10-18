@@ -41,9 +41,13 @@ const chlorakaFAQs = [
 export const Route = createFileRoute("/ru/taxi-to-chloraka")({
   head: () => ({
     meta: [
-      { title: "Такси в Хлораку от €45 — Трансферы из Ларнаки и Пафоса | Taxi Cyprus 24" },
-      { name: "description", content: "Частное такси по фиксированной цене в Хлораку из аэропорта Пафоса (€45) и Ларнаки (€140). Встреча, отслеживание рейса, бесплатные детские кресла, 24/7." },
-      { property: "og:title", content: "Такси в Хлораку от €45" },
+      { title: "Такси из аэропорта Пафоса в Хлораку — €45 | Taxi Cyprus 24" },
+      {
+        name: "description",
+        content:
+          "Такси из аэропорта Пафоса в Хлораку по фиксированной цене €45 (4 места) или €60 (6 мест); из аэропорта Ларнаки — €140. Встреча, бесплатные детские кресла, 24/7.",
+      },
+      { property: "og:title", content: "Такси из аэропорта Пафоса в Хлораку — €45" },
       { property: "og:description", content: "Частные трансферы по фиксированной цене в Хлораку из аэропортов Ларнаки и Пафоса." },
       { property: "og:image", content: chlorakaImg },
       { property: "og:locale", content: "ru_RU" },
@@ -53,11 +57,11 @@ export const Route = createFileRoute("/ru/taxi-to-chloraka")({
   component: () => (
     <TransferPage
       eyebrow="Ларнака и Пафос — Хлорака"
-      title="Частное такси в Хлораку"
+      title="Такси из аэропорта Пафоса в Хлораку"
       subtitle="Трансферы из аэропортов по фиксированной цене из Ларнаки и Пафоса в Хлораку на люксовом автомобиле. От двери до двери, встреча, бесплатные детские кресла."
       heroImage={heroImg}
       galleryImage={chlorakaImg}
-      defaultDropoff="Хлорака"
+      defaultDropoff="Chlorakas / Empa"
       fromLocation="Пафос / Ларнака"
       toLocation="Хлорака"
       duration="25 мин / 1ч 40м"

@@ -23,8 +23,8 @@ export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
       subtitle="Частные трансферы по фиксированной цене из международного аэропорта Ларнаки в Пафос на люксовом автомобиле. Встреча в зале прилёта, бесплатные детские кресла, отслеживание рейса."
       heroImage={heroImg}
       galleryImage={paphosImg}
-      defaultPickup="Аэропорт Ларнаки"
-      defaultDropoff="Пафос"
+      defaultPickup="Larnaca Airport"
+      defaultDropoff="Paphos Town"
       fromLocation="Аэропорт Ларнаки"
       toLocation="Пафос"
       duration="1ч 30м"
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
       relatedLinks={[
         { to: "/taxi-to-coral-bay", label: "Ларнака — Корал-Бей" },
         { to: "/taxi-to-peyia", label: "Ларнака — Пейя" },
-        { to: "/taxi-to-limassol", label: "Ларнака — Лимассол" },
+        { to: "/taxi-to-limassol", label: "Аэропорт Пафоса — Лимассол" },
         { to: "/paphos-airport-transfers", label: "Трансферы из аэропорта Пафоса" },
       ]}
     />

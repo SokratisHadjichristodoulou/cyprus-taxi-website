@@ -9,6 +9,7 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 import { StructuredData } from "@/components/StructuredData";
 import { PriceTable } from "@/components/PriceTable";
 import { pricingFromPaphos, pricingFromLarnaca } from "@/lib/pricing";
+import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 
 export const Route = createFileRoute("/el/pricing")({
   head: () => ({
@@ -28,11 +29,6 @@ export const Route = createFileRoute("/el/pricing")({
       { property: "og:image", content: heroImg },
       { property: "og:locale", content: "el_GR" },
       { name: "twitter:image", content: heroImg },
-      {
-        name: "keywords",
-        content:
-          "τιμές ταξί Κύπρος, τιμή ταξί αεροδρόμιο Πάφου, κόστος μεταφοράς αεροδρόμιο Λάρνακας, τιμές μεταφορών Κύπρος",
-      },
     ],
   }),
   component: PricingPage,
@@ -65,10 +61,12 @@ function PricingPage() {
         <div className="grid gap-8 lg:grid-cols-2">
           <PriceTable
             pricing={pricingFromPaphos}
+            linkMap={paphosRouteLinks}
             subtitle="Από/προς το Διεθνές Αεροδρόμιο Πάφου (PFO) σε προορισμούς σε όλη την Κύπρο."
           />
           <PriceTable
             pricing={pricingFromLarnaca}
+            linkMap={larnacaRouteLinks}
             subtitle="Από/προς το Διεθνές Αεροδρόμιο Λάρνακας (LCA) σε προορισμούς σε όλη την Κύπρο."
           />
         </div>
