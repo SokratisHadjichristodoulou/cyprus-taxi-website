@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ShieldCheck, Clock, BadgeCheck, Plane, Baby, CreditCard,
   Star, ArrowRight, MapPin,
+  ExternalLink,
 } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import meetGreetImg from "@/assets/meet-greet.jpg";
@@ -19,7 +20,12 @@ import { TrustBar } from "@/components/TrustBar";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
-import { aggregateRating } from "@/lib/reviews";
+import {
+  aggregateRating,
+  GOOGLE_MAPS_URL,
+  GOOGLE_REVIEW_STATS,
+  googleReviews,
+} from "@/lib/reviews";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { sharedFAQsRu } from "@/lib/faqs.ru";
 
@@ -126,6 +132,18 @@ function HomePage() {
                   {[0,1,2,3,4].map((i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
                 </div>
                 <span><strong className="font-semibold text-white">4.9</strong> · 120+ отзывов TripAdvisor</span>
+              </Link>
+              <div className="hidden h-4 w-px bg-white/20 sm:block" />
+              <Link
+                to="/ru/reviews"
+                className="flex items-center gap-2 transition-opacity hover:opacity-80"
+              >
+                <span>
+                  <strong className="font-semibold text-white">
+                    {GOOGLE_REVIEW_STATS.rating}/5
+                  </strong>{" "}
+                  в Google
+                </span>
               </Link>
               <div className="hidden h-4 w-px bg-white/20 sm:block" />
               <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> Лицензия и страховка</div>
@@ -300,13 +318,14 @@ function HomePage() {
         <div className="container-tight">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">
-              Отзывы на TripAdvisor
+              Отзывы на TripAdvisor и Google
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
               4.9★ на TripAdvisor — 120+ отзывов
             </h2>
             <p className="mt-4 text-sm text-muted-foreground md:text-base">
-              #6 из 94 транспортных компаний в Пафосе. Проверенные отзывы реальных путешественников.
+              #6 из 94 транспортных компаний в Пафосе на TripAdvisor и {GOOGLE_REVIEW_STATS.rating}
+              /5 в Google. Настоящие отзывы реальных путешественников.
             </p>
           </div>
 
@@ -325,10 +344,11 @@ function HomePage() {
                 text: "Спасибо, Влад! Очень добрый и приветливый, отличная пунктуальность и забота на протяжении всей поездки. 10/10, однозначно рекомендую.",
               },
               {
-                name: "Joep D",
-                from: "TripAdvisor",
-                date: "Июль 2025",
-                text: "Очень приятный опыт — мы пользовались этим такси несколько раз, всегда вовремя, и водитель дал отличные советы для поездок по разным городам.",
+                name: googleReviews[0].name,
+                from: "Google",
+                date: "",
+                text: googleReviews[0].text,
+                lang: "en",
               },
             ].map((t) => (
               <div key={t.name} className="rounded-2xl border border-border bg-card p-7 shadow-card-soft">
@@ -340,7 +360,9 @@ function HomePage() {
                   </div>
                   <span className="text-xs text-muted-foreground">{t.date}</span>
                 </div>
-                <p className="mt-4 text-[15px] leading-relaxed text-foreground">"{t.text}"</p>
+                <p lang={t.lang} className="mt-4 text-[15px] leading-relaxed text-foreground">
+                  "{t.text}"
+                </p>
                 <div className="mt-5 border-t border-border pt-4">
                   <div className="font-semibold text-navy">{t.name}</div>
                   <div className="text-xs text-muted-foreground">{t.from}</div>
@@ -349,13 +371,21 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             <Link
               to="/ru/reviews"
               className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
             >
               Читать все 120+ отзывов на TripAdvisor <ArrowRight className="h-4 w-4" />
             </Link>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
+            >
+              Смотреть в Google Maps <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>

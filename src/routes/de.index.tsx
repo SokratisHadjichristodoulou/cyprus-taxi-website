@@ -9,6 +9,7 @@ import {
   Star,
   ArrowRight,
   MapPin,
+  ExternalLink,
 } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import meetGreetImg from "@/assets/meet-greet.jpg";
@@ -28,7 +29,12 @@ import { sharedFAQsDe } from "@/lib/faqs.de";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
-import { aggregateRating } from "@/lib/reviews";
+import {
+  aggregateRating,
+  GOOGLE_MAPS_URL,
+  GOOGLE_REVIEW_STATS,
+  googleReviews,
+} from "@/lib/reviews";
 import { withLocale } from "@/lib/i18n";
 
 export const Route = createFileRoute("/de/")({
@@ -153,10 +159,10 @@ const reviews = [
     text: "Thank you Vlad! Very kind and friendly, excellent timing and took good care of the whole trip. 10/10 definitely recommend.",
   },
   {
-    name: "Joep D",
-    from: "TripAdvisor",
-    date: "Juli 2025",
-    text: "It was a very good experience — we have had this taxi multiple times, always on time, and he gave some good advice for our stay at different cities.",
+    name: googleReviews[0].name,
+    from: "Google",
+    date: "",
+    text: googleReviews[0].text,
   },
 ];
 
@@ -248,6 +254,18 @@ function HomePage() {
                 <span>
                   <strong className="font-semibold text-white">4,9</strong> · über 120
                   TripAdvisor-Bewertungen
+                </span>
+              </Link>
+              <div className="hidden h-4 w-px bg-white/20 sm:block" />
+              <Link
+                to="/de/reviews"
+                className="flex items-center gap-2 transition-opacity hover:opacity-80"
+              >
+                <span>
+                  <strong className="font-semibold text-white">
+                    {GOOGLE_REVIEW_STATS.rating}/5
+                  </strong>{" "}
+                  auf Google
                 </span>
               </Link>
               <div className="hidden h-4 w-px bg-white/20 sm:block" />
@@ -509,13 +527,14 @@ function HomePage() {
         <div className="container-tight">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">
-              TripAdvisor-Bewertungen
+              Bewertungen auf TripAdvisor & Google
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
               4,9★ auf TripAdvisor – über 120 Bewertungen
             </h2>
             <p className="mt-4 text-sm text-muted-foreground md:text-base">
-              Echte Bewertungen von Reisenden, im englischen Original.
+              Echte Bewertungen von Reisenden auf TripAdvisor und Google (
+              {GOOGLE_REVIEW_STATS.rating}/5), im englischen Original.
             </p>
           </div>
 
@@ -544,13 +563,21 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             <Link
               to="/de/reviews"
               className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
             >
               Alle Bewertungen lesen <ArrowRight className="h-4 w-4" />
             </Link>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
+            >
+              Auf Google Maps ansehen <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
