@@ -3,7 +3,12 @@ import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
-import { GOOGLE_MAPS_URL, GOOGLE_REVIEW_STATS, googleReviews } from "@/lib/reviews";
+import {
+  GOOGLE_MAPS_URL,
+  GOOGLE_REVIEW_STATS,
+  googleReviews,
+  GOOGLE_WRITE_REVIEW_URL,
+} from "@/lib/reviews";
 
 const TRIPADVISOR_URL =
   "https://www.tripadvisor.com/Attraction_Review-g190384-d8567084-Reviews-Taxi_Cyprus_Paphos-Paphos_Paphos_District.html";
@@ -161,6 +166,14 @@ function ReviewsPage() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 border-t border-border pt-6 md:justify-start">
             <a
+              href={GOOGLE_WRITE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-[color:var(--navy-foreground)] transition-transform hover:scale-[1.02]"
+            >
+              <Star className="h-4 w-4 fill-gold text-gold" /> Оставить отзыв в Google
+            </a>
+            <a
               href={GOOGLE_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -168,9 +181,6 @@ function ReviewsPage() {
             >
               Смотреть в Google Maps <ExternalLink className="h-4 w-4" />
             </a>
-            <span className="text-sm text-muted-foreground">
-              Ездили с нами? Будем благодарны за отзыв в Google.
-            </span>
           </div>
         </div>
       </section>

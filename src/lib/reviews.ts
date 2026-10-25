@@ -28,3 +28,7 @@ export const googleReviews = [
     text: "Just took Taxi with Vladimiros—car was spotless, he arrived early, helped with my bags, and the fare was exactly as promised. Perfect ride!",
   },
 ];
+
+// Where "Leave a Google review" buttons point. For a link that opens the review form directly,
+// replace this with the Business Profile's "Ask for reviews" link (https://g.page/r/…/review).
+export const GOOGLE_WRITE_REVIEW_URL = GOOGLE_MAPS_URL;

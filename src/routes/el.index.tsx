@@ -27,6 +27,7 @@ import {
   GOOGLE_MAPS_URL,
   GOOGLE_REVIEW_STATS,
   googleReviews,
+  GOOGLE_WRITE_REVIEW_URL,
 } from "@/lib/reviews";
 
 export const Route = createFileRoute("/el/")({
@@ -401,6 +402,24 @@ function HomePage() {
               className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
             >
               Δείτε στο Google Maps <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+          <div className="mx-auto mt-14 max-w-3xl rounded-3xl bg-navy px-6 py-10 text-center text-[color:var(--navy-foreground)] md:px-12">
+            <h3 className="font-display text-2xl font-bold text-white md:text-3xl">
+              Ταξιδέψατε μαζί μας;
+            </h3>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-white/75 md:text-base">
+              Η κριτική σας βοηθά άλλους ταξιδιώτες να βρουν έναν οδηγό που μπορούν να εμπιστευτούν.
+              Χρειάζεται μόνο ένα λεπτό.
+            </p>
+            <a
+              href={GOOGLE_WRITE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:scale-[1.02]"
+            >
+              <Star className="h-4 w-4 fill-gold text-gold" /> Αφήστε κριτική στο Google
+              <ExternalLink className="h-4 w-4" />
             </a>
           </div>
         </div>
