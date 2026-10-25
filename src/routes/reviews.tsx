@@ -10,6 +10,7 @@ import {
   GOOGLE_MAPS_URL,
   GOOGLE_REVIEW_STATS,
   googleReviews,
+  GOOGLE_WRITE_REVIEW_URL,
 } from "@/lib/reviews";
 
 const TRIPADVISOR_URL =
@@ -262,6 +263,14 @@ function ReviewsPage() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 border-t border-border pt-6 md:justify-start">
             <a
+              href={GOOGLE_WRITE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 text-sm font-semibold text-[color:var(--navy-foreground)] transition-transform hover:scale-[1.02]"
+            >
+              <Star className="h-4 w-4 fill-gold text-gold" /> Leave a Google review
+            </a>
+            <a
               href={GOOGLE_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -269,9 +278,6 @@ function ReviewsPage() {
             >
               View on Google Maps <ExternalLink className="h-4 w-4" />
             </a>
-            <span className="text-sm text-muted-foreground">
-              Travelled with us? We'd be grateful for a Google review.
-            </span>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ShieldCheck, Clock, BadgeCheck, Plane, Baby, CreditCard,
   Star, ArrowRight, MapPin,
+  ExternalLink,
 } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import meetGreetImg from "@/assets/meet-greet.jpg";
@@ -21,7 +22,13 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 import { popularRoutes } from "@/lib/routes-data";
 import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
-import { aggregateRating } from "@/lib/reviews";
+import {
+  aggregateRating,
+  GOOGLE_MAPS_URL,
+  GOOGLE_REVIEW_STATS,
+  googleReviews,
+  GOOGLE_WRITE_REVIEW_URL,
+} from "@/lib/reviews";
 
 export const Route = createFileRoute("/el/")({
   head: () => ({
@@ -126,6 +133,18 @@ function HomePage() {
                   {[0,1,2,3,4].map((i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
                 </div>
                 <span><strong className="font-semibold text-white">4.9</strong> · 120+ κριτικές TripAdvisor</span>
+              </Link>
+              <div className="hidden h-4 w-px bg-white/20 sm:block" />
+              <Link
+                to="/el/reviews"
+                className="flex items-center gap-2 transition-opacity hover:opacity-80"
+              >
+                <span>
+                  <strong className="font-semibold text-white">
+                    {GOOGLE_REVIEW_STATS.rating}/5
+                  </strong>{" "}
+                  στο Google
+                </span>
               </Link>
               <div className="hidden h-4 w-px bg-white/20 sm:block" />
               <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> Αδειούχοι & ασφαλισμένοι</div>
@@ -316,13 +335,14 @@ function HomePage() {
         <div className="container-tight">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">
-              Κριτικές TripAdvisor
+              Κριτικές TripAdvisor & Google
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
               4.9★ στο TripAdvisor — 120+ κριτικές
             </h2>
             <p className="mt-4 text-sm text-muted-foreground md:text-base">
-              #6 από 94 Μεταφορές στην Πάφο. Επαληθευμένες κριτικές από πραγματικούς ταξιδιώτες.
+              #6 από 94 Μεταφορές στην Πάφο στο TripAdvisor και {GOOGLE_REVIEW_STATS.rating}/5 στο
+              Google. Πραγματικές κριτικές από πραγματικούς ταξιδιώτες.
             </p>
           </div>
 
@@ -341,10 +361,11 @@ function HomePage() {
                 text: "Ευχαριστούμε Vlad! Πολύ ευγενικός και φιλικός, εξαιρετική συνέπεια στον χρόνο και άριστη φροντίδα σε όλο το ταξίδι. 10/10 το συνιστώ ανεπιφύλακτα.",
               },
               {
-                name: "Joep D",
-                from: "TripAdvisor",
-                date: "Ιούλ 2025",
-                text: "Ήταν πολύ καλή εμπειρία — έχουμε χρησιμοποιήσει αυτό το ταξί πολλές φορές, πάντα στην ώρα του, και μας έδωσε καλές συμβουλές για τη διαμονή μας σε διαφορετικές πόλεις.",
+                name: googleReviews[0].name,
+                from: "Google",
+                date: "",
+                text: googleReviews[0].text,
+                lang: "en",
               },
             ].map((t) => (
               <div key={t.name} className="rounded-2xl border border-border bg-card p-7 shadow-card-soft">
@@ -356,7 +377,9 @@ function HomePage() {
                   </div>
                   <span className="text-xs text-muted-foreground">{t.date}</span>
                 </div>
-                <p className="mt-4 text-[15px] leading-relaxed text-foreground">"{t.text}"</p>
+                <p lang={t.lang} className="mt-4 text-[15px] leading-relaxed text-foreground">
+                  "{t.text}"
+                </p>
                 <div className="mt-5 border-t border-border pt-4">
                   <div className="font-semibold text-navy">{t.name}</div>
                   <div className="text-xs text-muted-foreground">{t.from}</div>
@@ -365,13 +388,39 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             <Link
               to="/el/reviews"
               className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
             >
               Διαβάστε όλες τις 120+ κριτικές TripAdvisor <ArrowRight className="h-4 w-4" />
             </Link>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
+            >
+              Δείτε στο Google Maps <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+          <div className="mx-auto mt-14 max-w-3xl rounded-3xl bg-navy px-6 py-10 text-center text-[color:var(--navy-foreground)] md:px-12">
+            <h3 className="font-display text-2xl font-bold text-white md:text-3xl">
+              Ταξιδέψατε μαζί μας;
+            </h3>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-white/75 md:text-base">
+              Η κριτική σας βοηθά άλλους ταξιδιώτες να βρουν έναν οδηγό που μπορούν να εμπιστευτούν.
+              Χρειάζεται μόνο ένα λεπτό.
+            </p>
+            <a
+              href={GOOGLE_WRITE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:scale-[1.02]"
+            >
+              <Star className="h-4 w-4 fill-gold text-gold" /> Αφήστε κριτική στο Google
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>

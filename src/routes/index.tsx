@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ShieldCheck, Clock, BadgeCheck, Plane, Baby, CreditCard,
   Star, ArrowRight, MapPin,
+  ExternalLink,
 } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import meetGreetImg from "@/assets/meet-greet.jpg";
@@ -23,7 +24,14 @@ import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
 import { SocialSection } from "@/components/SocialSection";
 import { INSTAGRAM_URL, FACEBOOK_URL } from "@/lib/social";
-import { aggregateRating, GOOGLE_MAPS_URL, TRIPADVISOR_URL } from "@/lib/reviews";
+import {
+  aggregateRating,
+  GOOGLE_MAPS_URL,
+  GOOGLE_REVIEW_STATS,
+  googleReviews,
+  GOOGLE_WRITE_REVIEW_URL,
+  TRIPADVISOR_URL,
+} from "@/lib/reviews";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -210,6 +218,18 @@ function HomePage() {
                   {[0,1,2,3,4].map((i) => <Star key={i} className="h-4 w-4 fill-gold text-gold" />)}
                 </div>
                 <span><strong className="font-semibold text-white">4.9</strong> · 120+ TripAdvisor reviews</span>
+              </Link>
+              <div className="hidden h-4 w-px bg-white/20 sm:block" />
+              <Link
+                to="/reviews"
+                className="flex items-center gap-2 transition-opacity hover:opacity-80"
+              >
+                <span>
+                  <strong className="font-semibold text-white">
+                    {GOOGLE_REVIEW_STATS.rating}/5
+                  </strong>{" "}
+                  on Google
+                </span>
               </Link>
               <div className="hidden h-4 w-px bg-white/20 sm:block" />
               <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> Licensed & insured</div>
@@ -404,13 +424,14 @@ function HomePage() {
         <div className="container-tight">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/60">
-              TripAdvisor reviews
+              TripAdvisor & Google reviews
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-5xl">
               4.9★ on TripAdvisor — 120+ reviews
             </h2>
             <p className="mt-4 text-sm text-muted-foreground md:text-base">
-              Ranked #6 of 94 Transportation in Paphos. Verified reviews from real travellers.
+              Ranked #6 of 94 Transportation in Paphos on TripAdvisor, and rated{" "}
+              {GOOGLE_REVIEW_STATS.rating}/5 on Google. Real reviews from real travellers.
             </p>
           </div>
 
@@ -429,10 +450,10 @@ function HomePage() {
                 text: "Thank you Vlad! Very kind and friendly, excellent timing and took good care of the whole trip. 10/10 definitely recommend.",
               },
               {
-                name: "Joep D",
-                from: "TripAdvisor",
-                date: "Jul 2025",
-                text: "It was a very good experience — we have had this taxi multiple times, always on time, and he gave some good advice for our stay at different cities.",
+                name: googleReviews[0].name,
+                from: "Google",
+                date: "",
+                text: googleReviews[0].text,
               },
             ].map((t) => (
               <div key={t.name} className="rounded-2xl border border-border bg-card p-7 shadow-card-soft">
@@ -453,13 +474,39 @@ function HomePage() {
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             <Link
               to="/reviews"
               className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
             >
               Read all 120+ TripAdvisor reviews <ArrowRight className="h-4 w-4" />
             </Link>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
+            >
+              View on Google Maps <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+          <div className="mx-auto mt-14 max-w-3xl rounded-3xl bg-navy px-6 py-10 text-center text-[color:var(--navy-foreground)] md:px-12">
+            <h3 className="font-display text-2xl font-bold text-white md:text-3xl">
+              Travelled with us?
+            </h3>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-white/75 md:text-base">
+              Your review helps other travellers find a driver they can trust. It only takes a
+              minute.
+            </p>
+            <a
+              href={GOOGLE_WRITE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:scale-[1.02]"
+            >
+              <Star className="h-4 w-4 fill-gold text-gold" /> Leave a Google review
+              <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
