@@ -3,6 +3,7 @@ import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-mercedes-coast.jpg";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
+import { GOOGLE_MAPS_URL, GOOGLE_REVIEW_STATS, googleReviews } from "@/lib/reviews";
 
 const TRIPADVISOR_URL =
   "https://www.tripadvisor.com/Attraction_Review-g190384-d8567084-Reviews-Taxi_Cyprus_Paphos-Paphos_Paphos_District.html";
@@ -112,6 +113,58 @@ function ReviewsPage() {
           <Link to="/el/contact" className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-[color:var(--navy-foreground)]">
             Κράτηση μεταφοράς <ArrowRight className="h-4 w-4" />
           </Link>
+        </div>
+      </section>
+
+      {/* Google reviews */}
+      <section className="container-tight pb-16 md:pb-20">
+        <div className="mx-auto max-w-4xl rounded-3xl border border-border bg-card p-8 shadow-card-soft md:p-10">
+          <div className="grid items-center gap-8 md:grid-cols-[auto_1fr]">
+            <div className="text-center md:text-left">
+              <h2 className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                Κριτικές Google
+              </h2>
+              <div className="mt-2 font-display text-5xl font-bold text-navy">
+                {GOOGLE_REVIEW_STATS.rating}/5
+              </div>
+              <div className="mt-2 flex justify-center gap-0.5 md:justify-start">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <Star key={i} className="h-5 w-5 fill-gold text-gold" />
+                ))}
+              </div>
+              <div className="mt-1 text-xs font-medium text-muted-foreground">
+                {`${GOOGLE_REVIEW_STATS.count} ${GOOGLE_REVIEW_STATS.count === 1 ? "κριτική" : "κριτικές"} στο Google`}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {googleReviews.map((r) => (
+                <figure key={r.name}>
+                  <blockquote lang="en" className="text-[15px] leading-relaxed text-foreground">
+                    "{r.text}"
+                  </blockquote>
+                  <figcaption className="mt-3 text-sm">
+                    <span className="font-semibold text-navy">{r.name}</span>
+                    <span className="text-xs text-muted-foreground"> · Google</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 border-t border-border pt-6 md:justify-start">
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-navy/20 bg-secondary/50 px-5 py-3 text-sm font-semibold text-navy transition-colors hover:bg-secondary"
+            >
+              Δείτε στο Google Maps <ExternalLink className="h-4 w-4" />
+            </a>
+            <span className="text-sm text-muted-foreground">
+              Ταξιδέψατε μαζί μας; Θα εκτιμούσαμε μια κριτική στο Google.
+            </span>
+          </div>
         </div>
       </section>
 

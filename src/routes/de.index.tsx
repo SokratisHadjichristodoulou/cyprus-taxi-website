@@ -237,7 +237,7 @@ function HomePage() {
 
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-white/85">
               <Link
-                to="/reviews"
+                to="/de/reviews"
                 className="flex items-center gap-2 transition-opacity hover:opacity-80"
               >
                 <div className="flex">
@@ -546,7 +546,7 @@ function HomePage() {
 
           <div className="mt-10 text-center">
             <Link
-              to="/reviews"
+              to="/de/reviews"
               className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:underline"
             >
               Alle Bewertungen lesen <ArrowRight className="h-4 w-4" />

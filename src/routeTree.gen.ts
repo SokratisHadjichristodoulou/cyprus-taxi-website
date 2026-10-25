@@ -102,6 +102,7 @@ import { Route as DeTaxiToKatoPaphosRouteImport } from './routes/de.taxi-to-kato
 import { Route as DeTaxiToCoralBayRouteImport } from './routes/de.taxi-to-coral-bay'
 import { Route as DeTaxiToChlorakaRouteImport } from './routes/de.taxi-to-chloraka'
 import { Route as DeTaxiToAphroditeHillsRouteImport } from './routes/de.taxi-to-aphrodite-hills'
+import { Route as DeReviewsRouteImport } from './routes/de.reviews'
 import { Route as DePricingRouteImport } from './routes/de.pricing'
 import { Route as DePaphosAirportTransfersRouteImport } from './routes/de.paphos-airport-transfers'
 import { Route as DePaphosAirportToNicosiaRouteImport } from './routes/de.paphos-airport-to-nicosia'
@@ -602,6 +603,11 @@ const DeTaxiToAphroditeHillsRoute = DeTaxiToAphroditeHillsRouteImport.update({
   path: '/taxi-to-aphrodite-hills',
   getParentRoute: () => DeRoute,
 } as any)
+const DeReviewsRoute = DeReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => DeRoute,
+} as any)
 const DePricingRoute = DePricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -743,6 +749,7 @@ export interface FileRoutesByFullPath {
   '/de/paphos-airport-to-nicosia': typeof DePaphosAirportToNicosiaRoute
   '/de/paphos-airport-transfers': typeof DePaphosAirportTransfersRoute
   '/de/pricing': typeof DePricingRoute
+  '/de/reviews': typeof DeReviewsRoute
   '/de/taxi-to-aphrodite-hills': typeof DeTaxiToAphroditeHillsRoute
   '/de/taxi-to-chloraka': typeof DeTaxiToChlorakaRoute
   '/de/taxi-to-coral-bay': typeof DeTaxiToCoralBayRoute
@@ -851,6 +858,7 @@ export interface FileRoutesByTo {
   '/de/paphos-airport-to-nicosia': typeof DePaphosAirportToNicosiaRoute
   '/de/paphos-airport-transfers': typeof DePaphosAirportTransfersRoute
   '/de/pricing': typeof DePricingRoute
+  '/de/reviews': typeof DeReviewsRoute
   '/de/taxi-to-aphrodite-hills': typeof DeTaxiToAphroditeHillsRoute
   '/de/taxi-to-chloraka': typeof DeTaxiToChlorakaRoute
   '/de/taxi-to-coral-bay': typeof DeTaxiToCoralBayRoute
@@ -963,6 +971,7 @@ export interface FileRoutesById {
   '/de/paphos-airport-to-nicosia': typeof DePaphosAirportToNicosiaRoute
   '/de/paphos-airport-transfers': typeof DePaphosAirportTransfersRoute
   '/de/pricing': typeof DePricingRoute
+  '/de/reviews': typeof DeReviewsRoute
   '/de/taxi-to-aphrodite-hills': typeof DeTaxiToAphroditeHillsRoute
   '/de/taxi-to-chloraka': typeof DeTaxiToChlorakaRoute
   '/de/taxi-to-coral-bay': typeof DeTaxiToCoralBayRoute
@@ -1076,6 +1085,7 @@ export interface FileRouteTypes {
     | '/de/paphos-airport-to-nicosia'
     | '/de/paphos-airport-transfers'
     | '/de/pricing'
+    | '/de/reviews'
     | '/de/taxi-to-aphrodite-hills'
     | '/de/taxi-to-chloraka'
     | '/de/taxi-to-coral-bay'
@@ -1184,6 +1194,7 @@ export interface FileRouteTypes {
     | '/de/paphos-airport-to-nicosia'
     | '/de/paphos-airport-transfers'
     | '/de/pricing'
+    | '/de/reviews'
     | '/de/taxi-to-aphrodite-hills'
     | '/de/taxi-to-chloraka'
     | '/de/taxi-to-coral-bay'
@@ -1295,6 +1306,7 @@ export interface FileRouteTypes {
     | '/de/paphos-airport-to-nicosia'
     | '/de/paphos-airport-transfers'
     | '/de/pricing'
+    | '/de/reviews'
     | '/de/taxi-to-aphrodite-hills'
     | '/de/taxi-to-chloraka'
     | '/de/taxi-to-coral-bay'
@@ -2053,6 +2065,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeTaxiToAphroditeHillsRouteImport
       parentRoute: typeof DeRoute
     }
+    '/de/reviews': {
+      id: '/de/reviews'
+      path: '/reviews'
+      fullPath: '/de/reviews'
+      preLoaderRoute: typeof DeReviewsRouteImport
+      parentRoute: typeof DeRoute
+    }
     '/de/pricing': {
       id: '/de/pricing'
       path: '/pricing'
@@ -2178,6 +2197,7 @@ interface DeRouteChildren {
   DePaphosAirportToNicosiaRoute: typeof DePaphosAirportToNicosiaRoute
   DePaphosAirportTransfersRoute: typeof DePaphosAirportTransfersRoute
   DePricingRoute: typeof DePricingRoute
+  DeReviewsRoute: typeof DeReviewsRoute
   DeTaxiToAphroditeHillsRoute: typeof DeTaxiToAphroditeHillsRoute
   DeTaxiToChlorakaRoute: typeof DeTaxiToChlorakaRoute
   DeTaxiToCoralBayRoute: typeof DeTaxiToCoralBayRoute
@@ -2200,6 +2220,7 @@ const DeRouteChildren: DeRouteChildren = {
   DePaphosAirportToNicosiaRoute: DePaphosAirportToNicosiaRoute,
   DePaphosAirportTransfersRoute: DePaphosAirportTransfersRoute,
   DePricingRoute: DePricingRoute,
+  DeReviewsRoute: DeReviewsRoute,
   DeTaxiToAphroditeHillsRoute: DeTaxiToAphroditeHillsRoute,
   DeTaxiToChlorakaRoute: DeTaxiToChlorakaRoute,
   DeTaxiToCoralBayRoute: DeTaxiToCoralBayRoute,

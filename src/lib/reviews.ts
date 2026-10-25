@@ -14,3 +14,17 @@ export const aggregateRating = {
   bestRating: "5",
   worstRating: "1",
 };
+
+// Google Business Profile ("Vladimir TaxiCyprus24"), linked by its Maps CID (0x1eae908731da3cae).
+// Figures and review copied from the listing on 2026-10-25: 5/5 from 1 review.
+// Update both when the listing gets more reviews; reviews are quoted verbatim, never edited.
+export const GOOGLE_MAPS_URL = "https://www.google.com/maps?cid=2210863377416862894";
+
+export const GOOGLE_REVIEW_STATS = { rating: 5, count: 1 } as const;
+
+export const googleReviews = [
+  {
+    name: "Grigorios Paraskevopoulos",
+    text: "Just took Taxi with Vladimiros—car was spotless, he arrived early, helped with my bags, and the fare was exactly as promised. Perfect ride!",
+  },
+];
