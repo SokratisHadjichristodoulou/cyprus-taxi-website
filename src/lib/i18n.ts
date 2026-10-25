@@ -36,6 +36,7 @@ export const GERMAN_PATHS = new Set<string>([
   "/paphos-airport-to-nicosia",
   "/paphos-airport-transfers",
   "/pricing",
+  "/reviews",
   "/taxi-to-aphrodite-hills",
   "/taxi-to-chloraka",
   "/taxi-to-coral-bay",

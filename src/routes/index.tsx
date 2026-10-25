@@ -23,7 +23,7 @@ import { CTASection } from "@/components/CTASection";
 import { StructuredData } from "@/components/StructuredData";
 import { SocialSection } from "@/components/SocialSection";
 import { INSTAGRAM_URL, FACEBOOK_URL } from "@/lib/social";
-import { aggregateRating, TRIPADVISOR_URL } from "@/lib/reviews";
+import { aggregateRating, GOOGLE_MAPS_URL, TRIPADVISOR_URL } from "@/lib/reviews";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -126,7 +126,13 @@ function HomePage() {
                 geoRadius: "120000",
               },
               knowsLanguage: ["en", "el", "ru"],
-              sameAs: ["https://wa.me/35796626844", INSTAGRAM_URL, FACEBOOK_URL, TRIPADVISOR_URL],
+              sameAs: [
+                "https://wa.me/35796626844",
+                INSTAGRAM_URL,
+                FACEBOOK_URL,
+                TRIPADVISOR_URL,
+                GOOGLE_MAPS_URL,
+              ],
               aggregateRating,
               hasOfferCatalog: {
                 "@type": "OfferCatalog",

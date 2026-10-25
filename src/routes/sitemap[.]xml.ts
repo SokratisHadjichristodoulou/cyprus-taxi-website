@@ -44,7 +44,7 @@ const lastModified: Record<string, string> = {
   "/paphos-airport-to-nicosia": "2026-10-18",
   "/paphos-airport-transfers": "2026-10-18",
   "/pricing": "2026-10-18",
-  "/reviews": "2026-10-18",
+  "/reviews": "2026-10-25",
   "/taxi-to-aphrodite-hills": "2026-10-18",
   "/taxi-to-chloraka": "2026-10-18",
   "/taxi-to-coral-bay": "2026-10-18",
