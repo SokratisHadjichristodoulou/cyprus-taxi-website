@@ -79,9 +79,9 @@ function ArticlePage() {
         <div className="mx-auto max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground">
             Paphos is one of the most popular holiday destinations in Cyprus, famous for its
-            beaches, ancient history, traditional villages, and vibrant harbour area. Whether
-            you are visiting for a relaxing beach holiday, sightseeing, or local food
-            experiences, Paphos offers something for every traveller.
+            beaches, ancient history, traditional villages, and vibrant harbour area. Whether you
+            are visiting for a relaxing beach holiday, sightseeing, or local food experiences,
+            Paphos offers something for every traveller.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -89,29 +89,28 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             One of the most famous historical attractions in Cyprus is Tombs of the Kings. This
-            UNESCO World Heritage Site features impressive underground tombs carved directly
-            into rock dating back more than 2,000 years. The site is one of the top things to
-            see in Paphos for visitors interested in ancient history and archaeology.
+            UNESCO World Heritage Site features impressive underground tombs carved directly into
+            rock dating back more than 2,000 years. The site is one of the top things to see in
+            Paphos for visitors interested in ancient history and archaeology.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Explore the Paphos Mosaics
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Located inside Paphos Archaeological Park, the famous Paphos mosaics are considered
-            some of the best-preserved Roman mosaics in the Mediterranean. The detailed artwork
-            and ancient villas make this one of the most important cultural attractions in
-            Cyprus.
+            Located inside Paphos Archaeological Park, the famous Paphos mosaics are considered some
+            of the best-preserved Roman mosaics in the Mediterranean. The detailed artwork and
+            ancient villas make this one of the most important cultural attractions in Cyprus.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Walk Around Paphos Harbour
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Paphos Harbour is one of the best places to spend an evening in Cyprus. The harbour
-            area is filled with restaurants, cafés, bars, and seaside walking paths overlooking
-            the Mediterranean Sea. Visitors can enjoy fresh seafood, sunset views, and boat
-            tours departing from the marina.
+            Paphos Harbour is one of the best places to spend an evening in Cyprus. The harbour area
+            is filled with restaurants, cafés, bars, and seaside walking paths overlooking the
+            Mediterranean Sea. Visitors can enjoy fresh seafood, sunset views, and boat tours
+            departing from the marina.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -119,42 +118,40 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Pafos Zoo is one of the top family attractions in Paphos and one of the most visited
-            zoos in Cyprus. Located near Coral Bay and Peyia, Pafos Zoo is home to a wide
-            variety of animals including giraffes, monkeys, reptiles, parrots, flamingos, and
-            exotic birds from around the world.
+            zoos in Cyprus. Located near Coral Bay and Peyia, Pafos Zoo is home to a wide variety of
+            animals including giraffes, monkeys, reptiles, parrots, flamingos, and exotic birds from
+            around the world.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             The zoo is especially popular with families visiting Paphos with children, offering
-            daily parrot shows, animal experiences, and large outdoor areas with beautiful views
-            of the Mediterranean coastline. Many tourists visiting Coral Bay, Sea Caves, and
-            Peyia combine their trip with a visit to Pafos Zoo for a full day of sightseeing and
-            family activities in Cyprus.
+            daily parrot shows, animal experiences, and large outdoor areas with beautiful views of
+            the Mediterranean coastline. Many tourists visiting Coral Bay, Sea Caves, and Peyia
+            combine their trip with a visit to Pafos Zoo for a full day of sightseeing and family
+            activities in Cyprus.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Pafos Zoo is easily accessible from Paphos Harbour, Coral Bay, Peyia, and nearby
-            tourist areas by private taxi or transfer service. Taxicyprus24 provides reliable
-            taxi transfers to Pafos Zoo from hotels, airports, resorts, and attractions across
-            Cyprus.
+            Pafos Zoo is easily accessible from Paphos Harbour, Coral Bay, Peyia, and nearby tourist
+            areas by private taxi or transfer service. Taxicyprus24 provides reliable taxi transfers
+            to Pafos Zoo from hotels, airports, resorts, and attractions across Cyprus.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Discover Coral Bay & Sea Caves
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            A short drive from Paphos takes you to Coral Bay and the famous Peyia Sea Caves.
-            These coastal areas are ideal for swimming, snorkeling, photography, and relaxing by
-            the sea. The Sea Caves area is especially popular for sunset views and cliffside
-            scenery.
+            A short drive from Paphos takes you to Coral Bay and the famous Peyia Sea Caves. These
+            coastal areas are ideal for swimming, snorkeling, photography, and relaxing by the sea.
+            The Sea Caves area is especially popular for sunset views and cliffside scenery.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Visit Traditional Villages & Local Taverns
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The villages surrounding Paphos offer a more authentic Cyprus experience away from
-            busy tourist resorts. Areas like Kathikas and Peyia are known for traditional
-            tavernas, local wine, and mountain views. Many visitors enjoy exploring these
-            villages for Cypriot food, local culture, and quieter surroundings.
+            The villages surrounding Paphos offer a more authentic Cyprus experience away from busy
+            tourist resorts. Areas like Kathikas and Peyia are known for traditional tavernas, local
+            wine, and mountain views. Many visitors enjoy exploring these villages for Cypriot food,
+            local culture, and quieter surroundings.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -162,14 +159,50 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Many of the best attractions around Paphos are easiest to reach by private taxi or
-            airport transfer service. Taxicyprus24 provides reliable fixed-price taxi transfers
-            from Larnaca Airport, Paphos Airport, Coral Bay, Peyia, Limassol, and across Cyprus.
+            airport transfer service. Taxicyprus24 provides reliable fixed-price taxi transfers from
+            Larnaca Airport, Paphos Airport, Coral Bay, Peyia, Limassol, and across Cyprus.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            With professional drivers, 24/7 service, and comfortable vehicles, private transfers
-            are one of the most convenient ways to explore Paphos and the surrounding region
-            during your Cyprus holiday.
+            With professional drivers, 24/7 service, and comfortable vehicles, private transfers are
+            one of the most convenient ways to explore Paphos and the surrounding region during your
+            Cyprus holiday.
           </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
+            Related transfers
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/taxi-to-kato-paphos"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Kato Paphos <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-coral-bay"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Coral Bay <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-polis-latchi"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Polis & Latchi <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-aphrodite-hills"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Aphrodite Hills <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link

@@ -78,10 +78,10 @@ function ArticlePage() {
       <article className="container-tight py-16 md:py-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Chloraka and Kissonerga are two of the most underrated coastal areas in western
-            Cyprus. Located between Paphos and Coral Bay, these peaceful seaside villages offer
-            quiet beaches, scenic viewpoints, local tavernas, and a more authentic Cyprus
-            experience away from crowded tourist resorts.
+            Chloraka and Kissonerga are two of the most underrated coastal areas in western Cyprus.
+            Located between Paphos and Coral Bay, these peaceful seaside villages offer quiet
+            beaches, scenic viewpoints, local tavernas, and a more authentic Cyprus experience away
+            from crowded tourist resorts.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -89,39 +89,37 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             While many visitors head directly to Coral Bay, the coastline around Chloraka and
-            Kissonerga hides several smaller beaches and swimming spots with crystal-clear water
-            and beautiful sunset views.
+            Kissonerga hides several smaller beaches and swimming spots with crystal-clear water and
+            beautiful sunset views.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Potima Beach is one of the best hidden beaches near Paphos, popular for its relaxed
-            atmosphere, dramatic coastline, and sunset cafés overlooking the Mediterranean Sea.
-            The area is perfect for travellers looking to avoid busy tourist beaches during peak
-            summer months.
+            atmosphere, dramatic coastline, and sunset cafés overlooking the Mediterranean Sea. The
+            area is perfect for travellers looking to avoid busy tourist beaches during peak summer
+            months.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Scenic Coastal Viewpoints
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The road connecting Paphos, Chloraka, and Kissonerga offers some of the most
-            beautiful sea views in Cyprus. Visitors can stop along the coastline to enjoy
-            panoramic sunsets, rocky cliffs, and peaceful walking areas overlooking the
-            Mediterranean.
+            The road connecting Paphos, Chloraka, and Kissonerga offers some of the most beautiful
+            sea views in Cyprus. Visitors can stop along the coastline to enjoy panoramic sunsets,
+            rocky cliffs, and peaceful walking areas overlooking the Mediterranean.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The nearby Peyia Sea Caves area is also only a short drive away and remains one of
-            the top hidden attractions in the Paphos region for photography and coastal
-            exploration.
+            The nearby Peyia Sea Caves area is also only a short drive away and remains one of the
+            top hidden attractions in the Paphos region for photography and coastal exploration.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Traditional Taverns & Local Food
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Chloraka and Kissonerga are home to many family-run tavernas serving authentic
-            Cypriot food, fresh seafood, grilled meats, and local wine. Unlike busier tourist
-            areas, these villages offer a more traditional dining experience with quieter
-            surroundings and friendly local hospitality.
+            Chloraka and Kissonerga are home to many family-run tavernas serving authentic Cypriot
+            food, fresh seafood, grilled meats, and local wine. Unlike busier tourist areas, these
+            villages offer a more traditional dining experience with quieter surroundings and
+            friendly local hospitality.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Visitors staying in nearby villas or apartments often choose these areas for evening
@@ -142,16 +140,16 @@ function ArticlePage() {
             <li>Akamas Peninsula National Park</li>
           </ul>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The area combines peaceful coastal living with easy access to beaches, restaurants,
-            and sightseeing attractions across Paphos.
+            The area combines peaceful coastal living with easy access to beaches, restaurants, and
+            sightseeing attractions across Paphos.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Airport Transfers to Chloraka & Kissonerga
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The easiest way to travel to Chloraka and Kissonerga from Larnaca International
-            Airport or Paphos International Airport is by private airport transfer.
+            The easiest way to travel to Chloraka and Kissonerga from Larnaca International Airport
+            or Paphos International Airport is by private airport transfer.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Taxicyprus24 provides fixed-price Cyprus airport taxi services with professional
@@ -159,6 +157,42 @@ function ArticlePage() {
             24/7. Whether you are travelling to a private villa, hotel, or holiday apartment,
             private transfers offer a reliable and stress-free way to reach western Cyprus.
           </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
+            Related transfers
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/taxi-to-chloraka"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Chloraka <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-kissonerga"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Kissonerga <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-coral-bay"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Coral Bay <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-peyia"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Peyia <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link

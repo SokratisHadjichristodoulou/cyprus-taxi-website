@@ -78,10 +78,10 @@ function ArticlePage() {
       <article className="container-tight py-16 md:py-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Coral Bay and Peyia are among the most popular holiday destinations on the western
-            coast of Cyprus. Known for beautiful beaches, luxury villas, family-friendly
-            resorts, and stunning Mediterranean sunsets, both areas attract thousands of
-            visitors every year looking for the perfect Cyprus holiday accommodation.
+            Coral Bay and Peyia are among the most popular holiday destinations on the western coast
+            of Cyprus. Known for beautiful beaches, luxury villas, family-friendly resorts, and
+            stunning Mediterranean sunsets, both areas attract thousands of visitors every year
+            looking for the perfect Cyprus holiday accommodation.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -89,37 +89,37 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Coral Bay is famous for its golden sandy beach, lively atmosphere, and excellent
-            selection of hotels and resorts. Visitors staying in Coral Bay are close to
-            restaurants, beach bars, water sports, and popular attractions around Paphos.
+            selection of hotels and resorts. Visitors staying in Coral Bay are close to restaurants,
+            beach bars, water sports, and popular attractions around Paphos.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Some of the best hotels in Coral Bay include beachfront resorts with swimming pools,
-            spa facilities, sea-view rooms, and family entertainment. Many tourists choose Coral
-            Bay hotels because they offer easy access to Coral Bay Beach and are only a short
-            drive from Paphos Harbour and the Sea Caves area.
+            Some of the best hotels in Coral Bay include beachfront resorts with swimming pools, spa
+            facilities, sea-view rooms, and family entertainment. Many tourists choose Coral Bay
+            hotels because they offer easy access to Coral Bay Beach and are only a short drive from
+            Paphos Harbour and the Sea Caves area.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Luxury Villas in Peyia
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Peyia is one of the top locations in Cyprus for private holiday villas. Situated on
-            the hills above Coral Bay, Peyia offers panoramic sea views, peaceful surroundings,
-            and luxury accommodation perfect for families, couples, and groups.
+            Peyia is one of the top locations in Cyprus for private holiday villas. Situated on the
+            hills above Coral Bay, Peyia offers panoramic sea views, peaceful surroundings, and
+            luxury accommodation perfect for families, couples, and groups.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Many villas in Peyia include private swimming pools, outdoor terraces, BBQ areas,
-            and large living spaces ideal for longer stays in Cyprus. The area is especially
-            popular with travellers looking for privacy and a more relaxed atmosphere away from
-            busy tourist resorts.
+            Many villas in Peyia include private swimming pools, outdoor terraces, BBQ areas, and
+            large living spaces ideal for longer stays in Cyprus. The area is especially popular
+            with travellers looking for privacy and a more relaxed atmosphere away from busy tourist
+            resorts.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Why Stay in Coral Bay or Peyia?
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Both Coral Bay and Peyia provide excellent access to some of the best attractions in
-            the Paphos region, including:
+            Both Coral Bay and Peyia provide excellent access to some of the best attractions in the
+            Paphos region, including:
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-6 leading-relaxed text-muted-foreground">
             <li>Lara Beach</li>
@@ -143,9 +143,45 @@ function ArticlePage() {
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Whether you are travelling to a luxury villa in Peyia or a beachfront hotel in Coral
-            Bay, private transfers provide a fast, reliable, and stress-free start to your
-            Cyprus holiday.
+            Bay, private transfers provide a fast, reliable, and stress-free start to your Cyprus
+            holiday.
           </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
+            Related transfers
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/taxi-to-coral-bay"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Coral Bay <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-peyia"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Peyia <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-aphrodite-hills"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Aphrodite Hills <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-pissouri"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Pissouri <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link
