@@ -5,7 +5,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
-import { getLocaleFromPath } from "@/lib/i18n";
+import { getLocaleFromPath, stripLocale, withLocale, translate, type Locale } from "@/lib/i18n";
+import { StructuredData } from "@/components/StructuredData";
 
 function NotFoundComponent() {
   return (
@@ -114,6 +115,76 @@ function CanonicalLink() {
   return <link rel="canonical" href={href} />;
 }
 
+// BreadcrumbList JSON-LD for pages that don't render TransferPage (which has its own).
+// Route pages built on TransferPage, and the homepage, are deliberately absent here.
+const STATIC_CRUMBS: Record<string, Parameters<typeof translate>[0]> = {
+  "/about": "nav.about",
+  "/blog": "nav.blog",
+  "/contact": "nav.contact",
+  "/faq": "nav.faq",
+  "/fleet": "nav.fleet",
+  "/pricing": "nav.pricing",
+  "/reviews": "nav.reviews",
+};
+
+const CYPRUS_TRANSFERS_LABEL: Record<Locale, string> = {
+  en: "Cyprus Airport Transfers",
+  el: "Μεταφορές Αεροδρομίου Κύπρου",
+  ru: "Трансферы из аэропортов Кипра",
+  de: "Flughafentransfers Zypern",
+};
+
+// Blog posts are English-only.
+const BLOG_POST_TITLES: Record<string, string> = {
+  "/blog/best-beaches-paphos-coral-bay": "Best Beaches in Paphos & Coral Bay",
+  "/blog/complete-cyprus-airport-transfer-guide": "The Complete Cyprus Airport Transfer Guide",
+  "/blog/cyprus-travel-tips-first-time-visitors": "Cyprus Travel Tips for First-Time Visitors",
+  "/blog/hidden-gems-chloraka-kissonerga": "Hidden Gems Near Chloraka and Kissonerga",
+  "/blog/larnaca-airport-to-paphos-travel-guide": "How to Travel from Larnaca Airport to Paphos",
+  "/blog/things-to-do-in-paphos": "Things to Do in Paphos — Local Guide",
+  "/blog/top-hotels-villas-coral-bay-peyia": "Top Hotels & Villas in Coral Bay and Peyia",
+};
+
+function abs(path: string): string {
+  return `${SITE_ORIGIN}${path === "/" ? "/" : path}`;
+}
+
+function SiteBreadcrumbs() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const clean = pathname !== "/" && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  const locale = getLocaleFromPath(clean);
+  const base = stripLocale(clean);
+
+  let trail: { name: string; path: string }[] | null = null;
+  if (STATIC_CRUMBS[base]) {
+    trail = [{ name: translate(STATIC_CRUMBS[base], locale), path: clean }];
+  } else if (base === "/cyprus-airport-transfers") {
+    trail = [{ name: CYPRUS_TRANSFERS_LABEL[locale], path: clean }];
+  } else if (locale === "en" && BLOG_POST_TITLES[base]) {
+    trail = [
+      { name: translate("nav.blog", "en"), path: "/blog" },
+      { name: BLOG_POST_TITLES[base], path: clean },
+    ];
+  }
+  if (!trail) return null;
+
+  const items = [{ name: translate("nav.home", locale), path: withLocale(locale, "/") }, ...trail];
+  return (
+    <StructuredData
+      data={{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: items.map((it, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: it.name,
+          item: abs(it.path),
+        })),
+      }}
+    />
+  );
+}
+
 function RootShell({ children }: { children: React.ReactNode }) {
   // Same pathname source as CanonicalLink, so SSR renders the right language attribute.
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -136,6 +207,7 @@ function RootComponent() {
     <div className="flex min-h-screen flex-col bg-background pb-20 md:pb-0">
       <Header />
       <main className="flex-1">
+        <SiteBreadcrumbs />
         <Outlet />
       </main>
       <Footer />

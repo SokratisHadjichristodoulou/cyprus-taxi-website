@@ -1,11 +1,11 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Clock, BadgeCheck, Users, Plane, ShieldCheck } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { FAQAccordion, type FAQItem } from "@/components/FAQAccordion";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
 import { StructuredData } from "@/components/StructuredData";
-import { useI18n, withLocale } from "@/lib/i18n";
+import { useI18n, withLocale, type Locale } from "@/lib/i18n";
 
 export interface TransferPageProps {
   eyebrow: string;
@@ -28,9 +28,21 @@ export interface TransferPageProps {
   defaultDropoff?: string;
 }
 
+const SITE = "https://taxicyprus24.com";
+
+// Breadcrumb middle step: the all-routes overview, which has no German version (withLocale falls back to English).
+const HUB_LABEL: Record<Locale, string> = {
+  en: "Cyprus Airport Transfers",
+  el: "Μεταφορές Αεροδρομίου Κύπρου",
+  ru: "Трансферы из аэропортов Кипра",
+  de: "Flughafentransfers Zypern",
+};
+
 export function TransferPage(p: TransferPageProps) {
   const { t, locale } = useI18n();
   const contactPath = withLocale(locale, "/contact");
+  const rawPath = useRouterState({ select: (s) => s.location.pathname });
+  const pathname = rawPath !== "/" && rawPath.endsWith("/") ? rawPath.slice(0, -1) : rawPath;
 
   return (
     <>
@@ -80,9 +92,9 @@ export function TransferPage(p: TransferPageProps) {
             {
               "@type": "BreadcrumbList",
               itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: "https://taxicyprus24.com/" },
-                { "@type": "ListItem", position: 2, name: "Cyprus Airport Transfers", item: "https://taxicyprus24.com/cyprus-airport-transfers" },
-                { "@type": "ListItem", position: 3, name: p.title },
+                { "@type": "ListItem", position: 1, name: t("nav.home"), item: `${SITE}${withLocale(locale, "/")}` },
+                { "@type": "ListItem", position: 2, name: HUB_LABEL[locale], item: `${SITE}${withLocale(locale, "/cyprus-airport-transfers")}` },
+                { "@type": "ListItem", position: 3, name: p.title, item: `${SITE}${pathname}` },
               ],
             },
             {
