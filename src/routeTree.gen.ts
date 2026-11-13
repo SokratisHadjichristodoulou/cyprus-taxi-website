@@ -39,7 +39,9 @@ import { Route as DeRouteImport } from './routes/de'
 import { Route as CyprusAirportTransfersRouteImport } from './routes/cyprus-airport-transfers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AirportTransfersRouteImport } from './routes/airport-transfers'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as R9SeaterRouteImport } from './routes/9-seater'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RuIndexRouteImport } from './routes/ru.index'
 import { Route as ElIndexRouteImport } from './routes/el.index'
@@ -272,9 +274,19 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AirportTransfersRoute = AirportTransfersRouteImport.update({
+  id: '/airport-transfers',
+  path: '/airport-transfers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const R9SeaterRoute = R9SeaterRouteImport.update({
+  id: '/9-seater',
+  path: '/9-seater',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -702,7 +714,9 @@ const BlogBestBeachesPaphosCoralBayRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/9-seater': typeof R9SeaterRoute
   '/about': typeof AboutRoute
+  '/airport-transfers': typeof AirportTransfersRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
@@ -814,7 +828,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/9-seater': typeof R9SeaterRoute
   '/about': typeof AboutRoute
+  '/airport-transfers': typeof AirportTransfersRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
@@ -924,7 +940,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/9-seater': typeof R9SeaterRoute
   '/about': typeof AboutRoute
+  '/airport-transfers': typeof AirportTransfersRoute
   '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/cyprus-airport-transfers': typeof CyprusAirportTransfersRoute
@@ -1038,7 +1056,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/9-seater'
     | '/about'
+    | '/airport-transfers'
     | '/blog'
     | '/contact'
     | '/cyprus-airport-transfers'
@@ -1150,7 +1170,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/9-seater'
     | '/about'
+    | '/airport-transfers'
     | '/blog'
     | '/contact'
     | '/cyprus-airport-transfers'
@@ -1259,7 +1281,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/9-seater'
     | '/about'
+    | '/airport-transfers'
     | '/blog'
     | '/contact'
     | '/cyprus-airport-transfers'
@@ -1372,7 +1396,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  R9SeaterRoute: typeof R9SeaterRoute
   AboutRoute: typeof AboutRoute
+  AirportTransfersRoute: typeof AirportTransfersRoute
   BlogRoute: typeof BlogRoute
   ContactRoute: typeof ContactRoute
   CyprusAirportTransfersRoute: typeof CyprusAirportTransfersRoute
@@ -1624,11 +1650,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/airport-transfers': {
+      id: '/airport-transfers'
+      path: '/airport-transfers'
+      fullPath: '/airport-transfers'
+      preLoaderRoute: typeof AirportTransfersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/9-seater': {
+      id: '/9-seater'
+      path: '/9-seater'
+      fullPath: '/9-seater'
+      preLoaderRoute: typeof R9SeaterRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -2355,7 +2395,9 @@ const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  R9SeaterRoute: R9SeaterRoute,
   AboutRoute: AboutRoute,
+  AirportTransfersRoute: AirportTransfersRoute,
   BlogRoute: BlogRoute,
   ContactRoute: ContactRoute,
   CyprusAirportTransfersRoute: CyprusAirportTransfersRoute,
