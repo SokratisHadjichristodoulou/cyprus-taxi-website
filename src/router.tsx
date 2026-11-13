@@ -1,8 +1,35 @@
+import { useEffect } from "react";
 import { createRouter, useRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
+// After a redeploy, a browser (or Googlebot's cached render) can request a JS chunk that no longer
+// exists. Without recovery the page shows "Something went wrong" with HTTP 200, which Google
+// reports as a soft 404 (seen on the homepage on 2026-11-10). Reload once to fetch fresh assets.
+const CHUNK_ERROR =
+  /Failed to fetch dynamically imported module|error loading dynamically imported module|Importing a module script failed|Loading chunk|ChunkLoadError/i;
+const RELOAD_KEY = "tc24-chunk-reload";
+
+function useChunkErrorRecovery(error: Error) {
+  useEffect(() => {
+    if (!CHUNK_ERROR.test(`${error?.name ?? ""} ${error?.message ?? ""}`)) return;
+    try {
+      if (sessionStorage.getItem(RELOAD_KEY)) return;
+      sessionStorage.setItem(RELOAD_KEY, "1");
+    } catch {
+      // Storage blocked: still reload once; a second failure lands back here without storage and stops.
+      if (window.location.search.includes("_r=1")) return;
+      const url = new URL(window.location.href);
+      url.searchParams.set("_r", "1");
+      window.location.replace(url.toString());
+      return;
+    }
+    window.location.reload();
+  }, [error]);
+}
+
 function DefaultErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   const router = useRouter();
+  useChunkErrorRecovery(error);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
