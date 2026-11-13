@@ -129,6 +129,8 @@ export const Route = createFileRoute("/de/taxi-to-kato-paphos")({
         { to: "/taxi-to-kissonerga", label: "Flughafen Paphos – Kissonerga" },
         { to: "/taxi-to-coral-bay", label: "Flughafen Paphos – Coral Bay" },
         { to: "/larnaca-airport-to-paphos", label: "Flughafen Larnaka – Paphos" },
+        { to: "/taxi-to-polis-latchi", label: "Taxi nach Polis & Latchi" },
+        { to: "/paphos-airport-to-larnaca", label: "Flughafen Paphos – Larnaka" },
       ]}
     />
   ),

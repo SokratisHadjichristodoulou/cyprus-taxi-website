@@ -54,6 +54,9 @@ export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
         { to: "/taxi-to-peyia", label: "Λάρνακα προς Πέγεια" },
         { to: "/taxi-to-limassol", label: "Αεροδρόμιο Πάφου προς Λεμεσό" },
         { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
+        { to: "/taxi-to-kato-paphos", label: "Ταξί προς Κάτω Πάφο" },
+        { to: "/taxi-to-aphrodite-hills", label: "Ταξί προς Aphrodite Hills" },
+        { to: "/paphos-airport-to-larnaca", label: "Αεροδρόμιο Πάφου προς Λάρνακα" },
       ]}
     />
   ),

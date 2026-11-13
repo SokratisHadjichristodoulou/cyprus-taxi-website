@@ -124,6 +124,7 @@ export const Route = createFileRoute("/el/taxi-to-aphrodite-hills")({
         { to: "/taxi-to-limassol", label: "Αεροδρόμιο Πάφου προς Λεμεσό" },
         { to: "/taxi-to-kato-paphos", label: "Αεροδρόμιο Πάφου προς Κάτω Πάφο" },
         { to: "/larnaca-airport-to-paphos", label: "Λάρνακα προς Πάφο" },
+        { to: "/paphos-airport-to-nicosia", label: "Αεροδρόμιο Πάφου προς Λευκωσία" },
       ]}
     />
   ),

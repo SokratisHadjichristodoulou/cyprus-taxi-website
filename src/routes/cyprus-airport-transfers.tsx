@@ -11,7 +11,6 @@ import { StructuredData } from "@/components/StructuredData";
 
 const allRoutes = [
   ...popularRoutes,
-  { slug: "/taxi-to-limassol" as const, name: "Paphos Airport to Limassol", fromAirport: "Paphos", duration: "50 min", distance: "65 km", priceFrom: 90 },
   { slug: "/larnaca-airport-to-ayia-napa" as const, name: "Larnaca Airport to Ayia Napa", fromAirport: "Larnaca", duration: "45 min", distance: "55 km", priceFrom: 80 },
   { slug: "/larnaca-airport-to-protaras" as const, name: "Larnaca Airport to Protaras", fromAirport: "Larnaca", duration: "50 min", distance: "60 km", priceFrom: 90 },
   { slug: "/larnaca-airport-transfers" as const, name: "Larnaca Airport to Nicosia", fromAirport: "Larnaca", duration: "40 min", distance: "50 km", priceFrom: 70 },

@@ -107,6 +107,7 @@ export const Route = createFileRoute("/ru/paphos-airport-to-larnaca")({
         { to: "/taxi-to-limassol", label: "Аэропорт Пафоса — Лимассол" },
         { to: "/larnaca-airport-to-paphos", label: "Ларнака — Пафос" },
         { to: "/larnaca-airport-transfers", label: "Трансферы из аэропорта Ларнаки" },
+        { to: "/taxi-to-pissouri", label: "Такси в Писсури" },
       ]}
     />
   ),

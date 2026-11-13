@@ -90,6 +90,9 @@ export const Route = createFileRoute("/el/taxi-to-peyia")({
         { to: "/taxi-to-coral-bay", label: "Ταξί προς Coral Bay" },
         { to: "/taxi-to-chloraka", label: "Ταξί προς Χλώρακα" },
         { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
+        { to: "/taxi-to-kissonerga", label: "Ταξί προς Κισσόνεργα" },
+        { to: "/taxi-to-polis-latchi", label: "Ταξί προς Πόλη & Λατσί" },
+        { to: "/taxi-to-kato-paphos", label: "Ταξί προς Κάτω Πάφο" },
       ]}
     />
   ),

@@ -96,6 +96,9 @@ export const Route = createFileRoute("/ru/taxi-to-chloraka")({
         { to: "/paphos-airport-transfers", label: "Трансферы из аэропорта Пафоса" },
         { to: "/larnaca-airport-transfers", label: "Трансферы из аэропорта Ларнаки" },
         { to: "/larnaca-airport-to-paphos", label: "Ларнака — Пафос" },
+        { to: "/taxi-to-kissonerga", label: "Такси в Киссонергу" },
+        { to: "/taxi-to-kato-paphos", label: "Такси в Като-Пафос" },
+        { to: "/taxi-to-polis-latchi", label: "Такси в Полис и Лачи" },
       ]}
     />
   ),

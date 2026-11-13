@@ -87,6 +87,10 @@ export const Route = createFileRoute("/taxi-to-limassol")({
       relatedLinks={[
         { to: "/paphos-airport-transfers", label: "Paphos Airport Transfers" },
         { to: "/cyprus-airport-transfers", label: "All Routes" },
+        { to: "/taxi-to-pissouri", label: "Taxi to Pissouri" },
+        { to: "/taxi-to-aphrodite-hills", label: "Taxi to Aphrodite Hills" },
+        { to: "/paphos-airport-to-larnaca", label: "Paphos Airport to Larnaca" },
+        { to: "/paphos-airport-to-nicosia", label: "Paphos Airport to Nicosia" },
       ]}
     />
   ),

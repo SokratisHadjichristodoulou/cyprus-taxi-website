@@ -52,6 +52,9 @@ export const Route = createFileRoute("/el/larnaca-airport-transfers")({
           { to: "/larnaca-airport-to-paphos", label: "LCA προς Πάφο" },
           { to: "/taxi-to-coral-bay", label: "LCA προς Coral Bay" },
           { to: "/cyprus-airport-transfers", label: "Όλες οι διαδρομές" },
+          { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
+          { to: "/taxi-to-pissouri", label: "Ταξί προς Πισσούρι" },
+          { to: "/taxi-to-aphrodite-hills", label: "Ταξί προς Aphrodite Hills" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">

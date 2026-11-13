@@ -88,6 +88,10 @@ export const Route = createFileRoute("/ru/taxi-to-limassol")({
       relatedLinks={[
         { to: "/paphos-airport-transfers", label: "Трансферы из аэропорта Пафоса" },
         { to: "/cyprus-airport-transfers", label: "Все маршруты" },
+        { to: "/taxi-to-pissouri", label: "Такси в Писсури" },
+        { to: "/taxi-to-aphrodite-hills", label: "Такси в Афродита Хиллз" },
+        { to: "/paphos-airport-to-larnaca", label: "Аэропорт Пафоса — Ларнака" },
+        { to: "/paphos-airport-to-nicosia", label: "Аэропорт Пафоса — Никосия" },
       ]}
     />
   ),
