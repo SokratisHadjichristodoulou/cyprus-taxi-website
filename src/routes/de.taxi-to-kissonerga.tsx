@@ -41,7 +41,7 @@ const kissonergaFAQs = [
 export const Route = createFileRoute("/de/taxi-to-kissonerga")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Kissonerga: Festpreis 55 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Kissonerga: Festpreis 55 €" },
       {
         name: "description",
         content:
@@ -125,6 +125,7 @@ export const Route = createFileRoute("/de/taxi-to-kissonerga")({
         { to: "/taxi-to-coral-bay", label: "Flughafen Paphos – Coral Bay" },
         { to: "/taxi-to-peyia", label: "Flughafen Paphos – Peyia" },
         { to: "/larnaca-airport-to-paphos", label: "Flughafen Larnaka – Paphos" },
+        { to: "/taxi-to-polis-latchi", label: "Taxi nach Polis & Latchi" },
       ]}
     />
   ),

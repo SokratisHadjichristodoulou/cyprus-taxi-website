@@ -7,7 +7,7 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο — Σταθερή τιμή €140 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο – €140 | Taxi Cyprus 24" },
       { name: "description", content: "Ιδιωτικό ταξί από Αεροδρόμιο Λάρνακας προς Πάφο από €140. Σταθερή τιμή, υποδοχή, δωρεάν παιδικά καθίσματα, παρακολούθηση πτήσης. Κράτηση 24/7." },
       { property: "og:title", content: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο από €140" },
       { property: "og:description", content: "Ιδιωτική μεταφορά σταθερής τιμής από Λάρνακα προς Πάφο με υποδοχή." },
@@ -54,6 +54,9 @@ export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
         { to: "/taxi-to-peyia", label: "Λάρνακα προς Πέγεια" },
         { to: "/taxi-to-limassol", label: "Αεροδρόμιο Πάφου προς Λεμεσό" },
         { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
+        { to: "/taxi-to-kato-paphos", label: "Ταξί προς Κάτω Πάφο" },
+        { to: "/taxi-to-aphrodite-hills", label: "Ταξί προς Aphrodite Hills" },
+        { to: "/paphos-airport-to-larnaca", label: "Αεροδρόμιο Πάφου προς Λάρνακα" },
       ]}
     />
   ),

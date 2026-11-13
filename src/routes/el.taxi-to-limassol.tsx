@@ -41,7 +41,7 @@ const limassolFAQs = [
 export const Route = createFileRoute("/el/taxi-to-limassol")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Λεμεσό – €90 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Λεμεσό – €90 | Taxi Cyprus 24" },
       {
         name: "description",
         content:
@@ -88,6 +88,10 @@ export const Route = createFileRoute("/el/taxi-to-limassol")({
       relatedLinks={[
         { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
         { to: "/cyprus-airport-transfers", label: "Όλες οι διαδρομές" },
+        { to: "/taxi-to-pissouri", label: "Ταξί προς Πισσούρι" },
+        { to: "/taxi-to-aphrodite-hills", label: "Ταξί προς Aphrodite Hills" },
+        { to: "/paphos-airport-to-larnaca", label: "Αεροδρόμιο Πάφου προς Λάρνακα" },
+        { to: "/paphos-airport-to-nicosia", label: "Αεροδρόμιο Πάφου προς Λευκωσία" },
       ]}
     />
   ),

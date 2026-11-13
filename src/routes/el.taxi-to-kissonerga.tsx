@@ -41,7 +41,7 @@ const kissonergaFAQs = [
 export const Route = createFileRoute("/el/taxi-to-kissonerga")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Κισσόνεργα – €55 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Κισσόνεργα – €55 | Taxi Cyprus 24" },
       {
         name: "description",
         content:
@@ -125,6 +125,7 @@ export const Route = createFileRoute("/el/taxi-to-kissonerga")({
         { to: "/taxi-to-coral-bay", label: "Αεροδρόμιο Πάφου προς Coral Bay" },
         { to: "/taxi-to-peyia", label: "Αεροδρόμιο Πάφου προς Πέγεια" },
         { to: "/larnaca-airport-to-paphos", label: "Λάρνακα προς Πάφο" },
+        { to: "/taxi-to-polis-latchi", label: "Ταξί προς Πόλη & Λατσί" },
       ]}
     />
   ),

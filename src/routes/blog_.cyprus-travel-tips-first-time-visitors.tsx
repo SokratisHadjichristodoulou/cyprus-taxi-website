@@ -78,32 +78,31 @@ function ArticlePage() {
       <article className="container-tight py-16 md:py-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Cyprus is one of the most popular Mediterranean holiday destinations for UK and
-            European travellers, offering beautiful beaches, warm weather, historic sites, and
-            welcoming local culture. If you are visiting Cyprus for the first time, knowing a
-            few important travel tips can help make your holiday smoother, safer, and more
-            enjoyable.
+            Cyprus is one of the most popular Mediterranean holiday destinations for UK and European
+            travellers, offering beautiful beaches, warm weather, historic sites, and welcoming
+            local culture. If you are visiting Cyprus for the first time, knowing a few important
+            travel tips can help make your holiday smoother, safer, and more enjoyable.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
             Currency in Cyprus
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The official currency in Cyprus is the Euro (€). Most hotels, restaurants, shops,
-            and taxi services accept credit and debit cards, although carrying some cash is
-            useful for smaller villages and local tavernas. ATMs are widely available across
-            popular tourist areas including Paphos, Limassol, and Larnaca.
+            The official currency in Cyprus is the Euro (€). Most hotels, restaurants, shops, and
+            taxi services accept credit and debit cards, although carrying some cash is useful for
+            smaller villages and local tavernas. ATMs are widely available across popular tourist
+            areas including Paphos, Limassol, and Larnaca.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Driving in Cyprus
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            One of the most important things to know for first-time visitors is that people
-            drive on the left-hand side of the road in Cyprus, similar to the UK. Road signs
-            are in both Greek and English, making driving relatively easy for tourists. Car
-            rental is popular, but many visitors prefer private airport transfers and taxi
-            services for convenience and stress-free travel.
+            One of the most important things to know for first-time visitors is that people drive on
+            the left-hand side of the road in Cyprus, similar to the UK. Road signs are in both
+            Greek and English, making driving relatively easy for tourists. Car rental is popular,
+            but many visitors prefer private airport transfers and taxi services for convenience and
+            stress-free travel.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -111,41 +110,41 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Cyprus enjoys over 300 days of sunshine each year, making it one of the warmest
-            destinations in Europe. Summer temperatures often exceed 30°C, especially in July
-            and August, while spring and autumn offer more comfortable weather for sightseeing
-            and outdoor activities.
+            destinations in Europe. Summer temperatures often exceed 30°C, especially in July and
+            August, while spring and autumn offer more comfortable weather for sightseeing and
+            outdoor activities.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Popular beach destinations like Coral Bay and Ayia Napa are busiest during the
-            summer season, while winter months remain mild compared to most European countries.
+            Popular beach destinations like Coral Bay and Ayia Napa are busiest during the summer
+            season, while winter months remain mild compared to most European countries.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Dress Code & Local Culture
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Cyprus is generally relaxed and tourist-friendly, especially in coastal resorts.
-            Casual summer clothing is acceptable in most places, although visitors should dress
-            modestly when visiting churches, monasteries, and religious sites.
+            Cyprus is generally relaxed and tourist-friendly, especially in coastal resorts. Casual
+            summer clothing is acceptable in most places, although visitors should dress modestly
+            when visiting churches, monasteries, and religious sites.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Cypriot hospitality is an important part of local culture, and visitors will often
-            find locals welcoming and helpful throughout the island.
+            Cypriot hospitality is an important part of local culture, and visitors will often find
+            locals welcoming and helpful throughout the island.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Transport & Airport Transfers
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The main international airports in Cyprus are Larnaca International Airport and
-            Paphos International Airport. While buses are available, many tourists choose
-            private airport transfers for faster and more comfortable travel across the island.
+            The main international airports in Cyprus are Larnaca International Airport and Paphos
+            International Airport. While buses are available, many tourists choose private airport
+            transfers for faster and more comfortable travel across the island.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Taxicyprus24 offers fixed-price Cyprus airport taxi services with professional
-            drivers, flight monitoring, meet & greet service, and 24/7 availability. Whether
-            you are travelling to Limassol, Paphos, Coral Bay, Peyia, or Ayia Napa, private
-            transfers provide one of the easiest ways to start your Cyprus holiday.
+            Taxicyprus24 offers fixed-price Cyprus airport taxi services with professional drivers,
+            flight monitoring, meet & greet service, and 24/7 availability. Whether you are
+            travelling to Limassol, Paphos, Coral Bay, Peyia, or Ayia Napa, private transfers
+            provide one of the easiest ways to start your Cyprus holiday.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -160,10 +159,40 @@ function ArticlePage() {
           </ul>
 
           <p className="mt-8 leading-relaxed text-muted-foreground">
-            For first-time visitors, Cyprus combines beautiful beaches, excellent food,
-            historic attractions, and easy travel, making it one of the best Mediterranean
-            destinations for a relaxing holiday.
+            For first-time visitors, Cyprus combines beautiful beaches, excellent food, historic
+            attractions, and easy travel, making it one of the best Mediterranean destinations for a
+            relaxing holiday.
           </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
+            Related transfers
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/paphos-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/larnaca-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Larnaca Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/cyprus-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              All Cyprus airport routes <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Transfer prices <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link

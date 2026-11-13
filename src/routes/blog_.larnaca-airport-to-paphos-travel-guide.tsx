@@ -88,10 +88,10 @@ function ArticlePage() {
             Public Bus from Larnaca Airport to Paphos
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Public buses are the cheapest way to travel between Larnaca Airport and Paphos.
-            However, the journey usually requires multiple bus changes and can take more than 3
-            hours. This option may be suitable for budget travellers, but it can be difficult
-            with luggage, children, or late-night arrivals.
+            Public buses are the cheapest way to travel between Larnaca Airport and Paphos. However,
+            the journey usually requires multiple bus changes and can take more than 3 hours. This
+            option may be suitable for budget travellers, but it can be difficult with luggage,
+            children, or late-night arrivals.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -99,26 +99,26 @@ function ArticlePage() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Car rental is another popular option for tourists visiting Cyprus. Hiring a car from
-            Larnaca Airport gives you flexibility to explore places like Coral Bay, Peyia, and
-            the surrounding coastline at your own pace. However, visitors should remember that
-            driving in Cyprus is on the left-hand side of the road, and parking in busy tourist
-            areas can sometimes be challenging.
+            Larnaca Airport gives you flexibility to explore places like Coral Bay, Peyia, and the
+            surrounding coastline at your own pace. However, visitors should remember that driving
+            in Cyprus is on the left-hand side of the road, and parking in busy tourist areas can
+            sometimes be challenging.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Private Airport Transfer — The Most Comfortable Option
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            For travellers looking for the easiest and most comfortable journey, a private
-            airport transfer from Larnaca Airport to Paphos is often the best choice.
-            Taxicyprus24 offers fixed-price private taxi transfers with professional drivers,
-            flight monitoring, meet & greet service, and 24/7 availability.
+            For travellers looking for the easiest and most comfortable journey, a private airport
+            transfer from Larnaca Airport to Paphos is often the best choice. Taxicyprus24 offers
+            fixed-price private taxi transfers with professional drivers, flight monitoring, meet &
+            greet service, and 24/7 availability.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Unlike buses or shared shuttles, private transfers provide direct door-to-door
-            service with no waiting times or unnecessary stops. Whether you are travelling to
-            Paphos Harbour, Coral Bay, Peyia, Chloraka, or nearby resorts, a private taxi
-            ensures a smooth and stress-free start to your Cyprus holiday.
+            Unlike buses or shared shuttles, private transfers provide direct door-to-door service
+            with no waiting times or unnecessary stops. Whether you are travelling to Paphos
+            Harbour, Coral Bay, Peyia, Chloraka, or nearby resorts, a private taxi ensures a smooth
+            and stress-free start to your Cyprus holiday.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -140,6 +140,42 @@ function ArticlePage() {
             With free child seats, fixed pricing, and direct transfers, Taxicyprus24 makes
             travelling across Cyprus simple and reliable.
           </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
+            Related transfers
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/larnaca-airport-to-paphos"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Larnaca Airport to Paphos <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-to-larnaca"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Larnaca <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-kato-paphos"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Kato Paphos <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-coral-bay"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Coral Bay <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link

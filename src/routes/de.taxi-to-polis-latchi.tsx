@@ -41,7 +41,7 @@ const polisLatchiFAQs = [
 export const Route = createFileRoute("/de/taxi-to-polis-latchi")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Polis & Latchi: Festpreis 95 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Polis & Latchi: Festpreis 95 €" },
       {
         name: "description",
         content:

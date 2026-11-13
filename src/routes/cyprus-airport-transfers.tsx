@@ -11,7 +11,6 @@ import { StructuredData } from "@/components/StructuredData";
 
 const allRoutes = [
   ...popularRoutes,
-  { slug: "/taxi-to-limassol" as const, name: "Paphos Airport to Limassol", fromAirport: "Paphos", duration: "50 min", distance: "65 km", priceFrom: 90 },
   { slug: "/larnaca-airport-to-ayia-napa" as const, name: "Larnaca Airport to Ayia Napa", fromAirport: "Larnaca", duration: "45 min", distance: "55 km", priceFrom: 80 },
   { slug: "/larnaca-airport-to-protaras" as const, name: "Larnaca Airport to Protaras", fromAirport: "Larnaca", duration: "50 min", distance: "60 km", priceFrom: 90 },
   { slug: "/larnaca-airport-transfers" as const, name: "Larnaca Airport to Nicosia", fromAirport: "Larnaca", duration: "40 min", distance: "50 km", priceFrom: 70 },
@@ -20,7 +19,7 @@ const allRoutes = [
 export const Route = createFileRoute("/cyprus-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Cyprus Airport Transfers — All Routes & Prices | Taxi Cyprus 24" },
+      { title: "Cyprus Airport Taxi Transfers: All Routes | Taxi Cyprus 24" },
       { name: "description", content: "Complete list of Cyprus airport transfer routes from Larnaca (LCA) and Paphos (PFO). Fixed prices to Paphos, Limassol, Coral Bay, Ayia Napa, Protaras, Nicosia." },
       { property: "og:title", content: "Cyprus Airport Transfers — All Routes" },
       { property: "og:description", content: "Fixed-price Cyprus airport transfers to every destination." },

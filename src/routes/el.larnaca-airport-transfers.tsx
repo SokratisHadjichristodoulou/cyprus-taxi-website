@@ -10,7 +10,7 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/larnaca-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Μεταφορές & Ταξί Αεροδρομίου Λάρνακας από €130 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρομίου Λάρνακας από €130 | Taxi Cyprus 24" },
       { name: "description", content: "Ιδιωτικές μεταφορές από Αεροδρόμιο Λάρνακας (LCA) προς Πάφο, Αγία Νάπα, Πρωταρά, Λευκωσία και όλη την Κύπρο. Σταθερές τιμές, υποδοχή, 24/7." },
       { property: "og:title", content: "Μεταφορές Αεροδρομίου Λάρνακας από €130" },
       { property: "og:description", content: "Premium ταξί από το Αεροδρόμιο Λάρνακας προς όλους τους προορισμούς της Κύπρου." },
@@ -52,6 +52,9 @@ export const Route = createFileRoute("/el/larnaca-airport-transfers")({
           { to: "/larnaca-airport-to-paphos", label: "LCA προς Πάφο" },
           { to: "/taxi-to-coral-bay", label: "LCA προς Coral Bay" },
           { to: "/cyprus-airport-transfers", label: "Όλες οι διαδρομές" },
+          { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
+          { to: "/taxi-to-pissouri", label: "Ταξί προς Πισσούρι" },
+          { to: "/taxi-to-aphrodite-hills", label: "Ταξί προς Aphrodite Hills" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">

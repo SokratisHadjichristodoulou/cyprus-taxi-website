@@ -8,7 +8,7 @@
 - Website: https://taxicyprus24.com
 - Phone / WhatsApp: +357 96 626 844
 - Country served: Cyprus (entire island)
-- Languages: English, Greek (Ελληνικά), Russian (Русский)
+- Languages: English, Greek (Ελληνικά), Russian (Русский), German (Deutsch; main airport transfer pages)
 - Hours: 24 hours a day, 7 days a week, including public holidays
 - Currencies accepted: EUR, GBP
 - Payment methods: cash, credit/debit card, bank transfer
@@ -78,36 +78,37 @@
 
 ## Pages
 
-- [Home](/): Premium private airport taxi transfers across Cyprus, 24/7.
-- [Cyprus Airport Transfers](/cyprus-airport-transfers): Overview of all fixed-price transfers from LCA and PFO.
-- [Larnaca Airport Transfers](/larnaca-airport-transfers): Private transfers from Larnaca International Airport to anywhere in Cyprus.
-- [Paphos Airport Transfers](/paphos-airport-transfers): Private transfers from Paphos International Airport across Cyprus.
-- [Larnaca to Paphos](/larnaca-airport-to-paphos): Direct fixed-price route from LCA to Paphos.
-- [Larnaca to Ayia Napa](/larnaca-airport-to-ayia-napa): Fixed-price route from LCA to Ayia Napa.
-- [Larnaca to Protaras](/larnaca-airport-to-protaras): Fixed-price route from LCA to Protaras.
-- [Taxi to Coral Bay](/taxi-to-coral-bay): Fixed-price transfers from Paphos Airport to Coral Bay.
-- [Taxi to Peyia](/taxi-to-peyia): Fixed-price transfers from Paphos Airport to Peyia.
-- [Taxi to Chloraka](/taxi-to-chloraka): Fixed-price transfers from Paphos Airport to Chloraka.
-- [Taxi to Limassol](/taxi-to-limassol): Fixed-price transfers from Paphos Airport to Limassol.
-- [Taxi to Kato Paphos](/taxi-to-kato-paphos): Fixed-price transfers from Paphos Airport to Kato Paphos and Paphos town (Tomb of the Kings area, Kamares and Tsada included).
-- [Taxi to Kissonerga](/taxi-to-kissonerga): Fixed-price transfers from Paphos Airport to Kissonerga and Tala.
-- [Taxi to Polis & Latchi](/taxi-to-polis-latchi): Fixed-price transfers from Paphos Airport to Polis Chrysochous and Latchi.
-- [Taxi to Aphrodite Hills](/taxi-to-aphrodite-hills): Fixed-price transfers from Paphos Airport to the InterContinental Aphrodite Hills.
-- [Taxi to Pissouri](/taxi-to-pissouri): Fixed-price transfers from Paphos Airport to Pissouri village and Pissouri Bay.
-- [Paphos Airport to Larnaca](/paphos-airport-to-larnaca): Fixed-price transfer from Paphos Airport to Larnaca.
-- [Paphos Airport to Nicosia](/paphos-airport-to-nicosia): Fixed-price transfer from Paphos Airport to Nicosia.
-- [Pricing](/pricing): Full transparent fixed-price table for all routes and vehicles.
-- [Fleet](/fleet): Mercedes-Benz E-Class sedans, 6-seater and 12-seater premium vans.
-- [Reviews](/reviews): Verified TripAdvisor reviews (4.9/5 from 120+ reviews).
-- [FAQ](/faq): Answers to common questions about booking, payment, and service.
-- [About](/about): About Taxi Cyprus 24 and our drivers.
-- [Contact](/contact): Booking form, WhatsApp and phone contact.
-- [Blog](/blog): Travel guides and tips for visiting Cyprus.
+- [Home](https://taxicyprus24.com/): Premium private airport taxi transfers across Cyprus, 24/7.
+- [Cyprus Airport Transfers](https://taxicyprus24.com/cyprus-airport-transfers): Overview of all fixed-price transfers from LCA and PFO.
+- [Larnaca Airport Transfers](https://taxicyprus24.com/larnaca-airport-transfers): Private transfers from Larnaca International Airport to anywhere in Cyprus.
+- [Paphos Airport Transfers](https://taxicyprus24.com/paphos-airport-transfers): Private transfers from Paphos International Airport across Cyprus.
+- [Larnaca to Paphos](https://taxicyprus24.com/larnaca-airport-to-paphos): Direct fixed-price route from LCA to Paphos.
+- [Larnaca to Ayia Napa](https://taxicyprus24.com/larnaca-airport-to-ayia-napa): Fixed-price route from LCA to Ayia Napa.
+- [Larnaca to Protaras](https://taxicyprus24.com/larnaca-airport-to-protaras): Fixed-price route from LCA to Protaras.
+- [Taxi to Coral Bay](https://taxicyprus24.com/taxi-to-coral-bay): Fixed-price transfers from Paphos Airport to Coral Bay.
+- [Taxi to Peyia](https://taxicyprus24.com/taxi-to-peyia): Fixed-price transfers from Paphos Airport to Peyia.
+- [Taxi to Chloraka](https://taxicyprus24.com/taxi-to-chloraka): Fixed-price transfers from Paphos Airport to Chloraka.
+- [Taxi to Limassol](https://taxicyprus24.com/taxi-to-limassol): Fixed-price transfers from Paphos Airport to Limassol.
+- [Taxi to Kato Paphos](https://taxicyprus24.com/taxi-to-kato-paphos): Fixed-price transfers from Paphos Airport to Kato Paphos and Paphos town (Tomb of the Kings area, Kamares and Tsada included).
+- [Taxi to Kissonerga](https://taxicyprus24.com/taxi-to-kissonerga): Fixed-price transfers from Paphos Airport to Kissonerga and Tala.
+- [Taxi to Polis & Latchi](https://taxicyprus24.com/taxi-to-polis-latchi): Fixed-price transfers from Paphos Airport to Polis Chrysochous and Latchi.
+- [Taxi to Aphrodite Hills](https://taxicyprus24.com/taxi-to-aphrodite-hills): Fixed-price transfers from Paphos Airport to the InterContinental Aphrodite Hills.
+- [Taxi to Pissouri](https://taxicyprus24.com/taxi-to-pissouri): Fixed-price transfers from Paphos Airport to Pissouri village and Pissouri Bay.
+- [Paphos Airport to Larnaca](https://taxicyprus24.com/paphos-airport-to-larnaca): Fixed-price transfer from Paphos Airport to Larnaca.
+- [Paphos Airport to Nicosia](https://taxicyprus24.com/paphos-airport-to-nicosia): Fixed-price transfer from Paphos Airport to Nicosia.
+- [Pricing](https://taxicyprus24.com/pricing): Full transparent fixed-price table for all routes and vehicles.
+- [Fleet](https://taxicyprus24.com/fleet): Mercedes-Benz E-Class sedans, 6-seater and 12-seater premium vans.
+- [Reviews](https://taxicyprus24.com/reviews): Verified TripAdvisor reviews (4.9/5 from 120+ reviews).
+- [FAQ](https://taxicyprus24.com/faq): Answers to common questions about booking, payment, and service.
+- [About](https://taxicyprus24.com/about): About Taxi Cyprus 24 and our drivers.
+- [Contact](https://taxicyprus24.com/contact): Booking form, WhatsApp and phone contact.
+- [Blog](https://taxicyprus24.com/blog): Travel guides and tips for visiting Cyprus.
 
 ## Optional
 
-- [Greek site (Ελληνικά)](/el): Greek-language version of the site.
-- [Russian site (Русский)](/ru): Russian-language version of the site.
+- [Greek site (Ελληνικά)](https://taxicyprus24.com/el): Greek-language version of the site.
+- [Russian site (Русский)](https://taxicyprus24.com/ru): Russian-language version of the site.
+- [German site (Deutsch)](https://taxicyprus24.com/de): German-language version of the home, airport, Paphos route, pricing, fleet, FAQ, reviews and contact pages.
 
 ## How to book
 

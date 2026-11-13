@@ -18,7 +18,7 @@ const TRIPADVISOR_URL =
 export const Route = createFileRoute("/de/reviews")({
   head: () => ({
     meta: [
-      { title: "Bewertungen – 4,9★ auf TripAdvisor (über 120 Bewertungen) | Taxi Cyprus 24" },
+      { title: "Bewertungen – 4,9★ auf TripAdvisor | Taxi Cyprus 24" },
       {
         name: "description",
         content:

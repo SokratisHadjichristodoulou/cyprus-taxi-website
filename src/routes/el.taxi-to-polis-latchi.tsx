@@ -41,7 +41,7 @@ const polisLatchiFAQs = [
 export const Route = createFileRoute("/el/taxi-to-polis-latchi")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Πόλη & Λατσί – €95 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου – Πόλη & Λατσί €95 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

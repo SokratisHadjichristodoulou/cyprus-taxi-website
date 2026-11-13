@@ -10,7 +10,7 @@ import { sharedFAQsDe } from "@/lib/faqs.de";
 export const Route = createFileRoute("/de/larnaca-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Flughafentransfer Larnaka (LCA) – Privattaxi zum Festpreis | Taxi Cyprus 24" },
+      { title: "Flughafentransfer Larnaka (LCA) – Taxi zum Festpreis" },
       {
         name: "description",
         content:
@@ -77,6 +77,9 @@ export const Route = createFileRoute("/de/larnaca-airport-transfers")({
           { to: "/larnaca-airport-to-protaras", label: "Flughafen Larnaka – Protaras" },
           { to: "/taxi-to-coral-bay", label: "Flughafen Larnaka – Coral Bay" },
           { to: "/cyprus-airport-transfers", label: "Alle Strecken" },
+          { to: "/paphos-airport-transfers", label: "Flughafentransfer Paphos" },
+          { to: "/taxi-to-pissouri", label: "Taxi nach Pissouri" },
+          { to: "/taxi-to-aphrodite-hills", label: "Taxi nach Aphrodite Hills" },
         ]}
       />
       <section className="container-tight pb-16 md:pb-20">

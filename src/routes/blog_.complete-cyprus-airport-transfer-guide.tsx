@@ -123,11 +123,11 @@ function ArticlePage() {
       <article className="container-tight py-16 md:py-20">
         <div className="mx-auto max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            Travelling to Cyprus for a holiday or business trip? Choosing the right airport
-            transfer can make your arrival faster, easier, and far less stressful. Whether you
-            land at Larnaca International Airport or Paphos International Airport, this guide
-            compares taxis, private airport transfers, rental cars, and public transport options
-            across Cyprus.
+            Travelling to Cyprus for a holiday or business trip? Choosing the right airport transfer
+            can make your arrival faster, easier, and far less stressful. Whether you land at
+            Larnaca International Airport or Paphos International Airport, this guide compares
+            taxis, private airport transfers, rental cars, and public transport options across
+            Cyprus.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -170,8 +170,8 @@ function ArticlePage() {
             ))}
           </ul>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Unlike shared shuttle buses, private transfers provide direct door-to-door travel
-            with no waiting for other passengers.
+            Unlike shared shuttle buses, private transfers provide direct door-to-door travel with
+            no waiting for other passengers.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -202,8 +202,8 @@ function ArticlePage() {
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Standard airport taxis are available outside both airports. However, prices can vary
             depending on traffic, luggage, time of day, and final destination. Many travellers
-            prefer pre-booked airport taxi services because they offer fixed pricing and
-            guaranteed availability.
+            prefer pre-booked airport taxi services because they offer fixed pricing and guaranteed
+            availability.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">Popular searches include:</p>
           <ul className="mt-4 list-disc space-y-2 pl-6 leading-relaxed text-muted-foreground">
@@ -225,21 +225,21 @@ function ArticlePage() {
             ))}
           </ul>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            For many families and groups, private airport transfers are often more convenient
-            after long flights.
+            For many families and groups, private airport transfers are often more convenient after
+            long flights.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Public Transport in Cyprus
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Public buses are the cheapest way to travel across Cyprus, but routes between
-            airports and tourist areas may require multiple changes and longer travel times. Bus
-            services are more limited late at night and early in the morning.
+            Public buses are the cheapest way to travel across Cyprus, but routes between airports
+            and tourist areas may require multiple changes and longer travel times. Bus services are
+            more limited late at night and early in the morning.
           </p>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Travellers arriving with luggage, children, or late-night flights often choose
-            airport transfers for comfort and convenience.
+            Travellers arriving with luggage, children, or late-night flights often choose airport
+            transfers for comfort and convenience.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -255,8 +255,8 @@ function ArticlePage() {
             ))}
           </ul>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Most private airport transfer services include luggage, motorway fees, child seats,
-            and meet & greet in the quoted price.
+            Most private airport transfer services include luggage, motorway fees, child seats, and
+            meet & greet in the quoted price.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -275,6 +275,48 @@ function ArticlePage() {
             prices, comfortable vehicles, and professional drivers to ensure a smooth arrival
             anywhere on the island.
           </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
+            Related transfers
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/paphos-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/larnaca-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Larnaca Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/larnaca-airport-to-paphos"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Larnaca Airport to Paphos <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-to-larnaca"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Larnaca <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-to-nicosia"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Nicosia <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/cyprus-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              All Cyprus airport routes <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link

@@ -23,7 +23,7 @@ const allRoutes = [
 export const Route = createFileRoute("/el/cyprus-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Μεταφορές Αεροδρομίου Κύπρου — Όλες οι Διαδρομές & Τιμές | Taxi Cyprus 24" },
+      { title: "Μεταφορές Αεροδρομίου Κύπρου — Διαδρομές & Τιμές" },
       { name: "description", content: "Πλήρης λίστα διαδρομών μεταφορών αεροδρομίου Κύπρου από Λάρνακα (LCA) και Πάφο (PFO). Σταθερές τιμές προς Πάφο, Λεμεσό, Coral Bay, Αγία Νάπα, Πρωταρά, Λευκωσία." },
       { property: "og:title", content: "Μεταφορές Αεροδρομίου Κύπρου — Όλες οι Διαδρομές" },
       { property: "og:description", content: "Σταθερές τιμές μεταφορών αεροδρομίου Κύπρου σε κάθε προορισμό." },

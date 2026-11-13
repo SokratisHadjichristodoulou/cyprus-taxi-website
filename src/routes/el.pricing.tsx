@@ -14,7 +14,7 @@ import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 export const Route = createFileRoute("/el/pricing")({
   head: () => ({
     meta: [
-      { title: "Τιμές Μεταφορών Ταξί Κύπρου — Σταθερές Τιμές από PFO & LCA | Taxi Cyprus 24" },
+      { title: "Τιμές Ταξί Κύπρου — Σταθερές Τιμές | Taxi Cyprus 24" },
       {
         name: "description",
         content:

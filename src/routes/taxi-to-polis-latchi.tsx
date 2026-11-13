@@ -41,7 +41,7 @@ const polisLatchiFAQs = [
 export const Route = createFileRoute("/taxi-to-polis-latchi")({
   head: () => ({
     meta: [
-      { title: "Paphos Airport to Polis & Latchi Taxi – Fixed €95 | Taxi Cyprus 24" },
+      { title: "Paphos Airport to Polis & Latchi Taxi – €95 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

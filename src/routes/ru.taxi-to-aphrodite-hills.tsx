@@ -41,7 +41,7 @@ const aphroditeHillsFAQs = [
 export const Route = createFileRoute("/ru/taxi-to-aphrodite-hills")({
   head: () => ({
     meta: [
-      { title: "Такси из аэропорта Пафоса в Афродита Хиллз — €45 | Taxi Cyprus 24" },
+      { title: "Такси аэропорт Пафос — Афродита Хиллз €45 | Taxi Cyprus 24" },
       {
         name: "description",
         content:
@@ -124,6 +124,7 @@ export const Route = createFileRoute("/ru/taxi-to-aphrodite-hills")({
         { to: "/taxi-to-limassol", label: "Аэропорт Пафоса — Лимассол" },
         { to: "/taxi-to-kato-paphos", label: "Аэропорт Пафоса — Като-Пафос" },
         { to: "/larnaca-airport-to-paphos", label: "Ларнака — Пафос" },
+        { to: "/paphos-airport-to-nicosia", label: "Аэропорт Пафоса — Никосия" },
       ]}
     />
   ),

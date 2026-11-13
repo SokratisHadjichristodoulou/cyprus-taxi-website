@@ -41,7 +41,7 @@ const chlorakaFAQs = [
 export const Route = createFileRoute("/el/taxi-to-chloraka")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Χλώρακα – €45 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Χλώρακα – €45 | Taxi Cyprus 24" },
       {
         name: "description",
         content:
@@ -96,6 +96,9 @@ export const Route = createFileRoute("/el/taxi-to-chloraka")({
         { to: "/paphos-airport-transfers", label: "Μεταφορές Αεροδρομίου Πάφου" },
         { to: "/larnaca-airport-transfers", label: "Μεταφορές Αεροδρομίου Λάρνακας" },
         { to: "/larnaca-airport-to-paphos", label: "Λάρνακα προς Πάφο" },
+        { to: "/taxi-to-kissonerga", label: "Ταξί προς Κισσόνεργα" },
+        { to: "/taxi-to-kato-paphos", label: "Ταξί προς Κάτω Πάφο" },
+        { to: "/taxi-to-polis-latchi", label: "Ταξί προς Πόλη & Λατσί" },
       ]}
     />
   ),

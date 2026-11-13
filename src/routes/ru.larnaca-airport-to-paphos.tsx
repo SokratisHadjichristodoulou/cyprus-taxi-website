@@ -7,7 +7,7 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Такси из аэропорта Ларнаки в Пафос — Фиксированная цена €140 | Taxi Cyprus 24" },
+      { title: "Такси из аэропорта Ларнаки в Пафос — €140 | Taxi Cyprus 24" },
       { name: "description", content: "Частное такси из аэропорта Ларнаки в Пафос от €140. Фиксированная цена, встреча, бесплатные детские кресла, отслеживание рейса. Бронирование 24/7." },
       { property: "og:title", content: "Такси из аэропорта Ларнаки в Пафос от €140" },
       { property: "og:description", content: "Частный трансфер по фиксированной цене из Ларнаки в Пафос со встречей." },
@@ -54,6 +54,9 @@ export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
         { to: "/taxi-to-peyia", label: "Ларнака — Пейя" },
         { to: "/taxi-to-limassol", label: "Аэропорт Пафоса — Лимассол" },
         { to: "/paphos-airport-transfers", label: "Трансферы из аэропорта Пафоса" },
+        { to: "/taxi-to-kato-paphos", label: "Такси в Като-Пафос" },
+        { to: "/taxi-to-aphrodite-hills", label: "Такси в Афродита Хиллз" },
+        { to: "/paphos-airport-to-larnaca", label: "Аэропорт Пафоса — Ларнака" },
       ]}
     />
   ),

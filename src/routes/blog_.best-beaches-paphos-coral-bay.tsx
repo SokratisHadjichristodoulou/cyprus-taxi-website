@@ -17,7 +17,8 @@ export const Route = createFileRoute("/blog_/best-beaches-paphos-coral-bay")({
       { property: "og:type", content: "article" },
       {
         property: "og:description",
-        content: "The ultimate guide to the most beautiful beaches around Paphos and Coral Bay in Cyprus.",
+        content:
+          "The ultimate guide to the most beautiful beaches around Paphos and Coral Bay in Cyprus.",
       },
       { property: "og:image", content: coralBayImg },
       { name: "twitter:image", content: coralBayImg },
@@ -79,48 +80,48 @@ function BeachesArticle() {
         <div className="mx-auto max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground">
             Paphos and Coral Bay are home to some of the most beautiful beaches in Cyprus,
-            attracting visitors with crystal-clear waters, golden sand, and stunning coastal
-            views. Whether you are looking for a family-friendly beach, hidden swimming spots,
-            or the perfect sunset location, the west coast of Cyprus has something for everyone.
+            attracting visitors with crystal-clear waters, golden sand, and stunning coastal views.
+            Whether you are looking for a family-friendly beach, hidden swimming spots, or the
+            perfect sunset location, the west coast of Cyprus has something for everyone.
           </p>
 
           <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
             Coral Bay Beach
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Coral Bay is one of the most popular beaches in Cyprus thanks to its soft golden
-            sand, calm shallow waters, and excellent facilities. Located just a short drive from
-            Paphos, Coral Bay is perfect for swimming, sunbathing, water sports, and family
-            holidays. The area is also surrounded by restaurants, cafés, and hotels, making it
-            ideal for a full beach day.
+            Coral Bay is one of the most popular beaches in Cyprus thanks to its soft golden sand,
+            calm shallow waters, and excellent facilities. Located just a short drive from Paphos,
+            Coral Bay is perfect for swimming, sunbathing, water sports, and family holidays. The
+            area is also surrounded by restaurants, cafés, and hotels, making it ideal for a full
+            beach day.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Lara Beach
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            For a quieter and more natural experience, Lara Beach offers a unique escape
-            surrounded by protected nature. Famous for its turtle conservation area, Lara Beach
-            is one of the most scenic hidden beaches near Paphos. Its untouched coastline and
-            peaceful atmosphere make it perfect for visitors looking to avoid busy tourist areas.
+            For a quieter and more natural experience, Lara Beach offers a unique escape surrounded
+            by protected nature. Famous for its turtle conservation area, Lara Beach is one of the
+            most scenic hidden beaches near Paphos. Its untouched coastline and peaceful atmosphere
+            make it perfect for visitors looking to avoid busy tourist areas.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Potima Bay
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            Potima Beach is known for its dramatic coastal scenery and spectacular sunsets.
-            Located between Coral Bay and Kissonerga, this beach is popular with both locals and
-            tourists who want a more relaxed beach experience away from crowded resorts.
+            Potima Beach is known for its dramatic coastal scenery and spectacular sunsets. Located
+            between Coral Bay and Kissonerga, this beach is popular with both locals and tourists
+            who want a more relaxed beach experience away from crowded resorts.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
             Sea Caves & Hidden Coves
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The Sea Caves area near Peyia Sea Caves features stunning rock formations, hidden
-            coves, and crystal-clear waters ideal for exploring and photography. It is one of
-            the best coastal spots in Cyprus for adventure lovers and sunset views.
+            The Sea Caves area near Peyia Sea Caves features stunning rock formations, hidden coves,
+            and crystal-clear waters ideal for exploring and photography. It is one of the best
+            coastal spots in Cyprus for adventure lovers and sunset views.
           </p>
 
           <h2 className="mt-10 font-display text-2xl font-bold text-navy md:text-3xl">
@@ -129,9 +130,45 @@ function BeachesArticle() {
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Many of the best beaches around Paphos and Coral Bay are easiest to reach by private
             taxi transfer. Taxicyprus24 offers reliable fixed-price taxi services from Larnaca
-            Airport, Paphos Airport, Limassol, and across Cyprus, making beach travel
-            comfortable and stress-free throughout your holiday.
+            Airport, Paphos Airport, Limassol, and across Cyprus, making beach travel comfortable
+            and stress-free throughout your holiday.
           </p>
+
+          <h2 className="mt-12 font-display text-2xl font-bold text-navy md:text-3xl">
+            Related transfers
+          </h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="/taxi-to-coral-bay"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Coral Bay <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-peyia"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Peyia <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-kato-paphos"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Kato Paphos <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/taxi-to-polis-latchi"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport to Polis & Latchi <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to="/paphos-airport-transfers"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium text-navy transition-colors hover:bg-secondary"
+            >
+              Paphos Airport transfers <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
 
           <div className="mt-12 flex flex-wrap gap-3">
             <Link

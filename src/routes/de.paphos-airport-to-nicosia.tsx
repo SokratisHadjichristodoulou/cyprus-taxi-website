@@ -41,7 +41,7 @@ const paphosToNicosiaFAQs = [
 export const Route = createFileRoute("/de/paphos-airport-to-nicosia")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Nikosia: Festpreis 150 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Nikosia: Festpreis 150 €" },
       {
         name: "description",
         content:
@@ -111,6 +111,7 @@ export const Route = createFileRoute("/de/paphos-airport-to-nicosia")({
         { to: "/paphos-airport-to-larnaca", label: "Flughafen Paphos – Larnaka" },
         { to: "/taxi-to-limassol", label: "Flughafen Paphos – Limassol" },
         { to: "/larnaca-airport-to-paphos", label: "Flughafen Larnaka – Paphos" },
+        { to: "/taxi-to-pissouri", label: "Taxi nach Pissouri" },
       ]}
     />
   ),

@@ -41,7 +41,7 @@ const limassolFAQs = [
 export const Route = createFileRoute("/de/taxi-to-limassol")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Limassol: Festpreis 90 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Limassol: Festpreis 90 €" },
       {
         name: "description",
         content:
@@ -107,6 +107,10 @@ export const Route = createFileRoute("/de/taxi-to-limassol")({
       relatedLinks={[
         { to: "/paphos-airport-transfers", label: "Flughafentransfer Paphos" },
         { to: "/cyprus-airport-transfers", label: "Alle Strecken" },
+        { to: "/taxi-to-pissouri", label: "Taxi nach Pissouri" },
+        { to: "/taxi-to-aphrodite-hills", label: "Taxi nach Aphrodite Hills" },
+        { to: "/paphos-airport-to-larnaca", label: "Flughafen Paphos – Larnaka" },
+        { to: "/paphos-airport-to-nicosia", label: "Flughafen Paphos – Nikosia" },
       ]}
     />
   ),

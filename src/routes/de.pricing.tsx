@@ -14,7 +14,7 @@ import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 export const Route = createFileRoute("/de/pricing")({
   head: () => ({
     meta: [
-      { title: "Taxipreise Zypern – Festpreise ab Paphos & Larnaka | Taxi Cyprus 24" },
+      { title: "Taxipreise Zypern – Festpreise Paphos & Larnaka" },
       {
         name: "description",
         content:

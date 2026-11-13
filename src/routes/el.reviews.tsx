@@ -16,7 +16,7 @@ const TRIPADVISOR_URL =
 export const Route = createFileRoute("/el/reviews")({
   head: () => ({
     meta: [
-      { title: "Κριτικές — 4.9★ στο TripAdvisor (120+ κριτικές) | Taxi Cyprus 24" },
+      { title: "Κριτικές — 4.9★ στο TripAdvisor | Taxi Cyprus 24" },
       { name: "description", content: "Διαβάστε επιβεβαιωμένες κριτικές TripAdvisor της Taxi Cyprus 24 — 4.9★ από 120+ ταξιδιώτες. Στη θέση #6 από 94 Μεταφορές στην Πάφο." },
       { property: "og:title", content: "Κριτικές — Taxi Cyprus 24" },
       { property: "og:description", content: "Επιβεβαιωμένες κριτικές 4.9★ στο TripAdvisor για μεταφορές αεροδρομίου Κύπρου." },

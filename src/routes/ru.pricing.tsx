@@ -14,7 +14,7 @@ import { paphosRouteLinks, larnacaRouteLinks } from "@/lib/route-links";
 export const Route = createFileRoute("/ru/pricing")({
   head: () => ({
     meta: [
-      { title: "Цены на трансферы из аэропортов Кипра — фиксированные тарифы | Taxi Cyprus 24" },
+      { title: "Цены на трансферы из аэропортов Кипра | Taxi Cyprus 24" },
       {
         name: "description",
         content:

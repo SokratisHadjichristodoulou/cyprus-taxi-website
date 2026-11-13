@@ -41,7 +41,7 @@ const coralBayFAQs = [
 export const Route = createFileRoute("/de/taxi-to-coral-bay")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Coral Bay: Festpreis 65 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Coral Bay: Festpreis 65 €" },
       {
         name: "description",
         content:
@@ -113,6 +113,9 @@ export const Route = createFileRoute("/de/taxi-to-coral-bay")({
         { to: "/taxi-to-peyia", label: "Taxi nach Peyia" },
         { to: "/taxi-to-chloraka", label: "Taxi nach Chloraka" },
         { to: "/paphos-airport-transfers", label: "Flughafentransfer Paphos" },
+        { to: "/taxi-to-kissonerga", label: "Taxi nach Kissonerga" },
+        { to: "/taxi-to-polis-latchi", label: "Taxi nach Polis & Latchi" },
+        { to: "/taxi-to-kato-paphos", label: "Taxi nach Kato Paphos" },
       ]}
     />
   ),

@@ -44,7 +44,7 @@ const paphosAirportFAQs = [
 export const Route = createFileRoute("/de/paphos-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Flughafentransfer Paphos (PFO) – Privattaxi ab 35 € | Taxi Cyprus 24" },
+      { title: "Flughafentransfer Paphos – Taxi ab 35 € | Taxi Cyprus 24" },
       {
         name: "description",
         content:

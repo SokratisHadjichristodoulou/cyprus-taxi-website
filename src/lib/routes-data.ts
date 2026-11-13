@@ -13,5 +13,8 @@ export const popularRoutes: Route[] = [
   { slug: "/taxi-to-peyia", name: "Paphos Airport to Peyia", fromAirport: "Paphos", duration: "30 min", distance: "22 km", priceFrom: 65 },
   { slug: "/taxi-to-chloraka", name: "Paphos Airport to Chloraka", fromAirport: "Paphos", duration: "25 min", distance: "20 km", priceFrom: 45 },
   { slug: "/taxi-to-limassol", name: "Paphos Airport to Limassol", fromAirport: "Paphos", duration: "50 min", distance: "65 km", priceFrom: 90 },
+  { slug: "/taxi-to-kato-paphos", name: "Paphos Airport to Kato Paphos", fromAirport: "Paphos", duration: "20 min", distance: "15 km", priceFrom: 35 },
+  { slug: "/paphos-airport-to-larnaca", name: "Paphos Airport to Larnaca", fromAirport: "Paphos", duration: "1h 30m", distance: "140 km", priceFrom: 140 },
+  { slug: "/paphos-airport-to-nicosia", name: "Paphos Airport to Nicosia", fromAirport: "Paphos", duration: "1h 50m", distance: "150 km", priceFrom: 150 },
   { slug: "/larnaca-airport-transfers", name: "Larnaca Airport Transfers", fromAirport: "Larnaca", duration: "Varies", distance: "Cyprus-wide", priceFrom: 130 },
 ];

@@ -41,7 +41,7 @@ const chlorakaFAQs = [
 export const Route = createFileRoute("/de/taxi-to-chloraka")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Chloraka: Festpreis 45 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Chloraka: Festpreis 45 €" },
       {
         name: "description",
         content:
@@ -116,6 +116,9 @@ export const Route = createFileRoute("/de/taxi-to-chloraka")({
         { to: "/paphos-airport-transfers", label: "Flughafentransfer Paphos" },
         { to: "/larnaca-airport-transfers", label: "Flughafentransfer Larnaka" },
         { to: "/larnaca-airport-to-paphos", label: "Flughafen Larnaka – Paphos" },
+        { to: "/taxi-to-kissonerga", label: "Taxi nach Kissonerga" },
+        { to: "/taxi-to-kato-paphos", label: "Taxi nach Kato Paphos" },
+        { to: "/taxi-to-polis-latchi", label: "Taxi nach Polis & Latchi" },
       ]}
     />
   ),

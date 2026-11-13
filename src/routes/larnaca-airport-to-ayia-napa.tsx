@@ -7,7 +7,7 @@ import { sharedFAQs } from "@/lib/faqs";
 export const Route = createFileRoute("/larnaca-airport-to-ayia-napa")({
   head: () => ({
     meta: [
-      { title: "Larnaca Airport to Ayia Napa Taxi — Fixed €80 | Taxi Cyprus 24" },
+      { title: "Larnaca Airport to Ayia Napa Taxi – €80 | Taxi Cyprus 24" },
       { name: "description", content: "Private Larnaca Airport to Ayia Napa taxi from €80. Fixed price, meet & greet, free child seats, flight tracking. 24/7 booking." },
       { property: "og:title", content: "Larnaca Airport to Ayia Napa Taxi from €80" },
       { property: "og:description", content: "Private fixed-price Larnaca Airport to Ayia Napa transfer with meet & greet." },

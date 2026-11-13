@@ -7,7 +7,7 @@ import { sharedFAQsDe } from "@/lib/faqs.de";
 export const Route = createFileRoute("/de/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Larnaka – Paphos: Festpreis 140 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Larnaka – Paphos: Festpreis 140 €" },
       {
         name: "description",
         content:
@@ -72,6 +72,9 @@ export const Route = createFileRoute("/de/larnaca-airport-to-paphos")({
         { to: "/taxi-to-peyia", label: "Larnaka – Peyia" },
         { to: "/taxi-to-limassol", label: "Flughafen Paphos – Limassol" },
         { to: "/paphos-airport-transfers", label: "Flughafentransfer Paphos" },
+        { to: "/taxi-to-kato-paphos", label: "Taxi nach Kato Paphos" },
+        { to: "/taxi-to-aphrodite-hills", label: "Taxi nach Aphrodite Hills" },
+        { to: "/paphos-airport-to-larnaca", label: "Flughafen Paphos – Larnaka" },
       ]}
     />
   ),

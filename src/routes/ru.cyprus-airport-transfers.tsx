@@ -23,7 +23,7 @@ const allRoutes = [
 export const Route = createFileRoute("/ru/cyprus-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Трансферы из аэропортов Кипра — Все маршруты и цены | Taxi Cyprus 24" },
+      { title: "Все трансферы из аэропортов Кипра | Taxi Cyprus 24" },
       { name: "description", content: "Полный список маршрутов трансферов из аэропортов Кипра — Ларнака (LCA) и Пафос (PFO). Фиксированные цены в Пафос, Лимассол, Корал-Бей, Айя-Напу, Протарас, Никосию." },
       { property: "og:title", content: "Трансферы из аэропортов Кипра — Все маршруты" },
       { property: "og:description", content: "Фиксированные цены на трансферы из аэропортов Кипра в любое направление." },

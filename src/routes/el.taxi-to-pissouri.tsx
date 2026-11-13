@@ -41,7 +41,7 @@ const pissouriFAQs = [
 export const Route = createFileRoute("/el/taxi-to-pissouri")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Πισσούρι – €60 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Πισσούρι – €60 | Taxi Cyprus 24" },
       {
         name: "description",
         content:
@@ -112,6 +112,7 @@ export const Route = createFileRoute("/el/taxi-to-pissouri")({
         { to: "/taxi-to-limassol", label: "Αεροδρόμιο Πάφου προς Λεμεσό" },
         { to: "/taxi-to-kato-paphos", label: "Αεροδρόμιο Πάφου προς Κάτω Πάφο" },
         { to: "/larnaca-airport-to-paphos", label: "Λάρνακα προς Πάφο" },
+        { to: "/paphos-airport-to-nicosia", label: "Αεροδρόμιο Πάφου προς Λευκωσία" },
       ]}
     />
   ),

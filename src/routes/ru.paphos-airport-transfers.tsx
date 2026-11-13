@@ -44,7 +44,7 @@ const paphosAirportFAQs = [
 export const Route = createFileRoute("/ru/paphos-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Трансферы и такси из аэропорта Пафоса от €35 | Taxi Cyprus 24" },
+      { title: "Трансфер и такси из аэропорта Пафоса от €35 | Taxi Cyprus 24" },
       { name: "description", content: "Частные трансферы из аэропорта Пафоса (PFO) в Корал-Бей, Пейю, Хлораку, Като-Пафос и по всему Кипру. Фиксированные цены, встреча, 24/7." },
       { property: "og:title", content: "Трансферы из аэропорта Пафоса от €35" },
       { property: "og:description", content: "Премиальное такси из аэропорта Пафоса во все направления Кипра." },
