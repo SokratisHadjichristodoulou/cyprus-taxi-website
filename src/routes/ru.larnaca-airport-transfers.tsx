@@ -10,7 +10,7 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 export const Route = createFileRoute("/ru/larnaca-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Трансферы и такси из аэропорта Ларнаки от €130 | Taxi Cyprus 24" },
+      { title: "Трансфер из аэропорта Ларнаки от €130 | Taxi Cyprus 24" },
       { name: "description", content: "Частные трансферы из аэропорта Ларнаки (LCA) в Пафос, Айя-Напу, Протарас, Никосию и по всему Кипру. Фиксированные цены, встреча, 24/7." },
       { property: "og:title", content: "Трансферы из аэропорта Ларнаки от €130" },
       { property: "og:description", content: "Премиальное такси из аэропорта Ларнаки во все направления Кипра." },

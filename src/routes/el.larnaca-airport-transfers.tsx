@@ -10,7 +10,7 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/larnaca-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Μεταφορές & Ταξί Αεροδρομίου Λάρνακας από €130 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρομίου Λάρνακας από €130 | Taxi Cyprus 24" },
       { name: "description", content: "Ιδιωτικές μεταφορές από Αεροδρόμιο Λάρνακας (LCA) προς Πάφο, Αγία Νάπα, Πρωταρά, Λευκωσία και όλη την Κύπρο. Σταθερές τιμές, υποδοχή, 24/7." },
       { property: "og:title", content: "Μεταφορές Αεροδρομίου Λάρνακας από €130" },
       { property: "og:description", content: "Premium ταξί από το Αεροδρόμιο Λάρνακας προς όλους τους προορισμούς της Κύπρου." },

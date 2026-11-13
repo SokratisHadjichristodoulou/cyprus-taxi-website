@@ -41,7 +41,7 @@ const kissonergaFAQs = [
 export const Route = createFileRoute("/el/taxi-to-kissonerga")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Κισσόνεργα – €55 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Κισσόνεργα – €55 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

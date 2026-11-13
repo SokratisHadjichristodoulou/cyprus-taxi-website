@@ -41,7 +41,7 @@ const pissouriFAQs = [
 export const Route = createFileRoute("/el/taxi-to-pissouri")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Πισσούρι – €60 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Πισσούρι – €60 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

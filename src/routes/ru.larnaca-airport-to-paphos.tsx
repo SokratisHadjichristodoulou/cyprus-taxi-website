@@ -7,7 +7,7 @@ import { sharedFAQsRu } from "@/lib/faqs.ru";
 export const Route = createFileRoute("/ru/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Такси из аэропорта Ларнаки в Пафос — Фиксированная цена €140 | Taxi Cyprus 24" },
+      { title: "Такси из аэропорта Ларнаки в Пафос — €140 | Taxi Cyprus 24" },
       { name: "description", content: "Частное такси из аэропорта Ларнаки в Пафос от €140. Фиксированная цена, встреча, бесплатные детские кресла, отслеживание рейса. Бронирование 24/7." },
       { property: "og:title", content: "Такси из аэропорта Ларнаки в Пафос от €140" },
       { property: "og:description", content: "Частный трансфер по фиксированной цене из Ларнаки в Пафос со встречей." },

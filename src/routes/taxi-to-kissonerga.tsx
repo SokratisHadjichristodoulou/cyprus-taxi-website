@@ -41,7 +41,7 @@ const kissonergaFAQs = [
 export const Route = createFileRoute("/taxi-to-kissonerga")({
   head: () => ({
     meta: [
-      { title: "Paphos Airport to Kissonerga Taxi – Fixed €55 | Taxi Cyprus 24" },
+      { title: "Paphos Airport to Kissonerga Taxi – €55 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

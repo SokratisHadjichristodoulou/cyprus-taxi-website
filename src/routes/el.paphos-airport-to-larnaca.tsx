@@ -41,7 +41,7 @@ const paphosToLarnacaFAQs = [
 export const Route = createFileRoute("/el/paphos-airport-to-larnaca")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Λάρνακα – €140 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Λάρνακα – €140 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

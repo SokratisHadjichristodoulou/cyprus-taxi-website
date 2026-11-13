@@ -41,7 +41,7 @@ const limassolFAQs = [
 export const Route = createFileRoute("/de/taxi-to-limassol")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Limassol: Festpreis 90 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Limassol: Festpreis 90 €" },
       {
         name: "description",
         content:

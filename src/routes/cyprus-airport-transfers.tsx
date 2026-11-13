@@ -20,7 +20,7 @@ const allRoutes = [
 export const Route = createFileRoute("/cyprus-airport-transfers")({
   head: () => ({
     meta: [
-      { title: "Cyprus Airport Transfers — All Routes & Prices | Taxi Cyprus 24" },
+      { title: "Cyprus Airport Taxi Transfers: All Routes | Taxi Cyprus 24" },
       { name: "description", content: "Complete list of Cyprus airport transfer routes from Larnaca (LCA) and Paphos (PFO). Fixed prices to Paphos, Limassol, Coral Bay, Ayia Napa, Protaras, Nicosia." },
       { property: "og:title", content: "Cyprus Airport Transfers — All Routes" },
       { property: "og:description", content: "Fixed-price Cyprus airport transfers to every destination." },

@@ -41,7 +41,7 @@ const aphroditeHillsFAQs = [
 export const Route = createFileRoute("/el/taxi-to-aphrodite-hills")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Aphrodite Hills – €45 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου – Aphrodite Hills €45 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

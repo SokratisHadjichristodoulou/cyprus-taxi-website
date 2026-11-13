@@ -41,7 +41,7 @@ const peyiaFAQs = [
 export const Route = createFileRoute("/el/taxi-to-peyia")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Πέγεια – €65 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Πέγεια – €65 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

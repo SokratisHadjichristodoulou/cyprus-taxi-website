@@ -41,7 +41,7 @@ import { withLocale } from "@/lib/i18n";
 export const Route = createFileRoute("/de/")({
   head: () => ({
     meta: [
-      { title: "Taxi Zypern & Flughafentransfer Paphos und Larnaka | Taxi Cyprus 24" },
+      { title: "Taxi Zypern – Flughafentransfer Paphos & Larnaka" },
       {
         name: "description",
         content:

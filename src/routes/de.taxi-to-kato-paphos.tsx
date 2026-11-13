@@ -41,7 +41,7 @@ const katoPaphosFAQs = [
 export const Route = createFileRoute("/de/taxi-to-kato-paphos")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Kato Paphos: Festpreis 35 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Kato Paphos: Festpreis 35 €" },
       {
         name: "description",
         content:

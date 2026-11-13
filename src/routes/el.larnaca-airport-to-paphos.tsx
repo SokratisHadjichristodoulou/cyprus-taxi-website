@@ -7,7 +7,7 @@ import { sharedFAQsEl } from "@/lib/faqs.el";
 export const Route = createFileRoute("/el/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο — Σταθερή τιμή €140 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο – €140 | Taxi Cyprus 24" },
       { name: "description", content: "Ιδιωτικό ταξί από Αεροδρόμιο Λάρνακας προς Πάφο από €140. Σταθερή τιμή, υποδοχή, δωρεάν παιδικά καθίσματα, παρακολούθηση πτήσης. Κράτηση 24/7." },
       { property: "og:title", content: "Ταξί Αεροδρόμιο Λάρνακας προς Πάφο από €140" },
       { property: "og:description", content: "Ιδιωτική μεταφορά σταθερής τιμής από Λάρνακα προς Πάφο με υποδοχή." },

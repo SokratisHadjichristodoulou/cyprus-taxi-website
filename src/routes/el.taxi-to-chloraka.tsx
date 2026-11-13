@@ -41,7 +41,7 @@ const chlorakaFAQs = [
 export const Route = createFileRoute("/el/taxi-to-chloraka")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Χλώρακα – €45 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Χλώρακα – €45 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

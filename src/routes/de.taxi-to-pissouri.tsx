@@ -41,7 +41,7 @@ const pissouriFAQs = [
 export const Route = createFileRoute("/de/taxi-to-pissouri")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Pissouri: Festpreis 60 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Pissouri: Festpreis 60 €" },
       {
         name: "description",
         content:

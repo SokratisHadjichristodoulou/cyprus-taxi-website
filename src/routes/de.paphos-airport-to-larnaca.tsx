@@ -41,7 +41,7 @@ const paphosToLarnacaFAQs = [
 export const Route = createFileRoute("/de/paphos-airport-to-larnaca")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Larnaka: Festpreis 140 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Larnaka: Festpreis 140 €" },
       {
         name: "description",
         content:

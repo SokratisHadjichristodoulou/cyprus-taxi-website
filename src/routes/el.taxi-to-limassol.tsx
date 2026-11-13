@@ -41,7 +41,7 @@ const limassolFAQs = [
 export const Route = createFileRoute("/el/taxi-to-limassol")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Λεμεσό – €90 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Λεμεσό – €90 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

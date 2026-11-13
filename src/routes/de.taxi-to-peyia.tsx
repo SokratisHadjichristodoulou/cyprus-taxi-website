@@ -41,7 +41,7 @@ const peyiaFAQs = [
 export const Route = createFileRoute("/de/taxi-to-peyia")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Peyia: Festpreis 65 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Peyia: Festpreis 65 €" },
       {
         name: "description",
         content:

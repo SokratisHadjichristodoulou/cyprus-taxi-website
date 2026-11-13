@@ -7,7 +7,7 @@ import { sharedFAQsDe } from "@/lib/faqs.de";
 export const Route = createFileRoute("/de/larnaca-airport-to-paphos")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Larnaka – Paphos: Festpreis 140 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Larnaka – Paphos: Festpreis 140 €" },
       {
         name: "description",
         content:

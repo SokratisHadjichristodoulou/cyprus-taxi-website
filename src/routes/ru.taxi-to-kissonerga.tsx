@@ -41,7 +41,7 @@ const kissonergaFAQs = [
 export const Route = createFileRoute("/ru/taxi-to-kissonerga")({
   head: () => ({
     meta: [
-      { title: "Такси из аэропорта Пафоса в Киссонергу — €55 | Taxi Cyprus 24" },
+      { title: "Такси из аэропорта Пафоса в Киссонергу €55 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

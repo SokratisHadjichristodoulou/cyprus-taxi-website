@@ -41,7 +41,7 @@ const coralBayFAQs = [
 export const Route = createFileRoute("/taxi-to-coral-bay")({
   head: () => ({
     meta: [
-      { title: "Paphos Airport to Coral Bay Taxi – Fixed €65 | Taxi Cyprus 24" },
+      { title: "Paphos Airport to Coral Bay Taxi – €65 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

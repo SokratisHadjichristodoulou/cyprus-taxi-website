@@ -41,7 +41,7 @@ const paphosToNicosiaFAQs = [
 export const Route = createFileRoute("/el/paphos-airport-to-nicosia")({
   head: () => ({
     meta: [
-      { title: "Ταξί από Αεροδρόμιο Πάφου προς Λευκωσία – €150 | Taxi Cyprus 24" },
+      { title: "Ταξί Αεροδρόμιο Πάφου προς Λευκωσία – €150 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

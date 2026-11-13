@@ -41,7 +41,7 @@ const katoPaphosFAQs = [
 export const Route = createFileRoute("/ru/taxi-to-kato-paphos")({
   head: () => ({
     meta: [
-      { title: "Такси из аэропорта Пафоса в Като-Пафос — €35 | Taxi Cyprus 24" },
+      { title: "Такси из аэропорта Пафоса в Като-Пафос €35 | Taxi Cyprus 24" },
       {
         name: "description",
         content:

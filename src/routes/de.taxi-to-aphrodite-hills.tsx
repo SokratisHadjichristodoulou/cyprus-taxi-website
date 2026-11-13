@@ -41,7 +41,7 @@ const aphroditeHillsFAQs = [
 export const Route = createFileRoute("/de/taxi-to-aphrodite-hills")({
   head: () => ({
     meta: [
-      { title: "Taxi Flughafen Paphos – Aphrodite Hills: Festpreis 45 € | Taxi Cyprus 24" },
+      { title: "Taxi Flughafen Paphos – Aphrodite Hills: Festpreis 45 €" },
       {
         name: "description",
         content:
